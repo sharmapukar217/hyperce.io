@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans");
+
+* {
+  font-family: "DM Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* .text-left {
+    text-align: left; 
+}*/
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
+}
