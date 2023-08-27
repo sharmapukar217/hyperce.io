@@ -89,7 +89,7 @@ export default function Footer() {
           <nav className="justify-center items-center flex">
             <ul className="flex gap-10">
               {navMenuItems.map((menuItem) => (
-                <a href={menuItem.href}>
+                <a key={navMenuItems.indexOf(menuItem)} href={menuItem.href}>
                   <li className="hover:scale-[102%] text-lg transition-colors duration-100 text-black dark:text-zinc-200 hover:text-white">
                     {menuItem.name}
                   </li>
