@@ -34,7 +34,7 @@ export default function Newsletter({ isVisible }: any) {
                 placeholder="hi@a.com"
                 id=""
               />
-              <button className="w-fit flex justify-center rounded-md items-center px-5 py-2 bg-[#357D8A]">
+              <button aria-aria-label="subscribe-newsletter" className="w-fit flex justify-center rounded-md items-center px-5 py-2 bg-[#357D8A]">
                 Subscribe
               </button>
             </div>

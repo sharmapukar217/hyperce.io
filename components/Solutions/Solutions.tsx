@@ -32,7 +32,7 @@ export default function Solutions() {
         </div>
         <div className="flex justify-center mt-10">
           <a href="/get-starte">
-            <button className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] text-xl font-bold flex gap-2 items-center border-2 px-7 py-3 rounded-xl">
+            <button aria-label="all-services" className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] text-xl font-bold flex gap-2 items-center border-2 px-7 py-3 rounded-xl">
               <span>See all our Services </span>
               <span>
                 <svg width="30px" height="30px" viewBox="-3 0 32 32">
