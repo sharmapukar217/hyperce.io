@@ -1,29 +1,34 @@
-export default function Card() {
+interface propTypes {
+  color: string;
+}
+export default function SolutionsCard({ color }: propTypes) {
+  const textColor = "text-[" + color + "]";
   return (
-    <div className="flex flex-col gap-5 rounded-xl px-0 md:px-5 py-7">
-      <div className="flex gap-5 font-semibold">
+    <div className="flex flex-col items-center px-5 py-5 rounded-2xl border-2 bg-[#E3E5EB] dark:bg-[#090E1A] gap-2 text-black dark:text-white">
+      <div className="icon px-4 aspect-square flex items-center justify-center py-3  bg-[#E3E5EB] dark:bg-[#090E1A] -mt-[55px] rounded-full">
         <svg
-          className="sm:flex"
-          width="40"
-          height="60"
-          viewBox="0 0 71 88"
+          width="35"
+          height="45"
+          viewBox="0 0 42 52"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          className="ml-1 mb-1"
         >
           <path
-            d="M62.5476 41.4325H57.4762V24.8595C57.4762 22.6618 56.7638 20.5541 55.4957 19.0001C54.2276 17.446 52.5077 16.573 50.7143 16.573H37.1905V10.3581C37.1905 7.61098 36.3 4.97635 34.7148 3.03382C33.1297 1.0913 30.9798 0 28.7381 0C26.4964 0 24.3465 1.0913 22.7614 3.03382C21.1762 4.97635 20.2857 7.61098 20.2857 10.3581V16.573H6.7619C4.96854 16.573 3.24862 17.446 1.98052 19.0001C0.712413 20.5541 0 22.6618 0 24.8595V40.6039H5.07143C10.1429 40.6039 14.2 45.5757 14.2 51.7906C14.2 58.0055 10.1429 62.9774 5.07143 62.9774H0V78.7217C0 80.9195 0.712413 83.0272 1.98052 84.5812C3.24862 86.1352 4.96854 87.0082 6.7619 87.0082H19.6095V80.7934C19.6095 74.5785 23.6667 69.6066 28.7381 69.6066C33.8095 69.6066 37.8667 74.5785 37.8667 80.7934V87.0082H50.7143C52.5077 87.0082 54.2276 86.1352 55.4957 84.5812C56.7638 83.0272 57.4762 80.9195 57.4762 78.7217V62.1488H62.5476C64.7893 62.1488 66.9392 61.0574 68.5244 59.1149C70.1095 57.1724 71 54.5378 71 51.7906C71 49.0435 70.1095 46.4089 68.5244 44.4663C66.9392 42.5238 64.7893 41.4325 62.5476 41.4325Z"
-            fill="#D8AEF2"
+            d="M37 24.7619H34V14.8571C34 13.5437 33.5786 12.284 32.8284 11.3553C32.0783 10.4265 31.0609 9.90476 30 9.90476H22V6.19048C22 4.54866 21.4732 2.97409 20.5355 1.81315C19.5979 0.652209 18.3261 0 17 0C15.6739 0 14.4021 0.652209 13.4645 1.81315C12.5268 2.97409 12 4.54866 12 6.19048V9.90476H4C2.93913 9.90476 1.92172 10.4265 1.17157 11.3553C0.421427 12.284 0 13.5437 0 14.8571V24.2667H3C6 24.2667 8.4 27.2381 8.4 30.9524C8.4 34.6667 6 37.6381 3 37.6381H0V47.0476C0 48.3611 0.421427 49.6207 1.17157 50.5495C1.92172 51.4782 2.93913 52 4 52H11.6V48.2857C11.6 44.5714 14 41.6 17 41.6C20 41.6 22.4 44.5714 22.4 48.2857V52H30C31.0609 52 32.0783 51.4782 32.8284 50.5495C33.5786 49.6207 34 48.3611 34 47.0476V37.1429H37C38.3261 37.1429 39.5978 36.4907 40.5355 35.3297C41.4732 34.1688 42 32.5942 42 30.9524C42 29.3106 41.4732 27.736 40.5355 26.5751C39.5978 25.4141 38.3261 24.7619 37 24.7619Z"
+            fill={color}
           />
         </svg>
-        <span className="text-xl md:text-2xl">
-          Headless <br /> Ecommerce
-        </span>
       </div>
-      <span className="text-black dark:text-[#CBCBCB] text-sm  md:text-lg  md:leading-7">
-        This should make the service seem more real and intrest the people and
+      <h3 className="font-semibold text-2xl mt-3 text-center">
+        Headless <br /> Ecommerce
+      </h3>
+      <span className="font-extralight text-md text-center dark:text-[#ADADAE]">
+        This should make the service seem more real and interest the people and
         something more...
       </span>
-      <span className="text-lg font-semibold">Learn more </span>
+      <a href="/">
+        <span className={`text-lg text-black dark:text-white underline`}>Learn More</span>
+      </a>
     </div>
   );
 }

@@ -27,7 +27,7 @@ export default function Newsletter({ isVisible }: any) {
         viewport={{ once: true }}
         className="mx-auto container px-5 md:px-20 flex flex-col lg:flex-row -mt-[10%]"
       >
-        <div className="xl:w-1/2 text-center md:text-left w-full left px-10 md:px-20 py-10 md:py-20 bg-[#0F1023] rounded-l-xl">
+        <div className="xl:w-1/2 text-center md:text-left w-full left px-10 md:px-20 py-10 md:py-20 bg-[#0F1023] text-white  rounded-l-xl">
           <div className="flex flex-col w-full md:w-[80%] gap-5">
             <div className="text-3xl font-bold">
               Subscribe to our Weekly Newsletter

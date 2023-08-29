@@ -55,9 +55,9 @@ export default function Hamburger(props: any) {
       <div
         className={`${
           menuOpen ? "transition-x-0" : "translate-x-[100%]"
-        } mobile-menu-content backdrop-blur-md transition-all flex justify-center duration-500 h-[100vh] z-20 fixed overflow-visible bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
+        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl transition-all flex justify-center duration-500 h-[100vh] z-20 fixed overflow-visible bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
       >
-        <div className="close-btn flex flex-col justify-center text-white h-fit w-[80%] rounded-2xl py-[10%] bg-black bg-opacity-60 px-[10%]">
+        <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] bg-black dark:bg-opacity-60 bg-opacity-20 px-[10%]">
           <svg
             onClick={closeMenu}
             className="my-8 cursor-pointer hover:scale-105 text-secondary"
@@ -85,7 +85,7 @@ export default function Hamburger(props: any) {
                 {menu.map((eachMenu) => (
                   <li
                     key={menu.indexOf(eachMenu)}
-                    className="hover:scale-[105%] text-md transition-all duration-200 text-zinc-200 hover:text-white"
+                    className="lg:hover:scale-[105%] text-md transition-all duration-200 text-black dark:text-zinc-200 hover:text-white"
                   >
                     <a href={eachMenu.link}>{eachMenu.title}</a>
                   </li>

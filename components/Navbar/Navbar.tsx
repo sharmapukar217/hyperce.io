@@ -72,7 +72,10 @@ export default function Navbar() {
         <nav className="justify-center items-center hidden lg:flex">
           <ul className="flex gap-10">
             {navMenuItems.map((menuItem) => (
-              <li key={navMenuItems.indexOf(menuItem)} className="hover:scale-[105%] text-md transition-all duration-200  text-black dark:text-zinc-200 hover:text-white">
+              <li
+                key={navMenuItems.indexOf(menuItem)}
+                className="hover:scale-[105%] text-md transition-all duration-200  text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
+              >
                 <a href={menuItem.href}>{menuItem.name}</a>
               </li>
             ))}

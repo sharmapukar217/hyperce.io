@@ -1,7 +1,9 @@
 "use client";
-import { DarkModeProvider } from "@/contexts/theme_context";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
+import { Raleway } from "next/font/google";
+
+const raleway = Raleway({ subsets: ["cyrillic"] });
 
 export default function RootLayout({
   children,
@@ -9,21 +11,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"
-          rel="stylesheet"
-        />
-      </head>
-      <DarkModeProvider>
-        <body className="">
-          {children}
+    <html>
+      <head></head>
+      <body className={`dark:bg-[#02080F] ${raleway.className}`}>
+        {children}
+        <div className="dark:bg-[#02080F] bg-white">
           <Footer />
-
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-        </body>
-      </DarkModeProvider>
+        </div>
+      </body>
     </html>
   );
 }

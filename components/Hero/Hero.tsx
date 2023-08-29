@@ -5,24 +5,24 @@ import Typewriter from "./minute/Typewriter";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col pt-0 pb-20 mt-10 lg:py-20 lg:flex-row items-center gap-10 px-10 mx-auto container">
-      <div className="left lg:w-1/2 flex flex-col gap-5 text-left md:text-center">
+    <section className="flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 mx-auto container">
+      <div className="left lg:w-1/2 flex flex-col gap-5 text-center lg:text-left">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-6xl lg:text-7xl font-semibold"
+          className="text-6xl lg:text-7xl font-bold"
         >
           Your Ecommerce Suite Partner
         </motion.div>
 
-        <div className="text-md font-light md:text-xl sm:w-full lg:w-4/5">
+        <div className="text-md font-md md:text-xl sm:w-full lg:w-4/5">
           <Typewriter
             text="Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions."
           />
         </div>
-        <div className="flex gap-5 text-xl font-light">
+        <div className="flex gap-5 text-xl justify-center lg:justify-start font-light">
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
