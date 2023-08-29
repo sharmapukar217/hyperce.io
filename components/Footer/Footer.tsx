@@ -84,7 +84,7 @@ export default function Footer() {
       </div>
       <div className="border-[1px] w-[60%] dark:border-zinc-600 border-zinc-300 my-5"></div>
       <div>
-        <span className="text-sm text-zinc-400">
+        <span className="text-sm dark:text-zinc-400 text-zinc-600">
           © Copyright 2023 Hyerce inc. | All rights reserved.{" "}
         </span>
       </div>

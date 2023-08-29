@@ -14,10 +14,8 @@ export default function Newsletter({ isVisible }: any) {
         />
       </div>
 
-      <div
-        className="mx-auto container px-5 md:px-20 flex flex-col lg:flex-row -mt-[10%]"
-      >
-        <div className="xl:w-1/2 text-center md:text-left w-full left px-10 md:px-20 py-10 md:py-20 bg-[#0F1023] text-white  rounded-l-xl">
+      <div className="mx-auto container px-5 md:px-20 flex flex-col lg:flex-row -mt-[10%]">
+        <div className="xl:w-1/2 text-center md:text-left w-full left px-10 md:px-20 py-10 md:py-20 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  rounded-l-xl">
           <div className="flex flex-col w-full md:w-[80%] gap-5">
             <div className="text-3xl font-bold">
               Subscribe to our Weekly Newsletter
@@ -34,7 +32,10 @@ export default function Newsletter({ isVisible }: any) {
                 placeholder="hi@a.com"
                 id=""
               />
-              <button aria-aria-label="subscribe-newsletter" className="w-fit flex justify-center rounded-md items-center px-5 py-2 bg-[#357D8A]">
+              <button
+                aria-aria-label="subscribe-newsletter"
+                className="-mr-[1%] text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-2 bg-[#357D8A]"
+              >
                 Subscribe
               </button>
             </div>

@@ -19,9 +19,9 @@ export default function SolutionsCard({ color }: propTypes) {
           />
         </svg>
       </div>
-      <h3 className="font-semibold text-2xl mt-3 text-center">
+      <h2 className="font-semibold text-2xl mt-3 text-center">
         Headless <br /> Ecommerce
-      </h3>
+      </h2>
       <span className="font-extralight text-md text-center dark:text-[#ADADAE]">
         This should make the service seem more real and interest the people and
         something more...
