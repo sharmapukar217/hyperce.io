@@ -7,14 +7,9 @@ export default function Hero() {
   return (
     <section className="flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 mx-auto container">
       <div className="left lg:w-1/2 flex flex-col gap-5 text-center lg:text-left">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-6xl lg:text-7xl font-bold"
-        >
+        <div className=" text-6xl lg:text-7xl font-bold">
           Your Ecommerce Suite Partner
-        </motion.div>
+        </div>
 
         <div className="text-md font-md md:text-xl sm:w-full lg:w-4/5">
           <Typewriter
@@ -23,16 +18,12 @@ export default function Hero() {
           />
         </div>
         <div className="flex gap-5 text-xl justify-center lg:justify-start font-light">
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-5 py-1 hover:bg-[#4a8b96] text-white bg-[#357D8A] text-[1rem] rounded-full"
-          >
+          <button className="px-5 py-1 hover:scale-[105%] active:scale-95 transition duration-150 hover:bg-[#4a8b96] text-white bg-[#357D8A] text-[1rem] rounded-full">
             Learn More
-          </motion.button>
-          <motion.button className="px-5 py-1 border-2 hover:text-gray-500 border-gray-500 dark:border-zinc-200 dark:hover:text-[#e4e4e4] text-[1rem] rounded-full">
+          </button>
+          <button className="hover:scale-[105%] active:scale-95 transition duration-150 px-5 py-1 border-2 hover:text-gray-500 border-gray-500 dark:border-zinc-200 dark:hover:text-[#e4e4e4] text-[1rem] rounded-full">
             Contact Us
-          </motion.button>
+          </button>
         </div>
       </div>
       <div className="right lg:w-1/2 h-[40vh] lg:h-[60vh] flex items-center justify-center">

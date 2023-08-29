@@ -14,17 +14,7 @@ export default function Newsletter({ isVisible }: any) {
         />
       </div>
 
-      <motion.div
-        initial={{
-          scale: 0,
-        }}
-        whileInView={{
-          scale: 1,
-        }}
-        transition={{
-          duration: 0.25,
-        }}
-        viewport={{ once: true }}
+      <div
         className="mx-auto container px-5 md:px-20 flex flex-col lg:flex-row -mt-[10%]"
       >
         <div className="xl:w-1/2 text-center md:text-left w-full left px-10 md:px-20 py-10 md:py-20 bg-[#0F1023] text-white  rounded-l-xl">
@@ -53,7 +43,7 @@ export default function Newsletter({ isVisible }: any) {
         <div className="xl:w-1/2 w-full min-h-[200px] bg-white right lg:rounded-r-xl bg-[url('/news-back.png')] bg-cover">
           {/* <img src="/news-back.png" alt="" className="" /> */}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

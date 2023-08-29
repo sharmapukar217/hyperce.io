@@ -1,17 +1,11 @@
 import React from "react";
-import { DarkModeProvider, useDarkMode } from "@/contexts/theme_context";
-import { motion } from "framer-motion";
+import { useDarkMode } from "@/contexts/theme_context";
 
 const DarkModeToggle: React.FC = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.8 }}
-      onClick={toggleDarkMode}
-      className="flex items-center"
-    >
+    <button onClick={toggleDarkMode} className="hover:scale-[105%] active:scale-95 transition duration-150 flex items-center">
       {darkMode ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +42,7 @@ const DarkModeToggle: React.FC = () => {
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
       )}
-    </motion.button>
+    </button>
   );
 };
 

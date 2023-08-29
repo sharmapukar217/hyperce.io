@@ -28,7 +28,7 @@ export default function Mission() {
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
         </div>
       </div>
-      <div className="mx-20 my-10 border border-black"></div>
+      <div className="mx-20 my-10 border border-black dark:border-white"></div>
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-2 ">
           <div className="icon flex justify-center">
