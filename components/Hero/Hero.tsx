@@ -18,10 +18,10 @@ export default function Hero() {
           />
         </div>
         <div className="flex gap-5 text-xl justify-center lg:justify-start font-light">
-          <button className="px-5 py-1 hover:scale-[105%] active:scale-95 transition duration-150 hover:bg-[#4a8b96] text-white bg-[#357D8A] text-[1rem] rounded-full">
+          <button aria-label="learn-more-hero" className="px-5 py-1 hover:scale-[105%] active:scale-95 transition duration-150 hover:bg-[#4a8b96] text-white bg-[#357D8A] text-[1rem] rounded-full">
             Learn More
           </button>
-          <button className="hover:scale-[105%] active:scale-95 transition duration-150 px-5 py-1 border-2 hover:text-gray-500 border-gray-500 dark:border-zinc-200 dark:hover:text-[#e4e4e4] text-[1rem] rounded-full">
+          <button aria-label="conact-us-hero" className="hover:scale-[105%] active:scale-95 transition duration-150 px-5 py-1 border-2 hover:text-gray-500 border-gray-500 dark:border-zinc-200 dark:hover:text-[#e4e4e4] text-[1rem] rounded-full">
             Contact Us
           </button>
         </div>

@@ -33,6 +33,7 @@ export default function Hamburger(props: any) {
   return (
     <div className="lg:hidden">
       <button
+        aria-label="hamburger-menu"
         type="button"
         className="hamburger cursor-pointer flex items-center"
         onClick={openMenu}

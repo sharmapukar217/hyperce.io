@@ -83,7 +83,7 @@ export default function Navbar() {
         </nav>
         <div className="flex gap-10 items-center">
           <div className="cta gap-5 hidden md:flex">
-            <button className="flex gap-1 hover:gap-[0.4rem] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center">
+            <button aria-label="proposal-download" className="flex gap-1 hover:gap-[0.4rem] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center">
               <div className="svg">
                 <svg
                   width="20px"
@@ -110,7 +110,7 @@ export default function Navbar() {
               </div>
               <span className="text-md">Proposal</span>
             </button>
-            <button className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-500 rounded-full font-extralight bg-[#1f2937] text-[#fff] hover:scale-[105%]">
+            <button aria-label="quotation" className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-500 rounded-full font-extralight bg-[#1f2937] text-[#fff] hover:scale-[105%]">
               <span className="text-md">Quotation</span>
             </button>
           </div>
