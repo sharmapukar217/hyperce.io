@@ -1,6 +1,6 @@
 export default function Mission() {
   return (
-    <section className="flex flex-col lg:flex-row mx-auto container mt-10 mb-20 text-black dark:text-white h-fit">
+    <section className="flex flex-col lg:flex-row mx-auto container my-10 text-black dark:text-white h-fit">
       <div className="flex flex-col items-center">
         <div className="flex flex-col gap-2 ">
           <div className="icon flex justify-center">

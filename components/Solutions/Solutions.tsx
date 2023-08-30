@@ -5,18 +5,12 @@ import SolutionsCard from "./Card";
 
 export default function Solutions() {
   return (
-    <motion.section
-      id="solutions"
-      initial={{ y: 80 }}
-      animate={{ y: -20 }}
-      transition={{ duration: 1, delay: 0.5 }}
-      className="mx-auto container px-10"
-    >
+    <section className=" mx-auto container px-10">
       <div className="bg-[#F3F4F6] dark:bg-[#0E1625] w-full -mt-[6%] rounded-3xl pt-14 pb-8">
         <h1 className="text-3xl text-black dark:text-white md:text-5xl font-bold text-center pb-10">
           Our Solutions and Services
         </h1>
-        <div className="px-10 flex flex-col gap-16 my-10">
+        <div className="px-10 flex flex-col gap-12 my-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 ">
             <SolutionsCard color="#5083D0" />
             <SolutionsCard color="#2CC589" />
@@ -32,7 +26,10 @@ export default function Solutions() {
         </div>
         <div className="flex justify-center mt-10">
           <a href="/get-starte">
-            <button aria-label="all-services" className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] text-xl font-bold flex gap-2 items-center border-2 px-7 py-3 rounded-xl">
+            <button
+              aria-label="all-services"
+              className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] text-xl font-bold flex gap-2 items-center border-2 px-7 py-3 rounded-xl"
+            >
               <span>See all our Services </span>
               <span>
                 <svg width="30px" height="30px" viewBox="-3 0 32 32">
@@ -51,6 +48,6 @@ export default function Solutions() {
           </a>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

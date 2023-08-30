@@ -5,7 +5,7 @@ const DarkModeToggle: React.FC = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <button aria-label="toggle-dark-mode" onClick={toggleDarkMode} className="hover:scale-[105%] active:scale-95 transition duration-150 flex items-center">
+    <button aria-label="toggle-dark-mode" onClick={toggleDarkMode} className="hover:scale-[115%] active:scale-75 transition duration-150 flex items-center">
       {darkMode ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
