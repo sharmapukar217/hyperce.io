@@ -1,6 +1,6 @@
 export default function EachTest() {
   return (
-    <div className="flex flex-col bg-[#E3E5EB] rounded-xl max-w-fit items-center px-8 pb-5">
+    <div className="flex flex-col bg-[#E3E5EB] dark:bg-gray-800 text-black dark:text-white rounded-xl max-w-fit items-center px-8 mt-10 mb:mt-0 pb-5">
       <div className="avatar w-[100px] aspect-square flex justify-center -mt-[45px]">
         <img src="/biplab.png" alt="" className="rounded-full" />
       </div>

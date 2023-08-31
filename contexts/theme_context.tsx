@@ -12,7 +12,7 @@ interface DarkModeProviderProps {
 }
 
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode');
@@ -21,20 +21,20 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
     }
   }, []);
 
-  useEffect(() => {
-    const systemDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  // useEffect(() => {
+  //   const systemDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
-    const handleSystemDarkModeChange = (event: MediaQueryListEvent) => {
-      setDarkMode(event.matches);
-    };
+  //   const handleSystemDarkModeChange = (event: MediaQueryListEvent) => {
+  //     setDarkMode(event.matches);
+  //   };
 
-    systemDarkModeQuery.addEventListener('change', handleSystemDarkModeChange);
-    setDarkMode(systemDarkModeQuery.matches);
+  //   systemDarkModeQuery.addEventListener('change', handleSystemDarkModeChange);
+  //   setDarkMode(systemDarkModeQuery.matches);
 
-    return () => {
-      systemDarkModeQuery.removeEventListener('change', handleSystemDarkModeChange);
-    };
-  }, []);
+  //   return () => {
+  //     systemDarkModeQuery.removeEventListener('change', handleSystemDarkModeChange);
+  //   };
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));

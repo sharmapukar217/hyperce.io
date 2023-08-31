@@ -1,7 +1,4 @@
-"use client";
-
-import { AnimatePresence, easeIn, motion } from "framer-motion";
-export default function Newsletter({ isVisible }: any) {
+export default function Newsletter() {
   return (
     <section className="">
       <div>

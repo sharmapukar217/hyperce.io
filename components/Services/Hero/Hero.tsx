@@ -1,6 +1,6 @@
 "use client";
 
-import Typewriter from "./minute/Typewriter";
+import Typewriter from "./minute/Typerwriter";
 
 export default function Hero() {
   return (
