@@ -10,6 +10,7 @@ import Testimonials from "@/components/Home/Testimonials/Testimonials";
 import ContactForm from "@/components/Contact/ContactForm";
 import Responsibility from "@/components/Home/Responsibility/Responsibility";
 import Stats from "@/components/Home/Stats/Stats";
+import Watch from "@/components/Home/WatchVideo/Watch";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </main>
       <div className="bg-white dark:bg-[#02080F]">
         <Solutions />
+        <Watch />
         <Mission />
         <Stats />
         <Business />
