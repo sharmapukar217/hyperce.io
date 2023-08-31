@@ -10,7 +10,7 @@ export default function Solutions() {
         Hyperce Suite
       </h1>
       <div className="flex justify-center w-fit">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-4/5">
           <Card />
           <Card />
           <Card />

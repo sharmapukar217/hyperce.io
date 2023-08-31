@@ -14,12 +14,12 @@ export default function Watch() {
         </p>
       </div>
       <div className="container p-8 mx-auto xl:px-0 ">
-        <div className="w-full max-w-4xl mx-auto overflow-hidden lg:mb-20 rounded-2xl ">
-          <div className="relative flex justify-center">
+        <div className="w-full mx-auto lg:mb-20 rounded-2xl ">
+          <div className="relative flex justify-center ">
             <iframe
-              width="700"
-              height="400"
-              src="https://www.youtube.com/embed/5YJZy5ZOuG8?si=0TZpZxnTsF65BhCI"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/QUNrBEhvXWQ?si=UpUZG9Dgzxxj8tRR"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
