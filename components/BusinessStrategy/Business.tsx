@@ -72,7 +72,7 @@ export default function Business() {
           </div>
         </div>
       </div>
-      <div className="lg:w-1/2 flex justify-center">
+      <div className="lg:w-1/2 flex justify-end">
         <div className="lg:w-2/3">
           <img
             className="hidden dark:block"

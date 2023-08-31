@@ -10,7 +10,7 @@ export default function EachTest() {
       </div>
       <div className="stat flex flex-col mt-2 items-center">
         <div className="stars flex gap-3 my-2">
-          {[1, 2, 3, 4, 5].map((each) => (
+          {[1, 2, 3, 4, 5].map(() => (
             <>
               <svg
                 width="22"

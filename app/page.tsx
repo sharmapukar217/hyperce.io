@@ -8,6 +8,7 @@ import Solutions from "@/components/Solutions/Solutions";
 import Mission from "@/components/Mission/Mission";
 import Business from "@/components/BusinessStrategy/Business";
 import Testimonials from "@/components/Testimonials/Testimonials";
+import Responsibility from "@/components/Responsibility/Responsibility";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Solutions />
         <Mission />
         <Business />
+        <Responsibility />
         <Newsletter />
         <Partners />
         <Testimonials />

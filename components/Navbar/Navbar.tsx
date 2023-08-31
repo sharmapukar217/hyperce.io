@@ -41,23 +41,23 @@ export default function Navbar() {
               <g clip-path="url(#clip0_108_12)">
                 <path
                   d="M19.3835 25.3852C19.3835 25.1269 19.5259 24.8891 19.7546 24.7653L26.1673 21.2949C26.6421 21.038 27.2212 21.3786 27.2212 21.9149V36.3114C27.2212 36.5698 27.0789 36.8075 26.8501 36.9313L20.4375 40.4016C19.9627 40.6586 19.3835 40.318 19.3835 39.7818V25.3852Z"
-                  fill="currentColor"
+                  fill="#357D8A"
                 />
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M27.3132 8.59434C27.3132 8.02965 26.6777 7.6933 26.2043 8.00733L19.7854 12.2654C19.5428 12.4263 19.2257 12.4242 18.9852 12.2602L12.7907 8.03363C12.3179 7.71108 11.6742 8.04655 11.6742 8.61543V16.2695C11.6742 16.5021 11.7896 16.7196 11.9827 16.8514L18.9852 21.6293C19.2257 21.7933 19.5428 21.7954 19.7854 21.6344L26.9969 16.8506C27.1946 16.7196 27.3132 16.4994 27.3132 16.2636V8.59434Z"
-                  fill="currentColor"
+                  fill="#357D8A"
                 />
                 <path
                   d="M4.16694e-05 4.9988C4.16694e-05 4.76409 0.117668 4.54472 0.3139 4.41341L6.72648 0.122106C7.19975 -0.194571 7.83768 0.141521 7.83768 0.707498V14.0056C7.83768 14.2403 7.72005 14.4597 7.52378 14.5911L1.11119 18.8823C0.637968 19.199 0 18.8629 0 18.297L4.16694e-05 4.9988Z"
-                  fill="currentColor"
+                  fill="#357D8A"
                 />
                 <path
                   fill-rule="evenodd"
                   clip-rule="evenodd"
                   d="M0 31.7632C0 32.3279 0.63536 32.6642 1.10879 32.3502L7.52766 28.0921C7.77041 27.9312 8.0875 27.9333 8.32802 28.0973L14.5225 32.3239C14.9952 32.6465 15.639 32.311 15.639 31.7422V24.0879C15.639 23.8556 15.5236 23.6379 15.3305 23.5062L8.32802 18.7283C8.0875 18.5642 7.77041 18.5621 7.52766 18.7231L0.316258 23.5069C0.118625 23.6379 0 23.8582 0 24.0939V31.7632Z"
-                  fill="currentColor"
+                  fill="#357D8A"
                 />
               </g>
               {/* <defs>
@@ -110,13 +110,13 @@ export default function Navbar() {
               </div>
               <span className="text-md">Proposal</span>
             </button>
-            <button aria-label="quotation" className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-500 rounded-full font-extralight bg-[#1f2937] text-[#fff] hover:scale-[105%]">
+            <button aria-label="quotation" className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-500 rounded-full font-extralight dark:bg-transparent bg-[#1f2937] text-[#fff] hover:scale-[105%]">
               <span className="text-md">Quotation</span>
             </button>
           </div>
 
           <div className="flex items-center gap-5">
-            <div className="w-fit px-1 py-1  cursor-pointer transition-all duration-100 rounded-full">
+            <div className="w-fit px-1 py-1 cursor-pointer transition-all duration-100 rounded-full">
               <DarkModeToggle />
             </div>
             <div className="hamburger flex items-center">
