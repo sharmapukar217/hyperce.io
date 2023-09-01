@@ -2,16 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap"); */
-
 * {
-  /* font-family: "Raleway", sans-serif; */
   scroll-behavior: smooth;
 }
-
-/* .text-left {
-    text-align: left; 
-}*/
 
 .progress-bar {
   position: fixed;

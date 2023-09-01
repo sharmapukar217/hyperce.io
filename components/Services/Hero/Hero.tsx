@@ -1,38 +1,31 @@
-"use client";
-
-import Typewriter from "./minute/Typerwriter";
-
 export default function Hero() {
   return (
-    <section className="flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 mx-auto container">
-      <div className="left lg:w-1/2 flex flex-col gap-5 text-center lg:text-left">
-        <div className=" text-6xl lg:text-7xl font-bold">
-          Your Ecommerce Suite Partner
-        </div>
-
-        <div className="text-md font-md md:text-xl sm:w-full lg:w-4/5">
-          <Typewriter
-            text="Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions."
-          />
-        </div>
-        <div className="flex gap-5 text-2xl justify-center lg:justify-start font-bold mt-5">
-          <button
-            aria-label="learn-more-hero"
-            className="px-5 py-1 hover:scale-[105%] active:scale-95 transition duration-150 hover:bg-[#4a8b96] text-white bg-[#357D8A] text-[1rem] rounded-full"
+    <section className="flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 mx-auto container text-center justify-center">
+      <div className="py-[35%] md:py-[25%] lg:py-[15%] w-full">
+        <span className="text-6xl md:text-7xl font-bold">
+          Headless Ecommerce <br /> Development
+        </span>
+        <br />
+        <a
+          className="mt-10 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
+          href="#"
+        >
+          Learn More
+          <svg
+            className="w-2.5 h-2.5"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
           >
-            Learn More
-          </button>
-          <button
-            aria-label="conact-us-hero"
-            className="hover:scale-[105%] active:scale-95 transition duration-150 px-5 py-1 border-2 hover:text-gray-500 border-gray-500 dark:border-zinc-200 dark:hover:text-[#e4e4e4] text-[1rem] rounded-full"
-          >
-            Contact Us
-          </button>
-        </div>
-      </div>
-      <div className="right lg:w-1/2 h-[40vh] lg:h-[60vh] flex items-center justify-center">
-        <img src="/home.png" alt="" />
+            <path
+              d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </a>
       </div>
     </section>
   );

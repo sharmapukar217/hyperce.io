@@ -1,5 +1,5 @@
 import Typewriter from "./minute/Typerwriter";
-  
+
 export default function Hero() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
@@ -30,10 +30,8 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="max-w-3xl text-center mx-auto">
-            <h1 className="block font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-              Your Ecommerce Suite Partner
-            </h1>
+          <div className="">
+            <h1 className="font-extrabold text-6xl text-center">Your Ecommerce Suite Partner</h1>
           </div>
 
           <div className="max-w-3xl text-center mx-auto">
