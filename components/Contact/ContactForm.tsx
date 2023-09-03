@@ -1,9 +1,9 @@
 export default function ContactForm() {
   return (
-    <section className="mx-auto container px-10 pb-20 text-black dark:text-white text-center md:text-left">
+    <section className="mx-auto container px-20 pb-20 text-black dark:text-white text-center md:text-left">
       <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto mt-16">
         <div className="dark:text-gray-300">
-          <h2 className="font-medium text-4xl dark:text-white">
+          <h2 className="font-bold text-4xl mb-5 dark:text-white">
             Contact Hyperce
           </h2>
           <p className="text-lg leading-relaxed mt-3">

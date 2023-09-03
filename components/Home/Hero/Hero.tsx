@@ -45,7 +45,7 @@ export default function Hero() {
 
           <div className="text-center flex gap-5 justify-center">
             <a
-              className="text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
+              className="hover:scale-105 active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
               href="#"
             >
               Learn More

@@ -1,6 +1,6 @@
 export default function Business() {
   return (
-    <section className="flex flex-col-reverse lg:flex-row mx-auto container py-20 lg:py-[8%] px-10 gap-20 text-black dark:text-white">
+    <section className="flex flex-col-reverse lg:flex-row mx-auto container py-20 lg:py-[8%] px-20 gap-20 text-black dark:text-white">
       <div className="lg:w-1/2 flex flex-col gap-5">
         <h3 className="text-5xl font-bold mb-5">
           Just focus on your business strategy

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 mx-auto container text-center justify-center">
+    <section className="flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-20 mx-auto container text-center justify-center">
       <div className="py-[35%] md:py-[25%] lg:py-[15%] w-full">
         <span className="text-6xl md:text-7xl font-bold">
           Headless Ecommerce <br /> Development

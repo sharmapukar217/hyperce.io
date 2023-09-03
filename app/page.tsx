@@ -11,6 +11,8 @@ import ContactForm from "@/components/Contact/ContactForm";
 import Responsibility from "@/components/Home/Responsibility/Responsibility";
 import Stats from "@/components/Home/Stats/Stats";
 import Watch from "@/components/Home/WatchVideo/Watch";
+import Collaborative from "@/components/Home/Collaborative/Collaborative";
+import RequestQuote from "@/components/Home/RequestQuote/RequestQuote";
 
 export default function Home() {
   return (
@@ -26,10 +28,12 @@ export default function Home() {
         <Stats />
         <Business />
         <Responsibility />
+        <Collaborative />
         <Newsletter />
         <Partners />
         <Testimonials />
         <Message />
+        <RequestQuote />
         <ContactForm />
       </div>
     </>

@@ -25,7 +25,7 @@ export default function Navbar() {
   ];
   return (
     <DarkModeProvider>
-      <header className="flex items-center justify-between mx-auto container py-5 px-10">
+      <header className="flex items-center justify-between mx-auto container py-5 px-20">
         <div className="logo">
           <Logo />
         </div>
