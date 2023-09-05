@@ -47,7 +47,7 @@ export default function Responsibility() {
         <div className="mt-5 flex justify-center">
           <button
             type="button"
-            className="flex items-center gap-3 border-[1px] border-[#357D8A] px-4 py-1"
+            className="flex items-center gap-3 border-[1px] border-[#357D8A] hover:border-[white] transition-all duration-150 px-7 py-3 rounded-xl"
           >
             <div className="icon">
               <svg

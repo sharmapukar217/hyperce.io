@@ -21,7 +21,7 @@ export default function Home() {
         <Navbar />
         <Hero />
       </main>
-      <div className="bg-white dark:bg-[#02080F]">
+      <div className="bg-white dark:bg-[#0F172A]">
         <Solutions />
         <Watch />
         <Mission />

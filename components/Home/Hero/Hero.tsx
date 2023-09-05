@@ -2,91 +2,150 @@ import Typewriter from "./minute/Typerwriter";
 
 export default function Hero() {
   return (
-    <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
-      <div className="bg-gradient-to-b from-green-600/[.1] via-transparent">
-        <div className="max-w-[85rem] sm:px-6 lg:px-8 py-24 space-y-8 container mx-auto pb-20 px-10">
-          <div className="flex justify-center">
-            <a
-              className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
-              href="#solutions"
-            >
-              <p className="mr-2 inline-block text-sm">Checkout our Services</p>
-              <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
-                <svg
-                  className="w-2.5 h-2.5"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </span>
-            </a>
-          </div>
+    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container px-10 pb-0 md:pb-20">
+      <div className="md:w-1/2 sm:px-6 lg:px-8 space-y-8 container mx-auto px-10 pt-10 md:pt-20">
+        <div className="flex justify-center md:justify-start">
+          <a
+            className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
+            href="#solutions"
+          >
+            <p className="mr-2 inline-block text-sm">Checkout our Services</p>
+            <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
+              <svg
+                className="w-2.5 h-2.5"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
 
-          <div className="">
-            <h1 className="font-extrabold text-6xl text-center">Your Ecommerce Suite Partner</h1>
-          </div>
+        <div className="">
+          <h1 className="font-extrabold text-4xl md:text-6xl text-center md:text-left">
+            Your Ecommerce Suite Partner
+          </h1>
+        </div>
 
-          <div className="max-w-3xl text-center mx-auto">
-            <p className="text-lg ">
-              <Typewriter
-                text="Take the opportunity to elevate your business to new heights with our
+        <div className="text-center md:text-left mx-auto">
+          <p className="text-base md:text-lg ">
+            <Typewriter
+              text="Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions."
-              />
-            </p>
-          </div>
+            />
+          </p>
+        </div>
 
-          <div className="text-center flex gap-5 justify-center">
-            <a
-              className="hover:scale-105 active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
-              href="#"
+        <div className="text-center flex gap-5 justify-center md:justify-start">
+          <a
+            className="hover:scale-105 active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
+            href="#"
+          >
+            Learn More
+            <svg
+              className="w-2.5 h-2.5"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
             >
-              Learn More
-              <svg
-                className="w-2.5 h-2.5"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-            <a
-              className=" inline-flex justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2  text-sm  font-medium rounded-full py-3 px-6 "
-              href="#contact"
+              <path
+                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+          <a
+            className=" inline-flex justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2  text-sm  font-medium rounded-full py-3 px-6 "
+            href="#contact"
+          >
+            Contact Us
+            <svg
+              className="w-2.5 h-2.5"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
             >
-              Contact Us
-              <svg
-                className="w-2.5 h-2.5"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-          </div>
+              <path
+                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
+      <div className="md:w-1/2 items-center h-full flex my-auto justify-center md:justify-end lg:pr-20">
+        <svg
+          width="400"
+          height="400"
+          className="md:mt-[15%] scale-[60%] md:scale-[80%] lg:scale-[100%]"
+          viewBox="0 0 398 398"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="199" cy="199" r="199" fill="url(#paint0_linear_0_1)" />
+          <g clip-path="url(#clip0_0_1)">
+            <path
+              d="M220.217 213.219L221.15 212.862C221.451 212.751 221.855 212.584 222.28 212.44L223.773 211.921C224.344 211.718 224.92 211.553 225.589 211.337C226.248 211.131 226.985 210.887 227.711 210.696L230.098 210.028C230.93 209.808 231.766 209.623 232.676 209.4C236.605 208.446 240.597 207.768 244.621 207.372C246.763 207.144 248.898 207.048 251.093 207C253.245 206.997 255.451 207.049 257.606 207.25C259.749 207.448 261.879 207.773 263.983 208.225C266.049 208.678 268.08 209.276 270.061 210.015C273.989 211.487 277.618 213.553 280.827 216.235C282.446 217.563 283.889 219.114 285.384 220.65C286.857 222.209 288.331 223.804 289.759 225.468C292.681 228.835 295.423 232.352 297.976 236.006C300.571 239.695 302.974 243.576 305.18 247.557C306.274 249.551 307.318 251.572 308.312 253.617C309.291 255.656 310.22 257.719 311.099 259.803C312.833 263.961 314.339 268.15 315.586 272.303C316.797 276.312 317.81 280.379 318.62 284.489C320.187 292.347 320.83 299.56 320.967 304.922L321 306.839L320.998 308.56L320.924 311.347L320.819 313.134L320.765 313.765L320.134 313.819L318.347 313.924L315.56 313.998L313.839 314L311.922 313.967C306.56 313.83 299.347 313.188 291.489 311.62C287.379 310.809 283.313 309.797 279.303 308.586C275.15 307.339 270.96 305.834 266.803 304.099C264.719 303.221 262.656 302.292 260.617 301.313C258.579 300.319 256.552 299.278 254.557 298.18C250.576 295.975 246.695 293.572 243.006 290.977C239.352 288.424 235.835 285.681 232.468 282.76C230.804 281.331 229.208 279.858 227.65 278.385C226.114 276.89 224.563 275.446 223.235 273.827C220.553 270.618 218.487 266.989 217.015 263.061C216.276 261.08 215.678 259.049 215.225 256.984C214.773 254.879 214.448 252.75 214.25 250.607C214.049 248.451 213.997 246.245 214 244.094C214.047 241.899 214.144 239.764 214.372 237.622C214.768 233.598 215.446 229.606 216.4 225.676C216.623 224.767 216.808 223.931 217.028 223.099L217.696 220.711C217.887 219.986 218.131 219.248 218.337 218.589C218.553 217.92 218.718 217.344 218.921 216.773L219.44 215.28C219.584 214.856 219.751 214.452 219.862 214.151C220.095 213.537 220.217 213.219 220.217 213.219Z"
+              fill="#FFB636"
+            />
+            <path
+              d="M132.479 261.714L178.508 307.743C181.69 310.925 187.13 308.671 187.13 304.172L187.13 265.486C187.13 264.147 187.662 262.862 188.609 261.915L213.728 236.796L131 195.999L131 258.143C131 258.806 131.13 259.463 131.384 260.075C131.638 260.688 132.01 261.245 132.479 261.714Z"
+              fill="#357D8A"
+            />
+            <path
+              d="M254.797 192.789L279.916 167.67C280.863 166.723 282.148 166.191 283.487 166.191L322.173 166.191C326.672 166.191 328.926 160.751 325.744 157.57L279.715 111.54C278.768 110.593 277.483 110.061 276.144 110.061L214 110.061L254.797 192.789Z"
+              fill="#357D8A"
+            />
+            <path
+              d="M11.3464 9.03299L11.7507 8.98412C12.0167 8.95428 12.4267 8.8959 12.9326 8.854C13.9438 8.77084 15.5104 8.58234 17.3969 8.49283C21.2779 8.20592 26.7413 8.01294 33.3143 8.14815C39.8911 8.27954 47.5737 8.7429 55.9133 9.7471C58.0245 9.9718 60.1148 10.2924 62.2869 10.6021C64.4813 10.8897 66.6249 11.2991 68.8714 11.673C73.3445 12.4411 77.8965 13.3995 82.5398 14.5059C92.1765 16.811 101.654 19.7381 110.912 23.2689C120.447 26.9112 129.971 31.2822 139.222 36.4054C148.467 41.5362 157.483 47.3728 166.054 53.8963C174.633 60.4109 182.774 67.6035 190.39 75.3203C198.006 83.0371 205.108 91.2681 211.553 99.9162C213.164 102.079 214.747 104.254 216.263 106.478C217.803 108.679 219.275 110.926 220.734 113.166C223.63 117.668 226.34 122.265 228.882 126.91C233.885 136.053 238.259 145.526 241.975 155.264C245.498 164.517 248.436 173.981 250.772 183.602C251.888 188.236 252.871 192.763 253.646 197.229L254.238 200.516C254.425 201.606 254.578 202.711 254.747 203.784L255.232 206.967L255.634 210.124C256.683 218.419 257.197 226.05 257.377 232.579C257.564 239.101 257.402 244.533 257.159 248.369C257.089 250.237 256.91 251.793 256.839 252.793C256.803 253.293 256.747 253.7 256.721 253.963L256.676 254.364C256.338 257.399 253.928 259.701 251.015 260.025L250.615 260.069C250.352 260.096 249.945 260.151 249.444 260.188C248.445 260.259 246.889 260.438 245.021 260.508C241.185 260.751 235.753 260.912 229.231 260.726C222.702 260.546 215.071 260.032 206.776 258.983L203.619 258.581L200.435 258.095C199.363 257.927 198.258 257.773 197.168 257.587L193.881 256.995C189.415 256.22 184.887 255.237 180.254 254.12C170.633 251.785 161.168 248.847 151.916 245.324C142.179 241.607 132.705 237.233 123.562 232.231C118.918 229.688 114.32 226.978 109.818 224.083C107.578 222.624 105.33 221.151 103.13 219.611C100.905 218.096 98.7308 216.512 96.5681 214.902C87.9201 208.457 79.6884 201.355 71.9722 193.738C64.2553 186.122 57.0628 177.982 50.5482 169.403C44.0254 160.832 38.1881 151.815 33.0572 142.571C27.9341 133.319 23.5631 123.795 19.9208 114.261C16.39 105.002 13.4629 95.5252 11.1578 85.8885C10.0514 81.2452 9.09294 76.6933 8.32487 72.2201C7.95099 69.9737 7.54157 67.8301 7.25402 65.6357C6.94426 63.4635 6.62306 61.3739 6.39899 59.262C5.39479 50.9225 4.93141 43.2399 4.80001 36.6631C4.66481 30.0901 4.85714 24.6266 5.14469 20.7457C5.23419 18.8592 5.42335 17.2926 5.50587 16.2814C5.54777 15.7755 5.60553 15.3654 5.636 15.0995L5.68488 14.6951C6.04987 11.6679 8.44865 9.38211 11.3464 9.03299Z"
+              fill="#ADBBBC"
+            />
+            <path
+              d="M164.414 164.418L165.415 164.048C166.038 163.841 166.933 163.563 167.931 163.372C169.997 162.917 172.512 162.767 174.7 163.588C175.799 163.993 176.716 164.742 177.824 165.447L181.35 167.792L189.8 173.419C193.111 175.654 196.409 177.907 199.694 180.18C203.349 182.713 206.983 185.277 210.595 187.871L216.281 192.003L222.048 196.296C225.905 199.209 229.802 202.19 233.648 205.221C237.48 208.223 241.283 211.262 245.055 214.339C248.79 217.374 252.476 220.35 255.995 223.278L261.195 227.575C262.874 228.998 264.616 230.293 266.068 231.796C267.529 233.289 268.681 235.013 269.481 236.993C270.297 238.956 270.834 241.106 271.336 243.184C272.265 247.101 273.002 251.062 273.546 255.051C273.798 256.894 273.996 258.657 274.145 260.322C274.303 261.978 274.366 263.58 274.467 264.984C274.556 266.399 274.548 267.75 274.588 268.879C274.611 270.024 274.574 271.056 274.573 271.863C274.554 272.688 274.513 273.347 274.498 273.778L274.453 274.454L273.776 274.5C273.345 274.515 272.685 274.556 271.862 274.574C271.054 274.576 270.023 274.613 268.877 274.59C267.748 274.551 266.397 274.558 264.983 274.468C263.578 274.368 261.976 274.305 260.32 274.147C258.656 273.999 256.892 273.801 255.049 273.548C251.06 273.004 247.1 272.266 243.182 271.338C241.105 270.836 238.955 270.299 236.991 269.482C235.01 268.683 233.287 267.531 231.794 266.07C230.291 264.617 228.997 262.876 227.574 261.196L223.277 255.996C220.348 252.478 217.372 248.792 214.338 245.056C211.297 241.327 208.24 237.507 205.22 233.649C202.188 229.803 199.208 225.906 196.295 222.049L192.002 216.283L187.869 210.596C185.276 206.984 182.712 203.35 180.179 199.696C177.76 196.204 175.498 192.879 173.418 189.801L167.79 181.351L165.446 177.825C164.741 176.718 163.992 175.801 163.587 174.701C162.766 172.514 162.916 169.999 163.371 167.933C163.562 166.935 163.84 166.039 164.047 165.416L164.414 164.418Z"
+              fill="#357D8A"
+            />
+            <path
+              d="M131.18 100.144C150.171 100.144 165.566 115.539 165.566 134.529C165.566 153.519 150.171 168.914 131.18 168.914C112.19 168.914 96.7951 153.519 96.7951 134.529C96.7951 115.539 112.19 100.144 131.18 100.144ZM57.623 82.8595C57.623 94.948 67.4226 104.748 79.511 104.748C91.5995 104.748 101.399 94.948 101.399 82.8595C101.399 70.771 91.5995 60.9715 79.511 60.9715C67.4226 60.9715 57.623 70.771 57.623 82.8595Z"
+              fill="#2B3B47"
+            />
+          </g>
+          <defs>
+            <linearGradient
+              id="paint0_linear_0_1"
+              x1="162.5"
+              y1="35"
+              x2="199"
+              y2="398"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#D9D9D9" />
+              <stop offset="0.854438" stop-color="#D9D9D9" stop-opacity="0" />
+            </linearGradient>
+            <clipPath id="clip0_0_1">
+              <rect
+                width="325"
+                height="325"
+                fill="white"
+                transform="translate(0 330) rotate(-90)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </section>
   );
 }

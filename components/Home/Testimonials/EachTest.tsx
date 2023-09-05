@@ -1,15 +1,15 @@
 export default function EachTest() {
   return (
-    <div className="flex flex-col bg-[#e4e4e4] dark:bg-gray-800 text-black dark:text-white rounded-xl max-w-fit items-center px-8 mt-10 mb:mt-0 pb-5">
+    <div className="flex flex-col bg-[#e4e4e4] dark:bg-transparent dark:hover:bg-[#0F172A] text-black dark:text-white rounded-xl max-w-fit items-center px-4 md:px-8 mt-10 mb:mt-0 pb-5">
       <div className="avatar w-[70px] lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
         <img src="/biplab.png" alt="" className="rounded-full" />
       </div>
-      <div className="message mt-5 text-sm md:text-xl font-[500] text-center mx-5">
+      <div className="message mt-5 text-md font-[500] text-center text-[#9CA3AF]">
         “ We love the developlemt process of the team thery are really friendly
-        and help me do everything blah blah. something more .... ”
+        and help me do everything blah blah. ”
       </div>
       <div className="stat flex flex-col mt-2 items-center">
-        <div className="stars flex gap-3 my-2">
+        <div className="stars flex gap-3 mt-2 mb-5">
           {[1, 2, 3, 4, 5].map(() => (
             <>
               <svg
@@ -28,10 +28,10 @@ export default function EachTest() {
           ))}
         </div>
         <div className="w-full text-center">
-          <div className="name text-[#357D8A] font-bold text-lg">
+          <div className="name text-[#357D8A] font-bold text-xl">
             Ankur Gajurel{" "}
           </div>
-          <div className="pos text-sm">Dev, Hyperce LLCk</div>
+          <div className="pos text-base">Dev, Hyperce LLCk</div>
         </div>
       </div>
     </div>
