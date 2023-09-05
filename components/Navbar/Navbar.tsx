@@ -4,31 +4,10 @@ import DarkModeToggle from "../ThemeSwitch/DarkModeToggle";
 import HamburgerComponent from "./Hamburger";
 import Logo from "@/utils/assets/Logo";
 import { usePathname } from "next/navigation";
+import { navMenuItems } from "@/data/Navdata";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const navMenuItems = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "Solutions",
-      href: "#solutions",
-    },
-    {
-      name: "Portfolio",
-      href: "/portfolio",
-    },
-    {
-      name: "Services",
-      href: "/services",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
-  ];
   return (
     <DarkModeProvider>
       <header className="flex items-center justify-between mx-auto container py-5 px-20">
@@ -42,7 +21,9 @@ export default function Navbar() {
               <li
                 key={navMenuItems.indexOf(menuItem)}
                 className={`hover:scale-[105%] text-md transition-all duration-200 font-medium  ${
-                  pathname === menuItem.href ? `text-[#337684]` : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
+                  pathname === menuItem.href
+                    ? `text-[#337684]`
+                    : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
                 }`}
               >
                 <a href={menuItem.href}>{menuItem.name}</a>

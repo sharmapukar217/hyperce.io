@@ -1,24 +1,7 @@
 import Logo from "@/utils/assets/Logo";
+import { navMenuItems } from "@/data/Navdata";
 
 export default function Footer() {
-  const navMenuItems = [
-    {
-      name: "Solutions",
-      href: "",
-    },
-    {
-      name: "Portfolio",
-      href: "",
-    },
-    {
-      name: "Blogs",
-      href: "",
-    },
-    {
-      name: "Contact",
-      href: "",
-    },
-  ];
   return (
     <footer className="bg-white dark:bg-[#02080F] mx-auto container flex items-center flex-col py-10">
       <div className="top flex justify-center flex-col items-center gap-5">

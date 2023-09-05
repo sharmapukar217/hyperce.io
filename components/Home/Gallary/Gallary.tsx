@@ -75,7 +75,7 @@ export default function App() {
           <EachTest />
         </div>
       </div>
-      <div className="justify-center mt-5 text-xl font-bold flex gap-3">
+      <div className="justify-center text-black dark:text-white mt-5 text-xl font-bold flex gap-3">
         Slide
         <svg
           version="1.1"
@@ -87,7 +87,7 @@ export default function App() {
           <g>
             <polyline
               fill="none"
-              stroke="#000000"
+              stroke="currentColor"
               stroke-width="5"
               stroke-miterlimit="10"
               points="63,37 1,37 1,18 	"
@@ -95,7 +95,7 @@ export default function App() {
           </g>
           <polyline
             fill="none"
-            stroke="#000000"
+            stroke="currentColor"
             stroke-width="5"
             stroke-linejoin="bevel"
             stroke-miterlimit="10"
