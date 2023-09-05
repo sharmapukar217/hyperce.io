@@ -13,6 +13,7 @@ import Stats from "@/components/Home/Stats/Stats";
 import Watch from "@/components/Home/WatchVideo/Watch";
 import Collaborative from "@/components/Home/Collaborative/Collaborative";
 import RequestQuote from "@/components/Home/RequestQuote/RequestQuote";
+import Gallary from "@/components/Home/Gallary/Gallary";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
         <Collaborative />
         <Newsletter />
         <Partners />
-        <Testimonials />
+        <Gallary />
         <Message />
         <RequestQuote />
         <ContactForm />
