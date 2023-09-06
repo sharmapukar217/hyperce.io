@@ -3,7 +3,7 @@ import Typewriter from "./minute/Typerwriter";
 export default function Hero() {
   return (
     <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container px-10 pb-0 md:pb-20">
-      <div className="md:w-1/2 sm:px-6 lg:px-8 space-y-8 container mx-auto px-10 pt-10 md:pt-20">
+      <div className="md:w-1/2 sm:px-6 lg:px-8 space-y-8 container mx-auto pt-10 md:pt-20">
         <div className="flex justify-center md:justify-start">
           <a
             className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
@@ -44,9 +44,9 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="text-center flex gap-5 justify-center md:justify-start">
+        <div className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row">
           <a
-            className="hover:scale-105 active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
+            className="hover:scale-105 w-2/3 md:w-fit active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
             href="#"
           >
             Learn More
@@ -66,7 +66,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            className=" inline-flex justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2  text-sm  font-medium rounded-full py-3 px-6 "
+            className=" inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2  text-sm  font-medium rounded-full py-3 px-6 "
             href="#contact"
           >
             Contact Us

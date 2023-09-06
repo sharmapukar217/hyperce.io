@@ -10,7 +10,7 @@ export default function App() {
     loop: true,
     mode: "free",
     slides: {
-      perView: 1.5,
+      perView: 1.2,
       spacing: 15,
     },
   });

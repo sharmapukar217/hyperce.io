@@ -10,9 +10,13 @@ import WhyChoose from "@/components/Services/WhyChoose/WhyChoose";
 export default function Services() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
-      <main className=" bg-cover bg-center bg-[url('/services-bg.png')] min-h-screen">
-        <Navbar />
-        <Hero />
+      <main className=" bg-cover bg-center bg-[url('/services-bg.png')] min-h-screen flex items-center">
+        <div className="h-fit absolute top-0 w-full">
+          <Navbar />
+        </div>
+        <div className="h-max w-[100vw]">
+          <Hero />
+        </div>
       </main>
       <HeadlessEcom />
       <WhyChoose />

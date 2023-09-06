@@ -11,10 +11,10 @@ export default function Newsletter() {
         />
       </div>
 
-      <div className="mx-auto container px-20 flex flex-col lg:flex-row -mt-[10%]">
-        <div className="xl:w-1/2 text-center md:text-left w-full left md:px-20 py-10 md:py-20 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  rounded-l-xl">
+      <div className="mx-auto container px-10 md:px-20 flex flex-col lg:flex-row pb-10 -mt-[10%]">
+        <div className="xl:w-1/2 text-center md:text-left w-full left px-5 md:px-20 py-10 md:py-20 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  rounded-l-xl">
           <div className="flex flex-col w-full md:w-[80%] gap-5">
-            <div className="text-3xl font-bold">
+            <div className="text-2xl md:text-3xl font-bold">
               Subscribe to our Weekly Newsletter
             </div>
             <div>
@@ -23,7 +23,7 @@ export default function Newsletter() {
             </div>
             <div className="flex flex-col gap-2 md:flex-row md:gap-0 w-full items-center md:border-[2px] rounded-md border-[#357D8A]">
               <input
-                className="w-full h-10 bg-transparent px-5 focus:outline-none"
+                className="w-full border-2 dark:border-gray-600 h-10 bg-transparent px-5 focus:outline-none"
                 type="text"
                 name=""
                 placeholder="hi@a.com"

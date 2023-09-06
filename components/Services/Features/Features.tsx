@@ -14,7 +14,7 @@ export default function Features() {
         <div className="relative p-6 md:p-16">
           <div className="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
             <div className="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
-              <h2 className="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
+              <h2 className="text-xl md:text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </h2>
 
@@ -48,9 +48,8 @@ export default function Features() {
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
                         Ankur Dev Support
                       </span>
-                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
+                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200 text-xs md:text-inherit">
                         Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Blanditiis, similique.
                       </span>
                     </span>
                   </span>
@@ -83,9 +82,8 @@ export default function Features() {
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
                         Lorem, ipsum.
                       </span>
-                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
+                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200 text-xs md:text-inherit">
                         Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Atque dolorum vel ratione?
                       </span>
                     </span>
                   </span>
@@ -115,9 +113,8 @@ export default function Features() {
                       <span className="block text-lg font-semibold hs-tab-active:text-blue-600 text-gray-800 dark:hs-tab-active:text-blue-500 dark:text-gray-200">
                         Lorem, ipsum.
                       </span>
-                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">
+                      <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200 text-xs md:text-inherit">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Porro odit quia beatae?
                       </span>
                     </span>
                   </span>
