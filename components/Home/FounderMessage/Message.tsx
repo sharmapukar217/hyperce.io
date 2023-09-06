@@ -1,6 +1,6 @@
 export default function Message() {
   return (
-    <section className="mx-auto container flex px-20 justify-center py-20">
+    <section className="mx-auto container flex px-20 justify-center py-10 md:py-20">
       <div className="bg-[#ffffff] dark:bg-[#0E1625] w-[80%] flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 h-[50vh] bg-cover flex items-end  bg-[url('')]">
           <div className="h-full w-full object-center">
