@@ -10,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <DarkModeProvider>
-      <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-5 px-20">
+      <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-5 px-10 md:px-20">
         <div className="logo">
           <Logo />
         </div>

@@ -1,6 +1,6 @@
 export default function Watch() {
   return (
-    <section className="container mx-auto px-20 py-10">
+    <section className="container mx-auto px-10 md:px-20 py-10">
       <div className="flex w-full flex-col items-center justify-center text-center">
         <div className="text-sm font-bold tracking-wider text-[#357D8A] uppercase">
           Watch a video

@@ -1,6 +1,6 @@
 export default function RequestQuote() {
   return (
-    <section className="container mx-auto py-20 px-20">
+    <section className="container mx-auto px-10 py-20 md:px-20">
       <div className="">
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">

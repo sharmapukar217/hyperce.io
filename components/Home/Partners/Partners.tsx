@@ -1,6 +1,6 @@
 export default function Partners() {
   return (
-    <section className="pt-20 mx-auto container px-20">
+    <section className="pt-20 mx-auto container px-10 md:px-20">
       <h2 className="text-4xl font-bold dark:text-white text-center mb-10">Our Partners</h2>
       <div className="logos grid grid-cols-2 lg:grid-cols-4 gap-10 justify-center items-center text-black dark:text-white">
         <div className="flex justify-center">

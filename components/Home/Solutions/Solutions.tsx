@@ -4,7 +4,7 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="w-fit dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] py-20 mx-auto rounded-2xl"
+      className="w-fit dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] px-10 md:py-20 mx-auto rounded-2xl"
     >
       <h1 className="text-3xl text-black dark:text-white md:text-5xl font-bold text-center pb-10">
         Hyperce Suite
