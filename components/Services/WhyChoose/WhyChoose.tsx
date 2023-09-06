@@ -2,7 +2,7 @@ import Card from "./Card";
 
 export default function WhyChoose() {
   return (
-    <section className="text-black dark:text-white container mx-auto py-20 mb-20 px-10 dark:bg-gradient-to-r from-[#101525] to-[#212642] rounded-3xl">
+    <section className="  text-white container mx-auto py-20 mb-20 px-10 bg-gradient-to-r from-[#101525] to-[#212642] rounded-3xl">
       <div className="flex items-center flex-col gap-5">
         <span className="text-2xl md:text-4xl font-bold text-center">
           Why Choose Headless E-commerce ?!

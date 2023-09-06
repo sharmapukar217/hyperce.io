@@ -10,7 +10,7 @@ export default function App() {
     loop: true,
     mode: "free",
     slides: {
-      perView: 1,
+      perView: 1.5,
       spacing: 15,
     },
   });
@@ -18,7 +18,7 @@ export default function App() {
     loop: true,
     mode: "free-snap",
     slides: {
-      perView: 2,
+      perView: 2.5,
       spacing: 15,
     },
   });
@@ -26,13 +26,21 @@ export default function App() {
     loop: true,
     mode: "free-snap",
     slides: {
-      perView: 3,
-      spacing: 15,
+      perView: 2.5,
+      spacing: 60,
     },
   });
 
   return (
-    <section className="container mx-auto px-10 py-20 ">
+    <section className="container mx-auto px-10  lg:px-[10%] py-20 ">
+      <div className="text-center w-full md:pb-10 flex flex-col gap-2">
+        <h2 className="text-4xl text-black dark:text-white font-bold">
+          Testimonials
+        </h2>
+        <span className="text-lg text-black dark:text-white">
+          What do our customers say?
+        </span>
+      </div>
       <div ref={phoneref} className="keen-slider">
         <div className="keen-slider__slide md:hidden">
           <EachTest />

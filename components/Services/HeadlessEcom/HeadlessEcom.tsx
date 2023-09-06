@@ -56,7 +56,7 @@ export default function HeadlessEcom() {
               and blah blah blah bhlah blah something more...
             </p>
           </div>
-          <div className="h-fit px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="bg-[#172D41] dark:bg-transparent h-fit px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               width="45"
               height="45"
@@ -69,7 +69,7 @@ export default function HeadlessEcom() {
                 fill="#AEF2D7"
               />
             </svg>
-            <p className="text-black">
+            <p className="text-[#cbcbcb]">
               This should make the service seem more real and intrest the people
               and blah blah blah bhlah blah something more...
             </p>

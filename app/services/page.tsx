@@ -1,5 +1,7 @@
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
+import Features from "@/components/Services/Features/Features";
+import Gallary from "@/components/Services/Gallary/Gallary";
 
 import HeadlessEcom from "@/components/Services/HeadlessEcom/HeadlessEcom";
 import Hero from "@/components/Services/Hero/Hero";
@@ -14,7 +16,8 @@ export default function Services() {
       </main>
       <HeadlessEcom />
       <WhyChoose />
-
+      <Gallary />
+      <Features />
       <Newsletter />
     </div>
   );
