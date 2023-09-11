@@ -6,7 +6,6 @@ import Message from "@/components/Home/FounderMessage/Message";
 import Solutions from "@/components/Home/Solutions/Solutions";
 import Mission from "@/components/Home/BusinessStrategy/Mission/Mission";
 import Business from "@/components/Home/BusinessStrategy/Business";
-import Testimonials from "@/components/Home/Testimonials/Testimonials";
 import ContactForm from "@/components/Contact/ContactForm";
 import Responsibility from "@/components/Home/Responsibility/Responsibility";
 import Stats from "@/components/Home/Stats/Stats";
