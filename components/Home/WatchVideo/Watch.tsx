@@ -1,21 +1,47 @@
 export default function Watch() {
   return (
-    <section className="container mx-auto px-10 md:px-20 py-10">
-      <div className="flex w-full flex-col items-center justify-center text-center">
-        <div className="text-sm font-bold tracking-wider text-[#357D8A] uppercase">
+    <section className="container mx-auto px-10 md:px-20 py-10 flex flex-col lg:flex-row text-left">
+      <div className="flex w-full flex-col justify-center items-center md:items-start">
+        <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase">
           Watch a video
         </div>
-        <h2 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-          Lorem ipsum dolor sit amet.
+        <h2 className="hyperce-head-xl leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white">
+          Lorem ipsum dolor. 
         </h2>
-        <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
+        <p className="py-4 hyperce-sub-head leading-normal text-gray-500 w-4/5 dark:text-gray-300">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ea
           dolore minus aut magni unde sint repellat dolor magnam praesentium?
         </p>
+        <div className="text-white">
+          <button
+            type="button"
+            className="flex items-center gap-3 border-[1px] border-[#357D8A] hover:border-[white] transition-all duration-150 px-7 py-3 rounded-xl"
+          >
+            <div className="icon">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 42 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M37.7232 12.5947C37.5238 11.8539 37.1333 11.1783 36.5908 10.6358C36.0482 10.0933 35.3727 9.70277 34.6318 9.50337C32.6071 8.72112 12.9913 8.33787 7.30034 9.52525C6.55934 9.72472 5.88376 10.1154 5.34122 10.6581C4.79868 11.2007 4.40823 11.8764 4.20896 12.6175C3.29459 16.6276 3.22546 25.2971 4.23171 29.3974C4.43111 30.1383 4.82162 30.8138 5.36415 31.3563C5.90668 31.8988 6.5822 32.2893 7.32309 32.4887C11.3332 33.4119 30.3977 33.5414 34.6546 32.4887C35.3955 32.2893 36.071 31.8988 36.6135 31.3563C37.1561 30.8138 37.5466 30.1383 37.746 29.3974C38.7207 25.0285 38.7898 16.8962 37.7232 12.5947Z"
+                  stroke="currentColor"
+                />
+                <path
+                  d="M26.7466 20.9956L17.6055 15.7535V26.2377L26.7466 20.9956Z"
+                  stroke="currentColor"
+                />
+              </svg>
+            </div>
+            <span className="font-semibold">WATCH VIDEO</span>
+          </button>
+        </div>
       </div>
-      <div className="container p-8 mx-auto xl:px-0 ">
-        <div className="w-full mx-auto lg:mb-20 rounded-2xl ">
-          <div className="relative flex justify-center ">
+      <div className="container p-8 mx-auto xl:px-0 flex items-center">
+        <div className="w-full mx-auto rounded-2xl">
+          <div className="relative flex justify-center">
             <iframe
               width="560"
               height="315"

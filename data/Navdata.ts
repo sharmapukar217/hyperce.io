@@ -13,6 +13,6 @@ export const navMenuItems = [
     },
     {
         name: "Contact",
-        href: "/contact",
+        href: "/#contact",
     },
 ];

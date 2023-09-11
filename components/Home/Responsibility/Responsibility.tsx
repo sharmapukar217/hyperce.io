@@ -1,7 +1,7 @@
 export default function Responsibility() {
   return (
     <section className=" text-black dark:text-white flex justify-center pb-[8%] text-center px-10 md:px-20 mx-auto container">
-      <div className="md:w-1/2 flex flex-col gap-5">
+      <div className="flex flex-col gap-5 items-center">
         <div className="icon flex justify-center">
           <svg
             width="70px"
@@ -33,18 +33,18 @@ export default function Responsibility() {
             />
           </svg>
         </div>
-        <div className="text flex flex-col gap-5">
-          <h2 className="text-4xl font-medium">
+        <div className="text flex flex-col gap-5 items-center">
+          <h2 className="hyperce-head-xl">
             Your privacy is our responsibility
           </h2>
-          <p className="">
+          <p className="hyperce-sub-head w-2/3">
             We believe that trust is paramount in a relationship. We do not own
             or sell your data, and we most certainly do not bank on
             advertising-based business models. The only way we make money is
             from the software license fees you pay us.
           </p>
         </div>
-        <div className="mt-5 flex justify-center">
+        <div className=" flex justify-center">
           <button
             type="button"
             className="flex items-center gap-3 border-[1px] border-[#357D8A] hover:border-[white] transition-all duration-150 px-7 py-3 rounded-xl"

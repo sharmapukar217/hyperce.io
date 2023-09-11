@@ -9,7 +9,7 @@ export default function Hero() {
             className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
             href="#solutions"
           >
-            <p className="mr-2 inline-block text-sm">Checkout our Services</p>
+            <p className="hyperce-head-sup mr-2 inline-block">Checkout our Services</p>
             <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
               <svg
                 className="w-2.5 h-2.5"
@@ -30,13 +30,13 @@ export default function Hero() {
         </div>
 
         <div className="">
-          <h1 className="font-extrabold text-4xl md:text-6xl text-center md:text-left">
+          <h1 className="hyperce-head-xl text-center md:text-left">
             Your Ecommerce Suite Partner
           </h1>
         </div>
 
         <div className="text-center md:text-left mx-auto">
-          <p className="text-base md:text-lg ">
+          <p className="hyperce-sub-head">
             <Typewriter
               text="Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions."
@@ -46,7 +46,7 @@ export default function Hero() {
 
         <div className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row">
           <a
-            className="hover:scale-105 w-2/3 md:w-fit active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
+            className="hyperce-btn-text-low hover:scale-105 w-2/3 md:w-fit active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent rounded-full py-3 px-6"
             href="#"
           >
             Learn More
@@ -66,7 +66,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            className=" inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2  text-sm  font-medium rounded-full py-3 px-6 "
+            className="hyperce-btn-text-low inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
             href="#contact"
           >
             Contact Us

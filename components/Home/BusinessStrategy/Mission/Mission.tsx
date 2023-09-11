@@ -1,8 +1,8 @@
 export default function Mission() {
   return (
     <section className="flex flex-col lg:flex-row mx-auto container my-10 text-black dark:text-white h-fit">
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col gap-5 items-center">
+        <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">
             <svg
               width="80"
@@ -17,11 +17,11 @@ export default function Mission() {
               />
             </svg>
           </div>
-          <div className="title font-bold text-4xl text-center">
-            Our Mission{" "}
+          <div className="title hyperce-head-xl text-center">
+            Our Mission
           </div>
         </div>
-        <div className="w-2/3 mt-5 text-center dark:text-[#ADADAE]">
+        <div className="w-4/5 hyperce-sub-head text-center dark:text-[#ADADAE]">
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
           Take the opportunity to elevate your business to new heights with our
@@ -29,8 +29,8 @@ export default function Mission() {
         </div>
       </div>
       <div className="mx-20 my-10 border border-black dark:border-white"></div>
-      <div className="flex flex-col items-center">
-        <div className="flex flex-col gap-2 ">
+      <div className="flex flex-col gap-5 items-center">
+        <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">
             <svg
               width="80"
@@ -53,11 +53,11 @@ export default function Mission() {
               />
             </svg>
           </div>
-          <div className="title font-bold text-4xl text-center">
+          <div className="title hyperce-head-xl text-center">
             Our Vision{" "}
           </div>
         </div>
-        <div className="w-2/3 mt-5 text-center dark:text-[#ADADAE]">
+        <div className="w-4/5 hyperce-sub-head text-center dark:text-[#ADADAE]">
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
           Take the opportunity to elevate your business to new heights with our

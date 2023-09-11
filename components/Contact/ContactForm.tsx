@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <section className="mx-auto container px-10 md:px-20 pb-20 text-black dark:text-white text-center md:text-left">
+    <section className="mx-auto container px-10 md:px-20 pb-20 text-black dark:text-white text-center md:text-left" id="contact">
       <div className="flex flex-col md:flex-row gap-10 justify-between mx-auto mt-16">
         <div className="md:w-1/2 dark:text-gray-300">
           <h2 className="font-bold text-4xl mb-5 dark:text-white">

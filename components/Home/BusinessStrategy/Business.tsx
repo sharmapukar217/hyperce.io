@@ -2,10 +2,10 @@ export default function Business() {
   return (
     <section className="flex flex-col-reverse lg:flex-row mx-auto container py-20 lg:py-[8%] px-10 md:px-20 gap-20 text-black dark:text-white">
       <div className="lg:w-1/2 flex flex-col gap-5">
-        <h3 className="text-5xl font-bold mb-5">
+        <h3 className="hyperce-head-xl mb-5">
           Just focus on your business strategy
         </h3>
-        <div className="flex flex-col gap-5 text-base text-black dark:text-[#D1D5DB]">
+        <div className="flex flex-col gap-5 hyperce-sub-head text-black dark:text-[#D1D5DB] mb-5">
           <p>
             At hyperce, we shape ecommerce suite solutions to meet your unique
             needs. With top-notch services we provide, you can focus on your
@@ -18,7 +18,7 @@ export default function Business() {
             Partner with us to make your online business thrive.
           </p>
         </div>
-        <div className="needs flex flex-gap gap-3 flex-col w-fit">
+        <div className="needs flex flex-gap gap-5 flex-col w-fit">
           <div className="need-1 flex gap-4">
             <div className="icon px-3 flex items-center border-[1px] rounded-lg">
               <svg
@@ -73,7 +73,7 @@ export default function Business() {
         </div>
       </div>
       <div className="lg:w-1/2 flex justify-end">
-        <div className="lg:w-2/3">
+        <div className="">
           <img
             className="hidden dark:block"
             src="https://www.hyperce.io/images/milestone-dark.png"

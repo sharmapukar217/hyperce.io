@@ -30,9 +30,9 @@ export default function Home() {
         <Business />
         <Responsibility />
         <Collaborative />
-        <Newsletter />
         <Partners />
         <Gallary />
+        <Newsletter />
         <Message />
         <RequestQuote />
         <ContactForm />

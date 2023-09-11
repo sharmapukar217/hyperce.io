@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+// import { allClass } from './data/GroupingClass'
 
 const config: Config = {
   darkMode: 'class',

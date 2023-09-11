@@ -21,21 +21,6 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
     }
   }, []);
 
-  // useEffect(() => {
-  //   const systemDarkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-  //   const handleSystemDarkModeChange = (event: MediaQueryListEvent) => {
-  //     setDarkMode(event.matches);
-  //   };
-
-  //   systemDarkModeQuery.addEventListener('change', handleSystemDarkModeChange);
-  //   setDarkMode(systemDarkModeQuery.matches);
-
-  //   return () => {
-  //     systemDarkModeQuery.removeEventListener('change', handleSystemDarkModeChange);
-  //   };
-  // }, []);
-
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
     document.body.classList.toggle('dark', darkMode);

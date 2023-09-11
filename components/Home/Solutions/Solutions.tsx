@@ -1,31 +1,36 @@
 import Card from "./Card";
+import { solutions } from "@/data/Solutions";
 
 export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="w-fit dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] px-10 md:py-20 mx-auto rounded-2xl"
+      className="w-fit dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto container px-10 lg:px-20 py-10 md:py-16 rounded-2xl"
     >
-      <h1 className="text-3xl text-black dark:text-white md:text-5xl font-bold text-center pb-10">
+      <h1 className="hyperce-head-xl text-black dark:text-white text-center pb-10">
         Hyperce Suite
       </h1>
       <div className="flex justify-center w-fit">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-4/5">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {
+            solutions.map((solution) => (
+              <>
+                <Card
+                  name={solution.name}
+                  des={solution.des}
+                />
+              </>
+            ))
+          }
         </div>
       </div>
       <div className="flex justify-center mt-20">
-        <a href="/get-starte">
+        <a href="/services">
           <button
             aria-label="all-services"
-            className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] text-xl font-bold flex gap-2 items-center border-2 px-7 py-3 rounded-full"
+            className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] flex gap-2 items-center border-2 px-7 py-3 rounded-full"
           >
-            <span>See all our Services </span>
+            <span className="hyperce-btn-text-high">See all our Services</span>
             <span>
               <svg width="30px" height="30px" viewBox="-3 0 32 32">
                 <g id="icomoon-ignore"></g>
