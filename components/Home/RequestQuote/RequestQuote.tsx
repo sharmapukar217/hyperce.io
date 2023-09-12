@@ -4,7 +4,7 @@ export default function RequestQuote() {
       <div className="">
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">
-            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
+            <h1 className="block text-4xl font-bold text-gray-800 dark:text-white">
               Love Specific Product?
             </h1>
             <p className="mt-3 text-lg text-gray-800 dark:text-gray-400">

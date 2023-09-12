@@ -4,7 +4,7 @@ export default function ContactForm() {
       <div className="flex flex-col md:flex-row gap-10 justify-between mx-auto mt-16">
         <div className="md:w-1/2 dark:text-gray-300">
           <h2 className="font-bold text-4xl mb-5 dark:text-white">
-            Contact Hyperce
+            Write a message:
           </h2>
           <form
             method="POST"
@@ -49,7 +49,7 @@ export default function ContactForm() {
           </form>
         </div>
         <div className="flex flex-col">
-          <span className="mb-5 md:mb-10 text-3xl font-semibold">
+          <span className="mb-5 md:mb-10 text-4xl font-bold">
             Contact Info:{" "}
           </span>
           <div className="flex flex-col gap-7">
