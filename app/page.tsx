@@ -13,6 +13,7 @@ import Watch from "@/components/Home/WatchVideo/Watch";
 import Collaborative from "@/components/Home/Collaborative/Collaborative";
 import RequestQuote from "@/components/Home/RequestQuote/RequestQuote";
 import Gallary from "@/components/Home/Gallary/Gallary";
+import CardsSection from "@/components/Home/CardsSection/CardsSection";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Business />
         <Responsibility />
         <Collaborative />
+        <CardsSection />
         <Partners />
         <Gallary />
         <Newsletter />
