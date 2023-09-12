@@ -5,9 +5,9 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="w-fit dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto container px-10 lg:px-20 py-10 md:py-16 rounded-2xl"
+      className="w-11/12 dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto container px-10 lg:px-20 py-10 md:py-16 rounded-2xl"
     >
-      <h1 className="hyperce-head-xl text-black dark:text-white text-center pb-10">
+      <h1 className="hyperce-head-xl text-4xl text-black dark:text-white text-center pb-10">
         Hyperce Suite
       </h1>
       <div className="flex justify-center w-fit">

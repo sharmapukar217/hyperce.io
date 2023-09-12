@@ -1,8 +1,8 @@
 export default function EachTest() {
     return (
-      <div className="flex flex-col border-2 dark:hover:bg-[#0F172A] text-black dark:text-white rounded-xl items-center px-4 md:px-8 mt-10 mb:mt-0 pb-5">
+      <div className="flex flex-col border-2 border-gray-200 dark:border-gray-700 dark:hover:bg-[#0F172A] text-black dark:text-white rounded-xl items-center px-4 md:px-8 mt-10 mb:mt-0 pb-5">
         <div className="avatar w-[70px] lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
-          <img src="/biplab.png" alt="" className="rounded-full" />
+          <img src="/biplab.png" alt="image" className="rounded-full mt-1" />
         </div>
         <div className="message mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]">
           “ We love the developlemt process of the team thery are really friendly

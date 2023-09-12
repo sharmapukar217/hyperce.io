@@ -1,8 +1,15 @@
 export default function Partners() {
   return (
-    <section className="mx-auto container px-10 lg:px-20 py-10 md:py-16">
-      <h2 className="hyperce-head-xl dark:text-white text-center mb-10">Our Partners</h2>
-      <div className="logos grid grid-cols-2 lg:grid-cols-4 gap-10 justify-center items-center text-black dark:text-white">
+    <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16">
+      <h2 className="text-4xl font-bold dark:text-white text-center">Our Partners</h2>
+      <div className="flex mt-5 justify-center px-10 mb-10">
+        <span className="hyperce-sub-head text-gray-700 dark:text-gray-400 w-full lg:w-2/3 text-center">
+          Partners are the one who makes us what we are Partners are the one who
+          makes us what we are Partners are the one who makes us what we are{" "}
+        </span>
+      </div>
+
+      <div className="mt-10 logos grid grid-cols-2 lg:grid-cols-4 gap-10 justify-center items-center text-black dark:text-white">
         <div className="flex justify-center">
           <svg
             width="150"
@@ -254,12 +261,7 @@ export default function Partners() {
           </svg>
         </div>
       </div>
-      <div className="flex justify-center px-10">
-        <span className="hyperce-sub-head text-black dark:text-white mt-10 w-full lg:w-2/3 text-center">
-          Partners are the one who makes us what we are Partners are the one who
-          makes us what we are Partners are the one who makes us what we are{" "}
-        </span>
-      </div>
+      
     </section>
   );
 }

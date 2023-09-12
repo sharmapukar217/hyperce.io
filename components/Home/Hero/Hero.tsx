@@ -2,14 +2,14 @@ import Typewriter from "./minute/Typerwriter";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container px-10 pb-0 md:pb-20">
+    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container px-10 pb-0 py-10 md:pb-20">
       <div className="md:w-1/2 sm:px-6 lg:px-8 space-y-8 container mx-auto pt-10 md:pt-20">
         <div className="flex justify-center md:justify-start">
           <a
             className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
             href="#solutions"
           >
-            <p className="hyperce-head-sup mr-2 inline-block">Checkout our Services</p>
+            <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">Checkout our Services</p>
             <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
               <svg
                 className="w-2.5 h-2.5"
@@ -30,23 +30,23 @@ export default function Hero() {
         </div>
 
         <div className="">
-          <h1 className="hyperce-head-xl text-center md:text-left">
+          <h1 className="hyperce-head-xl text-center text-5xl text md:text-left">
             Your Ecommerce Suite Partner
           </h1>
         </div>
 
         <div className="text-center md:text-left mx-auto">
-          <p className="hyperce-sub-head">
+          <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
             <Typewriter
               text="Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions."
+              futuristic ecommerce platforms and AI-powered ecommerce solutions."
             />
           </p>
         </div>
 
         <div className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row">
           <a
-            className="hyperce-btn-text-low hover:scale-105 w-2/3 md:w-fit active:scale-95 transition ease-in-out duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent rounded-full py-3 px-6"
+            className="hyperce-btn-text-low hover:scale-105 w-2/3 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
             href="#"
           >
             Learn More

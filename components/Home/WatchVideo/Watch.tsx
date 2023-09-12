@@ -5,17 +5,17 @@ export default function Watch() {
         <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase">
           Watch a video
         </div>
-        <h2 className="hyperce-head-xl leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white">
+        <h2 className="hyperce-head-xl text-4xl leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white">
           Lorem ipsum dolor. 
         </h2>
-        <p className="py-4 hyperce-sub-head leading-normal text-gray-500 w-4/5 dark:text-gray-300">
+        <p className="py-4 hyperce-sub-head leading-normal text-gray-700 w-4/5 dark:text-gray-400">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ea
           dolore minus aut magni unde sint repellat dolor magnam praesentium?
         </p>
-        <div className="text-white">
+        <div className="text-white mt-4">
           <button
             type="button"
-            className="flex items-center gap-3 border-[1px] border-[#357D8A] hover:border-[white] transition-all duration-150 px-7 py-3 rounded-xl"
+            className="flex items-center gap-3 text-black dark:text-white border-[2px] border-[#357D8A] hover:border-[white] transition-all duration-150 px-7 py-3 rounded-xl"
           >
             <div className="icon">
               <svg

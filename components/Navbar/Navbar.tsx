@@ -10,7 +10,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <DarkModeProvider>
-      <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-5 px-10 md:px-20">
+      <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-8 px-10 md:px-20">
         <div className="logo">
           <Logo />
         </div>
@@ -20,7 +20,7 @@ export default function Navbar() {
             {navMenuItems.map((menuItem) => (
               <li
                 key={navMenuItems.indexOf(menuItem)}
-                className={`hover:scale-[105%] text-md transition-all duration-200 font-medium  ${
+                className={`hover:scale-[105%] text-base transition-all duration-200 font-medium  ${
                   pathname === menuItem.href
                     ? `text-[#337684]`
                     : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"

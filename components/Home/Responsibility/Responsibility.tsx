@@ -34,10 +34,10 @@ export default function Responsibility() {
           </svg>
         </div>
         <div className="text flex flex-col gap-5 items-center">
-          <h2 className="hyperce-head-xl">
+          <h2 className="text-4xl font-extrabold">
             Your privacy is our responsibility
           </h2>
-          <p className="hyperce-sub-head w-2/3">
+          <p className="hyperce-sub-head text-gray-500 dark:text-gray-400 w-2/3">
             We believe that trust is paramount in a relationship. We do not own
             or sell your data, and we most certainly do not bank on
             advertising-based business models. The only way we make money is

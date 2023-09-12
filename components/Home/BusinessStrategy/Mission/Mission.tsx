@@ -17,18 +17,20 @@ export default function Mission() {
               />
             </svg>
           </div>
-          <div className="title hyperce-head-xl text-center">
+          <div className="title text-4xl font-extrabold text-center">
             Our Mission
           </div>
         </div>
-        <div className="w-4/5 hyperce-sub-head text-center dark:text-[#ADADAE]">
+        <div className="w-4/5 hyperce-sub-head text-left text-gray-700 dark:text-gray-400">
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
         </div>
       </div>
-      <div className="mx-20 my-10 border border-black dark:border-white"></div>
+
+      <div className="mx-20 mt-32 border border-[#dcddde] dark:border-[#3e4857]"></div>
+
       <div className="flex flex-col gap-5 items-center">
         <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">
@@ -53,11 +55,11 @@ export default function Mission() {
               />
             </svg>
           </div>
-          <div className="title hyperce-head-xl text-center">
+          <div className="title text-4xl font-extrabold text-center">
             Our Vision{" "}
           </div>
         </div>
-        <div className="w-4/5 hyperce-sub-head text-center dark:text-[#ADADAE]">
+        <div className="w-4/5 hyperce-sub-head text-left text-gray-700 dark:text-gray-400">
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
           Take the opportunity to elevate your business to new heights with our

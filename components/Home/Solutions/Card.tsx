@@ -6,7 +6,7 @@ interface propTypes {
 export default function SolutionsCard(props: propTypes) {
   return (
     <div className="mt-5 flex gap-5 px-5 items-center">
-      <div className="icon w-fit px-5 py-3 h-fit border-[2px] bg-[#DAE4FF] rounded-md border-gray-200 scale-[110%]">
+      <div className="icon w-fit px-5 py-3 h-fit bg-[#DAE4FF] rounded-md scale-[110%]">
         <svg
           width="28"
           height="41"
@@ -44,7 +44,7 @@ export default function SolutionsCard(props: propTypes) {
       </div>
       <div className="text">
         <div className="title hyperce-card-header">{props.name}</div>
-        <div className="hyperce-card-description des w-4/5 xl:w-full">
+        <div className="hyperce-card-description des text-sm dark:text-gray-300 text-gray-800 w-4/5 xl:w-full">
           {props.des}
         </div>
       </div>

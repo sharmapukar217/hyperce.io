@@ -17,13 +17,13 @@ export default function Newsletter() {
             <div className="text-2xl md:text-3xl font-bold">
               Subscribe to our Weekly Newsletter
             </div>
-            <div>
+            <div className="text-gray-700 dark:text-gray-400">
               Stay update with all new offers and services we provide and more
               details{" "}
             </div>
             <div className="flex flex-col gap-2 md:flex-row md:gap-0 w-full items-center md:border-[2px] rounded-md border-[#357D8A]">
               <input
-                className="w-full border-2 dark:border-gray-600 h-10 bg-transparent px-5 focus:outline-none"
+                className="w-full h-10 bg-transparent px-5 py-6 focus:outline-none"
                 type="text"
                 name=""
                 placeholder="hi@a.com"
@@ -31,7 +31,7 @@ export default function Newsletter() {
               />
               <button
                 aria-aria-label="subscribe-newsletter"
-                className="-mr-[1%] text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-2 bg-[#357D8A]"
+                className="-mr-[1%] text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
               >
                 Subscribe
               </button>

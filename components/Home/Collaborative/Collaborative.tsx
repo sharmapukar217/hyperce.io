@@ -34,10 +34,10 @@ export default function Collaborative() {
           <div className="mt-5 sm:mt-10 lg:mt-0 lg:col-span-5">
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2 md:space-y-4">
-                <h2 className="hyperce-head-xl text-gray-800 dark:text-gray-200">
+                <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
                   Collaborative tools to grow your ecom business.
                 </h2>
-                <p className="hyperce-sub-head text-gray-200">
+                <p className="text-base dark:text-gray-400 text-gray-700">
                   Use our tools to explore your ideas and make your ecommerce
                   venture come to life. Lorem ipsum dolor sit amet.
                 </p>
@@ -64,7 +64,7 @@ export default function Collaborative() {
                     />
                   </svg>
 
-                  <span className="text-sm sm:text-base text-gray-200">
+                  <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
                     <span className="font-bold">Lorem, ipsum.</span> – Lorem,
                     ipsum.
                   </span>
@@ -90,7 +90,7 @@ export default function Collaborative() {
                     />
                   </svg>
 
-                  <span className="text-sm sm:text-base text-gray-200">
+                  <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
                     Lorem ipsum dolor sit.
                   </span>
                 </li>
@@ -115,7 +115,7 @@ export default function Collaborative() {
                     />
                   </svg>
 
-                  <span className="text-sm sm:text-base text-gray-200">
+                  <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
                     Lorem, ipsum. <span className="font-bold">lorem</span>
                   </span>
                 </li>
