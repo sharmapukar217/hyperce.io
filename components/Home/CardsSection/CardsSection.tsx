@@ -47,7 +47,7 @@ export default function CardsSection() {
                 </svg>
               </span>
 
-              <h2 className="mt-2 font-bold text text-white dark:text-white">Accountant</h2>
+              <h2 className="mt-2 font-bold text text-black dark:text-white">Accountant</h2>
 
               <p className="hidden sm:mt-1 sm:block sm:text-sm">
                 Lorem ipsum dolor sit amet consectetur.
@@ -77,7 +77,7 @@ export default function CardsSection() {
                 </svg>
               </span>
 
-              <h2 className="mt-2 font-bold text text-white dark:text-white">Accountant</h2>
+              <h2 className="mt-2 font-bold text text-black dark:text-white">Accountant</h2>
 
               <p className="hidden sm:mt-1 sm:block sm:text-sm">
                 Lorem ipsum dolor sit amet consectetur.
@@ -107,7 +107,7 @@ export default function CardsSection() {
                 </svg>
               </span>
 
-              <h2 className="mt-2 font-bold text text-white dark:text-white">Accountant</h2>
+              <h2 className="mt-2 font-bold text text-black dark:text-white">Accountant</h2>
 
               <p className="hidden sm:mt-1 sm:block sm:text-sm">
                 Lorem ipsum dolor sit amet consectetur.
@@ -137,7 +137,7 @@ export default function CardsSection() {
                 </svg>
               </span>
 
-              <h2 className="mt-2 font-bold text text-white dark:text-white">Accountant</h2>
+              <h2 className="mt-2 font-bold text text-black dark:text-white">Accountant</h2>
 
               <p className="hidden sm:mt-1 sm:block sm:text-sm">
                 Lorem ipsum dolor sit amet consectetur.
@@ -167,7 +167,7 @@ export default function CardsSection() {
                 </svg>
               </span>
 
-              <h2 className="mt-2 font-bold text text-white dark:text-white">Accountant</h2>
+              <h2 className="mt-2 font-bold text text-black dark:text-white">Accountant</h2>
 
               <p className="hidden sm:mt-1 sm:block sm:text-sm">
                 Lorem ipsum dolor sit amet consectetur.
@@ -197,7 +197,7 @@ export default function CardsSection() {
                 </svg>
               </span>
 
-              <h2 className="mt-2 font-bold text text-white dark:text-white">Accountant</h2>
+              <h2 className="mt-2 font-bold text text-black dark:text-white">Accountant</h2>
 
               <p className="hidden sm:mt-1 sm:block sm:text-sm">
                 Lorem ipsum dolor sit amet consectetur.
