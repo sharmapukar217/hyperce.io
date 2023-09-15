@@ -1,6 +1,6 @@
 export default function FAQ(faq: any) {
   return (
-    <>
+    <div key={faq.key}>
       <dt aria-expanded={faq.open ? "true" : "false"}>
         {faq.question}
         <img
@@ -11,6 +11,6 @@ export default function FAQ(faq: any) {
         />
       </dt>
       <dd className={!faq.open ? "hidden" : undefined}>{faq.answer}</dd>
-    </>
+    </div>
   );
 }
