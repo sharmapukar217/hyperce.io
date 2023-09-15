@@ -17,12 +17,14 @@ export default function AccordionDemo() {
         <div className="grid md:grid-cols-2 gap-5 md:gap-10 lg:gap-16 mt-10 md:mt-0 lg:min-h-[344px]">
           <div className="flex flex-col gap-5">
             {FAQdata.slice(0, 4).map((eachQns) => (
-              <Question
-                id={eachQns.id}
-                question={eachQns.name}
-                answer={eachQns.answer}
-                icon={eachQns.icon}
-              />
+              <div key={FAQdata.indexOf(eachQns)}>
+                <Question
+                  id={eachQns.id}
+                  question={eachQns.name}
+                  answer={eachQns.answer}
+                  icon={eachQns.icon}
+                />
+              </div>
             ))}
           </div>
           <div className="flex flex-col gap-5">
