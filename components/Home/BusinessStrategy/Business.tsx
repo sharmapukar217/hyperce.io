@@ -1,11 +1,11 @@
 export default function Business() {
   return (
-    <section className="flex flex-col-reverse lg:flex-row mx-auto container py-20 lg:py-[8%] px-10 md:px-20 gap-20 text-black dark:text-white">
+    <section className="flex flex-col-reverse lg:flex-row container mx-auto px-10 md:px-20 py-10 md:py-20 gap-20 text-black dark:text-white">
       <div className="lg:w-1/2 flex flex-col gap-5">
         <h3 className="text-4xl font-extrabold pe-4 mb-5">
           Just focus on your business strategy
         </h3>
-        <div className="flex flex-col gap-5 hyperce-sub-head text-black dark:text-gray-400 text-gray-700 mb-5">
+        <div className="flex flex-col gap-5 hyperce-sub-head dark:text-gray-400 text-gray-700 mb-5">
           <p>
             At hyperce, we shape ecommerce suite solutions to meet your unique
             needs. With top-notch services we provide, you can focus on your

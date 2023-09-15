@@ -11,11 +11,12 @@ export default function Solutions() {
         Hyperce Suite
       </h1>
       <div className="flex justify-center w-fit">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 w-4/5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-4/5">
           {
             solutions.map((solution) => (
               <>
                 <Card
+                  icon={solution.icon}  
                   name={solution.name}
                   des={solution.des}
                 />
@@ -30,7 +31,7 @@ export default function Solutions() {
             aria-label="all-services"
             className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] flex gap-2 items-center border-2 px-7 py-3 rounded-full"
           >
-            <span className="hyperce-btn-text-high">See all our Services</span>
+            <span className="hyperce-btn-text-high">See all our Solutions</span>
             <span>
               <svg width="30px" height="30px" viewBox="-3 0 32 32">
                 <g id="icomoon-ignore"></g>

@@ -9,7 +9,9 @@ export default function Hero() {
             className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
             href="#solutions"
           >
-            <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">Checkout our Services</p>
+            <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">
+              Checkout our Services
+            </p>
             <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
               <svg
                 className="w-2.5 h-2.5"
@@ -46,7 +48,7 @@ export default function Hero() {
 
         <div className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row">
           <a
-            className="hyperce-btn-text-low hover:scale-105 w-2/3 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
+            className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
             href="#"
           >
             Learn More

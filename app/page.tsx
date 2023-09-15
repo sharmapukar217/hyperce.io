@@ -14,6 +14,7 @@ import Collaborative from "@/components/Home/Collaborative/Collaborative";
 import RequestQuote from "@/components/Home/RequestQuote/RequestQuote";
 import Gallary from "@/components/Home/Gallary/Gallary";
 import CardsSection from "@/components/Home/CardsSection/CardsSection";
+import FAQ from "@/components/FAQ/FAQ";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
         <Partners />
         <Gallary />
         <Newsletter />
+        <FAQ />
         <Message />
         <RequestQuote />
         <ContactForm />
