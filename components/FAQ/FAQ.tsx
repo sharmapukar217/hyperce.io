@@ -29,12 +29,14 @@ export default function AccordionDemo() {
           </div>
           <div className="flex flex-col gap-5">
             {FAQdata.slice(4, 8).map((eachQns) => (
-              <Question
-                id={eachQns.id}
-                question={eachQns.name}
-                answer={eachQns.answer}
-                icon={eachQns.icon}
-              />
+              <div key={FAQdata.indexOf(eachQns)}>
+                <Question
+                  id={eachQns.id}
+                  question={eachQns.name}
+                  answer={eachQns.answer}
+                  icon={eachQns.icon}
+                />
+              </div>
             ))}
           </div>
         </div>
