@@ -17,7 +17,7 @@ export default function FAQs() {
       <div>
         <dl>
           {FAQdata.map((faq, index) => (
-            <FAQ faq={faq} key={index} />
+            <FAQ faq={faq} key={FAQdata.indexOf(faq)} />
           ))}
         </dl>
       </div>

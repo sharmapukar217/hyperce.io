@@ -1,14 +1,16 @@
 interface propTypes {
   name: string;
   des: string;
-  icon: string;
+  whiteIcon: string;
+  darkIcon: string;
 }
 
 export default function SolutionsCard(props: propTypes) {
   return (
-    <div className="mt-5 flex gap-5 px-5 items-center">
+    <div className="mt-5 flex gap-5 items-center">
       <div className="icon px-2 py-3 w-[200px] aspect-square bg-transparent rounded-md scale-[110%]">
-        <img className="object-contain h-full w-full" src={props.icon} alt="" />
+        <img className="dark:hidden object-contain h-full w-full" src={props.whiteIcon} alt="" />
+        <img className="hidden dark:block object-contain h-full w-full" src={props.darkIcon} alt="" />
       </div>
       <div className="text">
         <div className="title hyperce-card-header">{props.name}</div>

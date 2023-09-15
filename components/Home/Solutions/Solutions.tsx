@@ -5,24 +5,23 @@ export default function Solutions() {
   return (
     <section
       id="solutions"
-      className="w-11/12 dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto container px-10 lg:px-20 py-10 md:py-16 rounded-2xl"
+      className="w-11/12 dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto lg:px-20 py-10 md:py-16 rounded-2xl"
     >
       <h1 className="hyperce-head-xl text-4xl text-black dark:text-white text-center pb-10">
         Hyperce Suite
       </h1>
       <div className="flex justify-center w-fit">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-4/5">
-          {
-            solutions.map((solution) => (
-              <>
-                <Card
-                  icon={solution.icon}  
-                  name={solution.name}
-                  des={solution.des}
-                />
-              </>
-            ))
-          }
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
+          {solutions.map((solution) => (
+            <>
+              <Card
+                whiteIcon={solution.whiteIcon}
+                darkIcon={solution.darkIcon}
+                name={solution.name}
+                des={solution.des}
+              />
+            </>
+          ))}
         </div>
       </div>
       <div className="flex justify-center mt-20">

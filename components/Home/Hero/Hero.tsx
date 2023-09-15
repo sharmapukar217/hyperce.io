@@ -2,8 +2,8 @@ import Typewriter from "./minute/Typerwriter";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container px-10 pb-0 py-10 md:pb-20">
-      <div className="md:w-1/2 sm:px-6 lg:px-8 space-y-8 container mx-auto pt-10 md:pt-20">
+    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container pb-0 py-10 md:pb-20">
+      <div className="md:w-1/2 lg:px-8 space-y-8 md:container mx-auto md:pt-10 lg:pt-20">
         <div className="flex justify-center md:justify-start">
           <a
             className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"

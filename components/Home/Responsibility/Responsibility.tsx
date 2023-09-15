@@ -1,6 +1,6 @@
 export default function Responsibility() {
   return (
-    <section className=" text-black dark:text-white flex justify-center pb-[8%] text-center px-10 md:px-20 mx-auto container">
+    <section className=" text-black dark:text-white flex justify-center py-10 md:py-20 text-center px-10 md:px-20 mx-auto container">
       <div className="flex flex-col gap-5 items-center">
         <div className="icon flex justify-center">
           <svg

@@ -1,6 +1,6 @@
 export default function Mission() {
   return (
-    <section className="flex flex-col lg:flex-row mx-auto container my-10 text-black dark:text-white h-fit">
+    <section className="flex flex-col lg:flex-row mx-auto py-10 md:py-20 container text-black dark:text-white h-fit">
       <div className="flex flex-col gap-5 items-center">
         <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">
@@ -21,7 +21,7 @@ export default function Mission() {
             Our Mission
           </div>
         </div>
-        <div className="w-4/5 hyperce-sub-head text-left text-gray-700 dark:text-gray-400">
+        <div className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400">
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
           Take the opportunity to elevate your business to new heights with our
@@ -59,7 +59,7 @@ export default function Mission() {
             Our Vision{" "}
           </div>
         </div>
-        <div className="w-4/5 hyperce-sub-head text-left text-gray-700 dark:text-gray-400">
+        <div className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400">
           Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions.
           Take the opportunity to elevate your business to new heights with our

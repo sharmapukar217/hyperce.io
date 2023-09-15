@@ -9,7 +9,7 @@ export default function Footer() {
           <Logo />
         </div>
         <div className="nav">
-          <nav className="justify-center items-center hidden lg:flex">
+          <nav className="justify-center items-center">
             <ul className="flex gap-10">
               {navMenuItems.map((menuItem) => (
                 <li

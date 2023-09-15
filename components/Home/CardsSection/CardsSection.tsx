@@ -1,6 +1,6 @@
 export default function CardsSection() {
   return (
-    <section className="container mx-auto px-10 py-20 text-black dark:text-white">
+    <section className="container mx-auto px-10 py-10 md:py-20 text-black dark:text-white">
       <div className="">
         <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:items-center lg:gap-x-16">
           <div className="mx-auto text-center lg:text-left lg:mx-0 ltr:lg:text-left rtl:lg:text-right">

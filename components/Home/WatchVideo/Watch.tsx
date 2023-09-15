@@ -1,11 +1,11 @@
 export default function Watch() {
   return (
-    <section className="container mx-auto px-10 md:px-20 py-10 flex flex-col lg:flex-row text-left">
+    <section className="container mx-auto px-10 md:px-20 py-10 md:py-20 flex flex-col lg:flex-row text-left">
       <div className="flex w-full flex-col justify-center items-center md:items-start">
         <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase">
           Watch a video
         </div>
-        <h2 className="hyperce-head-xl text-4xl leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white">
+        <h2 className="hyperce-head-xl text-4xl text-center leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white">
           Lorem ipsum dolor. 
         </h2>
         <p className="py-4 hyperce-sub-head leading-normal text-gray-700 w-4/5 dark:text-gray-400">

@@ -1,6 +1,6 @@
 export default function Collaborative() {
   return (
-    <section className="px-10 lg:px-20 container mx-auto pb-20">
+    <section className="px-10 lg:px-20 container mx-auto py-10 md:py-20">
       <div className="">
         <div className="lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
           <div className="lg:col-span-7">
@@ -31,7 +31,7 @@ export default function Collaborative() {
             </div>
           </div>
 
-          <div className="mt-5 sm:mt-10 lg:mt-0 lg:col-span-5">
+          <div className="mt-10 md:mt-20 lg:col-span-5">
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2 md:space-y-4">
                 <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
