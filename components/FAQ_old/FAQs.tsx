@@ -1,6 +1,4 @@
 import { FAQdata } from "@/data/FAQdata";
-import Question from "./minute/Question";
-import FAQ from "./FAQ";
 
 export default function FAQs() {
   return (
@@ -17,7 +15,10 @@ export default function FAQs() {
       <div>
         <dl>
           {FAQdata.map((faq, index) => (
-            <FAQ faq={faq} key={FAQdata.indexOf(faq)} />
+            <div key={index}>
+              <dt>{faq.name}</dt>
+              <dd>{faq.answer}</dd>
+            </div>
           ))}
         </dl>
       </div>
