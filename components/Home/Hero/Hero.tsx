@@ -127,7 +127,7 @@ export default function Hero() {
         <svg
           width="400"
           height="400"
-          className="overflow-visible absolute z-10 md:mt-[10%] scale-[60%] md:scale-[80%] lg:scale-[100%]"
+          className="overflow-visible z-10 md:mt-[10%] scale-[60%] md:scale-[80%] lg:scale-[100%]"
           // viewBox="0 0 398 398"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
