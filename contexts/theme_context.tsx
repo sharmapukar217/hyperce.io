@@ -7,7 +7,7 @@ import React, {
 } from "react";
 
 interface DarkModeContextProps {
-  darkMode: boolean;
+  darkMode: boolean | undefined;
   toggleDarkMode: () => void;
 }
 
@@ -22,16 +22,7 @@ interface DarkModeProviderProps {
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
   children,
 }) => {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("darkMode")
-  ); // Set the default value to false
-
-  useEffect(() => {
-    const savedMode = localStorage.getItem("darkMode");
-    if (savedMode) {
-      setDarkMode(JSON.parse(savedMode));
-    }
-  }, []);
+  const [darkMode, setDarkMode] = useState<boolean | undefined>(JSON.parse(localStorage.getItem("darkMode") as any)); // Set the default value to false
 
   // Use a useEffect to update the CSS class immediately
   useEffect(() => {
