@@ -1,33 +1,40 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 
 interface DarkModeContextProps {
-  darkMode: boolean;
+  darkMode: boolean | undefined;
   toggleDarkMode: () => void;
 }
 
-const DarkModeContext = createContext<DarkModeContextProps | undefined>(undefined);
+const DarkModeContext = createContext<DarkModeContextProps | undefined>(
+  undefined
+);
 
 interface DarkModeProviderProps {
   children: ReactNode;
 }
 
-export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(true);
+export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({
+  children,
+}) => {
+  const [darkMode, setDarkMode] = useState<boolean | undefined>(JSON.parse(localStorage.getItem("darkMode") as any)); // Set the default value to false
 
+  // Use a useEffect to update the CSS class immediately
   useEffect(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode) {
-      setDarkMode(JSON.parse(savedMode));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
-    document.body.classList.toggle('dark', darkMode);
+    document.body.classList.toggle("dark", darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
+    setDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("darkMode", JSON.stringify(newMode)); // Update local storage
+      return newMode;
+    });
   };
 
   return (
@@ -40,7 +47,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
 export const useDarkMode = () => {
   const context = useContext(DarkModeContext);
   if (!context) {
-    throw new Error('useDarkMode must be used within a DarkModeProvider');
+    throw new Error("useDarkMode must be used within a DarkModeProvider");
   }
   return context;
 };
