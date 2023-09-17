@@ -15,6 +15,7 @@ import RequestQuote from "@/components/Home/RequestQuote/RequestQuote";
 import Gallary from "@/components/Home/Gallary/Gallary";
 import CardsSection from "@/components/Home/CardsSection/CardsSection";
 import FAQ from "@/components/FAQ/FAQ";
+import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 
 export default function Home() {
   return (
@@ -24,21 +25,23 @@ export default function Home() {
         <Hero />
       </main>
       <div className="bg-white dark:bg-[#0F172A]">
-        <Solutions />
-        <Watch />
-        <Mission />
-        <Stats />
-        <Business />
-        <Responsibility />
-        <Collaborative />
-        <CardsSection />
-        <Partners />
-        <Gallary />
-        <Newsletter />
-        <FAQ />
-        <Message />
-        <RequestQuote />
-        <ContactForm />
+        <AnimateWrapper>
+          <div data-aos="fade-up"><Solutions /></div>
+          <div data-aos="fade-up"><Watch /></div>
+          <div data-aos="fade-up"><Mission /></div>
+          <div data-aos="fade-up"><Stats /></div>
+          <div data-aos="fade-up"><Business /></div>
+          <div data-aos="fade-up"><Responsibility /></div>
+          <div data-aos="fade-up"><Collaborative /></div>
+          <div data-aos="fade-up"><CardsSection /></div>
+          <div data-aos="fade-up"><Partners /></div>
+          <div data-aos="fade-up"><Gallary /></div>
+          <div data-aos="fade-up"><Newsletter /></div>
+          <div data-aos="fade-up"><FAQ /></div>
+          <div data-aos="fade-up"><Message /></div>
+          <div data-aos="fade-up"><RequestQuote /></div>
+          <div data-aos="fade-up"><ContactForm /></div>
+        </AnimateWrapper>
       </div>
     </>
   );

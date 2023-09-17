@@ -1,3 +1,5 @@
+import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
+
 export default function Mission() {
   return (
     <section className="flex flex-col lg:flex-row mx-auto py-10 md:py-20 container text-black dark:text-white h-fit">
@@ -21,12 +23,18 @@ export default function Mission() {
             Our Mission
           </div>
         </div>
-        <div className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400">
-          Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions.
-          Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions.
-        </div>
+        <AnimateWrapper>
+          <div
+            data-aos="fade-up"
+            className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400"
+          >
+            Take the opportunity to elevate your business to new heights with
+            our futuristic ecommerce platforms and AI-powered ecommerce
+            solutions. Take the opportunity to elevate your business to new
+            heights with our futuristic ecommerce platforms and AI-powered
+            ecommerce solutions.
+          </div>
+        </AnimateWrapper>
       </div>
 
       <div className="mx-20 mt-32 border border-[#dcddde] dark:border-[#3e4857]"></div>
@@ -59,12 +67,18 @@ export default function Mission() {
             Our Vision{" "}
           </div>
         </div>
-        <div className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400">
-          Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions.
-          Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions.
-        </div>
+        <AnimateWrapper>
+          <div
+            data-aos="fade-up"
+            className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400"
+          >
+            Take the opportunity to elevate your business to new heights with
+            our futuristic ecommerce platforms and AI-powered ecommerce
+            solutions. Take the opportunity to elevate your business to new
+            heights with our futuristic ecommerce platforms and AI-powered
+            ecommerce solutions.
+          </div>
+        </AnimateWrapper>
       </div>
     </section>
   );

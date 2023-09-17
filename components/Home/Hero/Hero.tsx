@@ -1,10 +1,23 @@
+"use client";
+import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 import Typewriter from "./minute/Typerwriter";
+
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container pb-0 py-10 md:pb-20">
-      <div className="md:w-1/2 lg:px-8 space-y-8 md:container mx-auto md:pt-10 lg:pt-20">
-        <div className="flex justify-center md:justify-start">
+    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row mx-auto container pt-10 pb-[10%]">
+      {/* <AnimateWrapper> */}
+      <div
+        // --aos="fade-right"
+        className="md:w-1/2 lg:px-8 space-y-8 md:container mx-auto md:pt-10 lg:pt-20"
+      >
+        <motion.div
+          initial={{ x: -150 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-center md:justify-start"
+        >
           <a
             className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
             href="#solutions"
@@ -29,13 +42,25 @@ export default function Hero() {
               </svg>
             </span>
           </a>
-        </div>
+        </motion.div>
 
-        <div className="">
-          <h1 className="hyperce-head-xl text-center text-5xl text md:text-left">
-            Your Ecommerce Suite Partner
+        <motion.div
+          initial={{ x: -150 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+          className=""
+        >
+          <h1
+            className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left"
+            style={
+              {
+                // fontFamily: "Times New Roman",
+              }
+            }
+          >
+            Your Ecommerce <br /> Suite Partner
           </h1>
-        </div>
+        </motion.div>
 
         <div className="text-center md:text-left mx-auto">
           <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
@@ -46,7 +71,12 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row">
+        <motion.div
+          initial={{ x: -150 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row"
+        >
           <a
             className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
             href="#"
@@ -87,19 +117,47 @@ export default function Hero() {
               />
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
-      <div className="md:w-1/2 items-center h-full flex my-auto justify-center md:justify-end lg:pr-20">
+
+      <div
+        // data-aos="fade-left"
+        className="md:w-1/2 items-center relative h-full flex my-auto justify-center md:justify-end lg:pr-20"
+      >
         <svg
           width="400"
           height="400"
-          className="md:mt-[15%] scale-[60%] md:scale-[80%] lg:scale-[100%]"
-          viewBox="0 0 398 398"
+          className="overflow-visible absolute z-10 md:mt-[10%] scale-[60%] md:scale-[80%] lg:scale-[100%]"
+          // viewBox="0 0 398 398"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="199" cy="199" r="199" fill="url(#paint0_linear_0_1)" />
-          <g clip-path="url(#clip0_0_1)">
+          <motion.circle
+            initial={{ x: -500, y: -500 }}
+            animate={{ x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+            cx="199"
+            cy="199"
+            className={`hidden dark:block`}
+            r="199"
+            fill="url(#bg-for-dark)"
+          />
+          <motion.circle
+            initial={{ x: -500, y: -500 }}
+            animate={{ x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+            cx="199"
+            cy="199"
+            r="199"
+            className={`dark:hidden`}
+            fill="url(#bg-for-light)"
+          />
+          <motion.g
+            initial={{ x: 500, y: 500 }}
+            animate={{ x: 0, y: 0 }}
+            transition={{ duration: 1 }}
+            clip-path="url(#clip0_0_1)"
+          >
             <path
               d="M220.217 213.219L221.15 212.862C221.451 212.751 221.855 212.584 222.28 212.44L223.773 211.921C224.344 211.718 224.92 211.553 225.589 211.337C226.248 211.131 226.985 210.887 227.711 210.696L230.098 210.028C230.93 209.808 231.766 209.623 232.676 209.4C236.605 208.446 240.597 207.768 244.621 207.372C246.763 207.144 248.898 207.048 251.093 207C253.245 206.997 255.451 207.049 257.606 207.25C259.749 207.448 261.879 207.773 263.983 208.225C266.049 208.678 268.08 209.276 270.061 210.015C273.989 211.487 277.618 213.553 280.827 216.235C282.446 217.563 283.889 219.114 285.384 220.65C286.857 222.209 288.331 223.804 289.759 225.468C292.681 228.835 295.423 232.352 297.976 236.006C300.571 239.695 302.974 243.576 305.18 247.557C306.274 249.551 307.318 251.572 308.312 253.617C309.291 255.656 310.22 257.719 311.099 259.803C312.833 263.961 314.339 268.15 315.586 272.303C316.797 276.312 317.81 280.379 318.62 284.489C320.187 292.347 320.83 299.56 320.967 304.922L321 306.839L320.998 308.56L320.924 311.347L320.819 313.134L320.765 313.765L320.134 313.819L318.347 313.924L315.56 313.998L313.839 314L311.922 313.967C306.56 313.83 299.347 313.188 291.489 311.62C287.379 310.809 283.313 309.797 279.303 308.586C275.15 307.339 270.96 305.834 266.803 304.099C264.719 303.221 262.656 302.292 260.617 301.313C258.579 300.319 256.552 299.278 254.557 298.18C250.576 295.975 246.695 293.572 243.006 290.977C239.352 288.424 235.835 285.681 232.468 282.76C230.804 281.331 229.208 279.858 227.65 278.385C226.114 276.89 224.563 275.446 223.235 273.827C220.553 270.618 218.487 266.989 217.015 263.061C216.276 261.08 215.678 259.049 215.225 256.984C214.773 254.879 214.448 252.75 214.25 250.607C214.049 248.451 213.997 246.245 214 244.094C214.047 241.899 214.144 239.764 214.372 237.622C214.768 233.598 215.446 229.606 216.4 225.676C216.623 224.767 216.808 223.931 217.028 223.099L217.696 220.711C217.887 219.986 218.131 219.248 218.337 218.589C218.553 217.92 218.718 217.344 218.921 216.773L219.44 215.28C219.584 214.856 219.751 214.452 219.862 214.151C220.095 213.537 220.217 213.219 220.217 213.219Z"
               fill="#FFB636"
@@ -124,10 +182,10 @@ export default function Hero() {
               d="M131.18 100.144C150.171 100.144 165.566 115.539 165.566 134.529C165.566 153.519 150.171 168.914 131.18 168.914C112.19 168.914 96.7951 153.519 96.7951 134.529C96.7951 115.539 112.19 100.144 131.18 100.144ZM57.623 82.8595C57.623 94.948 67.4226 104.748 79.511 104.748C91.5995 104.748 101.399 94.948 101.399 82.8595C101.399 70.771 91.5995 60.9715 79.511 60.9715C67.4226 60.9715 57.623 70.771 57.623 82.8595Z"
               fill="#2B3B47"
             />
-          </g>
+          </motion.g>
           <defs>
             <linearGradient
-              id="paint0_linear_0_1"
+              id="bg-for-dark"
               x1="162.5"
               y1="35"
               x2="199"
@@ -135,6 +193,17 @@ export default function Hero() {
               gradientUnits="userSpaceOnUse"
             >
               <stop stop-color="#D9D9D9" />
+              <stop offset="0.854438" stop-color="#D9D9D9" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient
+              id="bg-for-light"
+              x1="162.5"
+              y1="35"
+              x2="199"
+              y2="398"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#ffd541" />
               <stop offset="0.854438" stop-color="#D9D9D9" stop-opacity="0" />
             </linearGradient>
             <clipPath id="clip0_0_1">
@@ -148,6 +217,7 @@ export default function Hero() {
           </defs>
         </svg>
       </div>
+      {/* </AnimateWrapper> */}
     </section>
   );
 }

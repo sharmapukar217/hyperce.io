@@ -1,8 +1,8 @@
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
-import { Raleway } from "next/font/google";
+import { Raleway, Public_Sans } from "next/font/google";
 
-const raleway = Raleway({ subsets: ["cyrillic"] });
+const raleway = Raleway({ subsets: ["vietnamese"] });
 
 export default function RootLayout({
   children,
@@ -11,6 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head></head>
       <body className={`dark:bg-[#02080F] ${raleway.className}`}>
         {children}
         <div className="dark:bg-[#02080F] bg-white">
