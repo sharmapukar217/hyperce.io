@@ -70,7 +70,7 @@ export default function Responsibility() {
                   />
                 </svg>
               </div>
-              <span className="font-semibold">WATCH VIDEO</span>
+              <span className="font-semibold">SEE HOW</span>
             </button>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
-import { Raleway, Public_Sans } from "next/font/google";
+import { Raleway, Public_Sans, DM_Sans } from "next/font/google";
 
-const raleway = Raleway({ subsets: ["vietnamese"] });
+const raleway = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,

@@ -3,12 +3,17 @@ export default function HeadlessEcom() {
     <section className="container mx-auto px-10 py-20 text-black dark:text-white">
       <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
         <p className="leading-wide text-2xl font-extrabold">
-          A Very Catchy Detail About Headless{" "}
+          Enjoy easy, one-stop inventory and payment management with Hyperce
+          Headless.
         </p>
         <p className="w-2/3 text-base">
-          powered ecommerce solutions. Take the opportunity to elevate your
-          business to new heights with our futuristic ecommerce platforms and
-          AI-powered ecommerce solutions.{" "}
+          Grow traffic, track sales, and get a better eCommerce experience.
+        </p>
+        <p className="w-2/3 text-base">
+          Hyperce Headless is the practice of offering services or solutions
+          that are decoupled from a specific technology stack or user interface,
+          enabling flexibility and adaptability in delivering services across
+          various platforms, devices, and channels.
         </p>
       </div>
 
@@ -16,29 +21,31 @@ export default function HeadlessEcom() {
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
           <p className="text-4xl font-bold">What is Headless E-commerce ?!</p>
           <p>
-            Take the opportunity to elevate your business to new heights with
-            our futuristic ecommerce platforms and AI-powered ecommerce
-            solutions. Take the opportunity to elevate your business to new
-            heights with our futuristic ecommerce platforms and AI-powered
-            ecommerce solutions.{" "}
+            Hyperce, LLC's Headless commerce isn't just about esthetics; it's
+            about performance. It enables Hyperce to adapt quickly to changing
+            customer needs and market trends while maintaining a robust and
+            scalable backend system.
           </p>
           <p>
-            <p>Some topinc </p>
+            <p>Our mission? </p>
             <p>
-              to elevate your business to new heights with our futuristic
-              ecommerce platforms and AI-powered ecommerce solutions.v
-            </p>
-          </p>
-          <p>
-            <p>Some topinc </p>
-            <p>
-              to elevate your business to new heights with our futuristic
-              ecommerce platforms and AI-powered ecommerce solutions.v
+              To leave your competition headless and you, the business
+              visionary, head over heels for success! At Hyperce, we've
+              shattered the limitations of traditional e-commerce, carving a
+              path to the future with headless commerce solutions that are as
+              cutting-edge as they are irresistible.
+              <br />
+              <br />
+              Visualize your company reaching new heights, free from the
+              limitations imposed by traditional platforms. Our headless
+              architecture offers unparalleled flexibility, speed, and
+              scalability. It's a revolution in e-commerce that speaks to the
+              hearts of both clients and savvy entrepreneurs.
             </p>
           </p>
         </div>
-        <div className="lg:w-2/5 grid grid-cols-2 gap-5">
-          <div className="bg-gray-200 dark:bg-[#172D41] h-fit px-5 py-5 gap-5 flex flex-col rounded-xl">
+        <div className="lg:w-2/5 grid grid-cols-2 gap-5 h-fit">
+          <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#854b8a] dark:text-[#D8AEF2]"
               width="45"
@@ -53,11 +60,11 @@ export default function HeadlessEcom() {
               />
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
-              This should make the service seem more real and intrest the people
-              and blah blah blah bhlah blah something more...
+              Customer trust is paramount. Hyperce safeguards your data and
+              transactions with the most robust security measures.
             </p>
           </div>
-          <div className="bg-gray-200 dark:bg-[#172D41] dark:bg-transparent h-fit px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="bg-gray-200 dark:bg-[#172D41] h-full dark:bg-transparent px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#477e68] dark:text-[#AEF2D7]"
               width="45"
@@ -72,11 +79,11 @@ export default function HeadlessEcom() {
               />
             </svg>
             <p className=" text-black dark:text-[#cbcbcb] text-sm">
-              This should make the service seem more real and intrest the people
-              and blah blah blah bhlah blah something more...
+              Observe your business like never before. Dive into comprehensive
+              analytics to uncover customer behavior, trends, and opportunities.
             </p>
           </div>
-          <div className="col-span-2 bg-gray-200 dark:bg-[#172D41] h-fit px-10 py-5 gap-5 flex rounded-xl items-center justify-between xl:w-2/3">
+          <div className="col-span-2 bg-gray-200 dark:bg-[#172D41] h-fit px-10 py-5 gap-5 flex rounded-xl items-center justify-between xl:mx-10">
             <svg
               className="text-[#c7b36b] dark:text-[#FFD747]"
               width="60"
@@ -91,8 +98,9 @@ export default function HeadlessEcom() {
               />
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] w-4/5 text-sm">
-              This should make the service seem more real and intrest the people
-              and blah blah blah bhlah blah something more...
+              Picture a canvas where your creativity knows no bounds. Customize
+              your storefront to match your brand's unique essence. Responsive,
+              captivating, and always in sync with the pulse of your audience.
             </p>
           </div>
         </div>

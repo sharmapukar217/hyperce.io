@@ -21,12 +21,12 @@ export default function RequestQuote() {
                   type="text"
                   id="hero-input"
                   name="hero-input"
-                  className="py-3 px-4 block w-full xl:min-w-[18rem] border-gray-200 shadow-sm rounded-md focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                  className="py-3 px-4 block w-full outline-none border-full xl:min-w-[18rem] border-[1px] border-zinc-600  shadow-sm rounded-full focus:z-10 dark:bg-slate-900 dark:text-gray-400"
                   placeholder="Enter work email"
                 />
               </div>
               <a
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] hover:bg-[#2a636e] border border-transparent text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] rounded-full hover:bg-[#2a636e] border border-transparent text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
                 href="#"
               >
                 Request demo
