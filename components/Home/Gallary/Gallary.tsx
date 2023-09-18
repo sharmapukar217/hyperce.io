@@ -4,6 +4,7 @@ import * as React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import EachTest from "./EachTest";
+import { Testimonials } from "@/data/Testimonials";
 
 export default function App() {
   const [phoneref] = useKeenSlider<HTMLDivElement>({
@@ -42,46 +43,37 @@ export default function App() {
         </span>
       </div>
       <div ref={phoneref} className="keen-slider">
-        <div className="keen-slider__slide md:hidden">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide md:hidden">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide md:hidden">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide md:hidden">
-          <EachTest />
-        </div>
+        {Testimonials.map((testimonial) => (
+          <div className="keen-slider__slide md:hidden">
+            <EachTest
+              name={testimonial.name}
+              org={testimonial.org}
+              message={testimonial.message}
+            />
+          </div>
+        ))}
       </div>
       <div ref={midref} className="keen-slider">
-        <div className="keen-slider__slide hidden md:block xl:hidden">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide hidden md:block xl:hidden  ">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide hidden md:block xl:hidden">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide hidden md:block xl:hidden">
-          <EachTest />
-        </div>
+        {Testimonials.map((testimonial) => (
+          <div className="keen-slider__slide hidden md:block xl:hidden">
+            <EachTest
+              name={testimonial.name}
+              org={testimonial.org}
+              message={testimonial.message}
+            />
+          </div>
+        ))}
       </div>
       <div ref={ref} className="keen-slider">
-        <div className="keen-slider__slide hidden xl:block">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide hidden xl:block">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide hidden xl:block">
-          <EachTest />
-        </div>
-        <div className="keen-slider__slide hidden xl:block">
-          <EachTest />
-        </div>
+        {Testimonials.map((testimonial) => (
+          <div className="keen-slider__slide hidden h-full xl:block">
+            <EachTest
+              name={testimonial.name}
+              org={testimonial.org}
+              message={testimonial.message}
+            />
+          </div>
+        ))}
       </div>
       {/* <div className="justify-center text-black dark:text-white mt-5 text-xl font-bold flex gap-3">
         Slide
