@@ -76,12 +76,12 @@ export default function Business() {
         <div className="">
           <img
             className="hidden dark:block"
-            src="https://www.hyperce-io.vercel.app/images/milestone-dark.png"
+            src="https://hyperce-io.vercel.app/images/milestone-dark.png"
             alt=""
           />
           <img
             className="block dark:hidden"
-            src="https://www.hyperce-io.vercel.app/images/milestone.png"
+            src="https://hyperce-io.vercel.app/images/milestone.png"
             alt=""
           />
         </div>
