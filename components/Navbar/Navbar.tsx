@@ -5,8 +5,30 @@ import HamburgerComponent from "./Hamburger";
 import Logo from "@/utils/assets/Logo";
 import { usePathname } from "next/navigation";
 import { navMenuItems } from "@/data/Navdata";
+import { useEffect, useState } from "react";
+import "./Navbar.css";
+import { solutions } from "@/data/Solutions";
 
 export default function Navbar() {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isDropdownHovered, setIsDropdownHovered] = useState(false);
+
+  function handleDropdownVisible() {
+    setDropdownVisible(true);
+  }
+  function closeDropdown() {
+    if (!isDropdownHovered) {
+      setTimeout(() => {
+        setDropdownVisible(false);
+      }, 1000);
+    }
+  }
+  useEffect(() => {
+    if (!isDropdownHovered) {
+      setDropdownVisible(false);
+    }
+  }, [isDropdownHovered]);
+
   const pathname = usePathname();
   return (
     <DarkModeProvider>
@@ -31,6 +53,36 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <div>
+              <li
+                onMouseEnter={handleDropdownVisible}
+                onMouseLeave={handleDropdownVisible}
+                className="hover:scale-[105%] text-base font-bold transition-all duration-200 cursor-pointer"
+              >
+                Solutions
+              </li>
+              <div
+                onMouseEnter={() => setIsDropdownHovered(true)}
+                onMouseLeave={() => setIsDropdownHovered(false)}
+                className={`absolute border-[1px] z-50 bg-white dark:bg-black border-black px-1 py-1 transition-all duraition-500 animate ease-linear ${
+                  dropdownVisible ? "dropdown-visible" : "dropdown-hidden"
+                }`}
+              >
+                {solutions.map((each) => (
+                  <a href={each.href}>
+                    <div
+                      onMouseEnter={handleDropdownVisible}
+                      onMouseLeave={closeDropdown}
+                      className="px-3 py-2 border-[1px] flex gap-2 items-center max-h-10 hover:bg-gray-200 transition-all duration-200"
+                    >
+                      <img className="w-10 hidden dark:block" src={each.darkIcon} alt="" />
+                      <img className="w-10 dark:hidden" src={each.whiteIcon} alt="" />
+                      <span>{each.name}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
           </ul>
         </nav>
         <div className="flex gap-10 items-center">
