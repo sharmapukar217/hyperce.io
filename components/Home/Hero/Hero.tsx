@@ -23,7 +23,7 @@ export default function Hero() {
             href="#solutions"
           >
             <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">
-              Checkout our Services
+              Checkout our Solutions
             </p>
             <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
               <svg

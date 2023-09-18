@@ -19,11 +19,6 @@ export default function Question(props: propTypes) {
           <div className="flex justify-between w-full px-4">
             <div className="flex flex-row gap-3 items-center">
               <div>
-                {/* <img
-                  className="h-6 text-black dark:text-white"
-                  src={props.icon}
-                  alt=""
-                /> */}
                 <div dangerouslySetInnerHTML={{ __html: props.icon }} />
               </div>
               {props.question}

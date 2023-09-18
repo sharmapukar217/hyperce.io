@@ -9,8 +9,10 @@ export default function Watch() {
           Why Hyperce?
         </h2>
         <p className="py-4 hyperce-sub-head leading-normal text-gray-700 w-4/5 dark:text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe ea
-          dolore minus aut magni unde sint repellat dolor magnam praesentium?
+          Hyperce revolutionizes e-commerce with AI-driven solutions, elevating
+          online businesses to new heights. Our dedication to innovation,
+          efficiency, and tailored support ensures your success in the dynamic
+          world of online retail.
         </p>
         <div className="text-white mt-4">
           <a href="https://www.youtube.com/watch?v=EQ5Uehjyg8M">

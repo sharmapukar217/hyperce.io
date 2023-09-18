@@ -18,6 +18,7 @@ export default function Solutions() {
             {solutions.map((solution) => (
               <>
                 <Card
+                  href={solution.href}
                   whiteIcon={solution.whiteIcon}
                   darkIcon={solution.darkIcon}
                   name={solution.name}
@@ -28,7 +29,7 @@ export default function Solutions() {
           </div>
         </div>
         <div className="flex justify-center mt-20">
-          <a href="/services">
+          <a href="/">
             <button
               aria-label="all-services"
               className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] flex gap-2 items-center border-2 px-7 py-3 rounded-full"

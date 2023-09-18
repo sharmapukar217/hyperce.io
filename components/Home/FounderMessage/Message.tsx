@@ -22,17 +22,17 @@ export default function Message() {
         </div>
         <div className="w-full lg:w-1/2 flex flex-col gap-3 justify-center md:px-10 pt-10 md:py-[15%] lg:py-5">
           <h3 className="text-xl font-semibold text-[#4a7262] dark:text-[#AEF2D7]">
-            Dream of time some tagline
+            Embrace the Future of E-commerce
           </h3>
           <span className="text-3xl font-bold text-black dark:text-white ">
             Message from our Founder
           </span>
           <span className="text-md text-black dark:text-gray-300">
-            Take the opportunity to elevate your business to new heights with
-            our futuristic ecommerce platforms and AI-powered ecommerce
-            solutions. Take the opportunity to elevate your business to new
-            heights with our futuristic ecommerce platforms and AI-powered
-            ecommerce solutions.{" "}
+            As the founder of Hyperce, I am driven by a vision of a dynamic
+            e-commerce landscape where businesses thrive, innovate, and succeed.
+            We are here to empower your journey with cutting-edge e-commerce
+            platforms and AI-powered solutions. Together, we'll shape the future
+            of online commerce. Welcome to the Hyperce family!
           </span>
         </div>
       </div>

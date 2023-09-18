@@ -4,7 +4,10 @@ import { FAQdata } from "@/data/FAQdata";
 
 export default function AccordionDemo() {
   return (
-    <section className="mx-auto container px-10 md:px-20 py-10 md:py-20 lg:pb-10 min-h-[120%] text-black dark:text-white  ">
+    <section
+      id="faq"
+      className="mx-auto container px-10 md:px-20 py-10 md:py-20 lg:pb-10 min-h-[120%] text-black dark:text-white  "
+    >
       <div className="text-center w-full md:pb-16 flex flex-col gap-2">
         <h2 className="font-bold text-4xl text-black dark:text-white">
           Frequently Asked Questions

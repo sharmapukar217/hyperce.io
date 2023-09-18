@@ -6,7 +6,7 @@ import Message from "@/components/Home/FounderMessage/Message";
 import Solutions from "@/components/Home/Solutions/Solutions";
 import Mission from "@/components/Home/BusinessStrategy/Mission/Mission";
 import Business from "@/components/Home/BusinessStrategy/Business";
-import ContactForm from "@/components/Contact/ContactForm";
+import Contact from "@/components/Contact/Contact";
 import Responsibility from "@/components/Home/Responsibility/Responsibility";
 import Stats from "@/components/Home/Stats/Stats";
 import Watch from "@/components/Home/WatchVideo/Watch";
@@ -40,7 +40,7 @@ export default function Home() {
           <div data-aos="fade-up"><FAQ /></div>
           <div data-aos="fade-up"><Message /></div>
           <div data-aos="fade-up"><RequestQuote /></div>
-          <div data-aos="fade-up"><ContactForm /></div>
+          <div data-aos="fade-up"><Contact /></div>
         </AnimateWrapper>
       </div>
     </>

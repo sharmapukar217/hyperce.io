@@ -2,8 +2,8 @@ import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 
 export default function Mission() {
   return (
-    <section className="flex flex-col lg:flex-row mx-auto py-10 md:py-20 container text-black dark:text-white h-fit">
-      <div className="flex flex-col gap-5 items-center">
+    <section className="flex flex-col lg:flex-row mx-auto py-10 gap-5 container text-black dark:text-white h-fit">
+      <div className="flex flex-col gap-5 items-center md:w-1/2">
         <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">
             <svg
@@ -28,18 +28,15 @@ export default function Mission() {
             data-aos="fade-up"
             className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400"
           >
-            Take the opportunity to elevate your business to new heights with
-            our futuristic ecommerce platforms and AI-powered ecommerce
-            solutions. Take the opportunity to elevate your business to new
-            heights with our futuristic ecommerce platforms and AI-powered
-            ecommerce solutions.
+            To offer businesses of all sizes innovative and customizable
+            ecommerce solutions that follow future trends.
           </div>
         </AnimateWrapper>
       </div>
 
-      <div className="mx-20 mt-32 border border-[#dcddde] dark:border-[#3e4857]"></div>
+      <div className="mx-20 mt-32 border hidden md:block border-[#dcddde] dark:border-[#3e4857]"></div>
 
-      <div className="flex flex-col gap-5 items-center">
+      <div className="flex flex-col gap-5 items-center md:w-1/2">
         <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">
             <svg
@@ -72,11 +69,8 @@ export default function Mission() {
             data-aos="fade-up"
             className="w-4/5 hyperce-sub-head text-center text-gray-700 dark:text-gray-400"
           >
-            Take the opportunity to elevate your business to new heights with
-            our futuristic ecommerce platforms and AI-powered ecommerce
-            solutions. Take the opportunity to elevate your business to new
-            heights with our futuristic ecommerce platforms and AI-powered
-            ecommerce solutions.
+            To be the leading provider of cutting-edge ecommerce solutions
+            globally.
           </div>
         </AnimateWrapper>
       </div>

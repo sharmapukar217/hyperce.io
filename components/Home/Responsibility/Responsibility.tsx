@@ -3,7 +3,10 @@ import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 export default function Responsibility() {
   return (
     <AnimateWrapper>
-      <section data-aos="fade-up" className=" text-black dark:text-white flex justify-center py-10 md:py-20 text-center px-10 md:px-20 mx-auto container">
+      <section
+        data-aos="fade-up"
+        className=" text-black dark:text-white flex justify-center py-10 md:py-20 text-center px-10 md:px-20 mx-auto container"
+      >
         <div className="flex flex-col gap-5 items-center">
           <div className="icon flex justify-center">
             <svg
@@ -38,13 +41,13 @@ export default function Responsibility() {
           </div>
           <div className="text flex flex-col gap-5 items-center">
             <h2 className="text-4xl font-extrabold">
-              Your privacy is our responsibility
+              Your Success is Our Priority
             </h2>
             <p className="hyperce-sub-head text-gray-500 dark:text-gray-400 w-2/3">
-              We believe that trust is paramount in a relationship. We do not
-              own or sell your data, and we most certainly do not bank on
-              advertising-based business models. The only way we make money is
-              from the software license fees you pay us.
+              At Hyperce, we are committed to your success. We go beyond
+              providing solutions and become your strategic partner, working
+              tirelessly to help you achieve your e-commerce goals. Your growth
+              is our responsibility.
             </p>
           </div>
           <div className=" flex justify-center">
@@ -70,7 +73,7 @@ export default function Responsibility() {
                   />
                 </svg>
               </div>
-              <span className="font-semibold">SEE HOW</span>
+              <span className="font-semibold">Our Solutions</span>
             </button>
           </div>
         </div>
