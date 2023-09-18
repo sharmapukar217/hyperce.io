@@ -64,7 +64,7 @@ export default function Navbar() {
               <div
                 onMouseEnter={() => setIsDropdownHovered(true)}
                 onMouseLeave={() => setIsDropdownHovered(false)}
-                className={`absolute border-[1px] z-50 bg-white dark:bg-black border-black px-1 py-1 transition-all duraition-500 animate ease-linear ${
+                className={`absolute border-[1px] z-50 bg-white dark:bg- dark:bg-black border-black px-4 py-4 transition-all duraition-500 animate flex gap-4 flex-col ease-linear ${
                   dropdownVisible ? "dropdown-visible" : "dropdown-hidden"
                 }`}
               >
@@ -73,10 +73,18 @@ export default function Navbar() {
                     <div
                       onMouseEnter={handleDropdownVisible}
                       onMouseLeave={closeDropdown}
-                      className="px-3 py-2 border-[1px] flex gap-2 items-center max-h-10 hover:bg-gray-200 transition-all duration-200"
+                      className="px-3 py-2 border-[1px] flex gap-2 items-center max-h-10 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
                     >
-                      <img className="w-10 hidden dark:block" src={each.darkIcon} alt="" />
-                      <img className="w-10 dark:hidden" src={each.whiteIcon} alt="" />
+                      <img
+                        className="w-10 hidden dark:block"
+                        src={each.darkIcon}
+                        alt=""
+                      />
+                      <img
+                        className="w-10 dark:hidden"
+                        src={each.whiteIcon}
+                        alt=""
+                      />
                       <span>{each.name}</span>
                     </div>
                   </a>
