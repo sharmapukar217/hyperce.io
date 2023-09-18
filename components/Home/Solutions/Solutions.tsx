@@ -28,7 +28,7 @@ export default function Solutions() {
             ))}
           </div>
         </div>
-        <div className="flex justify-center mt-20">
+        {/* <div className="flex justify-center mt-20">
           <a href="/">
             <button
               aria-label="all-services"
@@ -52,7 +52,7 @@ export default function Solutions() {
               </span>
             </button>
           </a>
-        </div>
+        </div> */}
         <script async src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init();</script>
       </section>

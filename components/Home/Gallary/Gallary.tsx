@@ -44,7 +44,7 @@ export default function App() {
       </div>
       <div ref={phoneref} className="keen-slider">
         {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide md:hidden">
+          <div className="keen-slider__slide md:hidden h-full">
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -55,7 +55,7 @@ export default function App() {
       </div>
       <div ref={midref} className="keen-slider">
         {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide hidden md:block xl:hidden">
+          <div className="keen-slider__slide hidden md:block xl:hidden h-full">
             <EachTest
               name={testimonial.name}
               org={testimonial.org}

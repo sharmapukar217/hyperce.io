@@ -100,7 +100,8 @@ export default function Collaborative() {
                     </svg>
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
-                      Communication and Collaboration Tools
+                      <span className="font-bold"> Communication </span>and
+                      Collaboration Tools
                     </span>
                   </li>
 
@@ -125,10 +126,9 @@ export default function Collaborative() {
                     </svg>
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
-                      <span className="font-bold">
-                        Customer Relationship Management (CRM) Tools
-                      </span>
-                      I found out these 3 main tools and their sub-tools
+                      <span className="font-bold">Customer Relationship</span>{" "}
+                      Management (CRM) Tools I found out these 3 main tools and
+                      their sub-tools
                     </span>
                   </li>
                 </ul>

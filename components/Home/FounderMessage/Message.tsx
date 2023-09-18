@@ -16,7 +16,7 @@ export default function Message() {
           <div className="absolute flex flex-col text-left justify-end px-5 py-5 text-white">
             <span className="text-xl font-bold">Biplab Karki</span>
             <span className="text-md font-medium">
-              Founder & CEO, Hyperce inc.
+              Founder & CEO, Hyperce LLC.
             </span>
           </div>
         </div>

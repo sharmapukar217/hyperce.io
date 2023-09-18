@@ -10,7 +10,7 @@ export const Testimonials = [
         org: "CTO at CodingGarage, Berlin, Germany",
     },
     {
-        message: "Hyperce Ecommerce Suite Solution, one of the best ecommerce suite solutions in town.",
+        message: "I write this review to commend the developer responsible for implementing our new e-commerce solution. The experience of working with them has been largely positive.",
         name: "Arpan Chhetri",
         org: "Nepal"
     },

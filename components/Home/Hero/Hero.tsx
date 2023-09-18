@@ -6,26 +6,80 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container pt-10 pb-[10%]">
+    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center pb-[10%] py-10">
       {/* <AnimateWrapper> */}
       <div
         // --aos="fade-right"
-        className="md:w-1/2 lg:px-8 space-y-8 md:container mx-auto md:pt-10 lg:pt-20"
+        className="md:w-1/2 flex items-center lg:px-8  md:container mx-auto "
       >
-        <motion.div
-          initial={{ x: -150, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center md:justify-start"
-        >
-          <a
-            className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
-            href="#solutions"
+        <div className="flex justify-center flex-col space-y-8">
+          <motion.div
+            initial={{ x: -500, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex justify-center md:justify-start"
           >
-            <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">
-              Checkout our Solutions
+            <a
+              className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
+              href="#solutions"
+            >
+              <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">
+                Checkout our Solutions
+              </p>
+              <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
+                <svg
+                  className="w-2.5 h-2.5"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ x: -500, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className=""
+          >
+            <h1
+              className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left"
+              style={
+                {
+                  // fontFamily: "Times New Roman",
+                }
+              }
+            >
+              Your Ecommerce <br /> Suite Partner
+            </h1>
+          </motion.div>
+
+          <div className="text-center md:text-left mx-auto">
+            <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
+              <Typewriter text="In the ever-evolving world of e-commerce, having a trusted partner is essential. We are excited to introduce Hyperce as your gateway to seamless e-commerce solutions and tailored plans that transcend boundaries and set new standards of innovation." />
             </p>
-            <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
+          </div>
+
+          <motion.div
+            initial={{ x: -500, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row"
+          >
+            <a
+              className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
+              href="#"
+            >
+              Learn More
               <svg
                 className="w-2.5 h-2.5"
                 width="16"
@@ -40,81 +94,29 @@ export default function Hero() {
                   stroke-linecap="round"
                 />
               </svg>
-            </span>
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ x: -150, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className=""
-        >
-          <h1
-            className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left"
-            style={
-              {
-                // fontFamily: "Times New Roman",
-              }
-            }
-          >
-            Your Ecommerce <br /> Suite Partner
-          </h1>
-        </motion.div>
-
-        <div className="text-center md:text-left mx-auto">
-          <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
-            <Typewriter text="In the ever-evolving world of e-commerce, having a trusted partner is essential. We are excited to introduce Hyperce as your gateway to seamless e-commerce solutions and tailored plans that transcend boundaries and set new standards of innovation." />
-          </p>
+            </a>
+            <a
+              className="hyperce-btn-text-low inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
+              href="#contact"
+            >
+              Contact Us
+              <svg
+                className="w-2.5 h-2.5"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+          </motion.div>
         </div>
-
-        <motion.div
-          initial={{ x: -150, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row"
-        >
-          <a
-            className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
-            href="#"
-          >
-            Learn More
-            <svg
-              className="w-2.5 h-2.5"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </a>
-          <a
-            className="hyperce-btn-text-low inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
-            href="#contact"
-          >
-            Contact Us
-            <svg
-              className="w-2.5 h-2.5"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </a>
-        </motion.div>
       </div>
 
       <div

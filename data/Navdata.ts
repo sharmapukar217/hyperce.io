@@ -8,8 +8,8 @@ export const navMenuItems = [
         href: "#solutions",
     },
     {
-        name: "Services",
-        href: "/services",
+        name: "FAQs",
+        href: "#faq",
     },
     {
         name: "Contact",
