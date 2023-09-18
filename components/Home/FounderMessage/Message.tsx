@@ -31,8 +31,8 @@ export default function Message() {
             As the founder of Hyperce, I am driven by a vision of a dynamic
             e-commerce landscape where businesses thrive, innovate, and succeed.
             We are here to empower your journey with cutting-edge e-commerce
-            platforms and AI-powered solutions. Together, we'll shape the future
-            of online commerce. Welcome to the Hyperce family!
+            platforms and AI-powered solutions. Together, we&apos;ll shape the
+            future of online commerce. Welcome to the Hyperce family!
           </span>
         </div>
       </div>
