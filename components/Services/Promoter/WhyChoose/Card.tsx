@@ -1,4 +1,4 @@
-export default function Card(props: any) {
+export default function Card() {
   return (
     <div className="flex gap-5 hover:text-white hover:outline transition-all ease-in duration-100 outline-[#357D8A] rounded-xl w-fit px-5 md:px-10 py-5 hover:bg-gradient-to-b from-[#172D42] to-[#24474d]">
       <svg
@@ -15,8 +15,8 @@ export default function Card(props: any) {
         />
       </svg>
       <span className="flex flex-col justify-center">
-        <span className="text-lg font-bold">{props.num}</span>
-        <span>{props.des}</span>
+        <span className="text-lg font-bold">30x</span>
+        <span>Customer Retention</span>
       </span>
     </div>
   );

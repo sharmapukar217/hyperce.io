@@ -44,8 +44,11 @@ export default function Collaborative() {
                     Collaborative tools to grow your ecom business.
                   </h2>
                   <p className="text-base dark:text-gray-400 text-gray-700">
-                    Use our tools to explore your ideas and make your ecommerce
-                    venture come to life. Lorem ipsum dolor sit amet.
+                    Use our collaborative tools to explore your ideas and bring
+                    your e-commerce venture to life. Collaborative tools play a
+                    pivotal role in propelling the growth of your online
+                    business by fostering seamless communication, boosting
+                    productivity, and enhancing overall efficiency.
                   </p>
                 </div>
 
@@ -71,8 +74,8 @@ export default function Collaborative() {
                     </svg>
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
-                      <span className="font-bold">Lorem, ipsum.</span> – Lorem,
-                      ipsum.
+                      <span className="font-bold">Project Management </span> –
+                      and Task Collaboration
                     </span>
                   </li>
 
@@ -97,7 +100,7 @@ export default function Collaborative() {
                     </svg>
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
-                      Lorem ipsum dolor sit.
+                      Communication and Collaboration Tools
                     </span>
                   </li>
 
@@ -122,7 +125,10 @@ export default function Collaborative() {
                     </svg>
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
-                      Lorem, ipsum. <span className="font-bold">lorem</span>
+                      <span className="font-bold">
+                        Customer Relationship Management (CRM) Tools
+                      </span>
+                      I found out these 3 main tools and their sub-tools
                     </span>
                   </li>
                 </ul>

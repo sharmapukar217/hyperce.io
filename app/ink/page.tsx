@@ -22,7 +22,7 @@ export default function Services() {
       <Ink />
       <WhyChoose />
       <Gallary />
-      <Features />
+      {/* <Features /> */}
       <Newsletter />
       <ContactForm />
     </div>

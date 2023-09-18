@@ -22,7 +22,7 @@ export default function Services() {
       <HeadlessEcom />
       <WhyChoose />
       <Gallary />
-      <Features />
+      {/* <Features /> */}
       <Newsletter />
       <ContactForm />
     </div>

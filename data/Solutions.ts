@@ -14,11 +14,11 @@ export const solutions = [
         darkIcon: "/hyperce-ink-dark.svg"
     },
     {
-        name: 'Hyperce Boost',
-        href: "/boost",
-        des: "Enhance speed and efficiency with Boost's powerful cache service. Optimize your digital operations.",
-        whiteIcon: "/hyperce-boost.png",
-        darkIcon: "/hyperce-boost.png"
+        name: 'Hyperce Promoter',
+        href: "/promoter",
+        des: "Amplify your marketing strategies with Promoter's innovative solutions. Boost brand visibility and drive engagement for unparalleled promotional success.",
+        whiteIcon: "/promoter-logo.png",
+        darkIcon: "/promoter-logo.png"
     },
     {
         name: 'Hyperce Frontier',
