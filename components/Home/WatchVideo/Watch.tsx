@@ -15,7 +15,7 @@ export default function Watch() {
           world of online retail.
         </p>
         <div className="text-white mt-4">
-          <a href="https://www.youtube.com/watch?v=EQ5Uehjyg8M">
+          <a href="https://www.youtube.com/watch?v=EQ5Uehjyg8M" target="_blank">
             <button
               type="button"
               className="flex items-center gap-3 text-black dark:text-white border-[2px] border-[#357D8A] hover:border-gray-200 transition-all duration-150 px-5 py-2 rounded-xl"
