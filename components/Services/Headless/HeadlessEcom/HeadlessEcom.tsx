@@ -21,7 +21,7 @@ export default function HeadlessEcom() {
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
           <p className="text-4xl font-bold">What is Headless E-commerce ?!</p>
           <p>
-            Hyperce, LLC's Headless commerce isn't just about esthetics; it's
+            Hyperce, LLC&apos;s Headless commerce isn&apos;t just about esthetics; it&apos;s
             about performance. It enables Hyperce to adapt quickly to changing
             customer needs and market trends while maintaining a robust and
             scalable backend system.
@@ -30,7 +30,7 @@ export default function HeadlessEcom() {
             <p>Our mission? </p>
             <p>
               To leave your competition headless and you, the business
-              visionary, head over heels for success! At Hyperce, we've
+              visionary, head over heels for success! At Hyperce, we&apos;ve
               shattered the limitations of traditional e-commerce, carving a
               path to the future with headless commerce solutions that are as
               cutting-edge as they are irresistible.
@@ -39,7 +39,7 @@ export default function HeadlessEcom() {
               Visualize your company reaching new heights, free from the
               limitations imposed by traditional platforms. Our headless
               architecture offers unparalleled flexibility, speed, and
-              scalability. It's a revolution in e-commerce that speaks to the
+              scalability. It&apos;s a revolution in e-commerce that speaks to the
               hearts of both clients and savvy entrepreneurs.
             </p>
           </p>
@@ -99,7 +99,7 @@ export default function HeadlessEcom() {
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] w-4/5 text-sm">
               Picture a canvas where your creativity knows no bounds. Customize
-              your storefront to match your brand's unique essence. Responsive,
+              your storefront to match your brand&apos;s unique essence. Responsive,
               captivating, and always in sync with the pulse of your audience.
             </p>
           </div>

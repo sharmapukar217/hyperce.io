@@ -21,11 +21,11 @@ export default function Frontier() {
           <p>
             Portfolio Service is your ticket to optimizing your product and
             service offerings, backed by cutting-edge data analytics and market
-            insights. What sets us apart? We're not just about individual
-            success; we're fostering collaboration with other businesses to
-            create a thriving ecosystem. Join us, and together we'll shape the
-            future of online commerce. With Frontier, you're not just a client;
-            you're a valued collaborator in our journey to redefine e-commerce.
+            insights. What sets us apart? We&apos;re not just about individual
+            success; we&apos;re fostering collaboration with other businesses to
+            create a thriving ecosystem. Join us, and together we&apos;ll shape the
+            future of online commerce. With Frontier, you&apos;re not just a client;
+            you&apos;re a valued collaborator in our journey to redefine e-commerce.
           </p>
           <p>
             <p className="font-bold">Our mission? </p>
@@ -39,7 +39,7 @@ export default function Frontier() {
               challenging terrain of the e-commerce landscape effectively.
               <br />
               <br />
-              It's time to embark on a journey of growth and innovation with the
+              It&apos;s time to embark on a journey of growth and innovation with the
               Frontier Portfolio Service as your strategic partner.
             </p>
           </p>
@@ -61,7 +61,7 @@ export default function Frontier() {
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
               Hyperce helps in the strategic process of creating and enhancing a
-              brand's identity, reputation, and recognition in the minds of
+              brand&apos;s identity, reputation, and recognition in the minds of
               consumers.
             </p>
           </div>

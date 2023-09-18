@@ -33,13 +33,13 @@ export default function Ink() {
             <br />
             <p>
               At Hyperce, LLC, we understand that in the modern digital
-              landscape, blogging is more than just words on a screen; it's a
+              landscape, blogging is more than just words on a screen; it&apos;s a
               strategic asset that can transform your e-commerce venture.
-              Hyperce's blogging service is the creative bridge between
-              innovation and your brand's success.
+              Hyperce&apos;s blogging service is the creative bridge between
+              innovation and your brand&apos;s success.
               <br />
               <br />
-              It's not just about sharing stories; it's about crafting
+              It&apos;s not just about sharing stories; it&apos;s about crafting
               compelling narratives that resonate with your audience and drive
               conversions. These services typically provide tools and features
               that simplify the process of creating and maintaining a blog.
@@ -63,7 +63,7 @@ export default function Ink() {
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
               We understand the power of search engine optimization (SEO). Our
-              blogging service is finely tuned to improve your website's
+              blogging service is finely tuned to improve your website&apos;s
               visibility, helping you reach your target audience effectively.
             </p>
           </div>
