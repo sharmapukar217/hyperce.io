@@ -25,6 +25,7 @@ export default function CardsSection() {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
             {WhyChoose.map((feature) => (
               <a
+                key={WhyChoose.indexOf(feature)}
                 className="block rounded-xl border border-gray-100 dark:border-gray-500 p-4 shadow-sm hover:border-gray-200 hover:ring-1 hover:ring-gray-200 focus:outline-none focus:ring"
                 href="#faq"
               >
