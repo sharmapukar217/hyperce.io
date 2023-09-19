@@ -7,6 +7,7 @@ import Gallary from "@/components/Services/Ink/Gallary/Gallary";
 import Ink from "@/components/Services/Ink/Ink/Ink";
 import Hero from "@/components/Services/Ink/Hero/Hero";
 import WhyChoose from "@/components/Services/Ink/WhyChoose/WhyChoose";
+import Contact from "@/components/Contact/Contact";
 
 export default function Services() {
   return (
@@ -24,7 +25,7 @@ export default function Services() {
       <Gallary />
       {/* <Features /> */}
       <Newsletter />
-      <ContactForm />
+      <Contact />
     </div>
   );
 }

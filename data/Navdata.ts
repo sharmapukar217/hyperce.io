@@ -4,10 +4,6 @@ export const navMenuItems = [
         href: "/",
     },
     {
-        name: "Solutions",
-        href: "#solutions",
-    },
-    {
         name: "FAQs",
         href: "#faq",
     },

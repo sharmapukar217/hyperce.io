@@ -56,6 +56,7 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <a href="#solutions">
             <div
               onMouseEnter={showDropdown}
               onMouseLeave={hideDropdown}
@@ -101,6 +102,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
+            </a>
           </ul>
         </nav>
         <div className="flex gap-10 items-center">

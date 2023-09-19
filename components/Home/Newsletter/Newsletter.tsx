@@ -1,4 +1,51 @@
+"use client";
+
+import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
+
 export default function Newsletter() {
+  const { toast } = useToast();
+
+  const [email, setEmail] = useState();
+  const handleChange = (e: any) => {
+    setEmail(e.target.value);
+  };
+
+  async function handleNewslett() {
+    const response = await fetch("https://admin.hyperce.io/shop-api", {
+      headers: {
+        "content-type": "application/json",
+      },
+      referrerPolicy: "strict-origin-when-cross-origin",
+      body: JSON.stringify({
+        operationName: "CreateSubscriber",
+        variables: {
+          input: {
+            fullName: "",
+            email: email,
+            phone: "",
+          },
+        },
+        query:
+          "mutation CreateSubscriber($input: SubscriberAddInput!) {\n  subscribe(input: $input) {\n    ...Subscribers\n    __typename\n  }\n}\n\nfragment Subscribers on Subscriber {\n  id\n  fullName\n  email\n  phone\n  createdAt\n  updatedAt\n  __typename\n}",
+      }),
+      method: "POST",
+      mode: "cors",
+      credentials: "omit",
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    if (response.status === 200) {
+      toast({
+        title: "Your Email has been registered",
+        description:
+          "You will now receive product, promos and new updated of Hyperce on your email",
+      });
+    }
+  }
+
   return (
     <section className="">
       <div>
@@ -25,11 +72,14 @@ export default function Newsletter() {
               <input
                 className="w-full h-10 bg-transparent px-5 py-6 focus:outline-none"
                 type="text"
+                onChange={handleChange}
                 name=""
-                placeholder="hi@a.com"
+                value={email}
+                placeholder="hi@hyperce.io"
                 id=""
               />
               <button
+                onClick={handleNewslett}
                 aria-aria-label="subscribe-newsletter"
                 className="-mr-[1%] text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
               >

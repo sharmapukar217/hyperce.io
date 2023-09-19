@@ -7,6 +7,7 @@ import Gallary from "@/components/Services/Frontier/Gallary/Gallary";
 import Frontier from "@/components/Services/Frontier/Frontier/Frontier";
 import Hero from "@/components/Services/Frontier/Hero/Hero";
 import WhyChoose from "@/components/Services/Frontier/WhyChoose/WhyChoose";
+import Contact from "@/components/Contact/Contact";
 
 export default function Services() {
   return (
@@ -24,7 +25,7 @@ export default function Services() {
       <Gallary />
       {/* <Features /> */}
       <Newsletter />
-      <ContactForm />
+      <Contact />
     </div>
   );
 }

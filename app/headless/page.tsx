@@ -1,3 +1,4 @@
+import Contact from "@/components/Contact/Contact";
 import ContactForm from "@/components/Contact/Contact";
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
@@ -24,7 +25,7 @@ export default function Services() {
       <Gallary />
       {/* <Features /> */}
       <Newsletter />
-      <ContactForm />
+      <Contact />
     </div>
   );
 }

@@ -1,7 +1,11 @@
 "use client";
+
 import React, { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function ContactForm() {
+  const { toast } = useToast();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,6 +44,14 @@ export default function ContactForm() {
 
     const data = await response.json();
     console.log(data);
+
+    if (response.status === 200) {
+      toast({
+        title: "Your message has been recieved",
+        description:
+          "You will get a reply from us very soon.",
+      });
+    }
   }
 
   return (

@@ -1,4 +1,49 @@
+"use client";
+
+import { useToast } from "@/components/ui/use-toast";
+import { useState } from "react";
+
 export default function RequestQuote() {
+  const { toast } = useToast();
+
+  const [email, setEmail] = useState();
+  const handleChange = (e: any) => {
+    setEmail(e.target.value);
+  };
+
+  async function handleNewslett() {
+    const response = await fetch("https://admin.hyperce.io/shop-api", {
+      headers: {
+        "content-type": "application/json",
+      },
+      referrerPolicy: "strict-origin-when-cross-origin",
+      body: JSON.stringify({
+        operationName: "CreateSubscriber",
+        variables: {
+          input: {
+            fullName: "",
+            email: email,
+            phone: "",
+          },
+        },
+        query:
+          "mutation CreateSubscriber($input: SubscriberAddInput!) {\n  subscribe(input: $input) {\n    ...Subscribers\n    __typename\n  }\n}\n\nfragment Subscribers on Subscriber {\n  id\n  fullName\n  email\n  phone\n  createdAt\n  updatedAt\n  __typename\n}",
+      }),
+      method: "POST",
+      mode: "cors",
+      credentials: "omit",
+    });
+
+    const data = await response.json();
+    console.log(data);
+    if (response.status === 200) {
+      toast({
+        title: "We hear you.",
+        description:
+          "Thanks for your interest in our products. We will get back to you as soon as possible.",
+      });
+    }
+  }
   return (
     <section className="container mx-auto px-10 py-10 md:py-20 md:px-20">
       <div className="">
@@ -23,14 +68,19 @@ export default function RequestQuote() {
                   name="hero-input"
                   className="py-3 px-4 block w-full outline-none border-full xl:min-w-[18rem] border-2 border-gray-300  shadow-sm focus:z-10 dark:bg-slate-900 dark:text-gray-400"
                   placeholder="Enter work email"
+                  onChange={handleChange}
+                  value={email}
                 />
               </div>
-              <a
+              <button
+                type="button"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] rounded-full hover:bg-[#2a636e] border border-transparent text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
-                href="#"
+                onClick={() => {
+                  handleNewslett();
+                }}
               >
                 Request demo
-              </a>
+              </button>
             </div>
 
             <div className="mt-6 lg:mt-12">

@@ -7,6 +7,7 @@ import Gallary from "@/components/Services/Promoter/Gallary/Gallary";
 import Promoter from "@/components/Services/Promoter/Promoter/Promoter";
 import Hero from "@/components/Services/Promoter/Hero/Hero";
 import WhyChoose from "@/components/Services/Promoter/WhyChoose/WhyChoose";
+import Contact from "@/components/Contact/Contact";
 
 export default function Boost() {
   return (
@@ -24,7 +25,7 @@ export default function Boost() {
       <Gallary />
       {/* <Features /> */}
       <Newsletter />
-      <ContactForm />
+      <Contact />
     </div>
   );
 }
