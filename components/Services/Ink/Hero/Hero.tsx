@@ -2,10 +2,10 @@ export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
-        <div className="flex flex-col"> 
+        <div>
           <span className="text-7xl font-bold">Hyperce Ink</span>
           <br />
-          <span className="text-base font-medium">
+          <span className="text-base font-bold ">
             The best Blogging Solutions for eCommerce Businesses.
           </span>
         </div>

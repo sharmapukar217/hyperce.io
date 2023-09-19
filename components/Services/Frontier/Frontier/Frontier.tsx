@@ -37,8 +37,7 @@ export default function Frontier() {
               insights, resource allocation, risk mitigation, customization, and
               scalability, this service equips Hyperce, LLC to navigate the
               challenging terrain of the e-commerce landscape effectively.
-              <br />
-              <br />
+
               It&apos;s time to embark on a journey of growth and innovation with the
               Frontier Portfolio Service as your strategic partner.
             </p>

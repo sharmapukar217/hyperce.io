@@ -4,8 +4,6 @@ export default function Hero() {
       <div className="w-full">
         <span className="text-4xl md:text-7xl font-bold">
           Hyperce Frontier
-          <br />
-          (Portfolio Service)
         </span>
         <br />
         <a

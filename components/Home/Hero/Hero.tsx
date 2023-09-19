@@ -80,7 +80,7 @@ export default function Hero() {
           >
             <a
               className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
-              href="#"
+              href="#faq"
             >
               Learn More
               <svg

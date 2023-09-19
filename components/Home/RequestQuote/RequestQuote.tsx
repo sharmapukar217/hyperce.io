@@ -21,7 +21,7 @@ export default function RequestQuote() {
                   type="text"
                   id="hero-input"
                   name="hero-input"
-                  className="py-3 px-4 block w-full outline-none border-full xl:min-w-[18rem] border-[1px] border-zinc-600  shadow-sm rounded-full focus:z-10 dark:bg-slate-900 dark:text-gray-400"
+                  className="py-3 px-4 block w-full outline-none border-full xl:min-w-[18rem] border-2 border-gray-300  shadow-sm focus:z-10 dark:bg-slate-900 dark:text-gray-400"
                   placeholder="Enter work email"
                 />
               </div>

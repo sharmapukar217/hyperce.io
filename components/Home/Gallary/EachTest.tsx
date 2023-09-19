@@ -1,9 +1,9 @@
 export default function EachTest(props: any) {
   return (
     <div className="min-h-full flex flex-col border-2 border-gray-200 dark:border-gray-700 dark:hover:bg-[#0F172A] text-black dark:text-white rounded-xl items-center px-4 md:px-8 mt-10 mb:mt-0 pb-5">
-      {/* <div className="avatar w-[70px] lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
+      <div className="avatar w-[70px] lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
         <img src="/home.png" alt="image" className="rounded-full mt-1" />
-      </div> */}
+      </div>
       <div className="message mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]">
         {props.message}
       </div>
