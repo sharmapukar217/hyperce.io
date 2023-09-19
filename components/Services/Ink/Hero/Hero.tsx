@@ -2,12 +2,13 @@ export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
-        <span className="text-4xl md:text-7xl font-bold">
-          Hyperce Ink
+        <div className="flex flex-col"> 
+          <span className="text-7xl font-bold">Hyperce Ink</span>
           <br />
-          (Blogging Service)
-        </span>
-        <br />
+          <span className="text-base font-medium">
+            The best Blogging Solutions for eCommerce Businesses.
+          </span>
+        </div>
         <a
           className="mt-10 text-white inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
           href="#learnmore"

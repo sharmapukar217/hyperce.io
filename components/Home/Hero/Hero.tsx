@@ -63,9 +63,12 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          <div className="text-center md:text-left mx-auto">
+          <div className="mx-auto">
             <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
-              <Typewriter text="In the ever-evolving world of e-commerce, having a trusted partner is essential. We are excited to introduce Hyperce as your gateway to seamless e-commerce solutions and tailored plans that transcend boundaries and set new standards of innovation." />
+              <Typewriter
+                text="Take the opportunity to elevate your business to new heights with our
+          futuristic ecommerce platforms and AI-powered ecommerce solutions."
+              />
             </p>
           </div>
 

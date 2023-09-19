@@ -10,26 +10,29 @@ import "./Navbar.css";
 import { solutions } from "@/data/Solutions";
 
 export default function Navbar() {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isDropdownHovered, setIsDropdownHovered] = useState(false);
 
-  function handleDropdownVisible() {
-    setDropdownVisible(true);
-  }
-  function closeDropdown() {
+  const showDropdown = () => {
+    setIsDropdownVisible(true);
+  };
+
+  const hideDropdown = () => {
     if (!isDropdownHovered) {
       setTimeout(() => {
-        setDropdownVisible(false);
-      }, 1000);
+        setIsDropdownVisible(false);
+      }, 200);
     }
-  }
+  };
+
   useEffect(() => {
     if (!isDropdownHovered) {
-      setDropdownVisible(false);
+      setIsDropdownVisible(false);
     }
   }, [isDropdownHovered]);
 
   const pathname = usePathname();
+
   return (
     <DarkModeProvider>
       <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-8 px-10 md:px-20">
@@ -41,7 +44,7 @@ export default function Navbar() {
           <ul className="flex gap-10">
             {navMenuItems.map((menuItem) => (
               <li
-                key={navMenuItems.indexOf(menuItem)}
+                key={menuItem.href}
                 className={`hover:scale-[105%] text-base font-bold transition-all duration-200  ${
                   pathname === menuItem.href
                     ? `text-[#337684]`
@@ -53,43 +56,50 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            <div>
+            <div
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+              className="relative"
+            >
               <li
-                onMouseEnter={handleDropdownVisible}
-                onMouseLeave={handleDropdownVisible}
-                className="hover:scale-[105%] text-base font-bold transition-all duration-200 cursor-pointer"
+                className={`hover:scale-[105%] text-base font-bold transition-all duration-200 cursor-pointer ${
+                  isDropdownVisible ? "text-[#337684]" : ""
+                }`}
               >
                 Solutions
               </li>
-              <div
-                onMouseEnter={() => setIsDropdownHovered(true)}
-                onMouseLeave={() => setIsDropdownHovered(false)}
-                className={`absolute border-[1px] z-50 bg-white dark:bg- dark:bg-black border-black px-4 py-4 transition-all duraition-500 animate flex gap-4 flex-col ease-linear ${
-                  dropdownVisible ? "dropdown-visible" : "dropdown-hidden"
-                }`}
-              >
-                {solutions.map((each) => (
-                  <a href={each.href}>
-                    <div
-                      onMouseEnter={handleDropdownVisible}
-                      onMouseLeave={closeDropdown}
-                      className="px-3 py-2 border-[1px] flex gap-2 items-center max-h-10 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
-                    >
-                      <img
-                        className="w-10 hidden dark:block"
-                        src={each.darkIcon}
-                        alt=""
-                      />
-                      <img
-                        className="w-10 dark:hidden"
-                        src={each.whiteIcon}
-                        alt=""
-                      />
-                      <span>{each.name}</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
+              {isDropdownVisible && (
+                <div
+                  onMouseEnter={() => setIsDropdownHovered(true)}
+                  onMouseLeave={() => setIsDropdownHovered(false)}
+                  className={`absolute border-[1px] z-50 bg-white dark:bg-black border-black px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
+                    isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
+                  }`}
+                >
+                  {solutions.map((each) => (
+                    <>
+                      <a
+                        className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                        href={each.href}
+                      >
+                        <img
+                          className="h-10 w-10 hidden dark:block"
+                          src={each.darkIcon}
+                          alt=""
+                        />
+                        <img
+                          className="h-10 w-10 dark:hidden"
+                          src={each.whiteIcon}
+                          alt=""
+                        />
+                        {each.name}
+                      </a>
+
+
+                    </>
+                  ))}
+                </div>
+              )}
             </div>
           </ul>
         </nav>
@@ -111,16 +121,16 @@ export default function Navbar() {
                     <path
                       d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
                       stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
                       stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </div>

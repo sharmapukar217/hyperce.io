@@ -6,7 +6,8 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+    './node_modules/preline/dist/*.js',
+  ],
   theme: {
     container: {
       center: true,
