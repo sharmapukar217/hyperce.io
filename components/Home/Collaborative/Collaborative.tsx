@@ -45,7 +45,7 @@ export default function Collaborative() {
                   </h2>
                   <p className="text-base dark:text-gray-400 text-gray-700">
                     Use our collaborative tools to explore your ideas and bring
-                    your e-commerce venture to life. Collaborative tools play a
+                    your eCommerce venture to life. Collaborative tools play a
                     pivotal role in propelling the growth of your online
                     business by fostering seamless communication, boosting
                     productivity, and enhancing overall efficiency.

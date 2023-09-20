@@ -21,7 +21,7 @@ export default function PromoterPage() {
       </main>
       <Promoter />
       <WhyChoose />
-      <Gallary />
+      {/* <Gallary /> */}
       {/* <Features /> */}
       <Newsletter />
       <Contact />

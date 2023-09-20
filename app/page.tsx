@@ -20,11 +20,11 @@ import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 export default function Home() {
   return (
     <>
-      <main className="bg-white dark:bg-slate-900 text-black dark:text-white h-fit bg-center">
+      <main className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white h-fit bg-center">
         <Navbar />
         <Hero />
       </main>
-      <div className="bg-white dark:bg-[#0F172A]">
+      <div className="bg-[#ebeeef] dark:bg-[#0F172A]">
         <AnimateWrapper>
           <div data-aos="fade-up"><Solutions /></div>
           <div data-aos="fade-up"><Watch /></div>

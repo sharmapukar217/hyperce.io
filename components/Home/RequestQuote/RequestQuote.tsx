@@ -58,29 +58,27 @@ export default function RequestQuote() {
             </p>
 
             <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-              <div className="w-full sm:w-auto">
-                <label htmlFor="hero-input" className="sr-only">
-                  Search
-                </label>
+              <div className="flex flex-col gap-2 md:flex-row md:gap-0 items-center justify-between md:border-[2px] w-full rounded-md border-[#357D8A]">
                 <input
+                  className="h-10 w-3/5 text-black dark:text-white bg-transparent px-5 py-6 focus:outline-none"
                   type="text"
-                  id="hero-input"
-                  name="hero-input"
-                  className="py-3 px-4 block w-full outline-none border-full xl:min-w-[18rem] border-2 border-gray-300  shadow-sm focus:z-10 dark:bg-slate-900 dark:text-gray-400"
-                  placeholder="Enter work email"
                   onChange={handleChange}
                   value={email}
+                  placeholder="hi@hyperce.io"
+                  id=""
                 />
+                <button
+                  onClick={() => {
+                    if (email) {
+                      handleNewslett();
+                    }
+                  }}
+                  aria-aria-label="subscribe-newsletter"
+                  className="text-white w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
+                >
+                  Request Quotation
+                </button>
               </div>
-              <button
-                type="button"
-                className="w-full sm:w-auto inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] rounded-full hover:bg-[#2a636e] border border-transparent text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
-                onClick={() => {
-                  handleNewslett();
-                }}
-              >
-                Request demo
-              </button>
             </div>
 
             <div className="mt-6 lg:mt-12">

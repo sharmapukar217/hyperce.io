@@ -46,7 +46,7 @@ export default function Responsibility() {
             <p className="hyperce-sub-head text-gray-500 dark:text-gray-400 w-2/3">
               At Hyperce, we are committed to your success. We go beyond
               providing solutions and become your strategic partner, working
-              tirelessly to help you achieve your e-commerce goals. Your growth
+              tirelessly to help you achieve your eCommerce goals. Your growth
               is our responsibility.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Responsibility() {
             <a href="#solutions">
               <button
                 type="button"
-                className="flex items-center gap-3 border-[1px] border-[#357D8A] hover:border-[white] transition-all duration-150 px-7 py-3 rounded-xl"
+                className="flex items-center gap-3 border-[1px] border-[#357D8A] hover:text-[#357D8A] transition-all duration-150 px-7 py-3 rounded-xl"
               >
                 <div className="icon">
                   <svg
@@ -74,7 +74,7 @@ export default function Responsibility() {
                     />
                   </svg>
                 </div>
-                <span className="font-semibold">Our Solutions</span>
+                <span className="font-semibold uppercase">Our Solutions</span>
               </button>
             </a>
           </div>

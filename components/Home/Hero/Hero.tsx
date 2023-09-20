@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="bg-white dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center pb-[10%] py-10">
+    <section className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center pb-[10%] py-10">
       {/* <AnimateWrapper> */}
       <div
         // --aos="fade-right"

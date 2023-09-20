@@ -1,6 +1,9 @@
 export default function Frontier() {
   return (
-    <section className="container mx-auto px-10 py-20 text-black dark:text-white" id="learnmore">
+    <section
+      className="container mx-auto px-10 py-20 text-black dark:text-white"
+      id="learnmore"
+    >
       <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
         <p className="leading-wide text-2xl font-extrabold">
           Enjoy easy, one-stop inventory and payment management with Hyperce
@@ -9,9 +12,8 @@ export default function Frontier() {
         <p className="w-2/3 text-base">
           Hyperce Frontier Service is the cornerstone of our portfolio service
           at Hyperce which includes website design, brand, monitoring assets,
-          and management of the organization. As an e-commerce industry leader,
-          we know that staying ahead means seizing unique opportunities. Our
-          Frontier
+          and management of the organization. As an eCommerce industry leader,
+          we know that staying ahead means seizing unique opportunities.
         </p>
       </div>
 
@@ -19,13 +21,14 @@ export default function Frontier() {
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
           <p className="text-4xl font-bold">What is Hyperce Frontier ?</p>
           <p>
-            Portfolio Service is your ticket to optimizing your product and
-            service offerings, backed by cutting-edge data analytics and market
-            insights. What sets us apart? We&apos;re not just about individual
-            success; we&apos;re fostering collaboration with other businesses to
-            create a thriving ecosystem. Join us, and together we&apos;ll shape the
-            future of online commerce. With Frontier, you&apos;re not just a client;
-            you&apos;re a valued collaborator in our journey to redefine e-commerce.
+            Our Frontier Portfolio Service is your ticket to optimizing your
+            product and service offerings, backed by cutting-edge data analytics
+            and market insights. What sets us apart? We&apos;re not just about
+            individual success; we&apos;re fostering collaboration with other
+            businesses to create a thriving ecosystem. Join us, and together
+            we&apos;ll shape the future of online commerce. With Frontier,
+            you&apos;re not just a client; you&apos;re a valued collaborator in
+            our journey to redefine eCommerce.
           </p>
           <p>
             <p className="font-bold">Our mission? </p>
@@ -33,13 +36,12 @@ export default function Frontier() {
             <p>
               In an era where data is king and adaptability is key, the Hyperce,
               LLC Frontier Portfolio Service emerges as the essential tool for
-              e-commerce success. With a focus on portfolio optimization, market
+              eCommerce success. With a focus on portfolio optimization, market
               insights, resource allocation, risk mitigation, customization, and
               scalability, this service equips Hyperce, LLC to navigate the
-              challenging terrain of the e-commerce landscape effectively.
-
-              It&apos;s time to embark on a journey of growth and innovation with the
-              Frontier Portfolio Service as your strategic partner.
+              challenging terrain of the eCommerce landscape effectively.
+              It&apos;s time to embark on a journey of growth and innovation
+              with the Frontier Portfolio Service as your strategic partner.
             </p>
           </p>
         </div>
@@ -64,7 +66,7 @@ export default function Frontier() {
               consumers.
             </p>
           </div>
-          <div className="bg-gray-200 dark:bg-[#172D41] h-full dark:bg-transparent px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#477e68] dark:text-[#AEF2D7]"
               width="45"

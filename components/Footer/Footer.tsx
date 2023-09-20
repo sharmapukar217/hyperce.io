@@ -3,7 +3,7 @@ import { navMenuItems } from "@/data/Navdata";
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-[#02080F] mx-auto container flex items-center flex-col py-10">
+    <footer className="mx-auto container flex items-center flex-col py-10">
       <div className="top flex justify-center flex-col items-center gap-5">
         <div className="logo">
           <Logo />

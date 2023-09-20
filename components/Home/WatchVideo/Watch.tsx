@@ -9,7 +9,7 @@ export default function Watch() {
           Why Hyperce?
         </h2>
         <p className="py-4 hyperce-sub-head leading-normal text-gray-700 w-4/5 dark:text-gray-400">
-          Hyperce revolutionizes e-commerce with AI-driven solutions, elevating
+          Hyperce revolutionizes eCommerce with AI-driven solutions, elevating
           online businesses to new heights. Our dedication to innovation,
           efficiency, and tailored support ensures your success in the dynamic
           world of online retail.
@@ -18,7 +18,7 @@ export default function Watch() {
           <a href="https://www.youtube.com/watch?v=EQ5Uehjyg8M" target="_blank">
             <button
               type="button"
-              className="flex items-center gap-3 text-black dark:text-white border-[2px] border-[#357D8A] hover:border-gray-200 transition-all duration-150 px-5 py-2 rounded-xl"
+              className="flex items-center gap-3 text-black dark:text-white border-[1px] border-[#357D8A] hover:text-[#357D8A] transition-all duration-150 px-5 py-2 rounded-xl"
             >
               <div className="icon">
                 <svg

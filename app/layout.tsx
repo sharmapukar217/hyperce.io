@@ -13,9 +13,9 @@ export default function RootLayout({
   return (
     <html>
       <head></head>
-      <body className={`dark:bg-[#02080F] ${raleway.className}`}>
+      <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
         {children}
-        <div className="dark:bg-[#02080F] bg-white">
+        <div className="dark:bg-[#02080F] bg-[#ebeeef]">
           <Footer />
         </div>
         <Toaster />

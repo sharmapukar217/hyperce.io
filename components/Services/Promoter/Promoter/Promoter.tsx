@@ -36,8 +36,7 @@ export default function Promoter() {
               partnerships, and data-driven insights to propel brands to new
               heights of growth and visibility. In an era where data is king and
               adaptability is key, the Hyperce, We utilize tracking tools and
-              analytics to monitor the performance of the campaign. <br />
-              <br />
+              analytics to monitor the performance of the campaign.
               Collaboration with us follows industry regulations and is
               transparent to the audience. This includes disclosing any material
               relationships between the promoter and the brand. Our mission at
@@ -65,11 +64,10 @@ export default function Promoter() {
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
               Sending targeted email campaigns to subscribers to nurture leads,
-              build relationships, and encourage desired actions (e.g.,
-              purchases, sign-ups).
+              build relationships, and encourage desired actions.
             </p>
           </div>
-          <div className="bg-gray-200 dark:bg-[#172D41] h-full dark:bg-transparent px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#477e68] dark:text-[#AEF2D7]"
               width="45"
@@ -84,9 +82,8 @@ export default function Promoter() {
               />
             </svg>
             <p className=" text-black dark:text-[#cbcbcb] text-sm">
-              Want to promote in an exceptional method. We are here to utilize
-              unconventional and creative marketing tactics to capture the
-              attention of the target audience in unexpected ways.
+              We're here to redefine promotion with unconventional, creative
+              tactics that captivate your audience in unexpected ways.
             </p>
           </div>
           <div className="col-span-2 bg-gray-200 dark:bg-[#172D41] h-fit px-10 py-5 gap-5 flex rounded-xl items-center justify-between xl:mx-10">
@@ -104,10 +101,9 @@ export default function Promoter() {
               />
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] w-4/5 text-sm">
-              Optimize your online content to rank higher in search engine
-              results. This can increase organic traffic to your website and
-              improve your service&apos;s visibility with the services of
-              Hyperce.
+              Enhance your online content for higher search engine rankings,
+              boost organic traffic, and elevate your service's visibility with
+              Hyperce's expertise.
             </p>
           </div>
         </div>

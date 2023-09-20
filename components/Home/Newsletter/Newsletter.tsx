@@ -58,8 +58,8 @@ export default function Newsletter() {
         />
       </div>
 
-      <div className="mx-auto container px-10 md:px-20 flex flex-col lg:flex-row pb-10 -mt-[10%]">
-        <div className="xl:w-1/2 text-center md:text-left w-full left px-5 md:px-20 py-10 md:py-20 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  rounded-l-xl">
+      <div className="mx-auto container px-10 md:px-20 flex flex-col md:flex-row pb-10 -mt-[10%]">
+        <div className="xl:w-1/2 text-center md:text-left w-full left px-5 md:px-20 py-10 md:py-20 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  md:rounded-l-xl">
           <div className="flex flex-col w-full md:w-[80%] gap-5">
             <div className="text-2xl md:text-3xl font-bold">
               Subscribe to our Weekly Newsletter
@@ -81,14 +81,14 @@ export default function Newsletter() {
               <button
                 onClick={handleNewslett}
                 aria-aria-label="subscribe-newsletter"
-                className="-mr-[1%] text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
+                className="text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
               >
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-        <div className="xl:w-1/2 w-full min-h-[200px] bg-white right lg:rounded-r-xl bg-[url('/news-back.png')] bg-cover">
+        <div className="hidden md:block xl:w-1/2 w-full min-h-[200px] bg-white right md:rounded-r-xl bg-[url('/news-back.png')] bg-cover">
           {/* <img src="/news-back.png" alt="" className="" /> */}
         </div>
       </div>

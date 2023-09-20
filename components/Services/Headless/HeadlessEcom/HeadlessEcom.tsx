@@ -19,7 +19,7 @@ export default function HeadlessEcom() {
 
       <div className="flex gap-20 flex-col lg:flex-row">
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
-          <p className="text-4xl font-bold">What is Headless E-commerce ?</p>
+          <p className="text-4xl font-bold">What is Headless eCommerce ?</p>
           <p>
             Hyperce, LLC&apos;s Headless commerce isn&apos;t just about esthetics; it&apos;s
             about performance. It enables Hyperce to adapt quickly to changing
@@ -31,7 +31,7 @@ export default function HeadlessEcom() {
             <p>
               To leave your competition headless and you, the business
               visionary, head over heels for success! At Hyperce, we&apos;ve
-              shattered the limitations of traditional e-commerce, carving a
+              shattered the limitations of traditional eCommerce, carving a
               path to the future with headless commerce solutions that are as
               cutting-edge as they are irresistible.
               <br />
@@ -39,7 +39,7 @@ export default function HeadlessEcom() {
               Visualize your company reaching new heights, free from the
               limitations imposed by traditional platforms. Our headless
               architecture offers unparalleled flexibility, speed, and
-              scalability. It&apos;s a revolution in e-commerce that speaks to the
+              scalability. It&apos;s a revolution in eCommerce that speaks to the
               hearts of both clients and savvy entrepreneurs.
             </p>
           </p>
@@ -64,7 +64,7 @@ export default function HeadlessEcom() {
               transactions with the most robust security measures.
             </p>
           </div>
-          <div className="bg-gray-200 dark:bg-[#172D41] h-full dark:bg-transparent px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#477e68] dark:text-[#AEF2D7]"
               width="45"

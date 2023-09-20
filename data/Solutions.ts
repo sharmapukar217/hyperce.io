@@ -2,7 +2,7 @@ export const solutions = [
     {
         name: 'Hyperce Headless',
         href: "/headless",
-        des: "Elevate e-commerce with this cutting-edge solution. Seamless shopping experiences for global success.",
+        des: "Elevate eCommerce with this cutting-edge solution. Seamless shopping experiences for global success.",
         whiteIcon: "/headless-white.svg",
         darkIcon: "/headless-dark.svg"
     },

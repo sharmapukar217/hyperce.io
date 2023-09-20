@@ -6,7 +6,7 @@ export default function Ink() {
     >
       <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
         <p className="leading-wide text-2xl font-extrabold">
-          What is Hyperce Ink !?
+          What is Hyperce Ink ?
         </p>
         <p className="w-2/3 text-base">
           At Hyperce, we believe in the magic of storytelling. Discover how our
@@ -24,7 +24,7 @@ export default function Ink() {
             manage their own blogs on the internet. It offers a user-friendly
             interface and a suite of tools that simplify the process of crafting
             and sharing written content, images, videos, and more. Are you
-            seeking to elevate your e-commerce game, connect with customers on a
+            seeking to elevate your eCommerce game, connect with customers on a
             deeper level, and position your business as an industry leader? Look
             no further!
           </p>
@@ -33,16 +33,14 @@ export default function Ink() {
             <br />
             <p>
               At Hyperce, LLC, we understand that in the modern digital
-              landscape, blogging is more than just words on a screen; it&apos;s a
-              strategic asset that can transform your e-commerce venture.
+              landscape, blogging is more than just words on a screen; it&apos;s
+              a strategic asset that can transform your eCommerce venture.
               Hyperce&apos;s blogging service is the creative bridge between
-              innovation and your brand&apos;s success.
-              <br />
-              <br />
-              It&apos;s not just about sharing stories; it&apos;s about crafting
-              compelling narratives that resonate with your audience and drive
-              conversions. These services typically provide tools and features
-              that simplify the process of creating and maintaining a blog.
+              innovation and your brand&apos;s success. It&apos;s not just about
+              sharing stories; it&apos;s about crafting compelling narratives
+              that resonate with your audience and drive conversions. These
+              services typically provide tools and features that simplify the
+              process of creating and maintaining a blog.
             </p>
           </p>
         </div>
@@ -67,7 +65,7 @@ export default function Ink() {
               visibility, helping you reach your target audience effectively.
             </p>
           </div>
-          <div className="bg-gray-200 dark:bg-[#172D41] h-full dark:bg-transparent px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#477e68] dark:text-[#AEF2D7]"
               width="45"
