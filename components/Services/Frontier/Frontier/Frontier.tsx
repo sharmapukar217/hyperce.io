@@ -17,7 +17,7 @@ export default function Frontier() {
 
       <div className="flex gap-20 flex-col lg:flex-row">
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
-          <p className="text-4xl font-bold">What is Hyperce Frontier ?!</p>
+          <p className="text-4xl font-bold">What is Hyperce Frontier ?</p>
           <p>
             Portfolio Service is your ticket to optimizing your product and
             service offerings, backed by cutting-edge data analytics and market

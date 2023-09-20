@@ -1,9 +1,5 @@
-import ContactForm from "@/components/Contact/Contact";
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
-import Features from "@/components/Services/Frontier/Features/Features";
-import Gallary from "@/components/Services/Frontier/Gallary/Gallary";
-
 import Frontier from "@/components/Services/Frontier/Frontier/Frontier";
 import Hero from "@/components/Services/Frontier/Hero/Hero";
 import WhyChoose from "@/components/Services/Frontier/WhyChoose/WhyChoose";
@@ -22,7 +18,7 @@ export default function Services() {
       </main>
       <Frontier />
       <WhyChoose />
-      <Gallary />
+      {/* <Gallary /> */}
       {/* <Features /> */}
       <Newsletter />
       <Contact />

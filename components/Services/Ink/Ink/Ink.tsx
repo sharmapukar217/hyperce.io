@@ -17,7 +17,7 @@ export default function Ink() {
 
       <div className="flex gap-20 flex-col lg:flex-row">
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
-          <p className="text-4xl font-bold">What is Hyperce Ink ?!</p>
+          <p className="text-4xl font-bold">What is Hyperce Ink ?</p>
           <p>
             Hyperce’s ink service is an online blogging platform that empowers
             individuals and organizations to effortlessly create, publish, and

@@ -1,4 +1,8 @@
+"use client";
+
 import { stats } from "@/data/Stats";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function Stats() {
   return (
@@ -10,7 +14,7 @@ export default function Stats() {
             className=" mx-auto dark:md:border-[#64748B] md:border-r md:last:border-none md:w-1/4 min-w-[220px] p-4 w-1/2 text-center"
           >
             <div className="mb-2 font-bold font-heading dark:text-white lg:text-5xl text-[2.6rem] text-primary xl:text-6xl">
-              {each.number}
+              <Counter targetNumber={parseInt(each.number)} />
             </div>
             <div className="font-bold dark:text-slate-400 lg:text-base text-gray-800 text-sm tracking-widest uppercase">
               {each.name}
@@ -21,3 +25,22 @@ export default function Stats() {
     </section>
   );
 }
+
+const Counter = ({ targetNumber }: { targetNumber: number }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Count only when it comes into view once
+  });
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (inView && count < targetNumber) {
+      const interval = setInterval(() => {
+        setCount((prevCount) => prevCount + 1);
+      }, 60); // Adjust the interval duration as needed (in milliseconds)
+
+      return () => clearInterval(interval);
+    }
+  }, [inView, count, targetNumber]);
+
+  return <span ref={ref}>{inView && <>{count}&nbsp;+</>}</span>;
+};

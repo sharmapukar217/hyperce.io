@@ -127,8 +127,7 @@ export default function Collaborative() {
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
                       <span className="font-bold">Customer Relationship</span>{" "}
-                      Management (CRM) Tools I found out these 3 main tools and
-                      their sub-tools
+                      Management (CRM) Tools
                     </span>
                   </li>
                 </ul>

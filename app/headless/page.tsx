@@ -1,8 +1,8 @@
 import Contact from "@/components/Contact/Contact";
-import ContactForm from "@/components/Contact/Contact";
+
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
-import Features from "@/components/Services/Headless/Features/Features";
+
 import Gallary from "@/components/Services/Headless/Gallary/Gallary";
 
 import HeadlessEcom from "@/components/Services/Headless/HeadlessEcom/HeadlessEcom";

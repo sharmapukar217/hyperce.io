@@ -19,10 +19,10 @@ export default function App() {
     <section className="container mx-auto px-10  lg:px-[10%] py-5 md:py-20 ">
       <div className="text-center w-full md:pb-10 flex flex-col gap-2">
         <h2 className="text-3xl mb-3 md:text-4xl text-black dark:text-white font-bold">
-          Gallery for Headless E-comerce
+          Gallery for Hyperce Headless
         </h2>
         <span className="text-lg text-black dark:text-white">
-          Lorem ipsum dolor sit amet.
+          Uncover remarkable art pieces originating from Hyperce Headless.
         </span>
       </div>
       <div ref={ref} className="keen-slider">

@@ -2,7 +2,7 @@ import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 
 export default function Mission() {
   return (
-    <section className="flex flex-col lg:flex-row mx-auto py-10 gap-5 container text-black dark:text-white h-fit">
+    <section className="flex flex-col md:flex-row mx-auto py-10 gap-5 container text-black dark:text-white h-fit">
       <div className="flex flex-col gap-5 items-center md:w-1/2">
         <div className="flex flex-col gap-5 ">
           <div className="icon flex justify-center">

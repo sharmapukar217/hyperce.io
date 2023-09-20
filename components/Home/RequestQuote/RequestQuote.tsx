@@ -50,7 +50,7 @@ export default function RequestQuote() {
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">
             <h1 className="block text-4xl font-bold text-gray-800 dark:text-white">
-              Love Specific Product?
+              Love Specific Solution?
             </h1>
             <p className="mt-3 text-lg text-gray-800 dark:text-gray-400">
               Request a Quote today. Our Sales representatives are available

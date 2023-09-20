@@ -17,7 +17,7 @@ export default function Promoter() {
 
       <div className="flex gap-20 flex-col lg:flex-row">
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
-          <p className="text-4xl font-bold">What is Hyperce Promoter ?!</p>
+          <p className="text-4xl font-bold">What is Hyperce Promoter ?</p>
           <p>
             At Hyperce, we&apos;re not just riding the wave of Promoter
             Marketing; we&apos;re setting the industry standard with a truly

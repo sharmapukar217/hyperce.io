@@ -1,8 +1,5 @@
-import ContactForm from "@/components/Contact/Contact";
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
-import Features from "@/components/Services/Ink/Features/Features";
-import Gallary from "@/components/Services/Ink/Gallary/Gallary";
 
 import Ink from "@/components/Services/Ink/Ink/Ink";
 import Hero from "@/components/Services/Ink/Hero/Hero";
@@ -22,7 +19,7 @@ export default function Services() {
       </main>
       <Ink />
       <WhyChoose />
-      <Gallary />
+      {/* <Gallary /> */}
       {/* <Features /> */}
       <Newsletter />
       <Contact />

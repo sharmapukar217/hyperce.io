@@ -19,7 +19,7 @@ export default function HeadlessEcom() {
 
       <div className="flex gap-20 flex-col lg:flex-row">
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
-          <p className="text-4xl font-bold">What is Headless E-commerce ?!</p>
+          <p className="text-4xl font-bold">What is Headless E-commerce ?</p>
           <p>
             Hyperce, LLC&apos;s Headless commerce isn&apos;t just about esthetics; it&apos;s
             about performance. It enables Hyperce to adapt quickly to changing
