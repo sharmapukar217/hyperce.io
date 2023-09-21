@@ -20,7 +20,7 @@ export default function Message() {
             </span>
           </div>
         </div>
-        <div className="w-full lg:w-1/2 flex bg-white  dark:bg-[#0E1625] flex-col gap-3 justify-center md:px-10 pt-10 md:py-[15%] lg:py-5">
+        <div className="w-full lg:w-1/2 flex bg-white  dark:bg-[#0E1625] flex-col gap-7 md:gap-5 p-10 justify-center md:px-10 pt-10 md:py-[15%] lg:py-5">
           <h3 className="text-xl font-semibold text-[#4a7262] dark:text-[#AEF2D7]">
             Embrace the Future of eCommerce
           </h3>

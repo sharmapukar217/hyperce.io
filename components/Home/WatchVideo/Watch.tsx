@@ -1,6 +1,6 @@
 export default function Watch() {
   return (
-    <section className="container mx-auto px-10 md:px-20 py-10 md:py-20 flex flex-col lg:flex-row text-left">
+    <section id="why-hyperce" className="container mx-auto px-10 md:px-20 py-10 md:py-20 flex flex-col lg:flex-row text-left">
       <div className="flex w-full flex-col justify-center items-center md:items-start">
         <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase">
           Watch a video

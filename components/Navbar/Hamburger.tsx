@@ -1,5 +1,6 @@
 "use client";
 
+import "./Hamburger.css";
 import React, { useState } from "react";
 
 export default function Hamburger(props: any) {
@@ -10,15 +11,15 @@ export default function Hamburger(props: any) {
     },
     {
       title: "About",
-      link: "/about",
+      link: "/#why-hyperce",
     },
     {
       title: "Contact",
-      link: "/contact",
+      link: "/#contact",
     },
     {
       title: "FAQs",
-      link: "/faq",
+      link: "/#faq",
     },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
@@ -55,8 +56,8 @@ export default function Hamburger(props: any) {
 
       <div
         className={`${
-          menuOpen ? "transition-x-0 bg-fixed" : "translate-x-[100%]"
-        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl transition-all flex justify-center duration-500 h-[100vh] z-20 fixed overflow-visible bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
+          menuOpen ? "transition-x-0 hyperce-no-scroll" : "translate-x-[100%]"
+        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl transition-all flex justify-center duration-500 h-[100vh] -top-10 overflow-hidden z-20 fixed scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
       >
         <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] bg-black dark:bg-opacity-10 bg-opacity-0 px-[10%]">
           <svg
@@ -85,6 +86,7 @@ export default function Hamburger(props: any) {
               <ul className="flex flex-col gap-8">
                 {menu.map((eachMenu) => (
                   <li
+                    onClick={closeMenu}
                     key={menu.indexOf(eachMenu)}
                     className="lg:hover:scale-[105%] text-md transition-all duration-200 text-black dark:text-white hover:text-gray-500 hover:dark:text-gray-200"
                   >
