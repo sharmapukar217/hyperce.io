@@ -55,7 +55,7 @@ export default function Hamburger(props: any) {
 
       <div
         className={`${
-          menuOpen ? "transition-x-0" : "translate-x-[100%]"
+          menuOpen ? "transition-x-0 bg-fixed" : "translate-x-[100%]"
         } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl transition-all flex justify-center duration-500 h-[100vh] z-20 fixed overflow-visible bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
       >
         <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] bg-black dark:bg-opacity-10 bg-opacity-0 px-[10%]">

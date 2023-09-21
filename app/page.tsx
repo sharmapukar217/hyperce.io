@@ -16,6 +16,7 @@ import Gallary from "@/components/Home/Gallary/Gallary";
 import CardsSection from "@/components/Home/CardsSection/CardsSection";
 import FAQ from "@/components/FAQ/FAQ";
 import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
+import HomeTestimonial from "@/components/Home/Gallary/Testimonials";
 
 export default function Home() {
   return (
@@ -26,21 +27,51 @@ export default function Home() {
       </main>
       <div className="bg-[#ebeeef] dark:bg-[#0F172A]">
         <AnimateWrapper>
-          <div data-aos="fade-up"><Solutions /></div>
-          <div data-aos="fade-up"><Watch /></div>
-          <div data-aos="fade-up"><Mission /></div>
-          <div data-aos="fade-up"><Stats /></div>
-          <div data-aos="fade-up"><Business /></div>
-          <div data-aos="fade-up"><Responsibility /></div>
-          <div data-aos="fade-up"><Collaborative /></div>
-          <div data-aos="fade-up"><CardsSection /></div>
-          <div data-aos="fade-up"><Partners /></div>
-          <div data-aos="fade-up"><Gallary /></div>
-          <div data-aos="fade-up"><Newsletter /></div>
-          <div data-aos="fade-up"><FAQ /></div>
-          <div data-aos="fade-up"><Message /></div>
-          <div data-aos="fade-up"><RequestQuote /></div>
-          <div data-aos="fade-up"><Contact /></div>
+          <div data-aos="fade-up">
+            <Solutions />
+          </div>
+          <div data-aos="fade-up">
+            <Watch />
+          </div>
+          <div data-aos="fade-up">
+            <Mission />
+          </div>
+          <div data-aos="fade-up">
+            <Stats />
+          </div>
+          <div data-aos="fade-up">
+            <Business />
+          </div>
+          <div data-aos="fade-up">
+            <Responsibility />
+          </div>
+          <div data-aos="fade-up">
+            <Collaborative />
+          </div>
+          <div data-aos="fade-up">
+            <CardsSection />
+          </div>
+          <div data-aos="fade-up">
+            <Partners />
+          </div>
+          <div data-aos="fade-up">
+            <HomeTestimonial />
+          </div>
+          <div data-aos="fade-up">
+            <Newsletter />
+          </div>
+          <div data-aos="fade-up">
+            <FAQ />
+          </div>
+          <div data-aos="fade-up">
+            <Message />
+          </div>
+          <div data-aos="fade-up">
+            <RequestQuote />
+          </div>
+          <div data-aos="fade-up">
+            <Contact />
+          </div>
         </AnimateWrapper>
       </div>
     </>

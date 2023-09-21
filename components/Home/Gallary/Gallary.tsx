@@ -1,154 +1,110 @@
 "use client";
 
-import * as React from "react";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import EachTest from "./EachTest";
 import { Testimonials } from "@/data/Testimonials";
 
+import React, { useState } from "react";
+import "./styles.css";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
+
 export default function App() {
-  const [phoneref] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: "free",
-    slides: {
-      perView: 1.2,
-      spacing: 15,
-    },
-  });
-  const [midref] = useKeenSlider<HTMLDivElement>({
-    loop: true,
-    mode: "free-snap",
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [loaded, setLoaded] = useState(false);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     slides: {
       perView: 2.5,
       spacing: 15,
     },
-  });
-  const [ref] = useKeenSlider<HTMLDivElement>({
-    loop: true,
     mode: "free-snap",
-    slides: {
-      perView: 2.5,
-      spacing: 60,
+    initial: 2.5,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
+    },
+    created() {
+      setLoaded(true);
     },
   });
 
   return (
-    <section className="container mx-auto px-10 md:px-20 py-10 md:py-20">
-      <div className="text-center w-full md:pb-10 flex flex-col gap-2">
-        <h2 className="font-bold text-4xl text-black dark:text-white">
-          Testimonials
-        </h2>
-        <span className="hyperce-sub-head text-gray-700 dark:text-gray-400">
-          What do our customers say?
-        </span>
-      </div>
-      <div ref={phoneref} className="keen-slider">
-        {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide md:hidden h-full">
-            <EachTest
-              name={testimonial.name}
-              org={testimonial.org}
-              message={testimonial.message}
+    <>
+      <div className="navigation-wrapper">
+        <div ref={sliderRef} className="keen-slider">
+          {Testimonials.map((testimonial) => (
+            <div className="keen-slider__slide">
+              <EachTest
+                name={testimonial.name}
+                org={testimonial.org}
+                message={testimonial.message}
+              />
+            </div>
+          ))}
+        </div>
+        {loaded && instanceRef.current && (
+          <>
+            <Arrow
+              left
+              onClick={(e: any) =>
+                e.stopPropagation() || instanceRef.current?.prev()
+              }
+              disabled={currentSlide === 0}
             />
-          </div>
-        ))}
-      </div>
-      <div ref={midref} className="keen-slider">
-        {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide hidden md:block xl:hidden h-full">
-            <EachTest
-              name={testimonial.name}
-              org={testimonial.org}
-              message={testimonial.message}
+
+            <Arrow
+              onClick={(e: any) =>
+                e.stopPropagation() || instanceRef.current?.next()
+              }
+              disabled={
+                currentSlide ===
+                instanceRef.current.track.details.slides.length - 1
+              }
             />
-          </div>
-        ))}
+          </>
+        )}
       </div>
-      <div ref={ref} className="keen-slider">
-        {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide hidden h-full xl:block">
-            <EachTest
-              name={testimonial.name}
-              org={testimonial.org}
-              message={testimonial.message}
-            />
-          </div>
-        ))}
-      </div>
-      {/* <div className="justify-center text-black dark:text-white mt-5 text-xl font-bold flex gap-3">
-        Slide
-        <svg
-          version="1.1"
-          width="30px"
-          height="30px"
-          viewBox="0 0 64 64"
-          enable-background="new 0 0 64 64"
-        >
-          <g>
-            <polyline
-              fill="none"
-              stroke="currentColor"
-              stroke-width="5"
-              stroke-miterlimit="10"
-              points="63,37 1,37 1,18 	"
-            />
-          </g>
-          <polyline
-            fill="none"
-            stroke="currentColor"
-            stroke-width="5"
-            stroke-linejoin="bevel"
-            stroke-miterlimit="10"
-            points="54,46 63,37 
-	54,28 "
-          />
-        </svg>
-      </div> */}
-      <div className="flex flex-row gap-3 mt-8 justify-center text-black dark:text-white items-center">
-        <svg
-          width="13"
-          height="13"
-          viewBox="0 0 15 14"
-          className="text-black dark:text-white"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="7.53125"
-            cy="7"
-            r="7"
-            fill="currentColor"
-            stroke="black"
-            stroke-width="1"
-          />
-        </svg>
-        <svg
-          width="13"
-          height="13"
-          viewBox="0 0 15 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="7.53125" cy="7" r="7" fill="#357D8A" />
-        </svg>
-        <svg
-          width="13"
-          height="13"
-          className="text-black dark:text-white"
-          viewBox="0 0 15 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="7.53125"
-            cy="7"
-            r="7"
-            fill="currentColor"
-            stroke="black"
-            stroke-width="1"
-          />
-        </svg>
-      </div>
-    </section>
+      {loaded && instanceRef.current && (
+        <div className="dots">
+          {[
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx);
+                }}
+                className={"dot" + (currentSlide === idx ? " active" : "")}
+              ></button>
+            );
+          })}
+        </div>
+      )}
+    </>
+  );
+}
+
+function Arrow(props: {
+  disabled: boolean;
+  left?: boolean;
+  onClick: (e: any) => void;
+}) {
+  const disabeld = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabeld}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
   );
 }
