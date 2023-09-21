@@ -8,7 +8,7 @@ export const stats = [
         number: '20+'
     },
     {
-        name: 'Countries',
+        name: 'Regions',
         number: '10+'
     },
     {

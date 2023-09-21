@@ -1,18 +1,27 @@
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
-import { Raleway, Public_Sans, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 
 const raleway = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
+  title = "",
+  og_img = "",
+  og_description = "",
 }: {
   children: React.ReactNode;
+  title: string;
+  og_img: string;
+  og_description: string;
 }) {
   return (
     <html>
-      <head></head>
+      <head>
+        <title>Hyperce - Your Ultimate eCommerce Solutions Partner</title>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
         {children}
         <div className="dark:bg-[#02080F] bg-[#ebeeef]">
