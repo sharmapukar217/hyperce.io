@@ -28,31 +28,6 @@ export default function Solutions() {
             ))}
           </div>
         </div>
-        {/* <div className="flex justify-center mt-20">
-          <a href="/">
-            <button
-              aria-label="all-services"
-              className="hover:text-gray-600 dark:text-white  dark:hover:text-[#e4e4e4] border-[#c7c5c5] dark:border-zinc-200 transition-all duration-200 hover:scale-[102%] flex gap-2 items-center border-2 px-7 py-3 rounded-full"
-            >
-              <span className="hyperce-btn-text-high">
-                See all our Solutions
-              </span>
-              <span>
-                <svg width="30px" height="30px" viewBox="-3 0 32 32">
-                  <g id="icomoon-ignore"></g>
-                  <path
-                    d="M13.11 29.113c7.243 0 13.113-5.871 13.113-13.113s-5.87-13.113-13.113-13.113c-7.242 0-13.113 5.871-13.113 13.113s5.871 13.113 13.113 13.113zM13.11 3.936c6.652 0 12.064 5.412 12.064 12.064s-5.412 12.064-12.064 12.064c-6.653 0-12.064-5.412-12.064-12.064s5.411-12.064 12.064-12.064z"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    d="M13.906 21.637l0.742 0.742 6.378-6.379-6.378-6.379-0.742 0.742 5.112 5.112h-12.727v1.049h12.727z"
-                    fill="currentColor"
-                  ></path>
-                </svg>
-              </span>
-            </button>
-          </a>
-        </div> */}
         <script async src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>AOS.init();</script>
       </section>

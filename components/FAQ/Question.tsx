@@ -17,7 +17,7 @@ export default function Question(props: propTypes) {
       <AccordionItem value={props.id}>
         <AccordionTrigger>
           <div className="flex justify-between items-start w-full px-4">
-            <div className="flex flex-row gap-3 items-center">
+            <div className="flex flex-row gap-3 items-start text-start">
               <div className="">
                 <div dangerouslySetInnerHTML={{ __html: props.icon }} />
               </div>

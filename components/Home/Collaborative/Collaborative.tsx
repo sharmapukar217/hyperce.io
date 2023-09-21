@@ -40,7 +40,7 @@ export default function Collaborative() {
             <div className="mt-10 md:mt-20 lg:col-span-5">
               <div className="space-y-6 sm:space-y-8">
                 <div className="space-y-2 md:space-y-4">
-                  <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-gray-200">
                     Collaborative tools to grow your ecom business.
                   </h2>
                   <p className="text-base dark:text-gray-400 text-gray-700">

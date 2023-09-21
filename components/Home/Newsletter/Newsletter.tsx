@@ -68,9 +68,9 @@ export default function Newsletter() {
               Stay update with all new offers and services we provide and more
               details{" "}
             </div>
-            <div className="flex flex-col gap-2 md:flex-row md:gap-0 w-full items-center md:border-[2px] rounded-md border-[#357D8A]">
+            <div className="border-[2px] flex w-full border-[#357D8A]">
               <input
-                className="w-full h-10 bg-transparent px-5 py-6 focus:outline-none"
+                className="w-full h-10 bg-transparent px-5 py-6 outline-none"
                 type="text"
                 onChange={handleChange}
                 name=""
@@ -81,7 +81,7 @@ export default function Newsletter() {
               <button
                 onClick={handleNewslett}
                 aria-aria-label="subscribe-newsletter"
-                className="text-white dark:text0black w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
+                className="w-fit px-3 py-1 bg-[#357D8A] text-white"
               >
                 Subscribe
               </button>

@@ -57,10 +57,10 @@ export default function RequestQuote() {
               18/24 hours everyday on all of our socials.
             </p>
 
-            <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
-              <div className="flex flex-col gap-2 md:flex-row md:gap-0 items-center justify-between md:border-[2px] w-full rounded-md border-[#357D8A]">
+            <div className="mt-5 lg:mt-8 flex flex-col p-0 items-center gap-2 sm:flex-row sm:gap-3">
+              <div className="border-[2px] flex w-full border-[#357D8A]">
                 <input
-                  className="h-10 w-3/5 text-black dark:text-white bg-transparent px-5 py-6 focus:outline-none"
+                  className="w-full px-5 outline-none focus:border-[#357D8A]"
                   type="text"
                   onChange={handleChange}
                   value={email}
@@ -74,7 +74,7 @@ export default function RequestQuote() {
                     }
                   }}
                   aria-aria-label="subscribe-newsletter"
-                  className="text-white w-fit flex justify-center rounded-md items-center px-5 py-3 bg-[#357D8A]"
+                  className="w-fit px-3 py-1 bg-[#357D8A] text-white"
                 >
                   Request Quotation
                 </button>

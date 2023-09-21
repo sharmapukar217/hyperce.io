@@ -19,7 +19,7 @@ export default function Mission() {
               />
             </svg>
           </div>
-          <div className="title text-4xl font-extrabold text-center">
+          <div className="title text-3xl md:text-4xl font-extrabold text-center">
             Our Mission
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function Mission() {
               />
             </svg>
           </div>
-          <div className="title text-4xl font-extrabold text-center">
+          <div className="title text-3xl md:text-4xl font-extrabold text-center">
             Our Vision{" "}
           </div>
         </div>

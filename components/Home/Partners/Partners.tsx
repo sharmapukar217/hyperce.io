@@ -1,7 +1,7 @@
 export default function Partners() {
   return (
     <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16">
-      <h2 className="text-4xl font-bold dark:text-white text-center">
+      <h2 className="text-3xl md:text-4xl font-bold dark:text-white text-center">
         Our Partners
       </h2>
       <div className="flex mt-5 justify-center px-10 mb-10">

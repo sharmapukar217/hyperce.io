@@ -37,7 +37,7 @@ export default function CardsSection() {
   return (
     <section className="container mx-auto px-10 py-10 md:py-20 text-black dark:text-white">
       <div className="mx-auto md:w-3/5">
-        <h2 className="text-center text-gray-900 dark:text-white text-4xl hyperce-head-xl">
+        <h2 className="text-center text-gray-900 dark:text-white text-3xl md:text-4xl hyperce-head-xl">
           Shaped to meet your <br /> ecommerce needs
         </h2>
         <p className="mt-4 text-center text-gray-600 dark:text-gray-300">

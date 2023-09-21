@@ -40,7 +40,7 @@ export default function Responsibility() {
             </svg>
           </div>
           <div className="text flex flex-col gap-5 items-center">
-            <h2 className="text-4xl font-extrabold">
+            <h2 className="text-3xl md:text-4xl font-extrabold">
               Your Success is Our Priority
             </h2>
             <p className="hyperce-sub-head text-gray-500 dark:text-gray-400 w-2/3">
