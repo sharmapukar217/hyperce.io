@@ -57,51 +57,49 @@ export default function Navbar() {
               </li>
             ))}
             <a href="#solutions">
-            <div
-              onMouseEnter={showDropdown}
-              onMouseLeave={hideDropdown}
-              className="relative"
-            >
-              <li
-                className={`hover:scale-[105%] text-base font-bold transition-all duration-200 cursor-pointer ${
-                  isDropdownVisible ? "text-[#337684]" : ""
-                }`}
+              <div
+                onMouseEnter={showDropdown}
+                onMouseLeave={hideDropdown}
+                className="relative"
               >
-                Solutions
-              </li>
-              {isDropdownVisible && (
-                <div
-                  onMouseEnter={() => setIsDropdownHovered(true)}
-                  onMouseLeave={() => setIsDropdownHovered(false)}
-                  className={`absolute border-[1px] z-50 bg-white dark:bg-black border-black px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
-                    isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
+                <li
+                  className={`hover:scale-[105%] text-base font-bold transition-all duration-200 cursor-pointer ${
+                    isDropdownVisible ? "text-[#337684]" : ""
                   }`}
                 >
-                  {solutions.map((each) => (
-                    <>
-                      <a
-                        className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
-                        href={each.href}
-                      >
-                        <img
-                          className="h-10 w-10 hidden dark:block"
-                          src={each.darkIcon}
-                          alt=""
-                        />
-                        <img
-                          className="h-10 w-10 dark:hidden"
-                          src={each.whiteIcon}
-                          alt=""
-                        />
-                        {each.name}
-                      </a>
-
-
-                    </>
-                  ))}
-                </div>
-              )}
-            </div>
+                  Solutions
+                </li>
+                {isDropdownVisible && (
+                  <div
+                    onMouseEnter={() => setIsDropdownHovered(true)}
+                    onMouseLeave={() => setIsDropdownHovered(false)}
+                    className={`absolute border-[1px] z-50 bg-white dark:bg-[#0F1023] border-gray-300 px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
+                      isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
+                    }`}
+                  >
+                    {solutions.map((each) => (
+                      <>
+                        <a
+                          className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                          href={each.href}
+                        >
+                          <img
+                            className="h-10 w-10 hidden dark:block"
+                            src={each.darkIcon}
+                            alt=""
+                          />
+                          <img
+                            className="h-10 w-10 dark:hidden"
+                            src={each.whiteIcon}
+                            alt=""
+                          />
+                          {each.name}
+                        </a>
+                      </>
+                    ))}
+                  </div>
+                )}
+              </div>
             </a>
           </ul>
         </nav>

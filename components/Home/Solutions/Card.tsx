@@ -22,7 +22,7 @@ export default function SolutionsCard(props: propTypes) {
             alt=""
           />
         </div>
-        <div className="text text-center flex flex-col items-center">
+        <div className="text text-center lg:text-left flex flex-col items-center lg:items-start">
           <div className="title hyperce-card-header">{props.name}</div>
           <div className="hyperce-card-description des text-sm dark:text-gray-300 text-gray-800 w-4/5 xl:w-full">
             {props.des}

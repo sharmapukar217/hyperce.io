@@ -7,7 +7,7 @@ export default function Frontier() {
       <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
         <p className="leading-wide text-2xl font-extrabold">
           Enjoy easy, one-stop inventory and payment management with Hyperce
-          Headless.
+          Frontier.
         </p>
         <p className="w-2/3 text-base">
           Hyperce Frontier Service is the cornerstone of our portfolio service

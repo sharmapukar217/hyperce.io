@@ -6,7 +6,7 @@ export default function WhyChoose() {
       <div className="bg-gray-200 dark:bg-gradient-to-r from-[#101525] to-[#212642] md:px-10 rounded-3xl pt-16">
         <div className="flex items-center flex-col gap-5">
           <span className="text-2xl md:text-4xl font-bold text-center px-6">
-            Choose Hyperce Headless eCommerce
+            Choose Hyperce Ink
           </span>
           <p className="w-3/4 text-base md:text-xl text-center">
             Join us on this journey as we redefine the possibilities of online
