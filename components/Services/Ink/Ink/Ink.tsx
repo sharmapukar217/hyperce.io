@@ -44,7 +44,7 @@ export default function Ink() {
             </p>
           </p>
         </div>
-        <div className="lg:w-2/5 grid grid-cols-2 gap-5 h-fit">
+        <div className="lg:w-2/5 grid md:grid-cols-2 gap-5 h-fit">
           <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
             <svg
               className="text-[#854b8a] dark:text-[#D8AEF2]"
@@ -85,8 +85,8 @@ export default function Ink() {
               source of income for bloggers.
             </p>
           </div>
-          <div className="col-span-2 flex justify-center">
-            <div className="bg-gray-200 dark:bg-[#172D41] w-1/2 h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
+          <div className="md:col-span-2 flex justify-center">
+            <div className="bg-gray-200 dark:bg-[#172D41] md:w-1/2 h-full px-5 py-5 gap-5 flex flex-col rounded-xl">
               <svg
                 className="text-[#636a95] dark:text-[#b193e6]"
                 width="45"
