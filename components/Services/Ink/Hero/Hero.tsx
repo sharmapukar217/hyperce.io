@@ -2,16 +2,17 @@ export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
-        <div className="flex flex-col items-center gap-2 justify-center bg-white bg-opacity-50 py-20 rounded-3xl">
+        <div className="flex flex-col items-center mt-20 text-black gap-2 justify-center bg-white bg-opacity-50 py-20 rounded-3xl">
           <img
             className="h-[70px] mb-5 w-auto"
             src="/hyperce-ink-white.svg"
             alt=""
           />
-          <span className="text-7xl font-bold">Hyperce Ink</span>
+          <span className="text-4xl md:text-7xl font-bold">Hyperce Ink</span>
           <br />
           <span className="text-base font-bold ">
-            The best Blogging Solutions for eCommerce Businesses.
+            Unleash the Power of Words with Hyperce Ecommerce Suite Expert
+            Blogging Solutions!
           </span>
           <a
             className="mt-10 w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"

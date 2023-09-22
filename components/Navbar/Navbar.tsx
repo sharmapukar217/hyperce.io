@@ -73,7 +73,7 @@ export default function Navbar() {
                   <div
                     onMouseEnter={() => setIsDropdownHovered(true)}
                     onMouseLeave={() => setIsDropdownHovered(false)}
-                    className={`absolute border-[1px] z-50 bg-white dark:bg-[#0F1023] border-gray-300 px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
+                    className={`absolute border-[1px] z-50 bg-white dark:bg-[#0F1023] border-gray-300 dark:border-black px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
                       isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
                     }`}
                   >
@@ -105,7 +105,7 @@ export default function Navbar() {
         </nav>
         <div className="flex gap-10 items-center">
           <div className="cta gap-5 hidden md:flex">
-            <a href="https://docs.hyperce.io/">
+            <a href="https://small-assets.s3.ap-south-1.amazonaws.com/hyperce-proposal.pdf">
               <button
                 aria-label="proposal-download"
                 className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"

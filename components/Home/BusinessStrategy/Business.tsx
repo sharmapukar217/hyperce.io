@@ -48,7 +48,7 @@ export default function Business() {
           <div className="need-1 flex gap-4">
             <div className="icon px-3 h-fit py-3 flex items-center border-[1px] rounded-lg ">
               <svg
-                fill="#000000"
+                fill="currentColor"
                 version="1.1"
                 id="Capa_1"
                 width="25px"
