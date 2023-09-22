@@ -3,15 +3,14 @@ export default function Hero() {
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
         <div className="flex flex-col  text-black items-center gap-2 justify-center bg-white bg-opacity-50 py-10 md:py-20 mt-20 rounded-3xl">
-          <img
-            className="h-[120px] w-auto"
-            src="/frontier.png"
-            alt=""
-          />
-          <span className="text-4xl md:text-7xl font-bold">Hyperce Frontier</span>
+          <img className="h-[120px] w-auto" src="/frontier.png" alt="" />
+          <span className="text-4xl md:text-7xl font-bold">
+            Hyperce Frontier
+          </span>
           <br />
           <span className="text-base font-bold">
-            The best Blogging Solutions for eCommerce Businesses.
+            Experience Business Growth Through Dynamic Portfolio Creation with
+            Hyperce Frontier.
           </span>
           <a
             className="mt-10 w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
