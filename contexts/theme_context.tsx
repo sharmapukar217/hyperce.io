@@ -20,7 +20,7 @@ export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) 
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     if (isBrowser) {
       const storedDarkMode = localStorage.getItem("darkMode");
-      return storedDarkMode ? JSON.parse(storedDarkMode) : false;
+      return storedDarkMode ? JSON.parse(storedDarkMode) : true;
     }
     return false;
   });

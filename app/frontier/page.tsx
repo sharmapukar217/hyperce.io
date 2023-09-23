@@ -18,8 +18,7 @@ export default function Services() {
       </main>
       <Frontier />
       <WhyChoose />
-      {/* <Gallary /> */}
-      {/* <Features /> */}
+
       <Newsletter />
       <Contact />
     </div>

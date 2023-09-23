@@ -106,19 +106,25 @@
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  fill: #111111;
+  cursor: pointer;
+}
+.arrow-dark {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   cursor: pointer;
 }
 
 .arrow--left {
   left: 5px;
-  fill: #111111;
 }
 
 .arrow--right {
   left: auto;
   right: 5px;
-  fill: #111111;
 }
 
 .arrow--disabled {

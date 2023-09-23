@@ -40,7 +40,7 @@ export default function HomeTestimonial() {
             <span className="w-full flex justify-center mb-5 text-xl font-bold">
               {website.img_name}
             </span>
-            <a href={website.a_href}>
+            <a target="_blank" href={website.a_href}>
               <img src={website.img_src} />
             </a>
           </div>

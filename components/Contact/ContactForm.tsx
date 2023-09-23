@@ -48,8 +48,7 @@ export default function ContactForm() {
     if (response.status === 200) {
       toast({
         title: "Your message has been recieved",
-        description:
-          "You will get a reply from us very soon.",
+        description: "You will get a reply from us very soon.",
       });
     }
   }
@@ -70,7 +69,7 @@ export default function ContactForm() {
               required
               type="text"
               placeholder="Full Name"
-              className="w-full px-4 py-3 border-2 text-black placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400"
               name="name"
               value={formData.name}
               onChange={handleChange}
@@ -83,7 +82,7 @@ export default function ContactForm() {
               type="email"
               placeholder="Email Address"
               name="email"
-              className="w-full px-4 py-3 border-2 text-black placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400"
               value={formData.email}
               onChange={handleChange}
             />
@@ -92,7 +91,7 @@ export default function ContactForm() {
             <textarea
               name="message"
               placeholder="Your Message"
-              className="text-black w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+              className="text-black w-full px-4 py-3 placeholder:text-gray-800 rounded-md outline-none h-36 focus:outline-gray-400"
               value={formData.message}
               onChange={handleChange}
             ></textarea>

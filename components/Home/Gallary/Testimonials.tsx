@@ -170,8 +170,10 @@ function Arrow(props: {
   return (
     <svg
       onClick={props.onClick}
-      className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
+      className={`fill-white arrow ${
+        props.left
+          ? "arrow--left fill-black dark:fill-white"
+          : "arrow--right fill-black dark:fill-white"
       } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
