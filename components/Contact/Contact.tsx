@@ -75,7 +75,7 @@ export default function Contact() {
                     </span>
                   </div>
                 </a>
-                <a href="callto:+1-617-819-5576">
+                <a href="https://wa.me/16178195576">
                   <div className="phone flex gap-3">
                     <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
                       <svg
