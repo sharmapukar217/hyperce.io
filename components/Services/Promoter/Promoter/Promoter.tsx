@@ -39,11 +39,7 @@ export default function Promoter() {
               analytics to monitor the performance of the campaign.
               Collaboration with us follows industry regulations and is
               transparent to the audience. This includes disclosing any material
-              relationships between the promoter and the brand. Our mission at
-              Hyperce is to empower businesses to achieve unparalleled success
-              in the ever-evolving digital landscape. We harness the power of
-              innovative marketing strategies, influencer partnerships, and
-              data-driven insights to propel brands to new
+              relationships between the promoter and the brand.
             </p>
           </p>
         </div>

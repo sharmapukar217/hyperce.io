@@ -2,6 +2,7 @@ import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 import { DM_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
+import Script from "next/script";
 
 const raleway = DM_Sans({ subsets: ["latin"] });
 
@@ -17,6 +18,19 @@ export default function RootLayout({
   return (
     <html>
       <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
+        ></script>
+        <Script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-01M293WQ6R');
+          `}
+        </Script>
         <meta property="og:image" content={ROOT_OG_IMAGE} />
         <link rel="icon" href="/favicon.png" />
       </head>
