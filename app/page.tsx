@@ -16,15 +16,17 @@ import CardsSection from "@/components/Home/CardsSection/CardsSection";
 import FAQ from "@/components/FAQ/FAQ";
 import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 import HomeTestimonial from "@/components/Home/Gallary/Testimonials";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hyperce | Best Ecommerce Suite Solution",
+  description:
+    "Hyperce, One of the best ecommerce suite partners, dedicated to support and prospering the ecommerce industry globally. So Hurry up and grab your opportunities.",
+};
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.svg" />
-        <title>Home</title>
-      </Head>
       <main className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white h-fit bg-center">
         <Navbar />
         <Hero />

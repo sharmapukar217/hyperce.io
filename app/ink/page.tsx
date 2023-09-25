@@ -6,6 +6,13 @@ import Hero from "@/components/Services/Ink/Hero/Hero";
 import WhyChoose from "@/components/Services/Ink/WhyChoose/WhyChoose";
 import Contact from "@/components/Contact/Contact";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: " Hyperce Ink | Best Ecommerce Business Solution",
+  description: "Engage Your Audience, Enhance Your Brand, and Create Compelling Content. Unleash the Power of Words with Hyperce Ecommerce Suite Expert Blogging Solutions!",
+};
+
 export default function Services() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">

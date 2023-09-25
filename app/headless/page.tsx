@@ -9,6 +9,13 @@ import HeadlessEcom from "@/components/Services/Headless/HeadlessEcom/HeadlessEc
 import Hero from "@/components/Services/Headless/Hero/Hero";
 import WhyChoose from "@/components/Services/Headless/WhyChoose/WhyChoose";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hyperce Headless | Best Ecommerce Suite Solution",
+  description: "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach. Transform Your Business with Expert Marketing Solutions Today! So Hurry up and give us a call.",
+};
+
 export default function Services() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">

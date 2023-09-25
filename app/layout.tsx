@@ -7,19 +7,17 @@ const raleway = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
-  title = "",
-  og_img = "",
-  og_description = "",
 }: {
   children: React.ReactNode;
   title: string;
   og_img: string;
   og_description: string;
 }) {
+  const ROOT_OG_IMAGE = "/og-logo.png";
   return (
     <html>
       <head>
-        <title>Hyperce - Your Ultimate eCommerce Solutions Partner</title>
+        <meta property="og:image" content={ROOT_OG_IMAGE} />
         <link rel="icon" href="/favicon.png" />
       </head>
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>

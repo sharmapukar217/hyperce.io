@@ -1,12 +1,18 @@
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
 
-import Gallary from "@/components/Services/Promoter/Gallary/Gallary";
-
 import Promoter from "@/components/Services/Promoter/Promoter/Promoter";
 import Hero from "@/components/Services/Promoter/Hero/Hero";
 import WhyChoose from "@/components/Services/Promoter/WhyChoose/WhyChoose";
 import Contact from "@/components/Contact/Contact";
+
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hyperce Promoter | Best Ecommerce Suite Solution",
+  description:
+    "Strategize, Execute, and Amplify Your Brand's Reach. Transform Your Ecommerce Business Platform with Expert Marketing Solutions Today! So hurry up and visit Hyperce Ecommerce Business Solution.",
+};
 
 export default function PromoterPage() {
   return (
@@ -21,8 +27,6 @@ export default function PromoterPage() {
       </main>
       <Promoter />
       <WhyChoose />
-      {/* <Gallary /> */}
-      {/* <Features /> */}
       <Newsletter />
       <Contact />
     </div>
