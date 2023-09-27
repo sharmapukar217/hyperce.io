@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="border-[1px] w-[60%] dark:border-zinc-600 border-zinc-300 my-5"></div>
       <div>
         <span className="text-sm dark:text-zinc-400 text-zinc-600">
-          © Copyright 2023 Hyperce LLC. | All rights reserved.{" "}
+          © Copyright 2023 Hyperce | All rights reserved.{" "}
         </span>
       </div>
     </footer>
