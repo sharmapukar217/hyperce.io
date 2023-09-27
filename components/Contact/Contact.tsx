@@ -71,7 +71,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <span className="place dark:text-[#9CA3AF] text-left text-base">
-                    Hyperce LLC
+                    Hyperce, LLC
                   </span>
                 </div>
                 <div className="location flex gap-3">
@@ -226,7 +226,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <span className="place dark:text-[#9CA3AF] text-left text-base">
-                    Hyperce Pvt. Ltd.
+                    Hyperce Technologies Pvt. Ltd.
                   </span>
                 </div>
                 <div className="location flex gap-3">
