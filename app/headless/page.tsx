@@ -9,6 +9,9 @@ import HeadlessEcom from "@/components/Services/Headless/HeadlessEcom/HeadlessEc
 import Hero from "@/components/Services/Headless/Hero/Hero";
 import WhyChoose from "@/components/Services/Headless/WhyChoose/WhyChoose";
 
+import Image from "next/image";
+import HeadlessBg from "../../public/services-bg.png"
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +22,14 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
-      <main className=" bg-cover bg-center bg-[url('/services-bg.png')] min-h-screen flex items-center">
+      <main className=" bg-cover bg-center min-h-screen flex items-center">
+      <div>
+          <Image 
+          src={HeadlessBg} 
+          alt="HeadlessBg" 
+          layout="fill"
+          objectFit="cover"/>
+        </div>
         <div className="h-fit absolute top-0 w-full">
           <Navbar />
         </div>
