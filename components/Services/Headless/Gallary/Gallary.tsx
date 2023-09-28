@@ -1,5 +1,6 @@
 "use client";
 import "./styles.css";
+import Image from "next/image";
 
 import * as React from "react";
 import { useKeenSlider } from "keen-slider/react";
@@ -41,7 +42,10 @@ export default function HomeTestimonial() {
               {website.img_name}
             </span>
             <a target="_blank" href={website.a_href}>
-              <img src={website.img_src} />
+            <Image src={website.img_src} 
+            alt="WebsiteDemo"
+            width={500}
+            height={200} />
             </a>
           </div>
         ))}
