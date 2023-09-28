@@ -24,4 +24,16 @@ export const HeadlessGallary = [
         a_href: "https://storeinhouse.com.ar/home",
         img_src: "/gallary/storeinhouse_demo.png",
     },
+
+    {
+        img_name:  "Mrs Learning Bee",
+        a_href: "https://mrslearningbee.com/",
+        img_src: "/gallary/mrslearningbee_demo.png"
+    },
+
+    {
+        img_name:  "Himalayan Hardwear",
+        a_href: "https://himalayanhardwear.net/",
+        img_src: "/gallary/himalayanhardwear_demo.png"
+    }
 ]
