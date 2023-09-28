@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
-        <div className="flex flex-col items-center mt-20 gap-2 px-10 md:px-20 justify-center bg-white dark:bg-transparent bg-opacity-50 py-20 rounded-3xl">
+        <div className="flex flex-col items-center mt-20 text-black gap-2 justify-center bg-white bg-opacity-50 py-20 rounded-3xl">
           <img
             className="h-[100px] mb-5 w-auto dark:hidden"
             src="/headless.png"

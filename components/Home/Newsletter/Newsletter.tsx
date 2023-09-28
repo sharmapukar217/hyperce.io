@@ -50,8 +50,8 @@ export default function Newsletter() {
     <section className="">
       <div>
         <img
-          width="100%"
-          height="100%"
+        width="100%"
+        height="100%"
           loading="lazy"
           src="/newsletter.png"
           alt=""
@@ -80,7 +80,7 @@ export default function Newsletter() {
               />
               <button
                 onClick={handleNewslett}
-                aria-aria-label="subscribe-newsletter"
+                aria-label="subscribe-newsletter"
                 className="w-fit px-3 py-1 bg-[#357D8A] text-white"
               >
                 Subscribe
