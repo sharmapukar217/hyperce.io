@@ -6,6 +6,9 @@ import Hero from "@/components/Services/Promoter/Hero/Hero";
 import WhyChoose from "@/components/Services/Promoter/WhyChoose/WhyChoose";
 import Contact from "@/components/Contact/Contact";
 
+import Image from "next/image";
+import PromoterBg from '../../public/promoter.png'
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,7 +20,13 @@ export const metadata: Metadata = {
 export default function PromoterPage() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
-      <main className=" bg-cover bg-center bg-[url('/promoter.png')] min-h-screen flex items-center">
+      <main className="min-h-screen flex items-center">
+          <Image
+          src={PromoterBg}
+          alt="PromoterBg"
+          layout="fill"
+          objectFit="cover"
+          />
         <div className="h-fit absolute top-0 w-full">
           <Navbar />
         </div>

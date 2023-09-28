@@ -6,6 +6,9 @@ import Hero from "@/components/Services/Ink/Hero/Hero";
 import WhyChoose from "@/components/Services/Ink/WhyChoose/WhyChoose";
 import Contact from "@/components/Contact/Contact";
 
+import Image from "next/image";
+import InkBg from '../../public/ink.png'
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,7 +19,14 @@ export const metadata: Metadata = {
 export default function Services() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
-      <main className=" bg-cover bg-center bg-[url('/ink.png')] min-h-screen flex items-center">
+      <main className="min-h-screen flex items-center">
+        <div>
+          <Image 
+          src={InkBg} 
+          alt="InkBg" 
+          layout="fill" 
+          objectFit="cover"/>
+        </div>
         <div className="h-fit absolute top-0 w-full">
           <Navbar />
         </div>
