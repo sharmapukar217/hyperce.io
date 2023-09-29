@@ -2,8 +2,8 @@ export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
-        <div className="relative bg-white bg-opacity-50 py-20 mt-20 rounded-3xl">
-        <div className="flex flex-col items-center justify-center text-black gap-2   ">
+        <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
+        <div className="flex flex-col items-center justify-center text-black dark:text-white gap-2   ">
           <img
             className="h-[150px] mb-5 w-auto"
             src="/promoter-logo.png"
