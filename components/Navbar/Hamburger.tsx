@@ -1,9 +1,36 @@
 "use client";
 
 import "./Hamburger.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { solutions } from "@/data/Solutions";
+import { BsFillCaretDownFill } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 export default function Hamburger(props: any) {
+
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+  const [isDropdownHovered, setIsDropdownHovered] = useState(false);
+
+  const showDropdown = () => {
+    setIsDropdownVisible(true);
+  };
+
+  const hideDropdown = () => {
+    if (!isDropdownHovered) {
+      setTimeout(() => {
+        setIsDropdownVisible(false);
+      }, 200);
+    }
+  };
+
+  useEffect(() => {
+    if (!isDropdownHovered) {
+      setIsDropdownVisible(false);
+    }
+  }, [isDropdownHovered]);
+
+  const pathname = usePathname();
+
   const menu = [
     {
       title: "Home",
@@ -90,9 +117,56 @@ export default function Hamburger(props: any) {
                     key={menu.indexOf(eachMenu)}
                     className="lg:hover:scale-[105%] text-md transition-all duration-200 text-black dark:text-white hover:text-gray-500 hover:dark:text-gray-200"
                   >
-                    <a href={eachMenu.link}>{eachMenu.title}</a>
+                    <a href={eachMenu.link} className="font-bold hover:dark:text-[#357D8A]">{eachMenu.title}</a>
                   </li>
                 ))}
+                <a href="#solutions">
+              <div
+                onMouseEnter={showDropdown}
+                onMouseLeave={hideDropdown}
+                className="relative"
+              >
+                <li
+                  className={`hover:scale-[105%] flex inline-flex items-center justify-center text-base font-bold transition-all duration-200 cursor-pointer ${
+                    isDropdownVisible ? "text-[#337684]" : ""
+                  }`}
+                >
+                  <span className="flex inline-flex items-center justify-center">
+                  Solutions <BsFillCaretDownFill />
+                  </span>
+                </li>
+                {isDropdownVisible && (
+                  <div
+                    onMouseEnter={() => setIsDropdownHovered(true)}
+                    onMouseLeave={() => setIsDropdownHovered(false)}
+                    className={`absolute border-[1px] z-50 bg-white dark:bg-[#0F1023] border-gray-300 dark:border-black px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
+                      isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
+                    }`}
+                  >
+                    {solutions.map((each) => (
+                      <>
+                        <a
+                          className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                          href={each.href}
+                        >
+                          <img
+                            className="h-10 w-10 hidden dark:block"
+                            src={each.darkIcon}
+                            alt=""
+                          />
+                          <img
+                            className="h-10 w-10 dark:hidden"
+                            src={each.whiteIcon}
+                            alt=""
+                          />
+                          {each.name}
+                        </a>
+                      </>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </a>
               </ul>
             </div>
           </div>

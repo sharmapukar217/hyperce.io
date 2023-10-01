@@ -8,6 +8,7 @@ import { navMenuItems } from "@/data/Navdata";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { solutions } from "@/data/Solutions";
+import { BsFillCaretDownFill } from "react-icons/bs";
 
 export default function Navbar() {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -51,7 +52,7 @@ export default function Navbar() {
                     : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
                 }`}
               >
-                <a className="font-semibold" href={menuItem.href}>
+                <a className="font-semibold hover:dark:text-[#357D8A]" href={menuItem.href}>
                   {menuItem.name}
                 </a>
               </li>
@@ -63,11 +64,13 @@ export default function Navbar() {
                 className="relative"
               >
                 <li
-                  className={`hover:scale-[105%] text-base font-bold transition-all duration-200 cursor-pointer ${
+                  className={`hover:scale-[105%] flex inline-flex items-center justify-center text-base font-bold transition-all duration-200 cursor-pointer ${
                     isDropdownVisible ? "text-[#337684]" : ""
                   }`}
                 >
-                  Solutions
+                  <span className="flex inline-flex items-center justify-center">
+                  Solutions <BsFillCaretDownFill />
+                  </span>
                 </li>
                 {isDropdownVisible && (
                   <div
