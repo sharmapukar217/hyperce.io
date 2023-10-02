@@ -9,8 +9,8 @@ interface propTypes {
 export default function SolutionsCard(props: propTypes) {
   return (
     <a href={props.href}>
-      <div data-aos="fade-in" className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row">
-        <div className="icon px-2 py-3 w-[6rem] h-[6rem] flex items-center aspect-square bg-transparent rounded-md scale-[110%]">
+      <div data-aos="fade-in" className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row hover:dark:bg-[#357D8A] rounded-xl pb-2 hover:shadow-md hover:shadow-teal-500 hover:bg-teal-500">
+        <div className="icon px-2 py-3 w-[6rem] h-[6rem] flex items-center aspect-square bg-transparent  rounded-md scale-[110%]">
           <img
             className="dark:hidden object-contain h-full w-full"
             src={props.whiteIcon}
