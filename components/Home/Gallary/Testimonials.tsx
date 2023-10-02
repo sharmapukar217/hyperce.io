@@ -62,8 +62,8 @@ export default function HomeTestimonial() {
         </span>
       </div>
       <div ref={phoneref} className="keen-slider">
-        {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide md:hidden bottom-0 pb-10">
+        {Testimonials.map((testimonial, index) => (
+          <div key={index} className="keen-slider__slide md:hidden bottom-0 pb-10">
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -94,8 +94,8 @@ export default function HomeTestimonial() {
         )}
       </div>
       <div ref={midref} className="keen-slider">
-        {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide hidden md:block xl:hidden bottom-0 pb-10">
+        {Testimonials.map((testimonial, index) => (
+          <div key={index} className="keen-slider__slide hidden md:block xl:hidden bottom-0 pb-10">
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -126,8 +126,8 @@ export default function HomeTestimonial() {
         )}
       </div>
       <div ref={ref} className="keen-slider">
-        {Testimonials.map((testimonial) => (
-          <div className="keen-slider__slide hidden h-full xl:block">
+        {Testimonials.map((testimonial, index) => (
+          <div key={index} className="keen-slider__slide hidden h-full xl:block">
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -172,8 +172,8 @@ function Arrow(props: {
       onClick={props.onClick}
       className={`fill-white arrow ${
         props.left
-          ? "arrow--left fill-black dark:fill-white"
-          : "arrow--right fill-black dark:fill-white"
+          ? "arrow--left fill-[#c9ed48] dark:fill-[#c9ed48]"
+          : "arrow--right fill-[#c9ed48] dark:fill-[#c9ed48]"
       } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
