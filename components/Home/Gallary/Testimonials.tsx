@@ -170,7 +170,7 @@ function Arrow(props: {
   return (
     <svg
       onClick={props.onClick}
-      className={`fill-white arrow ${
+      className={`fill-[#c9ed48] arrow ${
         props.left
           ? "arrow--left fill-[#c9ed48] dark:fill-[#c9ed48]"
           : "arrow--right fill-[#c9ed48] dark:fill-[#c9ed48]"
