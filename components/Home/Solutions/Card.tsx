@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 interface propTypes {
   name: string;
   des: string;
@@ -7,9 +9,31 @@ interface propTypes {
 }
 
 export default function SolutionsCard(props: propTypes) {
+
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const transformationStyle = isHovered
+    ? { transform: 'translateY(-1px) scale(1.1)', transition: 'transform 0.3s' }
+    : {};
+
+
   return (
     <a href={props.href}>
-      <div data-aos="fade-in" className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row hover:bg-teal-300 hover:dark:bg-[#357D8A] rounded-xl pb-2 hover:shadow-md">
+      <div 
+      data-aos="fade-in" 
+      className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row rounded-xl pb-2 hover:shadow-sm dark:hover:shadow-sm hover:shadow-gray-200 dark:hover:shadow-gray-800"
+        style={transformationStyle}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+              >
         <div className="icon px-2 py-3 w-[6rem] h-[6rem] flex items-center aspect-square bg-transparent  rounded-md scale-[110%]">
           <img
             className="dark:hidden object-contain h-full w-full"
