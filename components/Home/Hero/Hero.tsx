@@ -12,7 +12,100 @@ export default function Hero() {
         // --aos="fade-right"
         className="md:w-1/2 flex items-center lg:px-8  md:container mx-auto "
       >
-        <div className="flex justify-center flex-col space-y-8">
+        {/* for small screen without animation */}
+        <div className="md:hidden flex items-center justify-center flex-col space-y-8">
+            <a
+              className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
+              href="#solutions"
+            >
+              <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">
+                Checkout our Solutions
+              </p>
+              <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
+                <svg
+                  className="w-2.5 h-2.5"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                >
+                  <path
+                    d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+            </a>
+
+
+    
+            <h1
+              className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left"
+              style={
+                {
+                  // fontFamily: "Times New Roman",
+                }
+              }
+            >
+              Your Ecommerce <br /> Suite Partner
+            </h1>
+
+
+          <div className="mx-auto">
+            <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
+              <Typewriter
+                text="Take the opportunity to elevate your business to new heights with our
+          futuristic ecommerce platforms and AI-powered ecommerce solutions."
+              />
+            </p>
+          </div>
+
+            <a
+              className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
+              href="#faq"
+            >
+              Learn More
+              <svg
+                className="w-2.5 h-2.5"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+            <a
+              className="hyperce-btn-text-low inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
+              href="#contact"
+            >
+              Contact Us
+              <svg
+                className="w-2.5 h-2.5"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+        </div>
+
+                {/* for above small screen */}
+        <div className="hidden md:block flex justify-center flex-col space-y-8">
           <motion.div
             initial={{ x: -500, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
