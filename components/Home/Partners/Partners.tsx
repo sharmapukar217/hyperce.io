@@ -17,7 +17,7 @@ export default function Partners() {
           "/PartnersLogo/Ian.png",
           "/PartnersLogo/Trylah.png",
           "/PartnersLogo/SignalStuff.png",
-          "/PartnersLogo/npdev .png",
+          "/PartnersLogo/npdev.png",
         ].map((each) => (
           <div className="flex justify-center">
             <img
