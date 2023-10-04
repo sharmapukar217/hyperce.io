@@ -6,7 +6,7 @@ export const HeadlessGallary = [
     },
     {
         img_name: "Goonji",
-        a_href: "https://goonji.vercel.app/",
+        a_href: "https://goonji.com/",
         img_src: "/gallary/goonji_demo.png",
     },
     {
@@ -35,5 +35,11 @@ export const HeadlessGallary = [
         img_name:  "Himalayan Hardwear",
         a_href: "https://himalayanhardwear.net/",
         img_src: "/gallary/himalayanhardwear_demo.png"
+    },
+
+    {
+        img_name:"SignalStuff",
+        a_href: "https://staging.signalstuff.com/",
+        img_src:"/gallary/signalstuff_demo.png"
     }
 ]

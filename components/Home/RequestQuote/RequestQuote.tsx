@@ -88,17 +88,17 @@ export default function RequestQuote() {
 
               <div className="mt-4 flex items-center gap-x-8">
                 <img
-                  src="https://iandigitaltalent.com/assets/img/puntoian-min.png"
+                  src="/PartnersLogo/Ian.png"
                   alt=""
                   className="w-16 h-auto"
                 />
                 <img
-                  src="https://cms.trylah.sg/wp-content/uploads/2022/09/TryLah-Name-Logo.png"
+                  src="/PartnersLogo/Trylah.png"
                   alt=""
                   className="w-16 h-auto"
                 />
                 <img
-                  src="https://hyperce-io.vercel.app/images/partners/npdev.png"
+                  src="/PartnersLogo/npdev.png"
                   alt=""
                   className="h-10 w-auto"
                 />

@@ -139,23 +139,23 @@ export default function Hamburger(props: any) {
                   <div
                     onMouseEnter={() => setIsDropdownHovered(true)}
                     onMouseLeave={() => setIsDropdownHovered(false)}
-                    className={`absolute border-[1px] z-50 bg-white dark:bg-[#0F1023] border-gray-300 dark:border-black px-1 py-1 transition-all duration-500 animate ease-linear p-4 ${
+                    className={`absolute w-60 z-50 bg-transparent  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
                       isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
                     }`}
                   >
                     {solutions.map((each) => (
                       <>
                         <a
-                          className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
+                          className="inline-flex text-xs gap-x-2  w-full items-center pl-2 py-1 text-gray-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-gray-300"
                           href={each.href}
                         >
                           <img
-                            className="h-10 w-10 hidden dark:block"
+                            className="h-8 w-8 hidden dark:block"
                             src={each.darkIcon}
                             alt=""
                           />
                           <img
-                            className="h-10 w-10 dark:hidden"
+                            className="h-8 w-8 dark:hidden"
                             src={each.whiteIcon}
                             alt=""
                           />

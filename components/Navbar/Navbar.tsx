@@ -108,7 +108,7 @@ export default function Navbar() {
         </nav>
         <div className="flex gap-10 items-center">
           <div className="cta gap-5 hidden md:flex">
-            <a target="_blank" href="https://small-assets.s3.ap-south-1.amazonaws.com/hyperce-proposal.pdf">
+            <a target="_blank" href="https://docs.hyperce.io/proposal.pdf">
               <button
                 aria-label="proposal-download"
                 className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"

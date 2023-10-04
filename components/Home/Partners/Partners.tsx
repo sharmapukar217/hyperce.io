@@ -14,11 +14,10 @@ export default function Partners() {
 
       <div className="mt-10 logos flex gap-8 md:gap-20 flex-wrap justify-center items-center text-black dark:text-white">
         {[
-          "https://iandigitaltalent.com/assets/img/puntoian-min.png",
-          "https://whaletank.biz/wp-content/uploads/2022/09/whale-tank-logo-color.png",
-          "https://cms.trylah.sg/wp-content/uploads/2022/09/TryLah-Name-Logo.png",
-          "https://signalstuff.com/wp-content/uploads/2021/01/cropped-SignalStuffAntennaHeaderWhite.png",
-          "https://hyperce-io.vercel.app/images/partners/npdev.png",
+          "/PartnersLogo/Ian.png",
+          "/PartnersLogo/Trylah.png",
+          "/PartnersLogo/SignalStuff.png",
+          "/PartnersLogo/npdev.png",
         ].map((each) => (
           <div className="flex justify-center">
             <img
