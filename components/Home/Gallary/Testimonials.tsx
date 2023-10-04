@@ -172,8 +172,8 @@ function Arrow(props: {
       onClick={props.onClick}
       className={`fill-[#c9ed48] arrow ${
         props.left
-          ? "arrow--left fill-[#c9ed48] dark:fill-[#c9ed48]"
-          : "arrow--right fill-[#c9ed48] dark:fill-[#c9ed48]"
+          ? "arrow--left fill-[#111111] dark:fill-[#c9ed48]"
+          : "arrow--right fill-[#111111] dark:fill-[#c9ed48]"
       } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
