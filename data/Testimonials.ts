@@ -18,16 +18,6 @@ export const Testimonials = [
 
 
     {
-        message: "Great experience working with Biplab team. They help a lot solving problems.",
-        name: "Martin Yousoufian",
-        org: "CEO, Ian Digital, Argentina",
-    },
-    {
-        message: "Great Service!",
-        name: "Emiliano Cucit",
-        org: "Full Stack Developer, Argentina",
-    },
-    {
         message:`A game-changer! From the moment I engaged with their services, I knew I was in good hands. Their team's professionalism and friendliness made the entire experience a pleasure. They truly took the time to understand my business needs, and their tailored solutions were spot-on.
 
         The seamless website design, robust shopping cart features, and integrated payment gateways have optimized the user experience, leading to increased conversions and positive customer feedback.
@@ -43,6 +33,19 @@ export const Testimonials = [
         name: "Alexander Halfen",
         org: "CTO at CodingGarage, Berlin, Germany",
     },
+
+    {
+        message: "Great experience working with Biplab team. They help a lot solving problems.",
+        name: "Martin Yousoufian",
+        org: "CEO, Ian Digital, Argentina",
+    },
+    
+    {
+        message: "Great Service!",
+        name: "Emiliano Cucit",
+        org: "Full Stack Developer, Argentina",
+    },
+
     {
         message: "I write this review to commend the developer responsible for implementing our new eCommerce solution. The experience of working with them has been largely positive.",
         name: "Arpan Chhetri",
