@@ -1,3 +1,20 @@
+"use client";
+import React from 'react';
+import { BiSolidMessageDetail } from "react-icons/bi";
+import { HiMiniCodeBracketSquare } from "react-icons/hi2";
+import { HiMiniShieldCheck} from "react-icons/hi2";
+
+import Image from 'next/image';
+
+
+
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+
 export default function Business() {
   return (
     <section className="bg-white dark:bg-transparent rounded-3xl flex flex-col lg:flex-row container mx-auto px-10 md:px-20 py-10 md:py-20 gap-20 text-black dark:text-white">
@@ -94,20 +111,61 @@ export default function Business() {
           </div>
         </div>
       </div>
-      <div className="lg:w-1/2 flex justify-end">
-        <div className="">
-          <img
-            className="hidden dark:block"
-            src="https://hyperce-io.vercel.app/images/milestone-dark.png"
-            alt=""
-          />
-          <img
-            className="block dark:hidden"
-            src="https://hyperce-io.vercel.app/images/milestone.png"
-            alt=""
-          />
+
+
+      {/* Timeline */}
+      <div className='dark:bg-gray-800 flex justify-center px-1 md:px-2 py-4 rounded-xl '>
+        <div className=''>
+      <Timeline>
+      <TimelineItem>
+        <TimelineSeparator>
+        <TimelineConnector />
+          <TimelineDot className='bg-blue-500 w-4 h-4' />
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+           <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
+              <span className='text-blue-500 pr-2'>
+              <BiSolidMessageDetail size={30} />
+              </span>
+              Discuss Your Need
+              </span>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+          <TimelineDot className='bg-gray-500 w-4 h-4 mt-4'/>
+          <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+        <span className='flex items-center mx-2 md:mx-4 px-2 py-4 md:py-6 mt-4 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
+              <span className='text-gray-500 pr-2'>
+              <HiMiniCodeBracketSquare size={30} />
+              </span>
+              Customize and Refine
+              </span>
+        </TimelineContent>
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineSeparator>
+        <TimelineDot className='bg-purple-600 w-4 h-4 mt-4'/>
+        <TimelineConnector />
+        </TimelineSeparator>
+        <TimelineContent>
+        <div className='flex flex-col mx-2 md:mx-4 px-2 py-4 md:py-6 mt-4 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
+          <span className='flex'>
+           <span> <HiMiniShieldCheck size={30} className="text-purple-600" /> </span>
+           <span className='pl-2'> Launch Faster in Market</span>
+            </span>
+          <div>
+            <Image src='/timeline.png' alt='LaunchImage' width={300} height={300} />
+          </div>
         </div>
-      </div>
+        </TimelineContent>
+      </TimelineItem>
+    </Timeline>
+    </div>
+    </div>
     </section>
   );
 }

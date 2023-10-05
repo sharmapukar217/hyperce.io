@@ -1,4 +1,5 @@
 export const HeadlessGallary = [
+
     {
         img_name: "Menzz",
         a_href: "https://menzz.co/",
@@ -14,6 +15,25 @@ export const HeadlessGallary = [
         a_href: "https://maipic.hyperce.io/",
         img_src: "/gallary/maipic_demo.png",
     },
+
+    {
+        img_name: "Rancho Magua",
+        a_href: "https://rancho-descanso.netlify.app/",
+        img_src: "/gallary/ranchodescanso_demo.png",
+    },
+
+    {
+        img_name: "Mi Naranja",
+        a_href: "https://minaranja.com/",
+        img_src: "/gallary/minaranja_demo.png",
+    },
+
+    {
+        img_name: "Juventud Güímar",
+        a_href: "https://juventudguimar.org/",
+        img_src: "/gallary/juventudguimar_demo.png",
+    },
+
     {
         img_name: "Shopvest",
         a_href: "https://trylah.sg/",

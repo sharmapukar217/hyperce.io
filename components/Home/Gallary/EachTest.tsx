@@ -1,11 +1,34 @@
+'use client';
+import React from "react";
 export default function EachTest(props: any) {
+  const [expanded, setExpanded] = React.useState(false);
+  
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
+  const messageStyle = {
+    overflow: expanded ? "auto" : "hidden",
+  };
+
+  const truncatedMessage = props.message.substring(0, 150);
+  const shouldShowEllipsis = props.message.length > 150;
+
   return (
-    <div className="min-h-full justify-between flex flex-col border-2 border-gray-200 dark:border-gray-700 dark:hover:bg-[#0F172A] text-black dark:text-white rounded-xl items-center px-4 md:px-8 mt-10 mb:mt-0 pb-5">
+    <div className="h-[400px] lg:h-[300px] justify-between flex flex-col border-2 border-gray-300 dark:border-gray-700 dark:hover:bg-[#0F172A] text-black dark:text-white rounded-xl items-center px-4 md:px-8 mt-10 mb:mt-0 pb-5">
       <div className="avatar w-[70px] -mb-10 md:-mb-0 lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
         <img src="/home.png" alt="image" className="rounded-full mt-1" />
       </div>
-      <div className="message mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]">
-        {props.message}
+      <div className="message overflow-auto mt-10 md:mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]" style={messageStyle}>
+      {expanded ? props.message : `${truncatedMessage}${shouldShowEllipsis ? " ..." : ""}`}
+        {shouldShowEllipsis && (
+          <span
+            className="text-[#357D8A] cursor-pointer underline"
+            onClick={toggleExpand}
+          >
+            {expanded ? "Read Less" : "Read More"}
+          </span>
+        )}
       </div>
       <div className="stat flex flex-col mt-2 items-center">
         <div className="stars flex gap-3 mt-2 mb-5">

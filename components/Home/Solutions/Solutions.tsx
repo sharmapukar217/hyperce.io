@@ -28,10 +28,6 @@ export default function Solutions() {
             ))}
           </div>
         </div>
-
-        <div className="relative mt-2 rounded-xl shadow-sm shadow-zinc-200 dark:shadow-[#0f1023] bg-gradient-to-r from-[#F3F4F6] dark:from-[#0f1023] via-teal-500 dark:via-teal-800 via-teal-500 dark:via-teal-800 to-g[#F3F4F6] dark:to-[#0f1023] text-black dark:text-white text-center py-6">
-        <p className=" text-lg md:text-2xl font-bold">More Comming soon...</p>
-        </div>
         
 
         <script async src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
