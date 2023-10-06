@@ -54,7 +54,11 @@ export default function Hero() {
 
 
           <div className="mx-auto">
-            <p className="hyperce-sub-head muted text-gray-700 dark:text-gray-400">
+            <p className="sm:hidden hyperce-sub-head muted text-gray-700 dark:text-gray-400">
+            Take the opportunity to elevate your business to new heights with our
+          futuristic ecommerce platforms and AI-powered ecommerce solutions.
+            </p>
+            <p className="hidden sm:block hyperce-sub-head muted text-gray-700 dark:text-gray-400">
               <Typewriter
                 text="Take the opportunity to elevate your business to new heights with our
           futuristic ecommerce platforms and AI-powered ecommerce solutions."
