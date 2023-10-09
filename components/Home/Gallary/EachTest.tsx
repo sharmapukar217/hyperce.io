@@ -19,7 +19,7 @@ export default function EachTest(props: any) {
       <div className="avatar w-[70px] -mb-10 md:-mb-0 lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
         <img src="/home.png" alt="image" className="rounded-full mt-1" />
       </div>
-      <div className="message overflow-auto mt-10 md:mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]" style={messageStyle}>
+      <div className="message custom-scrollbar overflow-auto mt-10 md:mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]" style={messageStyle}>
       {expanded ? props.message : `${truncatedMessage}${shouldShowEllipsis ? " ..." : ""}`}
         {shouldShowEllipsis && (
           <span
