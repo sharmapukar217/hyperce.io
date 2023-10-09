@@ -130,3 +130,23 @@
 .arrow--disabled {
   fill: #f4f75f;
 }
+
+/* Custom scrollbar styles */
+/* Force scrollbars to be always visible on macOS */
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #cab902 #f4f1f1; /* For Firefox */
+  overflow: auto;
+}
+
+/* Webkit browsers (Safari, Chrome) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbc9c9; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the thumb */
+}
+
+
