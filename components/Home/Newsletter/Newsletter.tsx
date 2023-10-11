@@ -49,7 +49,8 @@ export default function Newsletter() {
 
   return (
     <section className="">
-      <div>
+      
+      <div className="md:hidden flex items-center justify-center ">
         <Image
           width={2000}
           height={500}
@@ -58,8 +59,20 @@ export default function Newsletter() {
         />
       </div>
 
-      <div className="mx-auto container px-10 md:px-20 flex flex-col md:flex-row pb-10 -mt-[5%]">
-        <div className="xl:w-1/2 text-center md:text-left w-full left px-5 md:px-20 py-10 md:py-20 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  md:rounded-l-xl">
+
+      <div className="flex items-center justify-center ">
+      <div className="hidden md:block md:w-4/5">
+        <Image
+          width={1300}
+          height={500}
+          src="/hypercemembers.jpeg"
+          alt="Hyperce Members"
+        />
+      </div>
+      </div>
+
+      <div className="mx-auto container px-10 md:px-20 flex flex-col md:flex-row pb-10 xl:-mt-[4%]">
+        <div className="xl:w-1/2 text-center md:text-left w-full left px-5 md:px-10 py-10 md:py-10 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  md:rounded-l-xl">
           <div className="flex flex-col w-full md:w-[80%] gap-5">
             <div className="text-2xl md:text-3xl font-bold">
               Subscribe to our Weekly Newsletter

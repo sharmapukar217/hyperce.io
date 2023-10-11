@@ -1,11 +1,11 @@
 "use client";
+import "./style.css"
 import React from 'react';
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { HiMiniCodeBracketSquare } from "react-icons/hi2";
 import { HiMiniShieldCheck} from "react-icons/hi2";
 
 import Image from 'next/image';
-
 
 
 import Timeline from '@mui/lab/Timeline';
@@ -120,12 +120,12 @@ export default function Business() {
       <TimelineItem>
         <TimelineSeparator>
         <TimelineConnector />
-          <TimelineDot className='bg-blue-500 w-4 h-4' />
+          <TimelineDot className='blue-dot w-4 h-4' />
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
            <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
-              <span className='text-blue-500 pr-2'>
+              <span className='text-[#3498db] pr-2'>
               <BiSolidMessageDetail size={30} />
               </span>
               Discuss Your Need
@@ -134,12 +134,12 @@ export default function Business() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot className='bg-gray-500 w-4 h-4 mt-4'/>
+          <TimelineDot className='gray-dot w-4 h-4 mt-4'/>
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
         <span className='flex items-center mx-2 md:mx-4 px-2 py-4 md:py-6 mt-4 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
-              <span className='text-gray-500 pr-2'>
+              <span className='text-[#95a5a6] pr-2'>
               <HiMiniCodeBracketSquare size={30} />
               </span>
               Customize and Refine
@@ -148,13 +148,13 @@ export default function Business() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-        <TimelineDot className='bg-purple-600 w-4 h-4 mt-4'/>
+        <TimelineDot className='purple-dot w-4 h-4 mt-4'/>
         <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
         <div className='flex flex-col mx-2 md:mx-4 px-2 py-4 md:py-6 mt-4 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
           <span className='flex'>
-           <span> <HiMiniShieldCheck size={30} className="text-purple-600" /> </span>
+           <span> <HiMiniShieldCheck size={30} className="text-[#9b59b6]" /> </span>
            <span className='pl-2'> Launch Faster in Market</span>
             </span>
           <div>

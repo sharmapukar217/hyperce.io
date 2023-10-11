@@ -120,7 +120,7 @@ export default function Hamburger(props: any) {
                     <a href={eachMenu.link} className="font-bold hover:dark:text-[#357D8A]">{eachMenu.title}</a>
                   </li>
                 ))}
-                <a href="#solutions">
+                <a>
               <div
                 onMouseEnter={showDropdown}
                 onMouseLeave={hideDropdown}
