@@ -14,6 +14,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { blue, deepPurple, grey, purple, red } from "@mui/material/colors";
 
 export default function Business() {
   return (
@@ -114,18 +115,26 @@ export default function Business() {
 
 
       {/* Timeline */}
-      <div className='dark:bg-gray-800 flex justify-center px-1 md:px-2 py-4 rounded-xl '>
+      <div className='bg-transparent flex justify-center px-1 md:px-2 py-4 rounded-xl '>
         <div className=''>
       <Timeline>
       <TimelineItem>
         <TimelineSeparator>
-        <TimelineConnector />
-          <TimelineDot className='blue-dot w-4 h-4' />
-          <TimelineConnector />
+        <TimelineConnector sx={{
+          bgcolor: grey[800],
+          }} />
+          <TimelineDot sx={{
+          bgcolor: blue[400],
+          width: 16,
+          height: 16,
+          }}/>
+          <TimelineConnector sx={{
+          bgcolor: grey[800],
+          }} />
         </TimelineSeparator>
         <TimelineContent>
-           <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
-              <span className='text-[#3498db] pr-2'>
+           <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80'>
+              <span className='text-blue-400 pr-2'>
               <BiSolidMessageDetail size={30} />
               </span>
               Discuss Your Need
@@ -134,12 +143,18 @@ export default function Business() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot className='gray-dot w-4 h-4 mt-4'/>
-          <TimelineConnector />
+          <TimelineDot sx={{
+          bgcolor: grey[500],
+          width: 16,
+          height: 16,
+          }}/>
+          <TimelineConnector sx={{
+          bgcolor: grey[800],
+          }} />
         </TimelineSeparator>
-        <TimelineContent>
-        <span className='flex items-center mx-2 md:mx-4 px-2 py-4 md:py-6 mt-4 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
-              <span className='text-[#95a5a6] pr-2'>
+        <TimelineContent className="mt-4">
+        <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80'>
+              <span className='text-gray-400 pr-2'>
               <HiMiniCodeBracketSquare size={30} />
               </span>
               Customize and Refine
@@ -148,13 +163,19 @@ export default function Business() {
       </TimelineItem>
       <TimelineItem>
         <TimelineSeparator>
-        <TimelineDot className='purple-dot w-4 h-4 mt-4'/>
-        <TimelineConnector />
+        <TimelineDot sx={{
+          bgcolor: purple[800],
+          width: 16,
+          height: 16,
+          }}/>
+        <TimelineConnector sx={{
+          bgcolor: grey[800],
+          }} />
         </TimelineSeparator>
-        <TimelineContent>
-        <div className='flex flex-col mx-2 md:mx-4 px-2 py-4 md:py-6 mt-4 bg-white dark:bg-gray-700 rounded-xl shadow-xl border border-gray-50 dark:border-gray-500 font-semibold w-60 md:w-80'>
-          <span className='flex'>
-           <span> <HiMiniShieldCheck size={30} className="text-[#9b59b6]" /> </span>
+        <TimelineContent className="mt-4">
+        <div className='mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80 '>
+          <span className='flex items-center justify-start'>
+           <span> <HiMiniShieldCheck size={30} className="text-purple-800" /> </span>
            <span className='pl-2'> Launch Faster in Market</span>
             </span>
           <div>
