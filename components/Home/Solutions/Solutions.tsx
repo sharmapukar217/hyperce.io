@@ -23,6 +23,7 @@ export default function Solutions() {
                   darkIcon={solution.darkIcon}
                   name={solution.name}
                   des={solution.des}
+                  altText={solution.altText}
                 />
               </>
             ))}

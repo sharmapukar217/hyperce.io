@@ -6,6 +6,7 @@ interface propTypes {
   whiteIcon: string;
   darkIcon: string;
   href: string;
+  altText: string
 }
 
 export default function SolutionsCard(props: propTypes) {
@@ -38,12 +39,12 @@ export default function SolutionsCard(props: propTypes) {
           <img
             className="dark:hidden object-contain h-full w-full"
             src={props.whiteIcon}
-            alt=""
+            alt={props.altText}
           />
           <img
             className="hidden dark:block object-contain h-full w-full"
             src={props.darkIcon}
-            alt=""
+            alt={props.altText}
           />
         </div>
         <div className="text text-center lg:text-left flex flex-col items-center lg:items-start">
