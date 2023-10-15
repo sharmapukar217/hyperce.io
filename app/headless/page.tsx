@@ -10,25 +10,28 @@ import Hero from "@/components/Services/Headless/Hero/Hero";
 import WhyChoose from "@/components/Services/Headless/WhyChoose/WhyChoose";
 
 import Image from "next/image";
-import HeadlessBg from "../../public/services-bg.png"
+import HeadlessBg from "../../public/services-bg.png";
 
 import { Metadata } from "next";
+import DemoCredentials from "@/components/Services/Headless/Hero/minute/DemoCredentials";
 
 export const metadata: Metadata = {
   title: "Hyperce Headless | Best Ecommerce Suite Solution",
-  description: "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach. Transform Your Business with Expert Marketing Solutions Today! So Hurry up and give us a call.",
+  description:
+    "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach. Transform Your Business with Expert Marketing Solutions Today! So Hurry up and give us a call.",
 };
 
 export default function Services() {
   return (
     <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
       <main className=" bg-cover bg-center min-h-screen flex items-center">
-      <div>
-          <Image 
-          src={HeadlessBg} 
-          alt="HeadlessBg" 
-          layout="fill"
-          objectFit="cover"/>
+        <div>
+          <Image
+            src={HeadlessBg}
+            alt="HeadlessBg"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
         <div className="h-fit absolute top-0 w-full">
           <Navbar />
@@ -38,6 +41,13 @@ export default function Services() {
         </div>
       </main>
       <HeadlessEcom />
+      <DemoCredentials
+        demoLink="https://admin.hyperce.io"
+        productName="Headless Panel"
+        demoEmail="demo@hyperce.io"
+        demoPassword="Hyp3rc3-@dm1"
+        qrSource="/admin.hyperce.qr.png"
+      />
       <WhyChoose />
       <Gallary />
       {/* <Features /> */}
