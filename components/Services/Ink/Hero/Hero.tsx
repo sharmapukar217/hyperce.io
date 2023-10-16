@@ -40,7 +40,7 @@ export default function Hero() {
                 />
               </svg>
             </a>
-            <div className="flex gap-5">
+            {/* <div className="flex gap-5">
               <a
                 className="mt-10 w-fit text-black bg-opacity-70 bg-white hover:bg-opacity-75 flex justify-center items-center gap-x-3 text-center border-white font-bold shadow-lg shadow-transparent border border-transparent text-sm rounded-full py-3 px-6"
                 href="https://ink.hyperce.io"
@@ -55,7 +55,7 @@ export default function Hero() {
               >
                 Ink Demo 2
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
