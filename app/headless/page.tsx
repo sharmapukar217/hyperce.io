@@ -45,7 +45,7 @@ export default function Services() {
         demoLink="https://admin.hyperce.io"
         productName="Headless Panel"
         demoEmail="demo@hyperce.io"
-        demoPassword="Hyp3rc3-@dm1"
+        demoPassword="Hyperce123#"
         qrSource="/admin.hyperce.qr.png"
       />
       <WhyChoose />
