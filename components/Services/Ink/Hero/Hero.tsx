@@ -1,3 +1,5 @@
+import FrontendDemo from "../../Headless/Hero/minute/FrontendDemo";
+
 export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
@@ -41,20 +43,11 @@ export default function Hero() {
               </svg>
             </a>
             <div className="flex gap-5">
-              <a
-                className="mt-10 w-fit text-black bg-opacity-70 bg-white hover:bg-opacity-75 flex justify-center items-center gap-x-3 text-center border-white font-bold shadow-lg shadow-transparent border border-transparent text-sm rounded-full py-3 px-6"
-                href="https://ink.hyperce.io"
-                target="_blank"
-              >
-                Ink Demo
-              </a>
-              <a
-                className="mt-10 w-fit text-black bg-opacity-70 bg-white hover:bg-opacity-75 flex justify-center items-center gap-x-3 text-center border-white font-bold shadow-lg border border-transparent text-sm rounded-full py-3 px-6"
-                href="https://ink-classic.hyperce.io"
-                target="_blank"
-              >
-                Ink Classic Demo
-              </a>
+              <FrontendDemo link="https://ink.hyperce.io" name="Ink Demo" />
+              <FrontendDemo
+                link="https://ink-classic.hyperce.io"
+                name="Ink Classic Demo"
+              />
             </div>
           </div>
         </div>
