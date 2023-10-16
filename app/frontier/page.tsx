@@ -42,7 +42,7 @@ export default function FrontierPage() {
           demoEmail="demo@hyperce.io"
           demoPassword="@Hyperce123"
           qrSource="/frontier.demo.qr.png"
-          productName="Frontier"
+          productName="Frontier Admin Panel"
         />
         <WhyChoose />
         <Newsletter />

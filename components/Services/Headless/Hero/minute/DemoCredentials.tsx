@@ -1,7 +1,3 @@
-import Image from "next/image";
-
-import QRCode from "@/public/QR_code_for_mobile_English_Wikipedia.svg";
-
 interface DemoCredentialsInterface {
   productName: string;
   demoEmail: string;
@@ -30,7 +26,7 @@ export default function DemoCredentials({
         <div className="flex-col flex items-start gap-3">
           <span className="text-2xl font-bold">Credentials</span>
           <p className="text-left">
-            Go to the panel and login with the following credentials
+            Go to the admin panel and login with the following credentials.
           </p>
           <div className="text-left">
             <div className="email">
