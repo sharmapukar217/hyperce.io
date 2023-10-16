@@ -38,7 +38,7 @@ export default function Services() {
         demoEmail="demo@hyperce.io"
         demoPassword="@Hyperce123"
         qrSource="/ink.demo.qr.png"
-        productName="Frontier"
+        productName="Ink"
       />
       <WhyChoose />
       {/* <Gallary /> */}
