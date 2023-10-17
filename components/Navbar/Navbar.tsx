@@ -37,7 +37,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <ThemeProvider enableColorScheme={false} attribute="class">
+    <ThemeProvider defaultTheme="dark" attribute="class">
       <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-8 px-10 md:px-20">
         <div className="logo">
           <Logo />
