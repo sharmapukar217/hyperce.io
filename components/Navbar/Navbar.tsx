@@ -10,6 +10,8 @@ import "./Navbar.css";
 import { solutions } from "@/data/Solutions";
 import { BsFillCaretDownFill } from "react-icons/bs";
 
+import { ThemeProvider } from "next-themes";
+
 export default function Navbar() {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isDropdownHovered, setIsDropdownHovered] = useState(false);
@@ -35,7 +37,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <DarkModeProvider>
+    <ThemeProvider enableColorScheme={false} attribute="class">
       <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-8 px-10 md:px-20">
         <div className="logo">
           <Logo />
@@ -163,6 +165,6 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-    </DarkModeProvider>
+    </ThemeProvider>
   );
 }
