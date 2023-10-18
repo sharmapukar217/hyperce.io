@@ -33,6 +33,7 @@ export default function RootLayout({
         </Script>
         <meta property="og:image" content={ROOT_OG_IMAGE} />
         <link rel="icon" href="/favicon.png" />
+        <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script> 
       </head>
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
         {children}
