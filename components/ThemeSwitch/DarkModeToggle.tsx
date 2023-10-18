@@ -1,12 +1,18 @@
 import React from "react";
 import { useDarkMode } from "@/contexts/theme_context";
+import { useTheme } from "next-themes";
 
 const DarkModeToggle: React.FC = () => {
-  const { darkMode, toggleDarkMode } = useDarkMode();
+  // const { darkMode, toggleDarkMode } = useDarkMode();
+  const { theme, setTheme } = useTheme();
 
   return (
-    <button aria-label="toggle-dark-mode" onClick={toggleDarkMode} className="hover:scale-[115%] active:scale-75 transition duration-150 flex items-center">
-      {darkMode ? (
+    <button
+      aria-label="toggle-dark-mode"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="hover:scale-[115%] active:scale-75 transition duration-150 flex items-center"
+    >
+      {theme === "dark" ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30px"

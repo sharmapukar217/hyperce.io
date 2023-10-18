@@ -10,6 +10,8 @@ import "./Navbar.css";
 import { solutions } from "@/data/Solutions";
 import { BsFillCaretDownFill } from "react-icons/bs";
 
+import { ThemeProvider } from "next-themes";
+
 export default function Navbar() {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isDropdownHovered, setIsDropdownHovered] = useState(false);
@@ -35,7 +37,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <DarkModeProvider>
+    <ThemeProvider defaultTheme="dark" attribute="class">
       <header className="flex items-center justify-between mx-auto gap-5 md:gap-0 container py-8 px-10 md:px-20">
         <div className="logo">
           <Logo />
@@ -52,7 +54,10 @@ export default function Navbar() {
                     : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
                 }`}
               >
-                <a className="font-semibold hover:dark:text-[#357D8A]" href={menuItem.href}>
+                <a
+                  className="font-semibold hover:dark:text-[#357D8A]"
+                  href={menuItem.href}
+                >
                   {menuItem.name}
                 </a>
               </li>
@@ -69,7 +74,7 @@ export default function Navbar() {
                   }`}
                 >
                   <span className="flex inline-flex items-center justify-center">
-                  Solutions <BsFillCaretDownFill />
+                    Solutions <BsFillCaretDownFill />
                   </span>
                 </li>
                 {isDropdownVisible && (
@@ -160,6 +165,6 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-    </DarkModeProvider>
+    </ThemeProvider>
   );
 }

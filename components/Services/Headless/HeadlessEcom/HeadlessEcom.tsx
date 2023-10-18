@@ -1,10 +1,13 @@
+import DemoCredentials from "../Hero/minute/DemoCredentials";
+
 export default function HeadlessEcom() {
   return (
-    <section 
-    className="container mx-auto px-10 py-20 text-black dark:text-white"
-    id="learnmore">
-      <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
-        <p className="leading-wide text-2xl font-extrabold">
+    <section
+      className="container mx-auto px-10 py-20 text-black dark:text-white"
+      id="learnmore"
+    >
+      <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-16">
+        <p className="leading-wide text-2xl mt-10 font-extrabold">
           Enjoy easy, one-stop inventory and payment management with Hyperce
           Headless.
         </p>
