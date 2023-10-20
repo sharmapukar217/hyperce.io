@@ -69,7 +69,7 @@ export default function ContactForm() {
               required
               type="text"
               placeholder="Full Name"
-              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400"
+              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
               name="name"
               value={formData.name}
               onChange={handleChange}
@@ -82,7 +82,7 @@ export default function ContactForm() {
               type="email"
               placeholder="Email Address"
               name="email"
-              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400"
+              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
               value={formData.email}
               onChange={handleChange}
             />
@@ -91,7 +91,7 @@ export default function ContactForm() {
             <textarea
               name="message"
               placeholder="Your Message"
-              className="text-black w-full px-4 py-3 placeholder:text-gray-800 rounded-md outline-none h-36 focus:outline-gray-400"
+              className="text-black w-full px-4 py-3 placeholder:text-gray-800 rounded-md outline-none h-36 focus:outline-gray-400 bg-white"
               value={formData.message}
               onChange={handleChange}
             ></textarea>
