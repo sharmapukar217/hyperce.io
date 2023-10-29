@@ -44,17 +44,27 @@ export default function Solutions() {
         <div className="flex justify-center w-fit">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
             {solutions.map((solution) => (
-              <>
-                <Card
-                  href={solution.href}
-                  whiteIcon={solution.whiteIcon}
-                  darkIcon={solution.darkIcon}
-                  name={solution.name}
-                  des={solution.des}
-                  altText={solution.altText}
-                />
-              </>
+              <Card
+                href={solution.href}
+                whiteIcon={solution.whiteIcon}
+                darkIcon={solution.darkIcon}
+                name={solution.name}
+                des={solution.des}
+                altText={solution.altText}
+              />
             ))}
+            <div className="col-span-2 flex justify-center">
+              <div className="w-1/2 ">
+                <Card
+                  href="/hosting"
+                  whiteIcon="/hyperce_hosting_logo.jpeg"
+                  darkIcon="/hyperce_hosting_logo.jpeg"
+                  name="Hyperce Hosting"
+                  des="Boost Your Platform's Presence with Unmatched Performance and Reliable Support."
+                  altText="Hosting Platform"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

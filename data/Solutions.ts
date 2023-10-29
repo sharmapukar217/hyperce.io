@@ -31,4 +31,5 @@ export const solutions = [
         darkIcon: "/frontier.png",
         altText: "E-commerce Platform"
     },
+
 ]
