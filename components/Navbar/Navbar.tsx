@@ -112,7 +112,7 @@ export default function Navbar() {
           </ul>
         </nav>
         <div className="flex gap-10 items-center">
-          <div className="cta gap-5 hidden md:flex">
+          <div className="cta gap-5 flex">
             <a target="_blank" href="https://docs.hyperce.io/proposal.pdf">
               <button
                 aria-label="proposal-download"
@@ -145,7 +145,7 @@ export default function Navbar() {
                 <span className="text-base font-bold">Proposal</span>
               </button>
             </a>
-            <a href="#contact">
+            <a href="#contact" className="hidden">
               <button
                 aria-label="quotation"
                 className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-300 rounded-full font-extralight dark:bg-transparent bg-[#1f2937] text-[#fff] hover:scale-[105%] active:scale-[95%]"

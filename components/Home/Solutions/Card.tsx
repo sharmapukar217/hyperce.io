@@ -27,7 +27,7 @@ export default function SolutionsCard(props: propTypes) {
 
 
   return (
-    <a href={props.href}>
+    <a href={props.href} className="">
       <div 
       data-aos="fade-in" 
       className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row rounded-xl pb-2 hover:shadow-sm dark:hover:shadow-sm hover:shadow-gray-200 dark:hover:shadow-gray-800"

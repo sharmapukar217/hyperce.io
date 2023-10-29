@@ -53,8 +53,8 @@ export default function Solutions() {
                 altText={solution.altText}
               />
             ))}
-            <div className="col-span-2 flex justify-center">
-              <div className="w-1/2 ">
+            <div className="md:col-span-2 flex justify-center">
+              <div className="md:w-1/2">
                 <Card
                   href="/hosting"
                   whiteIcon="/hyperce_hosting_logo.jpeg"

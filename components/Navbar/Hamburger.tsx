@@ -7,7 +7,6 @@ import { BsFillCaretDownFill } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 
 export default function Hamburger(props: any) {
-
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [isDropdownHovered, setIsDropdownHovered] = useState(false);
 
@@ -117,59 +116,68 @@ export default function Hamburger(props: any) {
                     key={menu.indexOf(eachMenu)}
                     className="lg:hover:scale-[105%] text-md transition-all duration-200 text-black dark:text-white hover:text-gray-500 hover:dark:text-gray-200"
                   >
-                    <a href={eachMenu.link} className="font-bold hover:dark:text-[#357D8A]">{eachMenu.title}</a>
+                    <a
+                      href={eachMenu.link}
+                      className="font-bold hover:dark:text-[#357D8A]"
+                    >
+                      {eachMenu.title}
+                    </a>
                   </li>
                 ))}
                 <a>
-              <div
-                onMouseEnter={showDropdown}
-                onMouseLeave={hideDropdown}
-                className="relative"
-              >
-                <li
-                  className={`hover:scale-[105%] flex inline-flex items-center justify-center text-base font-bold transition-all duration-200 cursor-pointer ${
-                    isDropdownVisible ? "text-[#337684]" : ""
-                  }`}
-                >
-                  <span className="flex inline-flex items-center justify-center">
-                  Solutions <BsFillCaretDownFill />
-                  </span>
-                </li>
-                {isDropdownVisible && (
                   <div
-                    onMouseEnter={() => setIsDropdownHovered(true)}
-                    onMouseLeave={() => setIsDropdownHovered(false)}
-                    className={`absolute w-60 z-50 bg-transparent  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
-                      isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
-                    }`}
+                    onMouseEnter={showDropdown}
+                    onMouseLeave={hideDropdown}
+                    className="relative"
                   >
-                    {solutions.map((each) => (
-                      <>
-                        <a
-                          className="inline-flex text-xs gap-x-2  w-full items-center pl-2 py-1 text-gray-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-gray-300"
-                          href={each.href}
-                        >
-                          <img
-                            className="h-8 w-8 hidden dark:block"
-                            src={each.darkIcon}
-                            alt=""
-                          />
-                          <img
-                            className="h-8 w-8 dark:hidden"
-                            src={each.whiteIcon}
-                            alt=""
-                          />
-                          {each.name}
-                        </a>
-                      </>
-                    ))}
+                    <li
+                      className={`hover:scale-[105%] flex inline-flex items-center justify-center text-base font-bold transition-all duration-200 cursor-pointer ${
+                        isDropdownVisible ? "text-[#337684]" : ""
+                      }`}
+                    >
+                      <span className="flex inline-flex items-center justify-center">
+                        Solutions <BsFillCaretDownFill />
+                      </span>
+                    </li>
+                    {isDropdownVisible && (
+                      <div
+                        onMouseEnter={() => setIsDropdownHovered(true)}
+                        onMouseLeave={() => setIsDropdownHovered(false)}
+                        className={`absolute w-60 z-50 bg-transparent  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
+                          isDropdownVisible
+                            ? "dropdown-visible"
+                            : "dropdown-hidden"
+                        }`}
+                      >
+                        {solutions.map((each) => (
+                          <>
+                            <a
+                              className="inline-flex text-xs gap-x-2  w-full items-center pl-2 py-1 text-gray-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-gray-300"
+                              href={each.href}
+                            >
+                              <img
+                                className="h-8 w-8 hidden dark:block"
+                                src={each.darkIcon}
+                                alt=""
+                              />
+                              <img
+                                className="h-8 w-8 dark:hidden"
+                                src={each.whiteIcon}
+                                alt=""
+                              />
+                              {each.name}
+                            </a>
+                          </>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            </a>
+                </a>
               </ul>
             </div>
+
           </div>
+          
         </div>
       </div>
     </div>
