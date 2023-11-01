@@ -62,6 +62,8 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            
+            
             <a href="#solutions">
               <div
                 onMouseEnter={showDropdown}
@@ -86,7 +88,7 @@ export default function Navbar() {
                     }`}
                   >
                     {solutions.map((each) => (
-                      <>
+                      <div className="">
                         <a
                           className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                           href={each.href}
@@ -103,7 +105,7 @@ export default function Navbar() {
                           />
                           {each.name}
                         </a>
-                      </>
+                      </div>
                     ))}
                   </div>
                 )}

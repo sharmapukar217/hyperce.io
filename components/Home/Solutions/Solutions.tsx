@@ -53,7 +53,7 @@ export default function Solutions() {
                 altText={solution.altText}
               />
             ))}
-            <div className="md:col-span-2 flex justify-center">
+            {/* <div className="md:col-span-2 flex justify-center">
               <div className="md:w-1/2">
                 <Card
                   href="/hosting"
@@ -64,7 +64,7 @@ export default function Solutions() {
                   altText="Hosting Platform"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
