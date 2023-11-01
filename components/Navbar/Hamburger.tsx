@@ -143,7 +143,7 @@ export default function Hamburger(props: any) {
                       <div
                         onMouseEnter={() => setIsDropdownHovered(true)}
                         onMouseLeave={() => setIsDropdownHovered(false)}
-                        className={`absolute bg-black w-60 z-50 bg-transparent  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
+                        className={`absolute bg-black w-60 z-50  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
                           isDropdownVisible
                             ? "dropdown-visible"
                             : "dropdown-hidden"
