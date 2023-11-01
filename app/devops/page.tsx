@@ -1,8 +1,8 @@
 import Newsletter from "@/components/Home/Newsletter/Newsletter";
 import Navbar from "@/components/Navbar/Navbar";
-import QA from "@/components/Services/qa/qa/qa";
-import Hero from "@/components/Services/qa/Hero/Hero";
-import WhyChoose from "@/components/Services/qa/WhyChoose/WhyChoose";
+import Devops from "@/components/Services/Devops/Devops/Devops";
+import Hero from "@/components/Services/Devops/Hero/Hero";
+import WhyChoose from "@/components/Services/Devops/WhyChoose/WhyChoose";
 import Contact from "@/components/Contact/Contact";
 
 import Image from "next/image";
@@ -11,7 +11,7 @@ import QaBg from "../../public/hyperce-qa.png";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hyperce QA | Best Ecommerce Solution",
+  title: "Hyperce Devops | Best Ecommerce Solution",
   description:
     "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
 };
@@ -36,7 +36,7 @@ export default function FrontierPage() {
             <Hero />
           </div>
         </main>
-        <QA />
+        <Devops />
         {/* <DemoCredentials
           demoLink="https://frontier.hyperce.io/admin"
           demoEmail="demo@hyperce.io"
