@@ -5,23 +5,17 @@ export default function Hero() {
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
             <img
-              className="h-[120px] w-auto rounded-full hidden dark:block"
-              src="/services_logos/devops/devops_dark.png"
+              className="h-[120px] w-auto rounded-full"
+              src="/hyperce_hosting_logo.jpeg"
               alt=""
             />
-            <img
-              className="h-[120px] w-auto rounded-full dark:hidden"
-              src="/services_logos/devops/devops_light.png"
-              alt=""
-            />
-
             <span className="text-4xl md:text-7xl font-bold">
-              Hyperce Devops
+              Hyperce Security
             </span>
             <br />
             <span className="text-base font-bold">
-              Elevate your software development process with Hyperce DevOps'
-              cutting-edge DevOps solutions.
+              Elevate your security infrastructure with Hyperce Security's
+              cutting-edge cybersecurity solutions.
             </span>
             <div className="flex gap-5">
               <a
