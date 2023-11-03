@@ -5,7 +5,7 @@ import Demo from "./demo.svg";
 
 export default function Form() {
   return (
-    <section className="flex flex-col md:flex-row mx-10 my-10 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl bg-[#ebeeef] py-10 justify-between">
+    <section className="flex flex-col md:flex-row mx-10 my-10 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl bg-[#ebeeef] dark:bg-transparent py-10 justify-between">
       {/* Left Section with Image */}
       <div className="md:flex-1 flex items-center justify-center p-4">
         <Image
