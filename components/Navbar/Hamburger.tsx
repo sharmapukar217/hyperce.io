@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { solutions } from "@/data/Solutions";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { usePathname } from "next/navigation";
+import { navMenuItems } from "@/data/Navdata";
 
 export default function Hamburger(props: any) {
   const [isDropdownVisible, setIsDropdownVisible] = useState(false);
@@ -30,24 +31,7 @@ export default function Hamburger(props: any) {
 
   const pathname = usePathname();
 
-  const menu = [
-    {
-      title: "Home",
-      link: "/",
-    },
-    {
-      title: "About",
-      link: "/#why-hyperce",
-    },
-    {
-      title: "Contact",
-      link: "/#contact",
-    },
-    {
-      title: "FAQs",
-      link: "/#faq",
-    },
-  ];
+  const menu = navMenuItems;
   const [menuOpen, setMenuOpen] = useState(false);
 
   function openMenu() {
@@ -108,7 +92,7 @@ export default function Hamburger(props: any) {
           </svg>
 
           <div className="menu">
-            <div className="flex mt-8 flex-col gap-5 px-4 mx-auto">
+            <div className="flex flex-col gap-5 px-4 mx-auto">
               <ul className="flex flex-col gap-8">
                 {menu.map((eachMenu) => (
                   <li
@@ -117,10 +101,10 @@ export default function Hamburger(props: any) {
                     className="lg:hover:scale-[105%] text-md transition-all duration-200 text-black dark:text-white hover:text-gray-500 hover:dark:text-gray-200"
                   >
                     <a
-                      href={eachMenu.link}
+                      href={eachMenu.href}
                       className="font-bold hover:dark:text-[#357D8A]"
                     >
-                      {eachMenu.title}
+                      {eachMenu.name}
                     </a>
                   </li>
                 ))}
@@ -143,7 +127,7 @@ export default function Hamburger(props: any) {
                       <div
                         onMouseEnter={() => setIsDropdownHovered(true)}
                         onMouseLeave={() => setIsDropdownHovered(false)}
-                        className={`absolute bg-black w-60 z-50  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
+                        className={`absolute bg-white dark:bg-black w-60 z-50  px-2 py-1 transition-all duration-500 animate ease-linear p-2 ${
                           isDropdownVisible
                             ? "dropdown-visible"
                             : "dropdown-hidden"
@@ -174,7 +158,11 @@ export default function Hamburger(props: any) {
                   </div>
                 </a>
               </ul>
-              <a target="_blank" href="https://docs.hyperce.io/proposal.pdf" className="mt-10">
+              <a
+                target="_blank"
+                href="https://docs.hyperce.io/proposal.pdf"
+                className="mt-10"
+              >
                 <button
                   aria-label="proposal-download"
                   className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
