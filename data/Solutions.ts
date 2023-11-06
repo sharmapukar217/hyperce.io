@@ -31,29 +31,4 @@ export const solutions = [
         darkIcon: "/frontier.png",
         altText: "E-commerce Platform"
     },
-    {
-        name: 'Hyperce Hosting',
-        href: "/hosting",
-        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
-        whiteIcon: "/frontier.png",
-        darkIcon: "/frontier.png",
-        altText: "Hosting Platform"
-    },
-    {
-        name: 'Hyperce QA',
-        href: "/qa",
-        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
-        whiteIcon: "/frontier.png",
-        darkIcon: "/frontier.png",
-        altText: "Testing Platform"
-    },
-    {
-        name: 'Hyperce Devops',
-        href: "/devops",
-        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
-        whiteIcon: "/frontier.png",
-        darkIcon: "/frontier.png",
-        altText: "Deployment Platform"
-    },
-
 ]

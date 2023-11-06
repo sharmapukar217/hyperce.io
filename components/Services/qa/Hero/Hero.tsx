@@ -1,17 +1,25 @@
+const icon = {
+  dark: "/services_logos/qa/qa-dark.png",
+  light: "/services_logos/qa/qa-light.png",
+};
+
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
-            <img
-              className="h-[120px] w-auto rounded-full"
-              src="/hyperce_hosting_logo.jpeg"
-              alt=""
-            />
-            <span className="text-4xl md:text-7xl font-bold">
-              Hyperce QA
-            </span>
+            <div>
+              <div className="hidden dark:block">
+                <Image height={80} width={80} src={icon.dark} alt="" />
+              </div>
+              <div className="dark:hidden">
+                <Image height={80} width={80} src={icon.light} alt="" />
+              </div>
+            </div>
+            <span className="text-4xl md:text-7xl font-bold">Hyperce QA</span>
             <br />
             <span className="text-base font-bold">
               Supercharge your software success with Hyperce QA's advanced

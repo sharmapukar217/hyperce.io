@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
 };
 
-export default function FrontierPage() {
+export default function QAPage() {
   return (
     <>
       <div className="bg-white dark:bg-slate-900 text-black dark:text-white">
