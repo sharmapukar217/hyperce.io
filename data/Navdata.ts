@@ -4,7 +4,7 @@ export const navMenuItems = [
         href: "/",
     },
     {
-        name: "Referral Program",
+        name: "Referral",
         href: "/referral",
     },
     {

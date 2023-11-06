@@ -62,8 +62,7 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-            
-            
+
             <a href="#solutions">
               <div
                 onMouseEnter={showDropdown}

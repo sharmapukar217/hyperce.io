@@ -31,4 +31,20 @@ export const solutions = [
         darkIcon: "/frontier.png",
         altText: "E-commerce Platform"
     },
+    {
+        name: 'Hyperce Devops',
+        href: "/devops",
+        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
+        whiteIcon: "/services_logos/devops/devops_light.png",
+        darkIcon: "/services_logos/devops/devops_dark.png",
+        altText: "E-commerce Platform"
+    },
+    {
+        name: 'View All Services',
+        href: "/solutions",
+        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
+        whiteIcon: "/og-logo.png",
+        darkIcon: "/og-logo.png",
+        altText: "E-commerce Platform"
+    },
 ]
