@@ -20,7 +20,7 @@ export default function Solutions() {
           target="_blank"
         >
           <button className="max-w-xs w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
-            <div className="flex gap-3 hover:gap-5 transition-all duration-150 items-center">
+            <div className="text-white flex gap-3 hover:gap-5 transition-all duration-150 items-center">
               <span>Hyperce Suite Book</span>
               <svg
                 width="30px"
@@ -63,7 +63,7 @@ export default function Solutions() {
           className="flex justify-center my-10"
         >
           <button className="max-w-xs w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
-            <div className="flex gap-3 hover:gap-5 transition-all duration-150 items-center">
+            <div className="text-white flex gap-3 hover:gap-5 transition-all duration-150 items-center">
               <span>View all Services By Hyperce</span>
               <svg
                 width="30px"

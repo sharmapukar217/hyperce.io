@@ -62,7 +62,6 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
-
             <a href="#solutions">
               <div
                 onMouseEnter={showDropdown}
@@ -87,7 +86,7 @@ export default function Navbar() {
                     }`}
                   >
                     {solutions.map((each) => (
-                      <div className="">
+                      <>
                         <a
                           className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"
                           href={each.href}
@@ -104,7 +103,7 @@ export default function Navbar() {
                           />
                           {each.name}
                         </a>
-                      </div>
+                      </>
                     ))}
                   </div>
                 )}
@@ -113,7 +112,7 @@ export default function Navbar() {
           </ul>
         </nav>
         <div className="flex gap-10 items-center">
-          <div className="cta gap-5 flex">
+          <div className="cta gap-5 hidden md:flex">
             <a target="_blank" href="https://docs.hyperce.io/proposal.pdf">
               <button
                 aria-label="proposal-download"
@@ -146,7 +145,7 @@ export default function Navbar() {
                 <span className="text-base font-bold">Proposal</span>
               </button>
             </a>
-            <a href="#contact" className="hidden">
+            <a href="#contact">
               <button
                 aria-label="quotation"
                 className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-300 rounded-full font-extralight dark:bg-transparent bg-[#1f2937] text-[#fff] hover:scale-[105%] active:scale-[95%]"
