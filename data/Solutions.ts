@@ -40,7 +40,7 @@ export const solutions = [
         altText: "E-commerce Platform"
     },
     {
-        name: 'View All Services',
+        name: 'View All Solutions',
         href: "/solutions",
         des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
         whiteIcon: "/og-logo.png",
