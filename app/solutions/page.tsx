@@ -70,7 +70,7 @@ const allServices = [
       dark: "/hyperce_hosting_logo.jpeg",
       light: "/hyperce_hosting_logo.jpeg",
     },
-    href: "/headless",
+    href: "/hosting",
   },
 ];
 
