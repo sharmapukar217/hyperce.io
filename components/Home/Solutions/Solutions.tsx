@@ -14,10 +14,10 @@ export default function Solutions() {
           Hyperce Suite
         </h1>
         <div className="flex justify-center">
-          <div className="flex gap-2 md:gap-5 flex-col md:flex-row">
+          <div className="flex gap-5 flex-col md:flex-row">
             <a
               href="https://docs.hyperce.io/hyperce_suite_book.pdf"
-              className="flex justify-center my-10"
+              className="flex justify-center md:my-10"
               target="_blank"
             >
               <button className="px-5 w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
@@ -41,7 +41,7 @@ export default function Solutions() {
                 </div>
               </button>
             </a>
-            <a href="/solutions" className="flex justify-center my-10">
+            <a href="/solutions" className="flex justify-center md:my-10">
               <button className="px-5 w-full border-2 border-white font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
                 <div className="text-white flex gap-3 hover:gap-5 transition-all duration-150 items-center">
                   <span>View all Solutions By Hyperce</span>
