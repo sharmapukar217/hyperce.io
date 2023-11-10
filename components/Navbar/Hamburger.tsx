@@ -2,7 +2,7 @@
 
 import "./Hamburger.css";
 import React, { useState, useEffect } from "react";
-import { solutions } from "@/data/Solutions";
+import { showcaseSolutions } from "@/data/Solutions";
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 import { navMenuItems } from "@/data/Navdata";

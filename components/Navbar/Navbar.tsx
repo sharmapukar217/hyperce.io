@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { navMenuItems } from "@/data/Navdata";
 import { useEffect, useState } from "react";
 import "./Navbar.css";
-import { solutions } from "@/data/Solutions";
+import { showcaseSolutions } from "@/data/Solutions";
 import { BsFillCaretDownFill } from "react-icons/bs";
 
 import { ThemeProvider } from "next-themes";
@@ -85,7 +85,7 @@ export default function Navbar() {
                       isDropdownVisible ? "dropdown-visible" : "dropdown-hidden"
                     }`}
                   >
-                    {solutions.map((each) => (
+                    {showcaseSolutions.map((each) => (
                       <>
                         <a
                           className="inline-flex gap-x-5 min-w-max py-2 w-full items-center px-4 text-gray-600 rounded-md hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300"

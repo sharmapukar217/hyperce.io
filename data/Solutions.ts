@@ -1,4 +1,4 @@
-export const solutions = [
+export const showcaseSolutions = [
     {
         name: 'Hyperce Headless',
         href: "/headless",
@@ -48,3 +48,86 @@ export const solutions = [
         altText: "E-commerce Platform"
     },
 ]
+
+export const allServices = [
+    {
+        title: "Hyperce Headless",
+        description:
+            "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach.",
+        icon: {
+            dark: "/headless-dark.svg",
+            light: "/headless.png",
+        },
+        href: "/headless",
+    },
+    {
+        title: "Hyperce Ink",
+        description:
+            "Unleash the Power of Words with Hyperce Ecommerce Suite Expert Blogging Solutions!",
+        icon: {
+            dark: "/hyperce-ink-dark.svg",
+            light: "/hyperce-ink-white.svg",
+        },
+        href: "/ink",
+    },
+    {
+        title: "Hyperce Frontier",
+        description:
+            "Experience Business Growth Through Dynamic Portfolio Creation with Hyperce Frontier.",
+        icon: {
+            dark: "/frontier.png",
+            light: "/frontier.png",
+        },
+        href: "/frontier",
+    },
+    {
+        title: "Hyperce Promoter",
+        description:
+            "Transform Your Ecommerce Business Platform with Expert Marketing Solutions Today!",
+        icon: {
+            dark: "/promoter-logo.png",
+            light: "/promoter-logo.png",
+        },
+        href: "/promoter",
+    },
+    {
+        title: "Hyperce QA",
+        description:
+            "Supercharge your software success with Hyperce QA's advanced testing solutions.",
+        icon: {
+            dark: "/services_logos/qa/qa-dark.png",
+            light: "/services_logos/qa/qa-light.png",
+        },
+        href: "/qa",
+    },
+    {
+        title: "Hyperce DevOps",
+        description:
+            "Elevate your software development process with Hyperce DevOps' cutting-edge DevOps solutions.",
+        icon: {
+            dark: "/services_logos/devops/devops_dark.png",
+            light: "/services_logos/devops/devops_light.png",
+        },
+        href: "/devops",
+    },
+    {
+        title: "Hyperce Hosting",
+        description:
+            "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
+        icon: {
+            dark: "/hyperce_hosting_logo.jpeg",
+            light: "/hyperce_hosting_logo.jpeg",
+        },
+        href: "/hosting",
+    },
+    {
+        title: "Hyperce Security",
+        description:
+            "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
+        icon: {
+            dark: "/services_logos/security/security_dark.png",
+            light: "/services_logos/security/security_dark.png",
+        },
+        href: "/hosting",
+    },
+];
