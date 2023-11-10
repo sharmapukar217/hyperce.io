@@ -60,7 +60,7 @@ export default function RequestQuote() {
             <div className="mt-5 lg:mt-8 flex flex-col p-0 items-center gap-2 sm:flex-row sm:gap-3">
               <div className="border-[2px] flex w-full border-[#357D8A]">
                 <input
-                  className="w-full px-5 outline-none focus:border-[#357D8A] bg-white"
+                  className="w-full px-5 outline-none focus:border-[#357D8A] bg-white text-black"
                   type="text"
                   onChange={handleChange}
                   value={email}
