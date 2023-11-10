@@ -133,7 +133,7 @@ export default function Hamburger(props: any) {
                             : "dropdown-hidden"
                         }`}
                       >
-                        {solutions.map((each) => (
+                        {showcaseSolutions.map((each) => (
                           <>
                             <a
                               className="inline-flex text-xs gap-x-2  w-full items-center pl-2 py-1 text-gray-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-900 dark:hover:text-gray-300"
