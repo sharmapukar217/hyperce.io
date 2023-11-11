@@ -128,6 +128,6 @@ export const allServices = [
             dark: "/services_logos/security/security_dark.png",
             light: "/services_logos/security/security_dark.png",
         },
-        href: "/hosting",
+        href: "/security",
     },
 ];

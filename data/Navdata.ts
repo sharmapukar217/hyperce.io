@@ -11,10 +11,4 @@ export const navMenuItems = [
         name: "FAQs",
         href: "#faq",
     },
-
-    {
-        name: "Contact",
-        href: "/#contact",
-    },
-
 ];

@@ -194,6 +194,14 @@ export default function Hamburger(props: any) {
                   <span className="text-base font-bold">Proposal</span>
                 </button>
               </a>
+              <a href="/#contact">
+                <button
+                  aria-label="quotation"
+                  className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-300 rounded-full font-extralight dark:bg-transparent bg-[#1f2937] text-[#fff] hover:scale-[105%] active:scale-[95%]"
+                >
+                  <span className="text-base font-bold">Quotation</span>
+                </button>
+              </a>
             </div>
           </div>
         </div>
