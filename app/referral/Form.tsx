@@ -2,8 +2,15 @@ import React from "react";
 
 import Image from "next/image";
 import Demo from "./demo.svg";
+import { toast } from "@/components/ui/use-toast";
 
 export default function Form() {
+  function toastForm() {
+    toast({
+      title: "Thanks for applying for our referral program!",
+      description: "You will get a reply from us very soon.",
+    });
+  }
   return (
     <section className="flex flex-col md:flex-row mx-10 my-10 border border-gray-300 dark:border-gray-700 shadow-lg rounded-xl bg-[#ebeeef] dark:bg-transparent py-10 justify-between">
       {/* Left Section with Image */}
@@ -55,6 +62,7 @@ export default function Form() {
 
           <button
             type="submit"
+            onClick={toastForm}
             className="bg-[#357D8A] text-white w-2/4 h-fit py-3"
           >
             Join Now

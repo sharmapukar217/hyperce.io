@@ -123,11 +123,21 @@ export const allServices = [
     {
         title: "Hyperce Security",
         description:
-            "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
+            "Secure your software with Hyperce Security's advanced security solutions.",
         icon: {
             dark: "/services_logos/security/security_dark.png",
             light: "/services_logos/security/security_dark.png",
         },
         href: "/security",
+    },
+    {
+        title: "Hyperce Shopstore",
+        description:
+            "Transform your business with Hyperce Shopstore's cutting-edge eCommerce solutions.",
+        icon: {
+            dark: "/services_logos/shopstore/shopstore_dark.png",
+            light: "/services_logos/shopstore/shopstore_light.png",
+        },
+        href: "/shopstore",
     },
 ];
