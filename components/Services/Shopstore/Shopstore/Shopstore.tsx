@@ -15,12 +15,6 @@ export default function Shopstore() {
           captivating custom design and seamless data migrations to SEO and
           performance optimization, we empower businesses to thrive in the
           ever-evolving digital marketplace.
-          <br />
-          <br />
-          It is an all-encompassing e-commerce solution, offering platform
-          consultation, custom design, integration, and optimization services
-          designed to create exceptional online shopping experiences tailored to
-          businesses' unique needs.
         </p>
       </div>
 
@@ -28,11 +22,10 @@ export default function Shopstore() {
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
           <p className="text-4xl font-bold">What is Hyperce Shopstore ?</p>
           <p>
-            Hyperce DevOps is the key to unlocking the full potential of your
-            software development process. Our suite of DevOps practices,
-            including Continuous Integration, Continuous Deployment, and
-            Infrastructure as Code, enables rapid and reliable software
-            delivery.
+          Hyperce Shopstore is an all-encompassing e-commerce solution, offering platform
+          consultation, custom design, integration, and optimization services
+          designed to create exceptional online shopping experiences tailored to
+          businesses' unique needs.
           </p>
           <p>
             <p className="font-bold">Our mission? </p>
