@@ -84,7 +84,7 @@ export default function Newsletter() {
             <div className="border-[2px] flex w-full border-[#357D8A]">
               <input
                 className="w-full h-10 bg-transparent px-5 py-6 outline-none"
-                type="text"
+                type="email"
                 onChange={handleChange}
                 name=""
                 value={email}
