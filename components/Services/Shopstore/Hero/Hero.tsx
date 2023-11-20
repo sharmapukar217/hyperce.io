@@ -1,3 +1,5 @@
+import FrontendDemo from "../../Headless/Hero/minute/FrontendDemo";
+
 export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
@@ -23,7 +25,7 @@ export default function Hero() {
               Enhance your online retail experience with Hyperce ShopStore's
               cutting-edge e-commerce solutions.
             </span>
-            <div className="flex gap-5">
+            <div className="flex flex-col justify-center items-center gap-2">
               <a
                 className="mt-10 w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 href="#learnmore"
@@ -44,10 +46,13 @@ export default function Hero() {
                   />
                 </svg>
               </a>
-              {/* <FrontendDemo
-                link="https://frontier-demo.hyperce.io/"
-                name="Frontier Demo"
-              /> */}
+              <div className="flex gap-5">
+                <FrontendDemo link="https://shopify.hyperce.io/" name="Shopify Demo" />
+                <FrontendDemo
+                  link="https://woocommerce.hyperce.io/"
+                  name="Woocommerce Demo"
+                />
+              </div>
             </div>
           </div>
         </div>
