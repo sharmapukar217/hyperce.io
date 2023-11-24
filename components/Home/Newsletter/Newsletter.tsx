@@ -38,18 +38,21 @@ export default function Newsletter() {
     const data = await response.json();
     console.log(data);
 
-    if (response.status === 200) {
+    if (data.errors) {
+      toast({
+        title: "Error",
+        description: data.errors[0].message,
+      });
+    } else if (response.status === 200) {
       toast({
         title: "Your Email has been registered",
-        description:
-          "You will now receive product, promos and new updated of Hyperce on your email",
+        description: "You have successfully subscribed to the newsletter.",
       });
     }
   }
 
   return (
     <section className="">
-      
       <div className="md:hidden flex items-center justify-center ">
         <Image
           width={2000}
@@ -59,16 +62,15 @@ export default function Newsletter() {
         />
       </div>
 
-
       <div className="flex items-center justify-center ">
-      <div className="hidden md:block md:w-4/5">
-        <Image
-          width={1300}
-          height={500}
-          src="/hypercemembers.jpeg"
-          alt="Hyperce Members"
-        />
-      </div>
+        <div className="hidden md:block md:w-4/5">
+          <Image
+            width={1300}
+            height={500}
+            src="/hypercemembers.jpeg"
+            alt="Hyperce Members"
+          />
+        </div>
       </div>
 
       <div className="mx-auto container px-10 md:px-20 flex flex-col md:flex-row pb-10 xl:-mt-[4%]">
