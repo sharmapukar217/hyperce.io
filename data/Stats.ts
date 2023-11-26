@@ -1,11 +1,11 @@
 export const stats = [
     {
         name: 'Projects',
-        number: '25+'
+        number: '35+'
     },
     {
         name: 'Clients',
-        number: '20+'
+        number: '30+'
     },
     {
         name: 'Regions',
