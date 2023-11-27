@@ -1,4 +1,4 @@
-import Card from "../../Frontier/WhyChoose/Card";
+import Card from "../../Reusables/Card";
 
 export default function WhyChoose() {
   return (

@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../../Reusables/Card";
 
 export default function WhyChoose() {
   return (

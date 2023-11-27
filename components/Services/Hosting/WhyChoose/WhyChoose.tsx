@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../../Reusables/Card";
 
 export default function WhyChoose() {
   return (
@@ -22,7 +22,7 @@ export default function WhyChoose() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-20 w-fit xl:grid-cols-4 md:px-20 py-10">
             {[
               { num: "30x", des: "Customer Retention" },
-              { num: "10x", des: "Sales Growth" },
+              { num: "10x", des: "Sales Improvement" },
               { num: "50x", des: "Productivity Increase" },
               { num: "20x", des: "ROI Improvement" },
             ].map((each) => (
