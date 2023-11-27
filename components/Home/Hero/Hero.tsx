@@ -32,8 +32,8 @@ export default function Hero() {
                 <path
                   d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
             </span>
@@ -79,8 +79,8 @@ export default function Hero() {
               <path
                 d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </a>
@@ -99,8 +99,8 @@ export default function Hero() {
               <path
                 d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
+                strokeWidth="2"
+                strokeLinecap="round"
               />
             </svg>
           </a>
@@ -132,8 +132,8 @@ export default function Hero() {
                   <path
                     d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </span>
@@ -188,8 +188,8 @@ export default function Hero() {
                 <path
                   d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
             </a>
@@ -208,8 +208,8 @@ export default function Hero() {
                 <path
                   d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
             </a>
@@ -365,8 +365,8 @@ export default function Hero() {
               y2="398"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#D9D9D9" />
-              <stop offset="0.854438" stop-color="#D9D9D9" stop-opacity="0" />
+              <stop stopColor="#D9D9D9" />
+              <stop offset="0.854438" stopColor="#D9D9D9" stopOpacity="0" />
             </linearGradient>
             <linearGradient
               id="bg-for-light"
@@ -376,8 +376,8 @@ export default function Hero() {
               y2="398"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#ffd541" />
-              <stop offset="0.854438" stop-color="#D9D9D9" stop-opacity="0" />
+              <stop stopColor="#ffd541" />
+              <stop offset="0.854438" stopColor="#D9D9D9" stopOpacity="0" />
             </linearGradient>
             <clipPath id="clip0_0_1">
               <rect

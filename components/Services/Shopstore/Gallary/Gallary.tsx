@@ -50,7 +50,7 @@ export default function App() {
             <polyline
               fill="none"
               stroke="currentColor"
-              stroke-width="5"
+              strokeWidth="5"
               stroke-miterlimit="10"
               points="63,37 1,37 1,18 	"
             />
@@ -58,8 +58,8 @@ export default function App() {
           <polyline
             fill="none"
             stroke="currentColor"
-            stroke-width="5"
-            stroke-linejoin="bevel"
+            strokeWidth="5"
+            strokeLinejoin="bevel"
             stroke-miterlimit="10"
             points="54,46 63,37 
 	54,28 "

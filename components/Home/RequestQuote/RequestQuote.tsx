@@ -73,7 +73,7 @@ export default function RequestQuote() {
                       handleNewslett();
                     }
                   }}
-                  aria-aria-label="subscribe-newsletter"
+                  aria-label="subscribe-newsletter"
                   className="w-fit px-3 py-1 bg-[#357D8A] text-white"
                 >
                   Request Quotation
