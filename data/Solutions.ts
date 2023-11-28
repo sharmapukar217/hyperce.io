@@ -140,4 +140,14 @@ export const allServices = [
         },
         href: "/shopstore",
     },
+    {
+        title: "Hyperce Appify",
+        description:
+            "Empower your digital presence with Hyperce Appify's cutting-edgemobile app solutions.",
+        icon: {
+            dark: "/services_logos/appify/appify_light_jpeg.jpeg",
+            light: "/services_logos/appify/appify_light_jpeg.jpeg",
+        },
+        href: "/appify",
+    },
 ];

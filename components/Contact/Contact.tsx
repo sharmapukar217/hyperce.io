@@ -3,13 +3,13 @@ import ContactForm from "./ContactForm";
 export default function Contact() {
   return (
     <section
-      className="mx-auto container px-10 md:px-20 pb-20 text-black dark:text-white text-center md:text-left"
+      className="mx-auto container px-10 lg:px-20 pb-20 text-black dark:text-white text-center lg:text-left"
       id="contact"
     >
-      <div className="flex flex-col md:flex-row gap-10 justify-between mx-auto mt-16">
+      <div className="flex flex-col lg:flex-row gap-10 justify-between mx-auto mt-16">
         <ContactForm />
         <div className="flex flex-col">
-          <span className="mb-5 md:mb-10 text-4xl font-bold">Contact Info</span>
+          <span className="mb-5 lg:mb-10 text-4xl font-bold">Contact Info</span>
           <div className="flex flex-col gap-7">
             <div>
               <span className="country text-2xl flex justify-start font-semibold">

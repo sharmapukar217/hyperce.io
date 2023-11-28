@@ -55,12 +55,12 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="md:w-1/2 dark:text-gray-300">
+      <div className="lg:w-2/3 dark:text-gray-300">
         <h2 className="font-bold text-4xl mb-5 dark:text-white">
           Write a message
         </h2>
         <form
-          className="w-full md:w-[80%] needs-validation"
+          className="w-full lg:w-[80%] needs-validation"
           onSubmit={(e) => handleSubmit(e)}
         >
           <input type="checkbox" className="hidden" name="botcheck" />
@@ -69,7 +69,7 @@ export default function ContactForm() {
               required
               type="text"
               placeholder="Full Name"
-              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
+              className="w-2/3 lg:w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
               name="name"
               value={formData.name}
               onChange={handleChange}
@@ -82,7 +82,7 @@ export default function ContactForm() {
               type="email"
               placeholder="Email Address"
               name="email"
-              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
+              className="w-2/3 lg:w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
               value={formData.email}
               onChange={handleChange}
             />
@@ -91,7 +91,7 @@ export default function ContactForm() {
             <textarea
               name="message"
               placeholder="Your Message"
-              className="text-black w-full px-4 py-3 placeholder:text-gray-800 rounded-md outline-none h-36 focus:outline-gray-400 bg-white"
+              className="text-black w-2/3 lg:w-full px-4 py-3 placeholder:text-gray-800 rounded-md outline-none h-36 focus:outline-gray-400 bg-white"
               value={formData.message}
               onChange={handleChange}
             ></textarea>

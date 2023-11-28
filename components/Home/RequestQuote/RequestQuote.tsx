@@ -6,28 +6,35 @@ import { useState } from "react";
 export default function RequestQuote() {
   const { toast } = useToast();
 
-  const [email, setEmail] = useState();
+  const [formData, setFormData] = useState({
+    email: "",
+    message: "",
+  });
+
   const handleChange = (e: any) => {
-    setEmail(e.target.value);
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
-  async function handleNewslett() {
+  async function handleSubmit(e: any) {
+    e.preventDefault();
     const response = await fetch("https://admin.hyperce.io/shop-api", {
       headers: {
         "content-type": "application/json",
       },
       referrerPolicy: "strict-origin-when-cross-origin",
       body: JSON.stringify({
-        operationName: "CreateSubscriber",
+        operationName: "addContact",
         variables: {
-          input: {
-            fullName: "",
-            email: email,
-            phone: "",
-          },
+          fullName: "Specifc Solution Enthusiast",
+          email: formData.email,
+          message: formData.message,
         },
         query:
-          "mutation CreateSubscriber($input: SubscriberAddInput!) {\n  subscribe(input: $input) {\n    ...Subscribers\n    __typename\n  }\n}\n\nfragment Subscribers on Subscriber {\n  id\n  fullName\n  email\n  phone\n  createdAt\n  updatedAt\n  __typename\n}",
+          "mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n",
       }),
       method: "POST",
       mode: "cors",
@@ -36,16 +43,17 @@ export default function RequestQuote() {
 
     const data = await response.json();
     console.log(data);
+
     if (response.status === 200) {
       toast({
-        title: "We hear you.",
-        description:
-          "Thanks for your interest in our products. We will get back to you as soon as possible.",
+        title: "Your message has been recieved",
+        description: "You will get a reply from us very soon.",
       });
     }
   }
+
   return (
-    <section className="container mx-auto px-10 py-10 md:py-20 md:px-20">
+    <section className="container mx-auto px-10 py-10 md:py-20 md:px-20 bg-white dark:bg-[#0F1023] rounded-3xl">
       <div className="">
         <div className="grid lg:grid-cols-7 lg:gap-x-8 xl:gap-x-12 lg:items-center">
           <div className="lg:col-span-3">
@@ -58,27 +66,35 @@ export default function RequestQuote() {
             </p>
 
             <div className="mt-5 lg:mt-8 flex flex-col p-0 items-center gap-2 sm:flex-row sm:gap-3">
-              <div className="border-[2px] flex w-full border-[#357D8A]">
+              <form
+                className="flex flex-col gap-4 w-full"
+                onSubmit={handleSubmit}
+              >
                 <input
-                  className="w-full px-5 outline-none focus:border-[#357D8A] bg-white text-black"
-                  type="text"
+                  className="w-1/2 lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black"
+                  type="email"
                   onChange={handleChange}
-                  value={email}
-                  placeholder="hi@hyperce.io"
+                  value={formData.email}
+                  placeholder="steve@apple.com"
+                  name="email"
+                  id=""
+                />
+                <textarea
+                  className="w-1/2 lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black min-h-[6vw]"
+                  onChange={handleChange}
+                  value={formData.message}
+                  placeholder="I'd like to request a quote for Hyperce Devops......."
+                  name="message"
                   id=""
                 />
                 <button
-                  onClick={() => {
-                    if (email) {
-                      handleNewslett();
-                    }
-                  }}
+                  type="submit"
                   aria-label="subscribe-newsletter"
-                  className="w-fit px-3 py-1 bg-[#357D8A] text-white"
+                  className="px-4 py-3 rounded-full w-fit bg-[#357D8A] hover:shadow-xl hover:bg-[#265058] transition-all duration-200 text-white"
                 >
                   Request Quotation
                 </button>
-              </div>
+              </form>
             </div>
 
             <div className="mt-6 lg:mt-12">

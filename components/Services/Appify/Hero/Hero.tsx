@@ -5,13 +5,8 @@ export default function Hero() {
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
             <img
-              className="h-[120px] w-auto rounded-full aspect-square hidden dark:block"
-              src="/services_logos/shopstore/shopstore_dark.png"
-              alt=""
-            />
-            <img
-              className="h-[120px] w-auto rounded-full aspect-square dark:hidden"
-              src="/services_logos/shopstore/shopstore_dark.png"
+              className="h-[120px] w-auto rounded-full aspect-square bg-white"
+              src="/services_logos/appify/appify_light.svg"
               alt=""
             />
 
