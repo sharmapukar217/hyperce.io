@@ -11,7 +11,7 @@ export default function WhyChoose() {
           <p className="w-3/4 text-base md:text-xl text-center">
             Join us on this journey as we redefine the possibilities of online
             commerce, turning your vision into a head-turning reality.
-            Experience headless magic, only at Hyperce, LLC - where we make the
+            Experience headless magic, only at Hyperce - where we make the
             impossible, possible.
           </p>
         </div>

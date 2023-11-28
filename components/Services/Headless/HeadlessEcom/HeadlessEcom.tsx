@@ -26,7 +26,7 @@ export default function HeadlessEcom() {
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
           <p className="text-4xl font-bold">What is Headless eCommerce ?</p>
           <p>
-            Hyperce, LLC&apos;s Headless commerce isn&apos;t just about
+            Hyperce&apos;s Headless commerce isn&apos;t just about
             esthetics; it&apos;s about performance. It enables Hyperce to adapt
             quickly to changing customer needs and market trends while
             maintaining a robust and scalable backend system.

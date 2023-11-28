@@ -38,7 +38,7 @@ export default function Frontier() {
               LLC Frontier Portfolio Service emerges as the essential tool for
               eCommerce success. With a focus on portfolio optimization, market
               insights, resource allocation, risk mitigation, customization, and
-              scalability, this service equips Hyperce, LLC to navigate the
+              scalability, this service equips Hyperce to navigate the
               challenging terrain of the eCommerce landscape effectively.
               It&apos;s time to embark on a journey of growth and innovation
               with the Frontier Portfolio Service as your strategic partner.

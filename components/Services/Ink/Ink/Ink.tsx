@@ -32,7 +32,7 @@ export default function Ink() {
             <p className="font-bold">Our mission? </p>
             <br />
             <p>
-              At Hyperce, LLC, we understand that in the modern digital
+              At Hyperce, we understand that in the modern digital
               landscape, blogging is more than just words on a screen; it&apos;s
               a strategic asset that can transform your eCommerce venture.
               Hyperce&apos;s blogging service is the creative bridge between
@@ -80,7 +80,7 @@ export default function Ink() {
               />
             </svg>
             <p className="text-black dark:text-[#cbcbcb] text-sm">
-              Hyperce, LLC grants monetization options, such as displaying ads
+              Hyperce grants monetization options, such as displaying ads
               or selling products directly through the blog. This can be a
               source of income for bloggers.
             </p>
@@ -101,7 +101,7 @@ export default function Ink() {
                 />
               </svg>
               <p className=" text-black dark:text-[#cbcbcb] text-sm">
-                Hyperce, LLC grants monetization options, such as displaying ads
+                Hyperce grants monetization options, such as displaying ads
                 or selling products directly through the blog. This can be a
                 source of income for bloggers.
               </p>

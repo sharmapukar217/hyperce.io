@@ -13,8 +13,8 @@ export default function WhyChoose() {
             connections that are nothing short of perfection. Every promoter we
             choose is handpicked to harmonize seamlessly with your brand's
             melody. Ready to experience Promoter Marketing that's truly
-            exceptional? Choose Hyperce, LLC, and let's take your eCommerce
-            business to new heights. Your success story starts here!
+            exceptional? Choose Hyperce, and let's take your eCommerce business
+            to new heights. Your success story starts here!
           </p>
         </div>
         <div className="flex justify-center">

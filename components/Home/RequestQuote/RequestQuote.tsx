@@ -71,6 +71,7 @@ export default function RequestQuote() {
                 onSubmit={handleSubmit}
               >
                 <input
+                  required
                   className="w-1/2 border lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black"
                   type="email"
                   onChange={handleChange}
@@ -80,6 +81,7 @@ export default function RequestQuote() {
                   id=""
                 />
                 <textarea
+                  required
                   className="w-1/2 border lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black min-h-[6vw]"
                   onChange={handleChange}
                   value={formData.message}
