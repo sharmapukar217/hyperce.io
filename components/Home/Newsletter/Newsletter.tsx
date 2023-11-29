@@ -1,3 +1,4 @@
+
 "use client";
 import Image from "next/image";
 
@@ -23,21 +24,22 @@ export default function Newsletter() {
         referrerPolicy: "strict-origin-when-cross-origin",
         body: JSON.stringify({
           email: email,
+          tags: [1],
         }),
         method: "POST",
         credentials: "omit",
       }
     );
 
-    if (response.status === 200) {
+    if (response.status === 201) {
       toast({
         title: "Your Email has been registered",
         description: "You have successfully subscribed to the newsletter.",
       });
-    } else {
+    } else if (response.status === 200) {
       toast({
-        title: "Error",
-        description: "Something went wrong",
+        title: "Already a fan",
+        description: "Email has already been added",
       });
     }
   }
@@ -69,16 +71,7 @@ export default function Newsletter() {
     console.log(data);
 
     if (data.errors) {
-      toast({
-        title: "Error",
-        description: data.errors[0].message,
-      });
-    } else if (response.status === 200) {
-      // toast({
-      //   title: "Your Email has been registered",
-      //   description: "You have successfully subscribed to the newsletter.",
-      // });
-      handleSendPortalSubscription();
+      console.log(data.errors);
     }
   }
 
@@ -114,7 +107,13 @@ export default function Newsletter() {
               Stay update with all new offers and services we provide and more
               details{" "}
             </div>
-            <div className="border-[2px] flex w-full border-[#357D8A]">
+            <form
+              className="border-[2px] flex w-full border-[#357D8A]"
+              onSubmit={() => {
+                handleNewslett();
+                handleSendPortalSubscription();
+              }}
+            >
               <input
                 className="w-full h-10 bg-transparent px-5 py-6 outline-none"
                 type="email"
@@ -125,13 +124,13 @@ export default function Newsletter() {
                 id=""
               />
               <button
-                onClick={handleNewslett}
+                type="submit"
                 aria-label="subscribe-newsletter"
                 className="w-fit px-3 py-1 bg-[#357D8A] text-white"
               >
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
         <div className="hidden md:block xl:w-1/2 w-full min-h-[200px] bg-white right md:rounded-r-xl bg-[url('/news-back.png')] bg-cover">
