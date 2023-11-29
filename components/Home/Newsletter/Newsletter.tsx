@@ -12,6 +12,36 @@ export default function Newsletter() {
     setEmail(e.target.value);
   };
 
+  async function handleSendPortalSubscription() {
+    const response = await fetch(
+      "https://zippybox.hyperce.io/api/v1/subscribers",
+      {
+        headers: {
+          "content-type": "application/json",
+          Authorization: "Bearer Bu4NoEDLOYr86mCc5D9xQ4owzkmWRLhW",
+        },
+        referrerPolicy: "strict-origin-when-cross-origin",
+        body: JSON.stringify({
+          email: email,
+        }),
+        method: "POST",
+        credentials: "omit",
+      }
+    );
+
+    if (response.status === 200) {
+      toast({
+        title: "Your Email has been registered",
+        description: "You have successfully subscribed to the newsletter.",
+      });
+    } else {
+      toast({
+        title: "Error",
+        description: "Something went wrong",
+      });
+    }
+  }
+
   async function handleNewslett() {
     const response = await fetch("https://admin.hyperce.io/shop-api", {
       headers: {
@@ -44,10 +74,11 @@ export default function Newsletter() {
         description: data.errors[0].message,
       });
     } else if (response.status === 200) {
-      toast({
-        title: "Your Email has been registered",
-        description: "You have successfully subscribed to the newsletter.",
-      });
+      // toast({
+      //   title: "Your Email has been registered",
+      //   description: "You have successfully subscribed to the newsletter.",
+      // });
+      handleSendPortalSubscription();
     }
   }
 
