@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 
@@ -13,7 +12,8 @@ export default function Newsletter() {
     setEmail(e.target.value);
   };
 
-  async function handleSendPortalSubscription() {
+  async function handleSendPortalSubscription(event: any) {
+    event.preventDefault();
     const response = await fetch(
       "https://zippybox.hyperce.io/api/v1/subscribers",
       {
@@ -44,7 +44,8 @@ export default function Newsletter() {
     }
   }
 
-  async function handleNewslett() {
+  async function handleNewslett(event: any) {
+    event.preventDefault();
     const response = await fetch("https://admin.hyperce.io/shop-api", {
       headers: {
         "content-type": "application/json",
@@ -109,9 +110,9 @@ export default function Newsletter() {
             </div>
             <form
               className="border-[2px] flex w-full border-[#357D8A]"
-              onSubmit={() => {
-                handleNewslett();
-                handleSendPortalSubscription();
+              onSubmit={(e) => {
+                handleNewslett(e);
+                handleSendPortalSubscription(e);
               }}
             >
               <input
