@@ -1,0 +1,43 @@
+name: Commit Alert Bot
+on:
+  push:
+  pull_request:
+    types: [opened]
+  issues:
+    types: [opened]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Commit Alert
+      if: github.event_name == 'push'
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        color: "#357D8A"
+        username: "GitHub Alert Bot"
+        message: |
+          `${{ github.event.commits[0].author.name }}` pushed a new commit to `${{ github.repository }}` with message ```${{ github.event.commits[0].message }}```
+    - name: Pull Request Alert
+      if: github.event_name == 'pull_request'
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        color: "#357D8A"
+        username: "GitHub Alert Bot"
+        message: |
+          A new PR has been created for `${{ github.repository }}` by `${{ github.event.pull_request.user.login }}`
+    - name: Issue Alert
+      if: github.event_name == 'issues'
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        color: "#357D8A"
+        username: "GitHub Alert Bot"
+        message: "New issue created on `${{ github.repository }}` with title `${{ github.event.issue.title }}` by `${{ github.event.issue.user.login }}`"
