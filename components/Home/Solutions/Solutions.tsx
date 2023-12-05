@@ -10,14 +10,14 @@ export default function Solutions() {
         id="solutions"
         className="w-fit container  dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto lg:px-20 py-10 md:py-16 rounded-2xl"
       >
-        <h1 className="hyperce-head-xl text-4xl text-black dark:text-white text-center pb-7">
+        <h1 className="hyperce-head-xl text-4xl text-black dark:text-white text-center">
           Hyperce Suite
         </h1>
         <div className="flex justify-center">
           <div className="flex gap-5 flex-col md:flex-row">
             <a
               href="https://docs.hyperce.io/hyperce_suite_book.pdf"
-              className="flex justify-center md:my-10"
+              className="flex justify-center md:mt-7 md:mb-10"
               target="_blank"
             >
               <button className="px-5 w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
@@ -41,7 +41,7 @@ export default function Solutions() {
                 </div>
               </button>
             </a>
-            <a href="/solutions" className="flex justify-center md:my-10">
+            <a href="/solutions" className="flex justify-center md:mt-7 md:mb-10">
               <button className="px-5 w-full border-2 border-black dark:border-white font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
                 <div className=" flex gap-3 hover:gap-5 transition-all duration-150 items-center">
                   <span>View all Solutions By Hyperce</span>
