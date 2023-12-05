@@ -72,7 +72,7 @@ export default function RequestQuote() {
               >
                 <input
                   required
-                  className="w-1/2 border lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black"
+                  className="w-full md:w-1/2 border lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black"
                   type="email"
                   onChange={handleChange}
                   value={formData.email}
@@ -82,7 +82,7 @@ export default function RequestQuote() {
                 />
                 <textarea
                   required
-                  className="w-1/2 border lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black min-h-[6vw]"
+                  className="w-full md:w-1/2 border lg:w-full px-5 py-3 outline-none focus:border-[#357D8A] bg-white text-black min-h-[6vw]"
                   onChange={handleChange}
                   value={formData.message}
                   placeholder="I'd like to request a quote for Hyperce Devops......."
