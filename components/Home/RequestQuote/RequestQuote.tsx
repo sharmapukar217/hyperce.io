@@ -1,6 +1,7 @@
 "use client";
 
 import { useToast } from "@/components/ui/use-toast";
+import { HypercePartners } from "@/data/Partners";
 import { useState } from "react";
 
 export default function RequestQuote() {
@@ -104,22 +105,10 @@ export default function RequestQuote() {
                 Trusted by:
               </span>
 
-              <div className="mt-4 flex items-center gap-x-8">
-                <img
-                  src="/PartnersLogo/Ian.png"
-                  alt=""
-                  className="w-16 h-auto"
-                />
-                <img
-                  src="/PartnersLogo/Trylah.png"
-                  alt=""
-                  className="w-16 h-auto"
-                />
-                <img
-                  src="/PartnersLogo/npdev.png"
-                  alt=""
-                  className="h-10 w-auto"
-                />
+              <div className="mt-4 flex flex-wrap items-center gap-y-5 gap-x-8">
+                {HypercePartners.map((each) => (
+                  <img src={each} alt="" className="w-16 h-auto" />
+                ))}
               </div>
             </div>
           </div>

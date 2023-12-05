@@ -1,3 +1,5 @@
+import { HypercePartners } from "@/data/Partners";
+
 export default function Partners() {
   return (
     <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16">
@@ -13,15 +15,10 @@ export default function Partners() {
       </div>
 
       <div className="mt-10 logos flex gap-8 md:gap-20 flex-wrap justify-center items-center text-black dark:text-white">
-        {[
-          "/PartnersLogo/Ian.png",
-          "/PartnersLogo/Trylah.png",
-          "/PartnersLogo/SignalStuff.png",
-          "/PartnersLogo/npdev.png",
-        ].map((each) => (
+        {HypercePartners.map((each) => (
           <div className="flex justify-center">
             <img
-              className="w-14 md:w-20 hover:invert-0 cursor-pointer transition-all duration-300 invert-[50%]"
+              className="w-14 md:w-20 cursor-pointer transition-all duration-300 invert-[10%] hover:invert-0"
               src={each}
               alt=""
             />
