@@ -8,8 +8,7 @@ export default function ServiesPages() {
       <Navbar />
       <div className="mt-16 text-center mx-auto">
         <h1 className="block font-bold text-gray-800 text-2xl md:text-4xl lg:text-5xl dark:text-gray-200">
-          Our Solutions{"   "}
-          <span className="text-xl text-[#357D8A]">By Hyperce</span>
+          Our Solutions
         </h1>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center">
           {allServices.map((service) => (
