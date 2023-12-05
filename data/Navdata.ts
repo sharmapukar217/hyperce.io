@@ -9,6 +9,6 @@ export const navMenuItems = [
     },
     {
         name: "FAQs",
-        href: "#faq",
+        href: "/#faq",
     },
 ];

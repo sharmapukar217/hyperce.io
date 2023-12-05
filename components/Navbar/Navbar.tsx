@@ -72,11 +72,11 @@ export default function Navbar() {
                   className="relative"
                 >
                   <li
-                    className={`hover:scale-[105%] flex inline-flex items-center justify-center text-base font-bold transition-all duration-200 cursor-pointer ${
+                    className={`hover:scale-[105%] flex items-center justify-center text-base font-bold transition-all duration-200 cursor-pointer ${
                       isDropdownVisible ? "text-[#337684]" : ""
                     }`}
                   >
-                    <span className="flex inline-flex items-center justify-center">
+                    <span className="flex items-center justify-center">
                       Solutions <BsFillCaretDownFill />
                     </span>
                   </li>
