@@ -116,7 +116,7 @@ export const allServices = [
             "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
         icon: {
             dark: "/hyperce_hosting_logo.jpeg",
-            light: "/hyperce_hosting_logo.jpeg",
+            light: "/hyperce-hosting-light.png",
         },
         href: "/hosting",
     },
@@ -126,7 +126,7 @@ export const allServices = [
             "Secure your software with Hyperce Security's advanced security solutions.",
         icon: {
             dark: "/services_logos/security/security_dark.png",
-            light: "/services_logos/security/security_dark.png",
+            light: "/services_logos/security/security_light.png",
         },
         href: "/security",
     },
@@ -146,7 +146,7 @@ export const allServices = [
             "Empower your digital presence with Hyperce Appify's cutting-edgemobile app solutions.",
         icon: {
             dark: "/services_logos/appify/appify_light_jpeg.jpeg",
-            light: "/services_logos/appify/appify_light_jpeg.jpeg",
+            light: "/services_logos/appify/appify_light.png",
         },
         href: "/appify",
     },
