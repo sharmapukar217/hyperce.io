@@ -19,7 +19,7 @@ export default function Newsletter() {
       {
         headers: {
           "content-type": "application/json",
-          Authorization: "Bearer Bu4NoEDLOYr86mCc5D9xQ4owzkmWRLhW",
+          Authorization: "Bearer EXVKcFrac6jswMIjxlF0SPf1Z7wbvcLe",
         },
         referrerPolicy: "strict-origin-when-cross-origin",
         body: JSON.stringify({

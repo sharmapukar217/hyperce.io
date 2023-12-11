@@ -3,6 +3,7 @@ import Footer from "@/components/Footer/Footer";
 import { DM_Sans } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
+import PrelineScript from "@/vendor/PrelineScript";
 
 const raleway = DM_Sans({ subsets: ["latin"] });
 
@@ -64,6 +65,10 @@ export default function RootLayout({
             Chat on WhatsApp
           </span>
         </a>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/preline@2.0.0/dist/preline.min.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
