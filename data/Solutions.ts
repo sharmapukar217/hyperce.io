@@ -1,4 +1,4 @@
-export const showcaseSolutions = [
+export const showcaseTechSolutions = [
     {
         name: 'Hyperce Headless',
         href: "/headless",
@@ -23,14 +23,14 @@ export const showcaseSolutions = [
         darkIcon: "/promoter-logo.png",
         altText: "E-commerce Business"
     },
-    {
-        name: 'Hyperce Frontier',
-        href: "/frontier",
-        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
-        whiteIcon: "/frontier.png",
-        darkIcon: "/frontier.png",
-        altText: "E-commerce Platform"
-    },
+    // {
+    //     name: 'Hyperce Frontier',
+    //     href: "/frontier",
+    //     des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
+    //     whiteIcon: "/frontier.png",
+    //     darkIcon: "/frontier.png",
+    //     altText: "E-commerce Platform"
+    // },
     {
         name: 'Hyperce Devops',
         href: "/devops",
@@ -49,7 +49,33 @@ export const showcaseSolutions = [
     },
 ]
 
-export const allServices = [
+export const showcaseNonTechSolutions = [
+    {
+        name: 'Hyperce Business and Legal',
+        href: "/bl",
+        des: "Hyperce Business and Legal Solutions help to strategize, execute, and amplify your brand's reach.",
+        whiteIcon: "/og-logo.png",
+        darkIcon: "/og-logo.png",
+        altText: "E-commerce Platform"
+    }, {
+        name: 'Hyperce Acquire',
+        href: "/acquire",
+        des: "Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ",
+        whiteIcon: "/og-logo.png",
+        darkIcon: "/og-logo.png",
+        altText: "E-commerce Platform"
+    },
+    {
+        name: 'View All Solutions',
+        href: "/solutions",
+        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
+        whiteIcon: "/og-logo.png",
+        darkIcon: "/og-logo.png",
+        altText: "E-commerce Platform"
+    },
+]
+
+export const allTechServices = [
     {
         title: "Hyperce Headless",
         description:
@@ -116,7 +142,7 @@ export const allServices = [
             "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
         icon: {
             dark: "/hyperce_hosting_logo.jpeg",
-            light: "/hyperce-hosting-light.png",
+            light: "/hyperce_hosting_logo.jpeg",
         },
         href: "/hosting",
     },
@@ -126,7 +152,7 @@ export const allServices = [
             "Secure your software with Hyperce Security's advanced security solutions.",
         icon: {
             dark: "/services_logos/security/security_dark.png",
-            light: "/services_logos/security/security_light.png",
+            light: "/services_logos/security/security_dark.png",
         },
         href: "/security",
     },
@@ -146,8 +172,28 @@ export const allServices = [
             "Empower your digital presence with Hyperce Appify's cutting-edgemobile app solutions.",
         icon: {
             dark: "/services_logos/appify/appify_light_jpeg.jpeg",
-            light: "/services_logos/appify/appify_light.png",
+            light: "/services_logos/appify/appify_light_jpeg.jpeg",
         },
         href: "/appify",
     },
+];
+export const allNonTechServices = [
+    {
+        title: 'Hyperce Business and Legal',
+        href: "/bl",
+        icon: {
+            dark: "/og-logo.png",
+            light: "/og-logo.png",
+        },
+        description: "Hyperce Business and Legal Solutions help to strategize, execute, and amplify your brand's reach.",
+    },
+    {
+        title: 'Hyperce Acquire',
+        href: "/acquire",
+        icon: {
+            dark: "/og-logo.png",
+            light: "/og-logo.png",
+        },
+        description: "Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ",
+    }
 ];

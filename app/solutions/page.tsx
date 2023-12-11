@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar/Navbar";
-import { allServices } from "@/data/Solutions";
+import { allNonTechServices, allTechServices } from "@/data/Solutions";
 import Image from "next/image";
 
 export default function ServiesPages() {
@@ -11,7 +11,23 @@ export default function ServiesPages() {
           Our Solutions
         </h1>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center">
-          {allServices.map((service) => (
+          <span className="my-5 w-full text-center text-3xl font-extrabold text-gray-300">
+            Tech Solutions
+          </span>
+          {allTechServices.map((service) => (
+            <ServiceCard
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              href={service.href}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center mt-5">
+          <span className="my-5 w-full text-center text-3xl font-extrabold text-gray-300">
+            Non-Tech Solutions
+          </span>
+          {allNonTechServices.map((service) => (
             <ServiceCard
               title={service.title}
               description={service.description}

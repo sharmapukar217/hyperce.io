@@ -1,6 +1,6 @@
 import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 import Card from "./Card";
-import { showcaseSolutions } from "@/data/Solutions";
+import { showcaseTechSolutions } from "@/data/Solutions";
 
 export default function Solutions() {
   return (
@@ -67,7 +67,7 @@ export default function Solutions() {
         </div>
         <div className="flex justify-center w-fit">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
-            {showcaseSolutions.map((solution) => (
+            {showcaseTechSolutions.map((solution) => (
               <>
                 <Card
                   href={solution.href}
