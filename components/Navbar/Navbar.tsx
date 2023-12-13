@@ -54,13 +54,13 @@ export default function Navbar() {
                   id="navbar-collapse-with-animation"
                   className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
                 >
-                  <div className="overflow-hidden overflow-y-auto max-h-[75vh]">
+                  <div className="overflow-hidden overflow-y-auto max-h-[75vh] w-full">
                     <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:mt-0 md:divide-y-0 md:divide-solid dark:divide-gray-700">
                       <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
                         <a href="/solutions">
                           <button
                             type="button"
-                            className={`hover:scale-[105%] text-base font-bold transition-all duration-200  flex items-center ${
+                            className={`text-base font-bold transition-all duration-200  flex items-center ${
                               pathname === "/solutions"
                                 ? `text-[#337684]`
                                 : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
