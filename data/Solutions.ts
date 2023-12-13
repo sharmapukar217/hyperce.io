@@ -62,15 +62,15 @@ export const showcaseNonTechSolutions = [
         name: 'Hyperce Business and Legal',
         href: "/bl",
         des: "Hyperce Business and Legal Solutions help to strategize, execute, and amplify your brand's reach.",
-        whiteIcon: "/og-logo.png",
-        darkIcon: "/og-logo.png",
+        whiteIcon: "/services_logos/bl/bl_logo.jpeg",
+        darkIcon: "/services_logos/bl/bl_logo.jpeg",
         altText: "E-commerce Platform"
     }, {
         name: 'Hyperce Acquire',
         href: "/acquire",
         des: "Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ",
-        whiteIcon: "/og-logo.png",
-        darkIcon: "/og-logo.png",
+        whiteIcon: "/services_logos/acquire/acquire_logo_light.jpeg",
+        darkIcon: "/services_logos/acquire/acquire_logo_light.jpeg",
         altText: "E-commerce Platform"
     },
     {
@@ -190,8 +190,8 @@ export const allNonTechServices = [
         title: 'Hyperce Business and Legal',
         href: "/bl",
         icon: {
-            dark: "/og-logo.png",
-            light: "/og-logo.png",
+            dark: "/services_logos/bl/bl_logo.jpeg",
+            light: "/services_logos/bl/bl_logo.jpeg",
         },
         description: "Hyperce Business and Legal Solutions help to strategize, execute, and amplify your brand's reach.",
     },
@@ -199,8 +199,8 @@ export const allNonTechServices = [
         title: 'Hyperce Acquire',
         href: "/acquire",
         icon: {
-            dark: "/og-logo.png",
-            light: "/og-logo.png",
+            dark: "/services_logos/acquire/acquire_logo_light.jpeg",
+            light: "/services_logos/acquire/acquire_logo_light.jpeg",
         },
         description: "Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ",
     }

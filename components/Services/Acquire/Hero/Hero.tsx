@@ -6,12 +6,12 @@ export default function Hero() {
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
             <img
               className="h-[120px] w-auto rounded-full hidden dark:block"
-              src="/services_logos/devops/devops_dark.png"
+              src="/services_logos/acquire/acquire_logo_light.jpeg"
               alt=""
             />
             <img
               className="h-[120px] w-auto rounded-full dark:hidden"
-              src="/services_logos/devops/devops_light.png"
+              src="/services_logos/acquire/acquire_logo_light.jpeg"
               alt=""
             />
 
