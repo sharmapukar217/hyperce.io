@@ -40,6 +40,14 @@ export const showcaseTechSolutions = [
         altText: "E-commerce Platform"
     },
     {
+        name: "Hyperce Hosting",
+        des: "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
+        darkIcon: "/hyperce_hosting_logo.jpeg",
+        whiteIcon: "/hyperce_hosting_logo.jpeg",
+        href: "/hosting",
+        altText: "E-commerce Suite"
+    },
+    {
         name: 'View All Solutions',
         href: "/solutions",
         des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",

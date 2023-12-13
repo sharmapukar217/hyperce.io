@@ -1,6 +1,9 @@
 import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 import Card from "./Card";
-import { showcaseTechSolutions } from "@/data/Solutions";
+import {
+  showcaseNonTechSolutions,
+  showcaseTechSolutions,
+} from "@/data/Solutions";
 
 export default function Solutions() {
   return (
@@ -41,7 +44,10 @@ export default function Solutions() {
                 </div>
               </button>
             </a>
-            <a href="/solutions" className="flex justify-center md:mt-7 md:mb-10">
+            <a
+              href="/solutions"
+              className="flex justify-center md:mt-7 md:mb-10"
+            >
               <button className="px-5 w-full border-2 border-black dark:border-white font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
                 <div className=" flex gap-3 hover:gap-5 transition-all duration-150 items-center">
                   <span>View all Solutions By Hyperce</span>
@@ -67,7 +73,19 @@ export default function Solutions() {
         </div>
         <div className="flex justify-center w-fit">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
-            {showcaseTechSolutions.map((solution) => (
+            {showcaseTechSolutions.slice(0, -1).map((solution) => (
+              <>
+                <Card
+                  href={solution.href}
+                  whiteIcon={solution.whiteIcon}
+                  darkIcon={solution.darkIcon}
+                  name={solution.name}
+                  des={solution.des}
+                  altText={solution.altText}
+                />
+              </>
+            ))}
+            {showcaseNonTechSolutions.map((solution) => (
               <>
                 <Card
                   href={solution.href}

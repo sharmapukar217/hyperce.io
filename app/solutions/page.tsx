@@ -11,7 +11,7 @@ export default function ServiesPages() {
           Our Solutions
         </h1>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center">
-          <span className="my-5 w-full text-center text-3xl font-extrabold text-gray-300">
+          <span className="my-5 w-full text-center text-3xl font-extrabold dark:text-gray-300">
             Tech Solutions
           </span>
           {allTechServices.map((service) => (
@@ -24,7 +24,7 @@ export default function ServiesPages() {
           ))}
         </div>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center mt-5">
-          <span className="my-5 w-full text-center text-3xl font-extrabold text-gray-300">
+          <span className="my-5 w-full text-center text-3xl font-extrabold dark:text-gray-300">
             Non-Tech Solutions
           </span>
           {allNonTechServices.map((service) => (
