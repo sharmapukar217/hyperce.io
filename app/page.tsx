@@ -17,7 +17,6 @@ import FAQ from "@/components/FAQ/FAQ";
 import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
 import HomeTestimonial from "@/components/Home/Gallary/Testimonials";
 import { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Hyperce | Best Ecommerce Suite Solution",
