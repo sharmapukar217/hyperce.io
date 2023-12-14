@@ -1,6 +1,9 @@
 export default function Watch() {
   return (
-    <section id="why-hyperce" className="container mx-auto px-10 md:px-20 py-10 md:py-20 flex flex-col lg:flex-row text-left">
+    <section
+      id="why-hyperce"
+      className="container mx-auto px-10 md:px-20 py-10 md:py-20 flex flex-col lg:flex-row text-left"
+    >
       <div className="flex w-full flex-col justify-center items-center md:items-start">
         <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase">
           Watch a video
@@ -15,7 +18,7 @@ export default function Watch() {
           world of online retail.
         </p>
         <div className="text-white mt-4">
-          <a href="https://www.youtube.com/watch?v=EQ5Uehjyg8M" target="_blank">
+          <a href="https://www.youtube.com/watch?v=wUNHpMc2bQQ" target="_blank">
             <button
               type="button"
               className="flex items-center gap-3 text-black dark:text-white border-[1px] border-[#357D8A] hover:text-[#357D8A] transition-all duration-150 px-5 py-2 rounded-xl"
@@ -49,7 +52,7 @@ export default function Watch() {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/EQ5Uehjyg8M?si=04-AvBkeqeAajPVx"
+              src="https://www.youtube.com/embed/wUNHpMc2bQQ?si=Np08Gx6mk7DwcAMF"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
