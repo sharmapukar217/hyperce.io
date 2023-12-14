@@ -6,7 +6,6 @@ import {
   showcaseNonTechSolutions,
   showcaseTechSolutions,
 } from "@/data/Solutions";
-import { BsFillCaretDownFill } from "react-icons/bs";
 import { usePathname } from "next/navigation";
 import { navMenuItems } from "@/data/Navdata";
 
@@ -49,7 +48,7 @@ export default function Hamburger(props: any) {
       <div
         className={`${
           menuOpen ? "transition-x-0 hyperce-no-scroll" : "translate-x-[100%]"
-        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl dark:backdrop-blur-full py-[10%] transition-all flex justify-center duration-500 h-[100vh] -top-10 overflow-hidden z-20 fixed scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
+        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl dark:backdrop-blur-full py-[10%] transition-all flex justify-center duration-500 h-[100vh] -top-10 overflow-scroll z-20 fixed scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
       >
         <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] dark:bg-opacity-10 bg-opacity-0 px-[10%]">
           <svg
@@ -93,40 +92,38 @@ export default function Hamburger(props: any) {
                 <div className="relative md:flex md:items-center md:justify-between z-50">
                   <div
                     id="navbar-collapse-with-animation"
-                    className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
+                    className="hs-collapse overflow-hidden transition-all duration-300 basis-full grow"
                   >
-                    <div className="overflow-hidden overflow-y-auto max-h-[75vh]">
+                    <div className="overflow-scroll overflow-y-auto max-h-[75vh] left-0">
                       <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:mt-0 md:divide-y-0 md:divide-solid dark:divide-gray-700">
                         <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
-                          <a href="/solutions">
-                            <button
-                              type="button"
-                              className={`hover:scale-[105%] text-base font-bold transition-all duration-200  flex items-center ${
-                                pathname === "/solutions"
-                                  ? `text-[#337684]`
-                                  : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
-                              }`}
+                          <button
+                            type="button"
+                            className={`hover:scale-[105%] text-base font-bold transition-all duration-200  flex items-center absolute left-0 ${
+                              pathname === "/solutions"
+                                ? `text-[#337684]`
+                                : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
+                            }`}
+                          >
+                            Solutions
+                            <svg
+                              className="flex-shrink-0 ms-2 w-4 h-4"
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
                             >
-                              Solutions
-                              <svg
-                                className="flex-shrink-0 ms-2 w-4 h-4"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                              >
-                                <path d="m6 9 6 6 6-6" />
-                              </svg>
-                            </button>
-                          </a>
+                              <path d="m6 9 6 6 6-6" />
+                            </svg>
+                          </button>
 
-                          <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full start-0 min-w-[15rem] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5 w-[50vw]">
-                            <div className="md:grid md:grid-cols-2 gap-4">
+                          <div className="absolute left-[10vh] max-h-[70vh] overflow-scroll -top-[20vh] hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 start-0 min-w-[50vw] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
+                            <div className="grid grid-cols-1 gap-4 ">
                               <div className="flex flex-col mx-1 md:mx-0">
                                 <span className="mb-5">Tech Solutions</span>
                                 {showcaseTechSolutions.map((each, index) => (
