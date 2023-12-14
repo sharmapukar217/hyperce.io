@@ -150,7 +150,7 @@ export const allTechServices = [
             "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
         icon: {
             dark: "/hyperce_hosting_logo.jpeg",
-            light: "/hyperce_hosting_logo.jpeg",
+            light: "/hyperce-hosting-light.png",
         },
         href: "/hosting",
     },
@@ -160,7 +160,7 @@ export const allTechServices = [
             "Secure your software with Hyperce Security's advanced security solutions.",
         icon: {
             dark: "/services_logos/security/security_dark.png",
-            light: "/services_logos/security/security_dark.png",
+            light: "/services_logos/security/security_light.png",
         },
         href: "/security",
     },
@@ -180,7 +180,7 @@ export const allTechServices = [
             "Empower your digital presence with Hyperce Appify's cutting-edgemobile app solutions.",
         icon: {
             dark: "/services_logos/appify/appify_light_jpeg.jpeg",
-            light: "/services_logos/appify/appify_light_jpeg.jpeg",
+            light: "/services_logos/appify/appify_light.png",
         },
         href: "/appify",
     },
@@ -191,7 +191,7 @@ export const allNonTechServices = [
         href: "/bl",
         icon: {
             dark: "/services_logos/bl/bl_logo.jpeg",
-            light: "/services_logos/bl/bl_logo.jpeg",
+            light: "/services_logos/bl/bl_transparent.png",
         },
         description: "Hyperce Business and Legal Solutions help to strategize, execute, and amplify your brand's reach.",
     },
@@ -200,7 +200,7 @@ export const allNonTechServices = [
         href: "/acquire",
         icon: {
             dark: "/services_logos/acquire/acquire_logo_light.jpeg",
-            light: "/services_logos/acquire/acquire_logo_light.jpeg",
+            light: "/services_logos/acquire/acquire_logo_transparent.png",
         },
         description: "Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ",
     }
