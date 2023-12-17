@@ -192,6 +192,7 @@ export function SolutionsMegaMenu() {
                       {platform.platformProducts?.map((product, index) => (
                         <div key={index} className="p-2">
                           <EachProduct product={product} />
+                          {/* <span>{product.name}</span> */}
                         </div>
                       ))}
                     </div>
