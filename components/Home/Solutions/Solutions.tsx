@@ -1,9 +1,10 @@
-import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
-import Card from "./Card";
+import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
+import Card from './Card';
 import {
   showcaseNonTechSolutions,
   showcaseTechSolutions,
-} from "@/data/Solutions";
+  viewAllSolutions
+} from '@/data/Solutions';
 
 export default function Solutions() {
   return (
@@ -73,7 +74,7 @@ export default function Solutions() {
         </div>
         <div className="flex justify-center w-fit">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
-            {showcaseTechSolutions.slice(0, -1).map((solution) => (
+            {showcaseTechSolutions.slice(0, 3).map((solution) => (
               <>
                 <Card
                   href={solution.href}
@@ -85,7 +86,7 @@ export default function Solutions() {
                 />
               </>
             ))}
-            {showcaseNonTechSolutions.map((solution) => (
+            {showcaseNonTechSolutions.slice(0, 2).map((solution) => (
               <>
                 <Card
                   href={solution.href}
@@ -97,6 +98,14 @@ export default function Solutions() {
                 />
               </>
             ))}
+            <Card
+              href={viewAllSolutions.href}
+              whiteIcon={viewAllSolutions.whiteIcon}
+              darkIcon={viewAllSolutions.darkIcon}
+              name={viewAllSolutions.name}
+              des={viewAllSolutions.des}
+              altText={viewAllSolutions.altText}
+            />
           </div>
         </div>
       </section>

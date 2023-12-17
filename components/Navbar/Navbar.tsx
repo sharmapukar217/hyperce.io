@@ -1,25 +1,46 @@
-"use client";
-import { DarkModeProvider } from "@/contexts/theme_context";
-import DarkModeToggle from "../ThemeSwitch/DarkModeToggle";
-import HamburgerComponent from "./Hamburger";
-import Logo from "@/utils/assets/Logo";
-import { usePathname } from "next/navigation";
-import { navMenuItems } from "@/data/Navdata";
-import { useEffect, useState } from "react";
-import "./Navbar.css";
+'use client';
+
+import DarkModeToggle from '../ThemeSwitch/DarkModeToggle';
+import HamburgerComponent from './Hamburger';
+import Logo from '@/utils/assets/Logo';
+import { navMenuItems } from '@/data/Navdata';
+
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+
+import './Navbar.css';
+
 import {
   showcaseNonTechSolutions,
-  showcaseTechSolutions,
-} from "@/data/Solutions";
+  showcaseSaasSolutions,
+  showcaseTechSolutions
+} from '@/data/Solutions';
 
-import { ThemeProvider } from "next-themes";
-import PrelineScript from "@/vendor/PrelineScript";
+import { ThemeProvider } from 'next-themes';
+import PrelineScript from '@/vendor/PrelineScript';
+
+import { EachProduct } from '../Platforms/Platforms';
+
+const PlatformsData = [
+  {
+    platformName: 'Hyperce Tech',
+    platformProducts: showcaseTechSolutions
+  },
+  {
+    platformName: 'Hyperce Non-Tech',
+    platformProducts: showcaseNonTechSolutions
+  },
+  {
+    platformName: 'Hyperce SaaS',
+    platformProducts: showcaseSaasSolutions
+  }
+];
 
 export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    require("preline");
+    require('preline');
   }, []);
 
   return (
@@ -38,7 +59,7 @@ export default function Navbar() {
                   className={`hover:scale-[105%] text-base font-bold transition-all duration-200  ${
                     pathname === menuItem.href
                       ? `text-[#337684]`
-                      : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
+                      : 'text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]'
                   }`}
                 >
                   <a
@@ -49,109 +70,7 @@ export default function Navbar() {
                   </a>
                 </li>
               ))}
-              <div className="relative md:flex md:items-center md:justify-between z-50">
-                <div
-                  id="navbar-collapse-with-animation"
-                  className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
-                >
-                  <div className="overflow-hidden overflow-y-auto max-h-[75vh] w-full">
-                    <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:mt-0 md:divide-y-0 md:divide-solid dark:divide-gray-700">
-                      <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
-                        <a href="/solutions">
-                          <button
-                            type="button"
-                            className={`text-base font-bold transition-all duration-200  flex items-center ${
-                              pathname === "/solutions"
-                                ? `text-[#337684]`
-                                : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
-                            }`}
-                          >
-                            Solutions
-                            <svg
-                              className="flex-shrink-0 ms-2 w-4 h-4"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            >
-                              <path d="m6 9 6 6 6-6" />
-                            </svg>
-                          </button>
-                        </a>
-
-                        <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 top-full start-0 min-w-[15rem] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5 w-[50vw]">
-                          <div className="md:grid md:grid-cols-2 gap-4">
-                            <div className="flex flex-col mx-1 md:mx-0">
-                              <span className="mb-5">Tech Solutions</span>
-                              {showcaseTechSolutions.map((each, index) => (
-                                <a
-                                  className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                  href={each.href}
-                                >
-                                  <img
-                                    className="h-10 w-10 hidden dark:block"
-                                    src={each.darkIcon}
-                                    alt=""
-                                  />
-                                  <img
-                                    className="h-10 w-10 dark:hidden"
-                                    src={each.whiteIcon}
-                                    alt=""
-                                  />
-
-                                  <div className="grow">
-                                    <p className="font-medium text-gray-800 dark:text-gray-200">
-                                      {each.name}
-                                    </p>
-                                    <p className="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200 line-clamp-2">
-                                      {each.des}
-                                    </p>
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
-
-                            <div className="flex flex-col mx-1 md:mx-0">
-                              <span className="mb-5">Non-Tech Solutions</span>
-                              {showcaseNonTechSolutions.map((each, index) => (
-                                <a
-                                  className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                  href={each.href}
-                                >
-                                  <img
-                                    className="h-10 w-10 hidden dark:block"
-                                    src={each.darkIcon}
-                                    alt=""
-                                  />
-                                  <img
-                                    className="h-10 w-10 dark:hidden"
-                                    src={each.whiteIcon}
-                                    alt=""
-                                  />
-
-                                  <div className="grow">
-                                    <p className="font-medium text-gray-800 dark:text-gray-200">
-                                      {each.name}
-                                    </p>
-                                    <p className="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200 line-clamp-2">
-                                      {each.des}
-                                    </p>
-                                  </div>
-                                </a>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <SolutionsMegaMenu />
             </ul>
           </nav>
           <div className="flex gap-10 items-center">
@@ -211,5 +130,78 @@ export default function Navbar() {
       </header>
       <PrelineScript />
     </ThemeProvider>
+  );
+}
+
+export function SolutionsMegaMenu() {
+  const pathname = usePathname();
+
+  return (
+    <div className="relative md:flex md:items-center md:justify-between z-50">
+      <div
+        id="navbar-collapse-with-animation"
+        className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+      >
+        <div className="">
+          <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] font-bold">
+            <button type="button" className="flex items-center w-full">
+              Platforms
+              <svg
+                className="flex-shrink-0 ms-2 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+
+            <div className="hs-dropdown-menu p-3 transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+              {PlatformsData.map((platform, index) => (
+                <div key={index}>
+                  <div className="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
+                    <button
+                      type="button"
+                      className="flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 text-left w-[13vw]"
+                    >
+                      {platform.platformName}
+
+                      <svg
+                        className="sm:-rotate-90 flex-shrink-0 ms-2 w-4 h-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </button>
+
+                    <div className="-mt-50 -ml-20 w-[20vw] hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full top-0 end-full !mx-[10px]">
+                      {platform.platformProducts?.map((product, index) => (
+                        <div key={index} className="p-2">
+                          <EachProduct product={product} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

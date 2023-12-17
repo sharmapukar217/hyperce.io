@@ -15,22 +15,6 @@ export const showcaseTechSolutions = [
         darkIcon: "/hyperce-ink-dark.svg",
         altText: "E-commerce Suite"
     },
-    // {
-    //     name: 'Hyperce Promoter',
-    //     href: "/promoter",
-    //     des: "Amplify your marketing strategies with Promoter's innovative solutions. Boost brand visibility and drive engagement for unparalleled promotional success.",
-    //     whiteIcon: "/promoter-logo.png",
-    //     darkIcon: "/promoter-logo.png",
-    //     altText: "E-commerce Business"
-    // },
-    // {
-    //     name: 'Hyperce Frontier',
-    //     href: "/frontier",
-    //     des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
-    //     whiteIcon: "/frontier.png",
-    //     darkIcon: "/frontier.png",
-    //     altText: "E-commerce Platform"
-    // },
     {
         name: 'Hyperce Devops',
         href: "/devops",
@@ -39,23 +23,51 @@ export const showcaseTechSolutions = [
         darkIcon: "/services_logos/devops/devops_dark.png",
         altText: "E-commerce Platform"
     },
-    // {
-    //     name: "Hyperce Hosting",
-    //     des: "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
-    //     darkIcon: "/hyperce_hosting_logo.jpeg",
-    //     whiteIcon: "/hyperce_hosting_logo.jpeg",
-    //     href: "/hosting",
-    //     altText: "E-commerce Suite"
-    // },
     {
-        name: 'View All Solutions',
-        href: "/solutions",
-        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
+        name: 'View All Tech Solutions',
+        href: "/solutions/tech",
+        des: "Check out our tech solutions to help you grow your business.",
         whiteIcon: "/og-logo.png",
         darkIcon: "/og-logo.png",
         altText: "E-commerce Platform"
     },
 ]
+
+export const showcaseSaasSolutions = [
+    {
+        name: 'Hyperce HRM',
+        href: "https://www.hypercetechlabs.com/casestudies/hyperce-hrm",
+        des: "Hyperce HRM is a SaaS based HRM solution that helps to strategize and execute your business goals",
+        whiteIcon: "/services_logos/saas/hrmLogo.png",
+        darkIcon: "/services_logos/saas/hrmLogo.png",
+        altText: "E-commerce Platform"
+    },
+    {
+        name: 'Zippybox',
+        href: "https://zippybox.hyperce.io/",
+        des: "Elevate your email marketing with AI. Create engaging emails, automate campaigns, and boost ROI.",
+        whiteIcon: "/services_logos/saas/zippyboxlogo.svg",
+        darkIcon: "/services_logos/saas/zippyboxlogo.svg",
+        altText: "E-commerce Platform"
+    },
+    {
+        name: 'View All Hyperce SaaS',
+        href: "/solutions/saas",
+        des: "Check out our other solutions to help you grow your business.",
+        whiteIcon: "/og-logo.png",
+        darkIcon: "/og-logo.png",
+        altText: "E-commerce Platform"
+    },
+]
+
+export const viewAllSolutions = {
+    name: 'View All Solutions',
+    href: "/solutions",
+    des: "Check out all our solutions to help you grow your business.",
+    whiteIcon: "/og-logo.png",
+    darkIcon: "/og-logo.png",
+    altText: "E-commerce Platform"
+}
 
 export const showcaseNonTechSolutions = [
     {
@@ -74,9 +86,9 @@ export const showcaseNonTechSolutions = [
         altText: "E-commerce Platform"
     },
     {
-        name: 'View All Solutions',
-        href: "/solutions",
-        des: "Showcase your work with Frontier's portfolio service. Expand your business horizons and impress clients globally.",
+        name: 'View All Non-Tech Solutions',
+        href: "/solutions/non-tech",
+        des: "Check out our other solutions to help you grow your business.",
         whiteIcon: "/og-logo.png",
         darkIcon: "/og-logo.png",
         altText: "E-commerce Platform"
@@ -204,4 +216,25 @@ export const allNonTechServices = [
         },
         description: "Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ",
     }
+];
+
+export const allSaasSolutions = [
+    {
+        title: 'Hyperce HRM',
+        href: "https://www.hypercetechlabs.com/casestudies/hyperce-hrm",
+        icon: {
+            dark: "/services_logos/bl/bl_logo.jpeg",
+            light: "/services_logos/bl/bl_logo.jpeg",
+        },
+        description: "Hyperce HRM is a SaaS based HRM solution that helps to strategize and execute your business goals",
+    },
+    {
+        title: 'Zippybox',
+        href: "https://zippybox.hyperce.io/",
+        description: "Elevate your email marketing with AI. Create engaging emails, automate campaigns, and boost ROI.",
+        icon: {
+            light: "/services_logos/saas/zippyboxlogo.svg",
+            dark: "/services_logos/saas/zippyboxlogo.svg",
+        },
+    },
 ];
