@@ -1,21 +1,21 @@
-import "./globals.css";
-import Footer from "@/components/Footer/Footer";
-import { DM_Sans } from "next/font/google";
-import { Toaster } from "@/components/ui/toaster";
-import Script from "next/script";
-import PrelineScript from "@/vendor/PrelineScript";
+import './globals.css';
+import Footer from '@/components/Footer/Footer';
+import { DM_Sans } from 'next/font/google';
+import { Toaster } from '@/components/ui/toaster';
+import Script from 'next/script';
+import PrelineScript from '@/vendor/PrelineScript';
 
-const raleway = DM_Sans({ subsets: ["latin"] });
+const raleway = DM_Sans({ subsets: ['latin'] });
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
   title: string;
   og_img: string;
   og_description: string;
 }) {
-  const ROOT_OG_IMAGE = "/og-logo.png";
+  const ROOT_OG_IMAGE = '/og-logo.png';
   return (
     <html>
       <head>
@@ -48,7 +48,7 @@ export default function RootLayout({
           href={`https://wa.me/16178195576`}
           target="_blank"
           style={{
-            background: "#2ace67",
+            background: '#2ace67'
           }}
           className="overflow-hidden group fixed bottom-4 right-4 rounded-xl h-12 p-3 flex justify-center items-center shadow-lg text-white"
         >

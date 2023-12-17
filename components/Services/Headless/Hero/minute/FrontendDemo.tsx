@@ -1,6 +1,6 @@
 export default function FrontendDemo({
   link,
-  name,
+  name
 }: {
   link: string;
   name: string;

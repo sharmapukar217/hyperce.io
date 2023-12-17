@@ -1,4 +1,4 @@
-import Card from "../../Reusables/Card";
+import Card from '../../Reusables/Card';
 
 export default function WhyChoose() {
   return (
@@ -21,10 +21,10 @@ export default function WhyChoose() {
         <div className="flex justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-20 w-fit xl:grid-cols-4 md:px-20 py-10">
             {[
-              { num: "10x", des: "Development Speed" },
-              { num: "10x", des: "Reliability" },
-              { num: "50x", des: "Collaboration" },
-              { num: "20x", des: "Efficiency" },
+              { num: '10x', des: 'Development Speed' },
+              { num: '10x', des: 'Reliability' },
+              { num: '50x', des: 'Collaboration' },
+              { num: '20x', des: 'Efficiency' }
             ].map((each) => (
               <Card num={each.num} des={each.des} />
             ))}

@@ -15,9 +15,7 @@ export default function Message() {
           </div>
           <div className="absolute flex flex-col text-left justify-end px-5 py-5 text-white">
             <span className="text-xl font-bold">Biplab Karki</span>
-            <span className="text-md font-medium">
-              Founder & CEO, Hyperce.
-            </span>
+            <span className="text-md font-medium">Founder & CEO, Hyperce.</span>
           </div>
         </div>
         <div className="w-full min-h-[60vh] lg:w-1/2 flex bg-white  dark:bg-[#0E1625] flex-col gap-7 md:gap-5 p-10 justify-center md:px-10 pt-10 md:py-[15%] lg:py-5">

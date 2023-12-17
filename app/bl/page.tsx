@@ -1,19 +1,19 @@
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
-import BL from "@/components/Services/BL/BL/BL";
-import Hero from "@/components/Services/BL/Hero/Hero";
-import WhyChoose from "@/components/Services/BL/WhyChoose/WhyChoose";
-import Contact from "@/components/Contact/Contact";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
+import BL from '@/components/Services/BL/BL/BL';
+import Hero from '@/components/Services/BL/Hero/Hero';
+import WhyChoose from '@/components/Services/BL/WhyChoose/WhyChoose';
+import Contact from '@/components/Contact/Contact';
 
-import Image from "next/image";
-import QaBg from "../../public/hyperce-qa.png";
+import Image from 'next/image';
+import QaBg from '../../public/hyperce-qa.png';
 
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Hyperce BL (Business & Legal)  | Best Ecommerce Solution",
+  title: 'Hyperce BL (Business & Legal)  | Best Ecommerce Solution',
   description:
-    "Hyperce BL (Business & Legal) is a one-stop solution for all your business and legal needs. We provide a wide range of services, including business formation, trademark registration, and legal consultation. Our team of experts will help you with any questions or concerns you may have about your company's legal requirements.",
+    "Hyperce BL (Business & Legal) is a one-stop solution for all your business and legal needs. We provide a wide range of services, including business formation, trademark registration, and legal consultation. Our team of experts will help you with any questions or concerns you may have about your company's legal requirements."
 };
 
 export default function FrontierPage() {

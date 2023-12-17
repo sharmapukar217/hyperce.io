@@ -1,5 +1,5 @@
 export const frontendDemos = {
-    Headless: "",
-    Ink: "",
-    Frontier: "hi"
-}
+  Headless: '',
+  Ink: '',
+  Frontier: 'hi'
+};

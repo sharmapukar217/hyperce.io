@@ -1,8 +1,8 @@
 import {
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "../ui/accordion";
+  AccordionTrigger
+} from '../ui/accordion';
 
 interface propTypes {
   question: string;

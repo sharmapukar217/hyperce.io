@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
+'use client';
+import Image from 'next/image';
 
-import { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import { useState } from 'react';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function Newsletter() {
   const { toast } = useToast();
@@ -15,57 +15,57 @@ export default function Newsletter() {
   async function handleSendPortalSubscription(event: any) {
     event.preventDefault();
     const response = await fetch(
-      "https://zippybox.hyperce.io/api/v1/subscribers",
+      'https://zippybox.hyperce.io/api/v1/subscribers',
       {
         headers: {
-          "content-type": "application/json",
-          Authorization: "Bearer EXVKcFrac6jswMIjxlF0SPf1Z7wbvcLe",
+          'content-type': 'application/json',
+          Authorization: 'Bearer EXVKcFrac6jswMIjxlF0SPf1Z7wbvcLe'
         },
-        referrerPolicy: "strict-origin-when-cross-origin",
+        referrerPolicy: 'strict-origin-when-cross-origin',
         body: JSON.stringify({
           email: email,
-          tags: [1],
+          tags: [1]
         }),
-        method: "POST",
-        credentials: "omit",
+        method: 'POST',
+        credentials: 'omit'
       }
     );
 
     if (response.status === 201) {
       toast({
-        title: "Your Email has been registered",
-        description: "You have successfully subscribed to the newsletter.",
+        title: 'Your Email has been registered',
+        description: 'You have successfully subscribed to the newsletter.'
       });
     } else if (response.status === 200) {
       toast({
-        title: "Already a fan",
-        description: "Email has already been added",
+        title: 'Already a fan',
+        description: 'Email has already been added'
       });
     }
   }
 
   async function handleNewslett(event: any) {
     event.preventDefault();
-    const response = await fetch("https://admin.hyperce.io/shop-api", {
+    const response = await fetch('https://admin.hyperce.io/shop-api', {
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json'
       },
-      referrerPolicy: "strict-origin-when-cross-origin",
+      referrerPolicy: 'strict-origin-when-cross-origin',
       body: JSON.stringify({
-        operationName: "CreateSubscriber",
+        operationName: 'CreateSubscriber',
         variables: {
           input: {
-            fullName: "",
+            fullName: '',
             email: email,
-            phone: "",
-          },
+            phone: ''
+          }
         },
         query:
-          "mutation CreateSubscriber($input: SubscriberAddInput!) {\n  subscribe(input: $input) {\n    ...Subscribers\n    __typename\n  }\n}\n\nfragment Subscribers on Subscriber {\n  id\n  fullName\n  email\n  phone\n  createdAt\n  updatedAt\n  __typename\n}",
+          'mutation CreateSubscriber($input: SubscriberAddInput!) {\n  subscribe(input: $input) {\n    ...Subscribers\n    __typename\n  }\n}\n\nfragment Subscribers on Subscriber {\n  id\n  fullName\n  email\n  phone\n  createdAt\n  updatedAt\n  __typename\n}'
       }),
-      method: "POST",
-      mode: "cors",
-      credentials: "omit",
+      method: 'POST',
+      mode: 'cors',
+      credentials: 'omit'
     });
 
     const data = await response.json();
@@ -106,7 +106,7 @@ export default function Newsletter() {
             </div>
             <div className="text-gray-700 dark:text-gray-400">
               Stay update with all new offers and services we provide and more
-              details{" "}
+              details{' '}
             </div>
             <form
               className="border-[2px] flex w-full border-[#357D8A]"

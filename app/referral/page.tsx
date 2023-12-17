@@ -1,6 +1,6 @@
-"use client";
-import Navbar from "@/components/Navbar/Navbar";
-import Form from "./Form";
+'use client';
+import Navbar from '@/components/Navbar/Navbar';
+import Form from './Form';
 
 export default function Services() {
   return (

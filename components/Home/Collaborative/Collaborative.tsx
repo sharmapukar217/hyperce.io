@@ -1,4 +1,4 @@
-import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
+import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 
 export default function Collaborative() {
   return (
@@ -126,7 +126,7 @@ export default function Collaborative() {
                     </svg>
 
                     <span className="text-sm sm:text-base dark:text-gray-400 text-gray-700">
-                      <span className="font-bold">Customer Relationship</span>{" "}
+                      <span className="font-bold">Customer Relationship</span>{' '}
                       Management (CRM) Tools
                     </span>
                   </li>

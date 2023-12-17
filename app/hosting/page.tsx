@@ -1,20 +1,20 @@
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
-import Hosting from "@/components/Services/Hosting/Hosting/Hosting";
-import Hero from "@/components/Services/Hosting/Hero/Hero";
-import WhyChoose from "@/components/Services/Hosting/WhyChoose/WhyChoose";
-import Contact from "@/components/Contact/Contact";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
+import Hosting from '@/components/Services/Hosting/Hosting/Hosting';
+import Hero from '@/components/Services/Hosting/Hero/Hero';
+import WhyChoose from '@/components/Services/Hosting/WhyChoose/WhyChoose';
+import Contact from '@/components/Contact/Contact';
 
-import Image from "next/image";
-import FrontierBg from "../../public/servers.jpeg";
+import Image from 'next/image';
+import FrontierBg from '../../public/servers.jpeg';
 
-import { Metadata } from "next";
+import { Metadata } from 'next';
 // import DemoCredentials from "@/components/Services/Headless/Hero/minute/DemoCredentials";
 
 export const metadata: Metadata = {
-  title: "Hyperce Hosting | Best Ecommerce Solution",
+  title: 'Hyperce Hosting | Best Ecommerce Solution',
   description:
-    "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
+    "Boost Your Platform's Presence with Unmatched Performance and Reliable Support."
 };
 
 export default function FrontierPage() {

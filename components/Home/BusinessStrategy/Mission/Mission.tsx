@@ -1,4 +1,4 @@
-import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
+import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 
 export default function Mission() {
   return (
@@ -61,7 +61,7 @@ export default function Mission() {
             </svg>
           </div>
           <div className="title text-3xl md:text-4xl font-extrabold text-center">
-            Our Vision{" "}
+            Our Vision{' '}
           </div>
         </div>
         <AnimateWrapper>

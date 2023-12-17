@@ -1,54 +1,54 @@
-"use client";
-import "./styles.css";
+'use client';
+import './styles.css';
 
-import * as React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import EachTest from "./EachTest";
-import { Testimonials } from "@/data/Testimonials";
+import * as React from 'react';
+import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css';
+import EachTest from './EachTest';
+import { Testimonials } from '@/data/Testimonials';
 
 export default function HomeTestimonial() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [loaded, setLoaded] = React.useState(false);
 
   const [phoneref, instanceRefPhone] = useKeenSlider<HTMLDivElement>({
-    mode: "free",
+    mode: 'free',
     slides: {
       perView: 1.2,
-      spacing: 15,
+      spacing: 15
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
       setLoaded(true);
-    },
+    }
   });
   const [midref, instanceRefMid] = useKeenSlider<HTMLDivElement>({
-    mode: "free-snap",
+    mode: 'free-snap',
     slides: {
       perView: 2.5,
-      spacing: 15,
+      spacing: 15
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
       setLoaded(true);
-    },
+    }
   });
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
-    mode: "free-snap",
+    mode: 'free-snap',
     slides: {
       perView: 2.5,
-      spacing: 60,
+      spacing: 60
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
       setLoaded(true);
-    },
+    }
   });
 
   return (
@@ -63,7 +63,10 @@ export default function HomeTestimonial() {
       </div>
       <div ref={phoneref} className="keen-slider">
         {Testimonials.map((testimonial, index) => (
-          <div key={index} className="keen-slider__slide md:hidden bottom-0 pb-10">
+          <div
+            key={index}
+            className="keen-slider__slide md:hidden bottom-0 pb-10"
+          >
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -95,7 +98,10 @@ export default function HomeTestimonial() {
       </div>
       <div ref={midref} className="keen-slider">
         {Testimonials.map((testimonial, index) => (
-          <div key={index} className="keen-slider__slide hidden md:block xl:hidden bottom-0 pb-10">
+          <div
+            key={index}
+            className="keen-slider__slide hidden md:block xl:hidden bottom-0 pb-10"
+          >
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -127,7 +133,10 @@ export default function HomeTestimonial() {
       </div>
       <div ref={ref} className="keen-slider">
         {Testimonials.map((testimonial, index) => (
-          <div key={index} className="keen-slider__slide hidden h-full xl:block">
+          <div
+            key={index}
+            className="keen-slider__slide hidden h-full xl:block"
+          >
             <EachTest
               name={testimonial.name}
               org={testimonial.org}
@@ -166,14 +175,14 @@ function Arrow(props: {
   left?: boolean;
   onClick: (e: any) => void;
 }) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
+  const disabeld = props.disabled ? ' arrow--disabled' : '';
   return (
     <svg
       onClick={props.onClick}
       className={`fill-[#000000] arrow ${
         props.left
-          ? "arrow--left fill-[#000000] dark:fill-[#c9ed48]"
-          : "arrow--right fill-[#000000] dark:fill-[#c9ed48]"
+          ? 'arrow--left fill-[#000000] dark:fill-[#c9ed48]'
+          : 'arrow--right fill-[#000000] dark:fill-[#c9ed48]'
       } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"

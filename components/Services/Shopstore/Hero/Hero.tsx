@@ -1,4 +1,4 @@
-import FrontendDemo from "../../Headless/Hero/minute/FrontendDemo";
+import FrontendDemo from '../../Headless/Hero/minute/FrontendDemo';
 
 export default function Hero() {
   return (
@@ -47,7 +47,10 @@ export default function Hero() {
                 </svg>
               </a>
               <div className="flex gap-5">
-                <FrontendDemo link="https://shopify.hyperce.io/" name="Shopify Demo" />
+                <FrontendDemo
+                  link="https://shopify.hyperce.io/"
+                  name="Shopify Demo"
+                />
                 <FrontendDemo
                   link="https://woocommerce.hyperce.io/"
                   name="Woocommerce Demo"

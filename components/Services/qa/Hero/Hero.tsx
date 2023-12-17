@@ -1,9 +1,9 @@
 const icon = {
-  dark: "/services_logos/qa/qa-dark.png",
-  light: "/services_logos/qa/qa-light.png",
+  dark: '/services_logos/qa/qa-dark.png',
+  light: '/services_logos/qa/qa-light.png'
 };
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Hero() {
   return (

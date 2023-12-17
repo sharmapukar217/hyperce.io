@@ -1,14 +1,14 @@
 'use client';
-import React from "react";
+import React from 'react';
 export default function EachTest(props: any) {
   const [expanded, setExpanded] = React.useState(false);
-  
+
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
 
   const messageStyle = {
-    overflow: expanded ? "auto" : "hidden",
+    overflow: expanded ? 'auto' : 'hidden'
   };
 
   const truncatedMessage = props.message.substring(0, 150);
@@ -19,14 +19,19 @@ export default function EachTest(props: any) {
       <div className="avatar w-[70px] -mb-10 md:-mb-0 lg:w-[100px] aspect-square flex justify-center -mt-[35px] md:-mt-[45px]">
         <img src="/home.png" alt="image" className="rounded-full mt-1" />
       </div>
-      <div className="message custom-scrollbar overflow-auto mt-10 md:mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]" style={messageStyle}>
-      {expanded ? props.message : `${truncatedMessage}${shouldShowEllipsis ? " ..." : ""}`}
+      <div
+        className="message custom-scrollbar overflow-auto mt-10 md:mt-5 text-md font-[500] text-center text-black dark:text-[#9CA3AF]"
+        style={messageStyle}
+      >
+        {expanded
+          ? props.message
+          : `${truncatedMessage}${shouldShowEllipsis ? ' ...' : ''}`}
         {shouldShowEllipsis && (
           <span
             className="text-[#357D8A] cursor-pointer underline"
             onClick={toggleExpand}
           >
-            {expanded ? "Read Less" : "Read More"}
+            {expanded ? 'Read Less' : 'Read More'}
           </span>
         )}
       </div>

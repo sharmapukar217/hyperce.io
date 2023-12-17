@@ -1,27 +1,27 @@
-import Navbar from "@/components/Navbar/Navbar";
-import Hero from "@/components/Home/Hero/Hero";
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Partners from "@/components/Home/Partners/Partners";
-import Message from "@/components/Home/FounderMessage/Message";
-import Solutions from "@/components/Home/Solutions/Solutions";
-import Mission from "@/components/Home/BusinessStrategy/Mission/Mission";
-import Business from "@/components/Home/BusinessStrategy/Business";
-import Contact from "@/components/Contact/Contact";
-import Responsibility from "@/components/Home/Responsibility/Responsibility";
-import Stats from "@/components/Home/Stats/Stats";
-import Watch from "@/components/Home/WatchVideo/Watch";
-import Collaborative from "@/components/Home/Collaborative/Collaborative";
-import RequestQuote from "@/components/Home/RequestQuote/RequestQuote";
-import CardsSection from "@/components/Home/CardsSection/CardsSection";
-import FAQ from "@/components/FAQ/FAQ";
-import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
-import HomeTestimonial from "@/components/Home/Gallary/Testimonials";
-import { Metadata } from "next";
+import Navbar from '@/components/Navbar/Navbar';
+import Hero from '@/components/Home/Hero/Hero';
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Partners from '@/components/Home/Partners/Partners';
+import Message from '@/components/Home/FounderMessage/Message';
+import Solutions from '@/components/Home/Solutions/Solutions';
+import Mission from '@/components/Home/BusinessStrategy/Mission/Mission';
+import Business from '@/components/Home/BusinessStrategy/Business';
+import Contact from '@/components/Contact/Contact';
+import Responsibility from '@/components/Home/Responsibility/Responsibility';
+import Stats from '@/components/Home/Stats/Stats';
+import Watch from '@/components/Home/WatchVideo/Watch';
+import Collaborative from '@/components/Home/Collaborative/Collaborative';
+import RequestQuote from '@/components/Home/RequestQuote/RequestQuote';
+import CardsSection from '@/components/Home/CardsSection/CardsSection';
+import FAQ from '@/components/FAQ/FAQ';
+import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
+import HomeTestimonial from '@/components/Home/Gallary/Testimonials';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Hyperce | Best Ecommerce Suite Solution",
+  title: 'Hyperce | Best Ecommerce Suite Solution',
   description:
-    "Hyperce, One of the best ecommerce suite partners, dedicated to support and prospering the ecommerce industry globally. So Hurry up and grab your opportunities.",
+    'Hyperce, One of the best ecommerce suite partners, dedicated to support and prospering the ecommerce industry globally. So Hurry up and grab your opportunities.'
 };
 
 export default function Home() {

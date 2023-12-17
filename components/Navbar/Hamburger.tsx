@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import "./Hamburger.css";
-import React, { useState, useEffect } from "react";
+import './Hamburger.css';
+import React, { useState, useEffect } from 'react';
 import {
   showcaseNonTechSolutions,
-  showcaseTechSolutions,
-} from "@/data/Solutions";
-import { usePathname } from "next/navigation";
-import { navMenuItems } from "@/data/Navdata";
+  showcaseTechSolutions
+} from '@/data/Solutions';
+import { usePathname } from 'next/navigation';
+import { navMenuItems } from '@/data/Navdata';
 
 export default function Hamburger(props: any) {
   const pathname = usePathname();
@@ -51,7 +51,7 @@ export default function Hamburger(props: any) {
 
       <div
         className={`${
-          menuOpen ? "transition-x-0 hyperce-no-scroll" : "translate-x-[100%]"
+          menuOpen ? 'transition-x-0 hyperce-no-scroll' : 'translate-x-[100%]'
         } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl dark:backdrop-blur-full py-[10%] transition-all flex justify-center duration-500 h-[100vh] -top-10 overflow-scroll z-20 fixed scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
       >
         <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] dark:bg-opacity-10 bg-opacity-0 px-[10%]">
@@ -104,9 +104,9 @@ export default function Hamburger(props: any) {
                           <button
                             type="button"
                             className={`hover:scale-[105%] text-base font-bold transition-all duration-200  flex items-center absolute left-0 ${
-                              pathname === "/solutions"
+                              pathname === '/solutions'
                                 ? `text-[#337684]`
-                                : "text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
+                                : 'text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]'
                             }`}
                           >
                             Solutions

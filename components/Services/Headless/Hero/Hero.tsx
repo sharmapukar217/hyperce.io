@@ -1,4 +1,4 @@
-import FrontendDemo from "./minute/FrontendDemo";
+import FrontendDemo from './minute/FrontendDemo';
 
 export default function Hero() {
   return (

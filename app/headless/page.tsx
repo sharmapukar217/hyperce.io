@@ -1,24 +1,24 @@
-import Contact from "@/components/Contact/Contact";
+import Contact from '@/components/Contact/Contact';
 
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
 
-import Gallary from "@/components/Services/Headless/Gallary/Gallary";
+import Gallary from '@/components/Services/Headless/Gallary/Gallary';
 
-import HeadlessEcom from "@/components/Services/Headless/HeadlessEcom/HeadlessEcom";
-import Hero from "@/components/Services/Headless/Hero/Hero";
-import WhyChoose from "@/components/Services/Headless/WhyChoose/WhyChoose";
+import HeadlessEcom from '@/components/Services/Headless/HeadlessEcom/HeadlessEcom';
+import Hero from '@/components/Services/Headless/Hero/Hero';
+import WhyChoose from '@/components/Services/Headless/WhyChoose/WhyChoose';
 
-import Image from "next/image";
-import HeadlessBg from "../../public/services-bg.png";
+import Image from 'next/image';
+import HeadlessBg from '../../public/services-bg.png';
 
-import { Metadata } from "next";
-import DemoCredentials from "@/components/Services/Headless/Hero/minute/DemoCredentials";
+import { Metadata } from 'next';
+import DemoCredentials from '@/components/Services/Headless/Hero/minute/DemoCredentials';
 
 export const metadata: Metadata = {
-  title: "Hyperce Headless | Best Ecommerce Suite Solution",
+  title: 'Hyperce Headless | Best Ecommerce Suite Solution',
   description:
-    "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach. Transform Your Business with Expert Marketing Solutions Today! So Hurry up and give us a call.",
+    "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach. Transform Your Business with Expert Marketing Solutions Today! So Hurry up and give us a call."
 };
 
 export default function Services() {

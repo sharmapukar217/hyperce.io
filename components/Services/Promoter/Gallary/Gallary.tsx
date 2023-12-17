@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
+import * as React from 'react';
+import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css';
 <img src="/gallary.png" />;
 
 export default function App() {
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    mode: "free-snap",
+    mode: 'free-snap',
     slides: {
       perView: 1.5,
-      spacing: 15,
-    },
+      spacing: 15
+    }
   });
 
   return (

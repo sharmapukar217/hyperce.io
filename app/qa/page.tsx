@@ -1,19 +1,19 @@
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
-import QA from "@/components/Services/qa/qa/qa";
-import Hero from "@/components/Services/qa/Hero/Hero";
-import WhyChoose from "@/components/Services/qa/WhyChoose/WhyChoose";
-import Contact from "@/components/Contact/Contact";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
+import QA from '@/components/Services/qa/qa/qa';
+import Hero from '@/components/Services/qa/Hero/Hero';
+import WhyChoose from '@/components/Services/qa/WhyChoose/WhyChoose';
+import Contact from '@/components/Contact/Contact';
 
-import Image from "next/image";
-import QaBg from "../../public/hyperce-qa.png";
+import Image from 'next/image';
+import QaBg from '../../public/hyperce-qa.png';
 
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Hyperce QA | Best Ecommerce Solution",
+  title: 'Hyperce QA | Best Ecommerce Solution',
   description:
-    "Boost Your Platform's Presence with Unmatched Performance and Reliable Support.",
+    "Boost Your Platform's Presence with Unmatched Performance and Reliable Support."
 };
 
 export default function QAPage() {

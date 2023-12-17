@@ -1,16 +1,15 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 interface propTypes {
   name: string;
   des: string;
   whiteIcon: string;
   darkIcon: string;
   href: string;
-  altText: string
+  altText: string;
 }
 
 export default function SolutionsCard(props: propTypes) {
-
   const [isHovered, setIsHovered] = React.useState(false);
 
   const handleMouseEnter = () => {
@@ -25,16 +24,15 @@ export default function SolutionsCard(props: propTypes) {
     ? { transform: 'translateY(-1px) scale(1.1)', transition: 'transform 0.3s' }
     : {};
 
-
   return (
     <a href={props.href} className="">
-      <div 
-      data-aos="fade-in" 
-      className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row rounded-xl pb-2 hover:shadow-sm dark:hover:shadow-sm hover:shadow-gray-200 dark:hover:shadow-gray-800"
+      <div
+        data-aos="fade-in"
+        className="mt-5 flex gap-3 md:gap-5 items-center flex-col md:flex-row rounded-xl pb-2 hover:shadow-sm dark:hover:shadow-sm hover:shadow-gray-200 dark:hover:shadow-gray-800"
         style={transformationStyle}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-              >
+      >
         <div className="icon px-2 py-3 w-[6rem] h-[6rem] flex items-center aspect-square bg-transparent  rounded-md scale-[110%]">
           <img
             className="dark:hidden object-contain h-full w-full"

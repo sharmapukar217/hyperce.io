@@ -1,4 +1,4 @@
-import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
+import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 
 export default function Responsibility() {
   return (

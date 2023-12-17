@@ -1,21 +1,21 @@
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
 
-import Ink from "@/components/Services/Ink/Ink/Ink";
-import Hero from "@/components/Services/Ink/Hero/Hero";
-import WhyChoose from "@/components/Services/Ink/WhyChoose/WhyChoose";
-import Contact from "@/components/Contact/Contact";
+import Ink from '@/components/Services/Ink/Ink/Ink';
+import Hero from '@/components/Services/Ink/Hero/Hero';
+import WhyChoose from '@/components/Services/Ink/WhyChoose/WhyChoose';
+import Contact from '@/components/Contact/Contact';
 
-import Image from "next/image";
-import InkBg from "../../public/ink.png";
+import Image from 'next/image';
+import InkBg from '../../public/ink.png';
 
-import { Metadata } from "next";
-import DemoCredentials from "@/components/Services/Headless/Hero/minute/DemoCredentials";
+import { Metadata } from 'next';
+import DemoCredentials from '@/components/Services/Headless/Hero/minute/DemoCredentials';
 
 export const metadata: Metadata = {
-  title: " Hyperce Ink | Best Ecommerce Business Solution",
+  title: ' Hyperce Ink | Best Ecommerce Business Solution',
   description:
-    "Engage Your Audience, Enhance Your Brand, and Create Compelling Content. Unleash the Power of Words with Hyperce Ecommerce Suite Expert Blogging Solutions!",
+    'Engage Your Audience, Enhance Your Brand, and Create Compelling Content. Unleash the Power of Words with Hyperce Ecommerce Suite Expert Blogging Solutions!'
 };
 
 export default function Services() {

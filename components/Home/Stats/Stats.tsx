@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { stats } from "@/data/Stats";
-import { useState, useEffect } from "react";
-import { useInView } from "react-intersection-observer";
+import { stats } from '@/data/Stats';
+import { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 export default function Stats() {
   return (
@@ -28,7 +28,7 @@ export default function Stats() {
 
 const Counter = ({ targetNumber }: { targetNumber: number }) => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Count only when it comes into view once
+    triggerOnce: true // Count only when it comes into view once
   });
   const [count, setCount] = useState(0);
 

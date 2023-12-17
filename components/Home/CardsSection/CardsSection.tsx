@@ -2,36 +2,36 @@ const servicesOffered = [
   // Keep user at 0 index, other can be changed
   // id are used for svg type from assets/icons/Feature.astro
   {
-    id: "user",
-    title: "Ecommerce Suite Solutions",
+    id: 'user',
+    title: 'Ecommerce Suite Solutions',
     description:
-      "Customized tools and technologies required for your ecommerce business powered by modern and headless techologies.",
-    image: "/images/xp.webp",
+      'Customized tools and technologies required for your ecommerce business powered by modern and headless techologies.',
+    image: '/images/xp.webp'
   },
   {
-    id: "speed",
-    title: "Seemingly Fast Speed",
+    id: 'speed',
+    title: 'Seemingly Fast Speed',
     description:
-      "Seamless browsing speed and high conversion rates for all your tools built using user centric approaches.",
+      'Seamless browsing speed and high conversion rates for all your tools built using user centric approaches.'
   },
   {
-    id: "secure",
-    title: "Secured Solutions",
+    id: 'secure',
+    title: 'Secured Solutions',
     description:
-      "Highly secured protection for your ecommerce customers, products and finance data highly safe from breaches.",
+      'Highly secured protection for your ecommerce customers, products and finance data highly safe from breaches.'
   },
   {
-    id: "payment",
-    title: "Financial Solutions",
+    id: 'payment',
+    title: 'Financial Solutions',
     description:
-      "Reliable, secure and convenient financial solutions for your ecommerce including payment gateways handling, invoice management and so on.",
+      'Reliable, secure and convenient financial solutions for your ecommerce including payment gateways handling, invoice management and so on.'
   },
   {
-    id: "seo",
-    title: "Conversion Friendly",
+    id: 'seo',
+    title: 'Conversion Friendly',
     description:
-      "Improved visibility and higher search engine ranking solutions for your ecommerce tools, social media profiles and related tools.",
-  },
+      'Improved visibility and higher search engine ranking solutions for your ecommerce tools, social media profiles and related tools.'
+  }
 ];
 export default function CardsSection() {
   return (
@@ -100,7 +100,7 @@ export default function CardsSection() {
     </section>
   );
 }
-import React from "react";
+import React from 'react';
 
 interface FeatureProps {
   type: string;
@@ -171,7 +171,7 @@ const Feature: React.FC<FeatureProps> = ({ type }) => {
           d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
         />
       </svg>
-    ),
+    )
   };
 
   return <>{icons[type]}</>;

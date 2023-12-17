@@ -1,28 +1,28 @@
-"use client";
-import "./styles.css";
-import Image from "next/image";
+'use client';
+import './styles.css';
+import Image from 'next/image';
 
-import * as React from "react";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import { HeadlessGallary } from "@/data/HeadlessGallary";
+import * as React from 'react';
+import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css';
+import { HeadlessGallary } from '@/data/HeadlessGallary';
 
 export default function HomeTestimonial() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const [loaded, setLoaded] = React.useState(false);
 
   const [ref, instanceRef] = useKeenSlider<HTMLDivElement>({
-    mode: "free-snap",
+    mode: 'free-snap',
     slides: {
       perView: 2.5,
-      spacing: 60,
+      spacing: 60
     },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
     created() {
       setLoaded(true);
-    },
+    }
   });
 
   return (
@@ -42,10 +42,12 @@ export default function HomeTestimonial() {
               {website.img_name}
             </span>
             <a target="_blank" href={website.a_href}>
-            <Image src={website.img_src} 
-            alt="WebsiteDemo"
-            width={500}
-            height={200} />
+              <Image
+                src={website.img_src}
+                alt="WebsiteDemo"
+                width={500}
+                height={200}
+              />
             </a>
           </div>
         ))}
@@ -81,12 +83,12 @@ function Arrow(props: {
   left?: boolean;
   onClick: (e: any) => void;
 }) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
+  const disabeld = props.disabled ? ' arrow--disabled' : '';
   return (
     <svg
       onClick={props.onClick}
       className={`arrow ${
-        props.left ? "arrow--left" : "arrow--right"
+        props.left ? 'arrow--left' : 'arrow--right'
       } ${disabeld}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"

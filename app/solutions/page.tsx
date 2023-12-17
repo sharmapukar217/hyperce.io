@@ -1,6 +1,6 @@
-import Navbar from "@/components/Navbar/Navbar";
-import { allNonTechServices, allTechServices } from "@/data/Solutions";
-import Image from "next/image";
+import Navbar from '@/components/Navbar/Navbar';
+import { allNonTechServices, allTechServices } from '@/data/Solutions';
+import Image from 'next/image';
 
 export default function ServiesPages() {
   return (
@@ -45,7 +45,7 @@ function ServiceCard({
   title,
   description,
   icon,
-  href,
+  href
 }: {
   title: string;
   description: string;

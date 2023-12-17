@@ -1,8 +1,8 @@
-"use client";
-import AnimateWrapper from "@/components/AnimateWrapper/AnimateWrapper";
-import Typewriter from "./minute/Typerwriter";
+'use client';
+import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
+import Typewriter from './minute/Typerwriter';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (

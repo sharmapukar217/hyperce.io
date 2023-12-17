@@ -1,19 +1,19 @@
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
-import Acquire from "@/components/Services/Acquire/Acquire/Acquire";
-import Hero from "@/components/Services/Acquire/Hero/Hero";
-import WhyChoose from "@/components/Services/Acquire/WhyChoose/WhyChoose";
-import Contact from "@/components/Contact/Contact";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
+import Acquire from '@/components/Services/Acquire/Acquire/Acquire';
+import Hero from '@/components/Services/Acquire/Hero/Hero';
+import WhyChoose from '@/components/Services/Acquire/WhyChoose/WhyChoose';
+import Contact from '@/components/Contact/Contact';
 
-import Image from "next/image";
-import QaBg from "../../public/hyperce-qa.png";
+import Image from 'next/image';
+import QaBg from '../../public/hyperce-qa.png';
 
-import { Metadata } from "next";
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Hyperce Acquire | Best Ecommerce Solution",
+  title: 'Hyperce Acquire | Best Ecommerce Solution',
   description:
-    "Hyperce Acquire stands as a beacon in the realm of e-commerce business transactions. Our suite of services begins with expert business valuation, conducting a thorough analysis of financials, customer base, brand strength, and growth potential. This meticulous evaluation provides sellers with a clear understanding of their e-commerce business's market value, fostering confidence and transparency.",
+    "Hyperce Acquire stands as a beacon in the realm of e-commerce business transactions. Our suite of services begins with expert business valuation, conducting a thorough analysis of financials, customer base, brand strength, and growth potential. This meticulous evaluation provides sellers with a clear understanding of their e-commerce business's market value, fostering confidence and transparency."
 };
 
 export default function FrontierPage() {

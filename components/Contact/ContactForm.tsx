@@ -1,45 +1,45 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { useToast } from "@/components/ui/use-toast";
+import React, { useState } from 'react';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function ContactForm() {
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: ''
   });
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: value
     });
   };
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    const response = await fetch("https://admin.hyperce.io/shop-api", {
+    const response = await fetch('https://admin.hyperce.io/shop-api', {
       headers: {
-        "content-type": "application/json",
+        'content-type': 'application/json'
       },
-      referrerPolicy: "strict-origin-when-cross-origin",
+      referrerPolicy: 'strict-origin-when-cross-origin',
       body: JSON.stringify({
-        operationName: "addContact",
+        operationName: 'addContact',
         variables: {
           fullName: formData.name,
           email: formData.email,
-          message: formData.message,
+          message: formData.message
         },
         query:
-          "mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n",
+          'mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
       }),
-      method: "POST",
-      mode: "cors",
-      credentials: "omit",
+      method: 'POST',
+      mode: 'cors',
+      credentials: 'omit'
     });
 
     const data = await response.json();
@@ -47,8 +47,8 @@ export default function ContactForm() {
 
     if (response.status === 200) {
       toast({
-        title: "Your message has been recieved",
-        description: "You will get a reply from us very soon.",
+        title: 'Your message has been recieved',
+        description: 'You will get a reply from us very soon.'
       });
     }
   }

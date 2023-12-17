@@ -1,5 +1,5 @@
-import FrontendDemo from "../../Headless/Hero/minute/FrontendDemo";
-import Card from "../../Reusables/Card";
+import FrontendDemo from '../../Headless/Hero/minute/FrontendDemo';
+import Card from '../../Reusables/Card';
 
 export default function Hero() {
   return (

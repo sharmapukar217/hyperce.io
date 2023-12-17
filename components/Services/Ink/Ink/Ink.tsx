@@ -32,9 +32,9 @@ export default function Ink() {
             <p className="font-bold">Our mission? </p>
             <br />
             <p>
-              At Hyperce, we understand that in the modern digital
-              landscape, blogging is more than just words on a screen; it&apos;s
-              a strategic asset that can transform your eCommerce venture.
+              At Hyperce, we understand that in the modern digital landscape,
+              blogging is more than just words on a screen; it&apos;s a
+              strategic asset that can transform your eCommerce venture.
               Hyperce&apos;s blogging service is the creative bridge between
               innovation and your brand&apos;s success. It&apos;s not just about
               sharing stories; it&apos;s about crafting compelling narratives
@@ -80,9 +80,9 @@ export default function Ink() {
               />
             </svg>
             <p className="text-black dark:text-[#cbcbcb] text-sm">
-              Hyperce grants monetization options, such as displaying ads
-              or selling products directly through the blog. This can be a
-              source of income for bloggers.
+              Hyperce grants monetization options, such as displaying ads or
+              selling products directly through the blog. This can be a source
+              of income for bloggers.
             </p>
           </div>
           <div className="md:col-span-2 flex justify-center">
@@ -101,9 +101,9 @@ export default function Ink() {
                 />
               </svg>
               <p className=" text-black dark:text-[#cbcbcb] text-sm">
-                Hyperce grants monetization options, such as displaying ads
-                or selling products directly through the blog. This can be a
-                source of income for bloggers.
+                Hyperce grants monetization options, such as displaying ads or
+                selling products directly through the blog. This can be a source
+                of income for bloggers.
               </p>
             </div>
           </div>

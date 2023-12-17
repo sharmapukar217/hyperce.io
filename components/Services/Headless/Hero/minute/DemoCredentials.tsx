@@ -11,7 +11,7 @@ export default function DemoCredentials({
   demoEmail,
   demoPassword,
   qrSource,
-  demoLink,
+  demoLink
 }: DemoCredentialsInterface) {
   return (
     <div className="border rounded-xl py-10 md:px-20 md:max-w-[50vw] flex flex-col lg:flex-row gap-5 justify-center items-center mb-10 container w-[70vw] md:w-full">

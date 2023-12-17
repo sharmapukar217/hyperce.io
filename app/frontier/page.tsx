@@ -1,20 +1,20 @@
-import Newsletter from "@/components/Home/Newsletter/Newsletter";
-import Navbar from "@/components/Navbar/Navbar";
-import Frontier from "@/components/Services/Frontier/Frontier/Frontier";
-import Hero from "@/components/Services/Frontier/Hero/Hero";
-import WhyChoose from "@/components/Services/Frontier/WhyChoose/WhyChoose";
-import Contact from "@/components/Contact/Contact";
+import Newsletter from '@/components/Home/Newsletter/Newsletter';
+import Navbar from '@/components/Navbar/Navbar';
+import Frontier from '@/components/Services/Frontier/Frontier/Frontier';
+import Hero from '@/components/Services/Frontier/Hero/Hero';
+import WhyChoose from '@/components/Services/Frontier/WhyChoose/WhyChoose';
+import Contact from '@/components/Contact/Contact';
 
-import Image from "next/image";
-import FrontierBg from "../../public/frontier-portfolio.png";
+import Image from 'next/image';
+import FrontierBg from '../../public/frontier-portfolio.png';
 
-import { Metadata } from "next";
-import DemoCredentials from "@/components/Services/Headless/Hero/minute/DemoCredentials";
+import { Metadata } from 'next';
+import DemoCredentials from '@/components/Services/Headless/Hero/minute/DemoCredentials';
 
 export const metadata: Metadata = {
-  title: "Hyperce Frontier | Best Ecommerce Solution",
+  title: 'Hyperce Frontier | Best Ecommerce Solution',
   description:
-    "Hyperce Frontier,for your product and service offerings, backed by cutting-edge data analytics and market insights. Learn more about Ecommerce Solution Frontier for your business.",
+    'Hyperce Frontier,for your product and service offerings, backed by cutting-edge data analytics and market insights. Learn more about Ecommerce Solution Frontier for your business.'
 };
 
 export default function FrontierPage() {

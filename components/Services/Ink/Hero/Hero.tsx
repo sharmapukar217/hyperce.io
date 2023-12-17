@@ -1,4 +1,4 @@
-import FrontendDemo from "../../Headless/Hero/minute/FrontendDemo";
+import FrontendDemo from '../../Headless/Hero/minute/FrontendDemo';
 
 export default function Hero() {
   return (

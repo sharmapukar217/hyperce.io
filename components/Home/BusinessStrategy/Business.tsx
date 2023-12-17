@@ -1,12 +1,11 @@
-"use client";
-import "./style.css"
+'use client';
+import './style.css';
 import React from 'react';
-import { BiSolidMessageDetail } from "react-icons/bi";
-import { HiMiniCodeBracketSquare } from "react-icons/hi2";
-import { HiMiniShieldCheck} from "react-icons/hi2";
+import { BiSolidMessageDetail } from 'react-icons/bi';
+import { HiMiniCodeBracketSquare } from 'react-icons/hi2';
+import { HiMiniShieldCheck } from 'react-icons/hi2';
 
 import Image from 'next/image';
-
 
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -14,7 +13,7 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import { blue, deepPurple, grey, purple, red } from "@mui/material/colors";
+import { blue, deepPurple, grey, purple, red } from '@mui/material/colors';
 
 export default function Business() {
   return (
@@ -113,80 +112,104 @@ export default function Business() {
         </div>
       </div>
 
-
       {/* Timeline */}
-      <div className='bg-transparent flex justify-center px-1 md:px-2 py-4 rounded-xl '>
-        <div className=''>
-      <Timeline>
-      <TimelineItem>
-        <TimelineSeparator>
-        <TimelineConnector sx={{
-          bgcolor: grey[800],
-          }} />
-          <TimelineDot sx={{
-          bgcolor: blue[400],
-          width: 16,
-          height: 16,
-          }}/>
-          <TimelineConnector sx={{
-          bgcolor: grey[800],
-          }} />
-        </TimelineSeparator>
-        <TimelineContent>
-           <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80'>
-              <span className='text-blue-400 pr-2'>
-              <BiSolidMessageDetail size={30} />
-              </span>
-              Discuss Your Need
-              </span>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot sx={{
-          bgcolor: grey[500],
-          width: 16,
-          height: 16,
-          }}/>
-          <TimelineConnector sx={{
-          bgcolor: grey[800],
-          }} />
-        </TimelineSeparator>
-        <TimelineContent className="mt-4">
-        <span className='flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80'>
-              <span className='text-gray-400 pr-2'>
-              <HiMiniCodeBracketSquare size={30} />
-              </span>
-              Customize and Refine
-              </span>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-        <TimelineDot sx={{
-          bgcolor: purple[800],
-          width: 16,
-          height: 16,
-          }}/>
-        <TimelineConnector sx={{
-          bgcolor: grey[800],
-          }} />
-        </TimelineSeparator>
-        <TimelineContent className="mt-4">
-        <div className='mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80 '>
-          <span className='flex items-center justify-start'>
-           <span> <HiMiniShieldCheck size={30} className="text-purple-800" /> </span>
-           <span className='pl-2'> Launch Faster in Market</span>
-            </span>
-          <div>
-            <Image src='/timeline.png' alt='LaunchImage' width={300} height={300} />
-          </div>
+      <div className="bg-transparent flex justify-center px-1 md:px-2 py-4 rounded-xl ">
+        <div className="">
+          <Timeline>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineConnector
+                  sx={{
+                    bgcolor: grey[800]
+                  }}
+                />
+                <TimelineDot
+                  sx={{
+                    bgcolor: blue[400],
+                    width: 16,
+                    height: 16
+                  }}
+                />
+                <TimelineConnector
+                  sx={{
+                    bgcolor: grey[800]
+                  }}
+                />
+              </TimelineSeparator>
+              <TimelineContent>
+                <span className="flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80">
+                  <span className="text-blue-400 pr-2">
+                    <BiSolidMessageDetail size={30} />
+                  </span>
+                  Discuss Your Need
+                </span>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot
+                  sx={{
+                    bgcolor: grey[500],
+                    width: 16,
+                    height: 16
+                  }}
+                />
+                <TimelineConnector
+                  sx={{
+                    bgcolor: grey[800]
+                  }}
+                />
+              </TimelineSeparator>
+              <TimelineContent className="mt-4">
+                <span className="flex items-center mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80">
+                  <span className="text-gray-400 pr-2">
+                    <HiMiniCodeBracketSquare size={30} />
+                  </span>
+                  Customize and Refine
+                </span>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot
+                  sx={{
+                    bgcolor: purple[800],
+                    width: 16,
+                    height: 16
+                  }}
+                />
+                <TimelineConnector
+                  sx={{
+                    bgcolor: grey[800]
+                  }}
+                />
+              </TimelineSeparator>
+              <TimelineContent className="mt-4">
+                <div className="mx-2 md:mx-4 px-4 py-4 md:py-6 bg-white dark:bg-transparent rounded-xl shadow-xl border border-gray-50 dark:border-gray-600 font-semibold w-60 md:w-80 ">
+                  <span className="flex items-center justify-start">
+                    <span>
+                      {' '}
+                      <HiMiniShieldCheck
+                        size={30}
+                        className="text-purple-800"
+                      />{' '}
+                    </span>
+                    <span className="pl-2"> Launch Faster in Market</span>
+                  </span>
+                  <div>
+                    <Image
+                      src="/timeline.png"
+                      alt="LaunchImage"
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                </div>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
         </div>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
-    </div>
-    </div>
+      </div>
     </section>
   );
 }

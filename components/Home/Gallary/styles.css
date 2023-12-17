@@ -1,5 +1,5 @@
-[class^="number-slide"],
-[class*=" number-slide"] {
+[class^='number-slide'],
+[class*=' number-slide'] {
   background: grey;
   display: flex;
   align-items: center;
@@ -148,5 +148,3 @@
   background-color: #cbc9c9; /* Color of the scrollbar thumb */
   border-radius: 4px; /* Rounded corners for the thumb */
 }
-
-

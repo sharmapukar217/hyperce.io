@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Typewriter = ({ text }: any) => {
-  const [visibleText, setVisibleText] = useState("");
+  const [visibleText, setVisibleText] = useState('');
 
   useEffect(() => {
     let currentIndex = 0;

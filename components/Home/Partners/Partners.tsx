@@ -1,4 +1,4 @@
-import { HypercePartners } from "@/data/Partners";
+import { HypercePartners } from '@/data/Partners';
 
 export default function Partners() {
   return (
