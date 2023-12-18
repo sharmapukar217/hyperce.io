@@ -36,7 +36,7 @@ export const showcaseTechSolutions = [
 export const showcaseSaasSolutions = [
   {
     name: 'Hyperce HRM',
-    href: 'https://www.hypercetechlabs.com/casestudies/hyperce-hrm',
+    href: '/hrm',
     des: 'Hyperce HRM is a SaaS based HRM solution that helps to strategize and execute your business goals',
     whiteIcon: '/services_logos/saas/hrmLogo.png',
     darkIcon: '/services_logos/saas/hrmLogo.png',
@@ -224,7 +224,7 @@ export const allNonTechServices = [
 export const allSaasSolutions = [
   {
     title: 'Hyperce HRM',
-    href: 'https://www.hypercetechlabs.com/casestudies/hyperce-hrm',
+    href: '/hrm',
     icon: {
       dark: '/services_logos/bl/bl_logo.jpeg',
       light: '/services_logos/bl/bl_logo.jpeg'
