@@ -19,7 +19,10 @@ export default function RootLayout({
   return (
     <html>
       <head>
-      <meta name="facebook-domain-verification" content="hrndjxk0ddo6z4blsde8xt4mvz9d63" />
+        <meta
+          name="facebook-domain-verification"
+          content="hrndjxk0ddo6z4blsde8xt4mvz9d63"
+        />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
