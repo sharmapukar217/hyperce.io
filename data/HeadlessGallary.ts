@@ -52,7 +52,7 @@ export const HeadlessGallary = [
 
   {
     img_name: 'Himalayan Hardwear',
-    a_href: 'https://himalayanhardwear.net/',
+    a_href: 'https://himalayanhardwear.com.np/',
     img_src: '/gallary/himalayanhardwear_demo.png'
   },
 
