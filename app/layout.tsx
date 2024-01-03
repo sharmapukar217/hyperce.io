@@ -19,6 +19,16 @@ export default function RootLayout({
   return (
     <html>
       <head>
+        <Script strategy="beforeInteractive" id="sample">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-MLHZXN9L');
+          `}
+        </Script>
+
         <meta
           name="facebook-domain-verification"
           content="hrndjxk0ddo6z4blsde8xt4mvz9d63"
@@ -27,7 +37,7 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
         ></script>
-        <Script>
+        <Script id="google 123">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -36,7 +46,7 @@ export default function RootLayout({
           gtag('config', 'G-01M293WQ6R');
           `}
         </Script>
-        <Script strategy="afterInteractive">
+        <Script strategy="afterInteractive" id="google 123">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -60,10 +70,26 @@ export default function RootLayout({
         </noscript>
         <meta property="og:image" content={ROOT_OG_IMAGE} />
         <link rel="icon" href="/favicon.png" />
-        {/* <script defer data-domain="hyperce.io" src="https://analytics.hyperce.io/js/script.js"></script> */}
-        {/* <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script>  */}
       </head>
+      {/*
+        this shiould be inside head tag
+        <script defer data-domain="hyperce.io" src="https://analytics.hyperce.io/js/script.js"></script> 
+        <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script>  
+      */}
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
+        {/* <!-- Google Tag Manager (noscript) --> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MLHZXN9L"
+            height="0"
+            width="0"
+            style={{
+              display: 'none',
+              visibility: 'hidden'
+            }}
+          ></iframe>
+        </noscript>
+
         {children}
         <div className="dark:bg-[#02080F] bg-[#ebeeef]">
           <Footer />
