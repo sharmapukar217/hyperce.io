@@ -29,6 +29,13 @@ export default function RootLayout({
           `}
         </Script>
 
+        <Script id="ss">
+          {`
+            gtag('event', 'conversion_event_submit_lead_form_1',{' '}
+            {// <event_parameters>});
+          `}
+        </Script>
+
         <meta
           name="facebook-domain-verification"
           content="hrndjxk0ddo6z4blsde8xt4mvz9d63"
