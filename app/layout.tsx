@@ -27,7 +27,7 @@ export default function RootLayout({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
         ></script>
-        <Script>
+        <Script id="datalayer">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -36,7 +36,7 @@ export default function RootLayout({
           gtag('config', 'G-01M293WQ6R');
           `}
         </Script>
-        <Script strategy="afterInteractive">
+        <Script strategy="afterInteractive" id="fb-events">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -58,6 +58,23 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=875677840678684&ev=PageView&noscript=1"
           />
         </noscript>
+        {/*  Google Tag Manager */}
+        <Script id="google-tag-manager">
+          {`
+          (function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-MLHZXN9L');
+          `}
+        </Script>
+        u{/* End Google Tag Manager  */}
+        {/* Google Tag Manager (noscript)  */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MLHZXN9L"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/*  End Google Tag Manager (noscript)  */}
         <meta property="og:image" content={ROOT_OG_IMAGE} />
         <link rel="icon" href="/favicon.png" />
         {/* <script defer data-domain="hyperce.io" src="https://analytics.hyperce.io/js/script.js"></script> */}
