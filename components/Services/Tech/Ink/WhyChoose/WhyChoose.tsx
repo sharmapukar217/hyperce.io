@@ -22,8 +22,10 @@ export default function WhyChoose() {
               { num: '10x', des: 'Customer Engagement' },
               { num: '50x', des: 'Brand Authority and Credibility' },
               { num: '20x', des: 'Leads and Conversion' }
-            ].map((each) => (
-              <Card num={each.num} des={each.des} />
+            ].map((each, index) => (
+              <div key={index}>
+                <Card num={each.num} des={each.des} />
+              </div>
             ))}
           </div>
         </div>
