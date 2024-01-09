@@ -1,11 +1,11 @@
 'use client';
-import './styles.css';
+import '@/app/gallaryStyles.css';
 import Image from 'next/image';
 
 import * as React from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import { HeadlessGallary } from '@/data/HeadlessGallary';
+import { HeadlessGallary } from '@/data/Gallary/Headless';
 
 export default function HomeTestimonial() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
@@ -36,8 +36,8 @@ export default function HomeTestimonial() {
         </span>
       </div>
       <div ref={ref} className="keen-slider">
-        {HeadlessGallary.map((website) => (
-          <div className="keen-slider__slide">
+        {HeadlessGallary.map((website, index) => (
+          <div key={index} className="keen-slider__slide">
             <span className="w-full flex justify-center mb-5 text-xl font-bold">
               {website.img_name}
             </span>
