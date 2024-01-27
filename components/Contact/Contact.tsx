@@ -95,7 +95,7 @@ export default function Contact() {
                     </span>
                   </div>
                 </a>
-                <a target="_blank" href="https://wa.me/16178195576">
+                <a target="_blank" href="telnet://16178195576">
                   <div className="phone flex gap-3">
                     <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
                       <svg
@@ -213,7 +213,7 @@ export default function Contact() {
                     </span>
                   </div>
                 </a>
-                <a href="https://wa.me/9779840260599">
+                <a href="tel://9779840260599">
                   <div className="phone flex gap-3 items-center">
                     <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
                       <svg
