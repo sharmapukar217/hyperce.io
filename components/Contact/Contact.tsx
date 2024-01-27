@@ -213,7 +213,7 @@ export default function Contact() {
                     </span>
                   </div>
                 </a>
-                <a href="tel://9779840260599">
+                <a href="telnet://9779840260599">
                   <div className="phone flex gap-3 items-center">
                     <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
                       <svg
