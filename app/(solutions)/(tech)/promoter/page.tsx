@@ -10,6 +10,7 @@ import Image from 'next/image';
 import PromoterBg from '../../../../public/promoter.png';
 
 import { Metadata } from 'next';
+import PromoterGallaryComponent from '@/components/Services/Tech/Promoter/Gallary/Gallary';
 
 export const metadata: Metadata = {
   title: 'Hyperce Promoter | Best Ecommerce Suite Solution',
@@ -36,6 +37,7 @@ export default function PromoterPage() {
       </main>
       <Promoter />
       <WhyChoose />
+      <PromoterGallaryComponent />
       <Newsletter />
       <Contact />
     </div>
