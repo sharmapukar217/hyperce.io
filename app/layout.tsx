@@ -95,7 +95,7 @@ export default function RootLayout({
         <Toaster />
         <a
           aria-label="Chat on WhatsApp"
-          href={`https://wa.me/9779840260599`}
+          href={`https://wa.me/16178195576`}
           target="_blank"
           style={{
             background: '#2ace67'
