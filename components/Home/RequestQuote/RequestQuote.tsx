@@ -106,8 +106,8 @@ export default function RequestQuote() {
               </span>
 
               <div className="mt-4 flex flex-wrap items-center gap-y-5 gap-x-8">
-                {HypercePartners.map((each) => (
-                  <img src={each} alt="" className="w-16 h-auto" />
+                {HypercePartners.map((each, index) => (
+                  <img key={index} src={each} alt="" className="w-16 h-auto" />
                 ))}
               </div>
             </div>

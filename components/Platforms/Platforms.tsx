@@ -9,9 +9,7 @@ export function EachPlatform({ platform }: { platform: any }) {
       </span>
       <div className="grid grid-cols-1 gap-5">
         {platform.platformProducts?.map((product: any, index: number) => (
-          <div>
-            <EachProduct product={product} />
-          </div>
+          <EachProduct key={index} product={product} />
         ))}
       </div>
     </div>

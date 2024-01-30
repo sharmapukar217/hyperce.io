@@ -20,8 +20,8 @@ export default function Hero() {
             </span>
             <br />
             <span className="text-base font-bold">
-              Elevate your software development process with Hyperce DevOps'
-              cutting-edge DevOps solutions.
+              Elevate your software development process with Hyperce
+              DevOps&apos; cutting-edge DevOps solutions.
             </span>
             <div className="flex gap-5">
               <a

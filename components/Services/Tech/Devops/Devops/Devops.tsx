@@ -37,8 +37,8 @@ export default function Devops() {
               deployed. We aim to break down silos between development and
               operations, fostering a culture of continuous improvement and
               innovation. With Hyperce DevOps, we empower your team to deliver
-              exceptional software that meets the demands of today's dynamic
-              market.
+              exceptional software that meets the demands of today&apos;s
+              dynamic market.
               <br />
               <br />
               Experience the transformation firsthand with Hyperce DevOps. Our

@@ -15,9 +15,10 @@ export default function SaasPage() {
           Our SaaS Solutions
         </h1>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center mt-5">
-          {allSaasSolutions.map((service) => (
+          {allSaasSolutions.map((service, index) => (
             <ServiceCard
               title={service.title}
+              key={index}
               description={service.description}
               icon={service.icon}
               href={service.href}

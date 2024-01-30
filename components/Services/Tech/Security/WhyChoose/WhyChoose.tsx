@@ -28,8 +28,8 @@ export default function WhyChoose() {
               { num: '10x', des: 'Compliance Assurance' },
               { num: '50x', des: 'Threat Detection' },
               { num: '20x', des: 'Incident Response' }
-            ].map((each) => (
-              <Card num={each.num} des={each.des} />
+            ].map((each, index: number) => (
+              <Card key={index} num={each.num} des={each.des} />
             ))}
           </div>
         </div>

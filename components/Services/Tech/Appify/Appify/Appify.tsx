@@ -35,7 +35,7 @@ export default function Appify() {
             <p>
               By prioritizing this feature, developers are equipped to meet the
               evolving demands of the market and end-users. In an era of rapid
-              technological evolution, Hyperce Appify's adaptability and
+              technological evolution, Hyperce Appify&apos;s adaptability and
               scalability position it as a crucial tool for developers striving
               to create sophisticated, high-performance applications.
               <br />
@@ -46,9 +46,10 @@ export default function Appify() {
               development tool; it catalyzes innovation, accessibility, and
               limitless possibilities. Choose us to transform your ideas into
               reality, where app creation becomes a creative expression. Your
-              app, with Hyperce Appify, is not just a product; it's a testament
-              to your vision effortlessly brought to life. Embrace the future of
-              app development with Hyperce Appify, where your ideas take flight.
+              app, with Hyperce Appify, is not just a product; it&apos;s a
+              testament to your vision effortlessly brought to life. Embrace the
+              future of app development with Hyperce Appify, where your ideas
+              take flight.
             </p>
           </p>
         </div>
@@ -70,7 +71,7 @@ export default function Appify() {
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
               Conduct Secure Code Reviews: Hyperce Appify ensures robust
               security by conducting thorough code reviews, identifying and
-              addressing potential flaws in your app's codebase.
+              addressing potential flaws in your app&apos;s codebase.
             </p>
           </div>
           <div className="bg-gray-200 dark:bg-[#172D41] h-full px-5 py-5 gap-5 flex flex-col rounded-xl">

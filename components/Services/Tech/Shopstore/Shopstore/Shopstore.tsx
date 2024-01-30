@@ -29,12 +29,12 @@ export default function Shopstore() {
             <br />
             <br />
             Our expertise extends beyond conventional store setups; we
-            orchestrate transformative experiences, whether you're establishing
-            a new digital storefront or contemplating a migration across
-            platforms. Picture it as a meticulous dance between technologies,
-            where Magento gracefully waltzes into Shopify or WooCommerce,
-            crafting a seamless transition that aligns with your evolving
-            business objectives.
+            orchestrate transformative experiences, whether you&apos;re
+            establishing a new digital storefront or contemplating a migration
+            across platforms. Picture it as a meticulous dance between
+            technologies, where Magento gracefully waltzes into Shopify or
+            WooCommerce, crafting a seamless transition that aligns with your
+            evolving business objectives.
           </p>
           <p>
             <p className="font-bold">Our mission? </p>

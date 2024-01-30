@@ -9,12 +9,12 @@ export default function Security() {
           Hyperce Security: Fortifying Your Digital Fortress
         </p>
         <p className="w-2/3 text-base">
-          Elevate your security posture with Hyperce Security's comprehensive
-          suite of cybersecurity services. We offer robust solutions to
-          safeguard your digital assets and protect against evolving threats.
-          Experience a transformative approach to cybersecurity that empowers
-          your team to defend against vulnerabilities with efficiency and
-          precision.
+          Elevate your security posture with Hyperce Security&apos;s
+          comprehensive suite of cybersecurity services. We offer robust
+          solutions to safeguard your digital assets and protect against
+          evolving threats. Experience a transformative approach to
+          cybersecurity that empowers your team to defend against
+          vulnerabilities with efficiency and precision.
         </p>
       </div>
 
@@ -38,7 +38,7 @@ export default function Security() {
               uninterrupted operation. We aim to proactively identify and
               mitigate security risks, fostering a culture of resilience and
               trust. With Hyperce Security, we empower your team to navigate
-              today's threat landscape with confidence and precision.
+              today&apos;s threat landscape with confidence and precision.
               <br />
               <br />
               Experience the transformation firsthand with Hyperce Security. Our

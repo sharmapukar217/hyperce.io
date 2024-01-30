@@ -11,8 +11,9 @@ export default function TechSolutionsPage() {
           Our Tech Solutions
         </h1>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center">
-          {allTechServices.map((service) => (
+          {allTechServices.map((service, index) => (
             <ServiceCard
+              key={index}
               title={service.title}
               description={service.description}
               icon={service.icon}

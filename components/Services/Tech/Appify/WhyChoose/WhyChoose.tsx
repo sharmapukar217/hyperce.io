@@ -12,9 +12,9 @@ export default function WhyChoose() {
             In the era of app development, Hyperce Appify stands as a catalyst
             for innovation, accessibility, and limitless possibilities. Choose
             us to walk on a journey where app creation is not just a task but a
-            creative expression. With Hyperce Appify, your app isn't just a
-            product; it's a testament to your vision, effortlessly brought to
-            life. Embrace the future of app development with Hyperce Appify,
+            creative expression. With Hyperce Appify, your app isn&apos;t just a
+            product; it&apos;s a testament to your vision, effortlessly brought
+            to life. Embrace the future of app development with Hyperce Appify,
             where your ideas take flight.
           </p>
         </div>
@@ -25,8 +25,8 @@ export default function WhyChoose() {
               { num: '10x', des: 'Unmatched Reliability' },
               { num: '50x', des: 'Seamless Collaboration' },
               { num: '20x', des: 'Optimal Efficiency' }
-            ].map((each) => (
-              <Card num={each.num} des={each.des} />
+            ].map((each, index) => (
+              <Card key={index} num={each.num} des={each.des} />
             ))}
           </div>
         </div>

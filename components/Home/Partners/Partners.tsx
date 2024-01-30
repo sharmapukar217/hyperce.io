@@ -15,8 +15,8 @@ export default function Partners() {
       </div>
 
       <div className="mt-10 logos flex gap-8 md:gap-20 flex-wrap justify-center items-center text-black dark:text-white">
-        {HypercePartners.map((each) => (
-          <div className="flex justify-center">
+        {HypercePartners.map((each, index) => (
+          <div key={index} className="flex justify-center">
             <img
               className="w-14 md:w-20 cursor-pointer transition-all duration-300 invert-[10%] hover:invert-0"
               src={each}

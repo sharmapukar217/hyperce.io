@@ -14,7 +14,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="text-base font-bold">
-              Boost Your Platform's Presence with Unmatched Performance and
+              Boost Your Platform&apos;s Presence with Unmatched Performance and
               Reliable Support.
             </span>
             <div className="flex gap-5">

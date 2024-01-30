@@ -12,10 +12,11 @@ export default function WhyChoose() {
             In the era of workforce management, Hyperce HRM stands as a catalyst
             for innovation, accessibility, and limitless possibilities. Choose
             us to walk on a journey where HR management is not just a task but a
-            strategic expression. With Hyperce HRM, your HR processes aren't
-            just procedures; they're a testament to your organizational vision,
-            effortlessly brought to life. Embrace the future of HR management
-            with Hyperce HRM, where your workforce management ideas take flight.
+            strategic expression. With Hyperce HRM, your HR processes
+            aren&apos;t just procedures; they&apos;re a testament to your
+            organizational vision, effortlessly brought to life. Embrace the
+            future of HR management with Hyperce HRM, where your workforce
+            management ideas take flight.
           </p>
         </div>
         <div className="flex justify-center">
@@ -28,8 +29,8 @@ export default function WhyChoose() {
               { num: '10x', des: 'Seamless Team Collaboration' },
               { num: '50x', des: 'Unmatched HR Process Reliability' },
               { num: '20x', des: 'Optimal HR Process Efficiency' }
-            ].map((each) => (
-              <Card num={each.num} des={each.des} />
+            ].map((each, index) => (
+              <Card key={index} num={each.num} des={each.des} />
             ))}
           </div>
         </div>

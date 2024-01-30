@@ -14,8 +14,9 @@ export default function ServiesPages() {
           <span className="my-5 w-full text-center text-3xl font-extrabold dark:text-gray-300">
             Tech Solutions
           </span>
-          {allTechServices.map((service) => (
+          {allTechServices.map((service, index) => (
             <ServiceCard
+              key={index}
               title={service.title}
               description={service.description}
               icon={service.icon}
@@ -27,8 +28,9 @@ export default function ServiesPages() {
           <span className="my-5 w-full text-center text-3xl font-extrabold dark:text-gray-300">
             Non-Tech Solutions
           </span>
-          {allNonTechServices.map((service) => (
+          {allNonTechServices.map((service, index) => (
             <ServiceCard
+              key={index}
               title={service.title}
               description={service.description}
               icon={service.icon}

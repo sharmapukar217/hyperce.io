@@ -15,8 +15,8 @@ export default function Hero() {
             </span>
             <br />
             <span className="text-base font-bold">
-              Empower your digital presence with Hyperce Appify's cutting-edge
-              mobile app solutions.
+              Empower your digital presence with Hyperce Appify&apos;s
+              cutting-edge mobile app solutions.
             </span>
             <div className="flex gap-5">
               <a

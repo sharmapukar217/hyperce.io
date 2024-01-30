@@ -36,7 +36,7 @@ export default function HRM() {
             <p>
               By prioritizing this feature, decision-makers are equipped to make
               strategic choices that enhance the profitability of the business.
-              In an era of evolving business landscapes, Hyperce HRM's
+              In an era of evolving business landscapes, Hyperce HRM&apos;s
               adaptability and scalability position it as a crucial tool for
               organizations striving to create a sophisticated, high-performance
               HR environment. Tailor every aspect, from onboarding processes to
@@ -48,7 +48,7 @@ export default function HRM() {
               innovation, accessibility, and limitless possibilities. Choose us
               to transform your HR processes into a seamless experience, where
               workforce management becomes a strategic expression. Your HR, with
-              Hyperce HRM, is not just a process; it's a testament to your
+              Hyperce HRM, is not just a process; it&apos;s a testament to your
               organizational vision effortlessly brought to life. Embrace the
               future of HR management with Hyperce HRM, where your workforce
               management ideas take flight.

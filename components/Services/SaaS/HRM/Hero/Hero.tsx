@@ -18,7 +18,7 @@ export default function Hero() {
             <span className="text-4xl md:text-7xl font-bold">Hyperce HRM</span>
             <br />
             <span className="text-base font-bold">
-              Empower your organizational efficiency with Hyperce HRM's
+              Empower your organizational efficiency with Hyperce HRM&apos;s
               innovative human resource management solutions.
             </span>
             <div className="flex gap-5">

@@ -22,7 +22,7 @@ export default function Hero() {
             <br />
             <span className="text-base font-bold ">
               Hyperce Ecommerce Solution helps to strategize, execute, and
-              amplify your brand's reach.
+              amplify your brand&apos;s reach.
             </span>
             {/* <div className="flex flex-col gap-10 justify-center items-center"> */}
             <div className="flex gap-5">

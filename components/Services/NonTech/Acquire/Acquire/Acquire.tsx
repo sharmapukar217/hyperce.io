@@ -25,7 +25,7 @@ export default function Acquire() {
             business valuation, conducting a thorough analysis of financials,
             customer base, brand strength, and growth potential. This meticulous
             evaluation provides sellers with a clear understanding of their
-            e-commerce business's market value, fostering confidence and
+            e-commerce business&apos;s market value, fostering confidence and
             transparency.
           </p>
           <p>
@@ -42,7 +42,7 @@ export default function Acquire() {
               <br />
               <br />
               Experience the Transformation with Hyperce Acquire: Hyperce
-              Acquire's approach revolves around personalized matchmaking,
+              Acquire&apos;s approach revolves around personalized matchmaking,
               utilizing a robust database to connect sellers with qualified and
               interested buyers. This tailored connection aligns businesses with
               individuals or entities sharing similar goals and preferences,
@@ -68,7 +68,7 @@ export default function Acquire() {
               />
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
-              Revolutionize e-commerce transactions with Hyperce Acquire's
+              Revolutionize e-commerce transactions with Hyperce Acquire&apos;s
               cutting-edge methodologies, optimizing efficiency and reducing the
               need for manual intervention.
             </p>
@@ -89,7 +89,7 @@ export default function Acquire() {
             </svg>
             <p className=" text-black dark:text-[#cbcbcb] text-sm">
               Facilitate transparent collaboration between sellers and buyers
-              using Hyperce Acquire's integrated tools, ensuring smooth
+              using Hyperce Acquire&apos;s integrated tools, ensuring smooth
               coordination from due diligence to transaction completion.
             </p>
           </div>
@@ -109,9 +109,9 @@ export default function Acquire() {
                 />
               </svg>
               <p className=" text-black dark:text-[#CBCBCB] text-sm">
-                Elevate operational synergy with Hyperce Acquire's integrated
-                tools and practices, fostering seamless communication and
-                collaboration between development and operations teams.
+                Elevate operational synergy with Hyperce Acquire&apos;s
+                integrated tools and practices, fostering seamless communication
+                and collaboration between development and operations teams.
               </p>
             </div>
           </div>

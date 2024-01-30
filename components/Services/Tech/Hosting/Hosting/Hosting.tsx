@@ -12,9 +12,9 @@ export default function Hosting() {
           Hosting solutions play a pivotal role in establishing and nurturing
           your online presence. With Hyperce Hosting, experience a seamless
           blend of cutting-edge technology and personalized support, ensuring
-          your website's optimal performance and visibility. Embrace a hosting
-          journey that takes your brand to new heights of digital excellence and
-          customer engagement.
+          your website&apos;s optimal performance and visibility. Embrace a
+          hosting journey that takes your brand to new heights of digital
+          excellence and customer engagement.
         </p>
       </div>
 
@@ -26,7 +26,8 @@ export default function Hosting() {
             experience, meticulously designed to elevate your online presence to
             unparalleled heights, starting at only $30 per month. With a focus
             on speed, security, and scalability, we offer a hosting solution
-            that caters to the dynamic demands of today's digital landscape.
+            that caters to the dynamic demands of today&apos;s digital
+            landscape.
           </p>
           <p>
             <p className="font-bold">Our mission? </p>

@@ -19,7 +19,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="text-base font-bold">
-              Elevate your security infrastructure with Hyperce Security's
+              Elevate your security infrastructure with Hyperce Security&apos;s
               cutting-edge cybersecurity solutions.
             </span>
             <div className="flex gap-5">

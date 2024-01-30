@@ -78,8 +78,8 @@ export default function Promoter() {
               />
             </svg>
             <p className=" text-black dark:text-[#cbcbcb] text-sm">
-              We're here to redefine promotion with unconventional, creative
-              tactics that captivate your audience in unexpected ways.
+              We&apos;re here to redefine promotion with unconventional,
+              creative tactics that captivate your audience in unexpected ways.
             </p>
           </div>
           <div className="md:col-span-2 flex justify-center">
@@ -99,8 +99,8 @@ export default function Promoter() {
               </svg>
               <p className=" text-black dark:text-[#CBCBCB] w-4/5 text-sm">
                 Enhance your online content for higher search engine rankings,
-                boost organic traffic, and elevate your service's visibility
-                with Hyperce's expertise.
+                boost organic traffic, and elevate your service&apos;s
+                visibility with Hyperce&apos;s expertise.
               </p>
             </div>
           </div>

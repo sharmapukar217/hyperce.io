@@ -9,12 +9,13 @@ export default function WhyChoose() {
             Why Choose Hyperce Promoter ?
           </span>
           <p className="w-3/4 text-base md:text-xl text-center">
-            We're not just matching you with influencers; we're crafting
-            connections that are nothing short of perfection. Every promoter we
-            choose is handpicked to harmonize seamlessly with your brand's
-            melody. Ready to experience Promoter Marketing that's truly
-            exceptional? Choose Hyperce, and let's take your eCommerce business
-            to new heights. Your success story starts here!
+            We&apos;re not just matching you with influencers; we&apos;re
+            crafting connections that are nothing short of perfection. Every
+            promoter we choose is handpicked to harmonize seamlessly with your
+            brand&apos;s melody. Ready to experience Promoter Marketing
+            that&apos;s truly exceptional? Choose Hyperce, and let&apos;s take
+            your eCommerce business to new heights. Your success story starts
+            here!
           </p>
         </div>
         <div className="flex justify-center">
@@ -24,8 +25,8 @@ export default function WhyChoose() {
               { num: '10x', des: 'Conversion Rates' },
               { num: '50x', des: 'Brand Awareness' },
               { num: '20x', des: 'Visibility and Traffic' }
-            ].map((each) => (
-              <Card num={each.num} des={each.des} />
+            ].map((each, index: number) => (
+              <Card key={index} num={each.num} des={each.des} />
             ))}
           </div>
         </div>

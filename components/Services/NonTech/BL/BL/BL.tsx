@@ -10,8 +10,8 @@ export default function BL() {
           E-commerce Excellence
         </p>
         <p className="w-2/3 text-base">
-          Elevate your e-commerce business with Hyperce BL's comprehensive legal
-          services tailored to meet the unique demands of the digital
+          Elevate your e-commerce business with Hyperce BL&apos;s comprehensive
+          legal services tailored to meet the unique demands of the digital
           marketplace. Our Legal Compliance Review, a cornerstone service,
           ensures that your operations align seamlessly with local, national,
           and international laws and regulations.
@@ -74,7 +74,7 @@ export default function BL() {
               />
             </svg>
             <p className=" text-black dark:text-[#CBCBCB] text-sm">
-              Revolutionize e-commerce transactions with Hyperce Acquire's
+              Revolutionize e-commerce transactions with Hyperce Acquire&apos;s
               cutting-edge methodologies, optimizing efficiency and reducing the
               need for manual intervention.
             </p>
@@ -95,7 +95,7 @@ export default function BL() {
             </svg>
             <p className=" text-black dark:text-[#cbcbcb] text-sm">
               Facilitate transparent collaboration between sellers and buyers
-              using Hyperce Acquire's integrated tools, ensuring smooth
+              using Hyperce Acquire&apos;s integrated tools, ensuring smooth
               coordination from due diligence to transaction completion.
             </p>
           </div>
@@ -115,9 +115,9 @@ export default function BL() {
                 />
               </svg>
               <p className=" text-black dark:text-[#CBCBCB] text-sm">
-                Elevate operational synergy with Hyperce Acquire's integrated
-                tools and practices, fostering seamless communication and
-                collaboration between development and operations teams.
+                Elevate operational synergy with Hyperce Acquire&apos;s
+                integrated tools and practices, fostering seamless communication
+                and collaboration between development and operations teams.
               </p>
             </div>
           </div>

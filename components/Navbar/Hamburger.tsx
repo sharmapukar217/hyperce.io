@@ -132,6 +132,7 @@ export default function Hamburger(props: any) {
                                 <span className="mb-5">Tech Solutions</span>
                                 {showcaseTechSolutions.map((each, index) => (
                                   <a
+                                    key={index}
                                     className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                                     href={each.href}
                                   >
@@ -162,6 +163,7 @@ export default function Hamburger(props: any) {
                                 <span className="mb-5">Non-Tech Solutions</span>
                                 {showcaseNonTechSolutions.map((each, index) => (
                                   <a
+                                    key={index}
                                     className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                                     href={each.href}
                                   >
