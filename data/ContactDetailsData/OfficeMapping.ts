@@ -22,10 +22,10 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     country: 'Nepal'
   },
   [Domain.HyperceUk]: {
-    officeName: 'Office Name for UK',
-    address: 'Address for UK',
-    email: 'Email for UK',
-    phoneNumber: 'Phone Number for UK',
+    officeName: 'Hyperce',
+    address: '184 Pantbach Rd, Rhiwbina, Cardiff, CF14 1UG',
+    email: 'hi@hyperce.uk',
+    phoneNumber: '+44-0771-044-2456',
     country: 'United Kingdom'
   },
   [Domain.HyperceUs]: {
