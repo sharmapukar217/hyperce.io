@@ -29,7 +29,7 @@ export default function Contact() {
         <div className="flex flex-col">
           <span className="mb-5 lg:mb-10 text-4xl font-bold">Contact Info</span>
           <div className="flex flex-col gap-7">
-            {currentDomain === Domain.HyperceIo || Domain.Localhost ? (
+            {currentDomain === Domain.HyperceIo ? (
               <>
                 {Object.keys(contactDetailsMapping).map(
                   (domain: any, index: number) => (
