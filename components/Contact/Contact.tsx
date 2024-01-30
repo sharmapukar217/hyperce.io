@@ -16,6 +16,7 @@ export default function Contact() {
     const domain: Domain = window.location.hostname as Domain;
     setCurrentDomain(domain);
     setContactAddressDetails(contactDetailsMapping[domain]);
+    console.log('domain', domain);
   }, []);
 
   return (
