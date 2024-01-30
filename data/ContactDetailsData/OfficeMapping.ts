@@ -7,9 +7,9 @@ export interface OfficeDetails {
 }
 
 export enum Domain {
-  HyperceIo = 'hyperce.io',
-  HyperceUk = 'hyperce.uk',
-  HyperceUs = 'hyperce.us',
+  HyperceIo = 'www.hyperce.io',
+  HyperceUk = 'www.hyperce.uk',
+  HyperceUs = 'www.hyperce.us',
   Localhost = 'localhost'
 }
 
