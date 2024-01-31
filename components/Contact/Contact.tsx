@@ -9,15 +9,15 @@ import {
 } from '@/data/ContactDetailsData/OfficeMapping';
 
 export default function Contact() {
-  const [contactAddressDetails, setContactAddressDetails] =
-    useState<OfficeDetails>(contactDetailsMapping[Domain.HyperceIo]);
-  const [currentDomain, setCurrentDomain] = useState<Domain>(Domain.HyperceIo);
+  const [infoMap, setInfoMap] = useState(contactDetailsMapping);
+
   useEffect(() => {
-    const domain: Domain = window.location.hostname as Domain;
-    setCurrentDomain(domain);
-    setContactAddressDetails(contactDetailsMapping[domain]);
-    console.log('domain', domain);
-  }, []);
+    const domain = window.location.hostname as Domain;
+    if (domain !== Domain.HyperceIo && contactDetailsMapping[domain]) {
+      const info = { [domain]: contactDetailsMapping[domain] };
+      setInfoMap(info as Record<Domain, OfficeDetails>);
+    }
+  }, [setInfoMap]);
 
   return (
     <section
@@ -29,7 +29,13 @@ export default function Contact() {
         <div className="flex flex-col">
           <span className="mb-5 lg:mb-10 text-4xl font-bold">Contact Info</span>
           <div className="flex flex-col gap-7">
-            {currentDomain === Domain.HyperceIo ? (
+            {Object.keys(infoMap).map((domain) => (
+              <EachOffice
+                key={domain}
+                contactAddressDetails={contactDetailsMapping[domain as Domain]}
+              />
+            ))}
+            {/* {curre  ntDomain === Domain.HyperceIo ? (
               <>
                 {Object.keys(contactDetailsMapping).map(
                   (domain: any, index: number) => (
@@ -46,7 +52,7 @@ export default function Contact() {
               </>
             ) : (
               <EachOffice contactAddressDetails={contactAddressDetails} />
-            )}
+            )} */}
           </div>
         </div>
       </div>
