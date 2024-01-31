@@ -14,7 +14,7 @@ export default function WhatsAppBtn() {
 
   useEffect(() => {
     const domain: Domain = window.location.hostname as Domain;
-    if (contactDetailsMapping[domain]?.phoneNumber) {
+    if (domain !== Domain.HyperceIo && contactDetailsMapping[domain]) {
       setWhatsAppNumber(contactDetailsMapping[domain].phoneNumber);
     }
   }, []);
