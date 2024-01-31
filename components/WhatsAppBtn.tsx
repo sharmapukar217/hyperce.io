@@ -9,7 +9,7 @@ import {
 
 export default function WhatsAppBtn() {
   const [whatsAppNumber, setWhatsAppNumber] = useState(
-    contactDetailsMapping[Domain.HyperceIo].phoneNumber
+    contactDetailsMapping[Domain.HyperceUs].phoneNumber
   );
 
   useEffect(() => {
