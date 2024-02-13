@@ -10,11 +10,9 @@ export enum Domain {
   HyperceIo = 'www.hyperce.io',
   HyperceUk = 'www.hyperce.uk',
   HyperceUs = 'www.hyperce.us'
-  // Localhost = 'localhost'
 }
 
 export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
-  // Note: Always put US on top
   [Domain.HyperceUs]: {
     officeName: 'Hyperce, LLC',
     address:
@@ -37,13 +35,4 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     phoneNumber: '+44-0771-044-2456',
     country: 'United Kingdom'
   }
-  // unsure if this is required
-  // @ankurgajurel: NOTE [ Adding this would show two Nepal on prod ]
-  // [Domain.Localhost]: {
-  //   officeName: 'Hyperce Technologies Pvt. Ltd.',
-  //   address: 'Adarshanagar, Chandragiri - 14, Kathmandu, Nepal, 44600',
-  //   email: 'hi@hyperce.io',
-  //   phoneNumber: '+977-9840260599',
-  //   country: 'Nepal'
-  // }
 };
