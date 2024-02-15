@@ -1,3 +1,4 @@
+'use client';
 import { useFounderData } from '@/lib/useFounderData';
 
 export default function Message() {
