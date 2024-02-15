@@ -4,6 +4,7 @@ import Frontier from '@/components/Services/Tech/Frontier/Frontier/Frontier';
 import Hero from '@/components/Services/Tech/Frontier/Hero/Hero';
 import WhyChoose from '@/components/Services/Tech/Frontier/WhyChoose/WhyChoose';
 import Contact from '@/components/Contact/Contact';
+import Gallary from '@/components/Services/Tech/Frontier/Gallary/Gallary';
 
 import Image from 'next/image';
 import FrontierBg from '../../../../public/frontier-portfolio.png';
@@ -45,6 +46,7 @@ export default function FrontierPage() {
           productName="Frontier Admin Panel"
         />
         <WhyChoose />
+        <Gallary />
         <Newsletter />
         <Contact />
       </div>
