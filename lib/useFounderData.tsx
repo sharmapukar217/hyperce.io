@@ -21,7 +21,7 @@ export const useFounderData = () => {
       case Domain.HyperceUk: {
         setData({
           founder: 'Huw Davies',
-          title: 'CEO, Hyperce.',
+          title: 'CEO, Hyperce UK',
           imageUrl:
             'https://media.discordapp.net/attachments/1129807618907590656/1206929912116682824/huwd.png?ex=65ddcc12&is=65cb5712&hm=f7e20df1890216a63f6ae55f09306f668bf1655d154b79a99387363837d67a2b&=&format=webp&quality=lossless&width=575&height=603'
         });
