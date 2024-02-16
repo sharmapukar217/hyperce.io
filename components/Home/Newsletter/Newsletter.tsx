@@ -78,7 +78,7 @@ export default function Newsletter() {
 
   return (
     <section className="">
-      <div className="md:hidden flex items-center justify-center ! hidden">
+      <div className="md:hidden flex items-center justify-center !hidden">
         <Image
           width={2000}
           height={500}
