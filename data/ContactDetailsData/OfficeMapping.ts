@@ -9,7 +9,8 @@ export interface OfficeDetails {
 export enum Domain {
   HyperceIo = 'www.hyperce.io',
   HyperceUk = 'www.hyperce.uk',
-  HyperceUs = 'www.hyperce.us'
+  HyperceUs = 'www.hyperce.us',
+  HyperceAu = 'www.hyperce.au'
 }
 
 export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
@@ -34,5 +35,13 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     email: 'hi@hyperce.uk',
     phoneNumber: '+44-0771-044-2456',
     country: 'United Kingdom'
+  },
+  [Domain.HyperceAu]: {
+    officeName: 'Hyperce Australia',
+    address:
+      'Kings Business Park - Kings Club 80 Dorcas St, South Melbourne 3205, Australia',
+    email: 'hi@hyperce.au',
+    phoneNumber: ' +61406492096',
+    country: 'Australia'
   }
 };
