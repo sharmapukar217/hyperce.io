@@ -30,11 +30,7 @@ export default function Message() {
             Message from our Founder
           </span>
           <span className="text-base text-black dark:text-gray-300">
-            As the founder of Hyperce, I am driven by a vision of a dynamic
-            eCommerce landscape where businesses thrive, innovate, and succeed.
-            We are here to empower your journey with cutting-edge eCommerce
-            platforms and AI-powered solutions. Together, we&apos;ll shape the
-            future of online commerce. Welcome to the Hyperce family!
+            {founderData.quote}
           </span>
         </div>
       </div>
