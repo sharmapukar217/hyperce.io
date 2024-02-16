@@ -99,7 +99,7 @@ export default function Newsletter() {
           />
         </div>
 
-        <div className="mx-auto container px-10 md:px-20 flex flex-col md:flex-row pb-10 xl:-mt-[4%]">
+        <div className="mx-auto container px-10 md:px-20 flex flex-col md:flex-row pb-10">
           <div className="xl:w-1/2 text-center md:text-left w-full left px-5 md:px-10 py-10 md:py-10 bg-[#f6f6f6] text-black dark:bg-[#0F1023] dark:text-white  md:rounded-l-xl">
             <div className="flex flex-col w-full md:w-[80%] gap-5">
               <div className="text-2xl md:text-3xl font-bold">
