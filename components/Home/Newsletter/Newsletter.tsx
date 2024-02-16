@@ -78,7 +78,7 @@ export default function Newsletter() {
 
   return (
     <section className="">
-      <div className="md:hidden flex items-center justify-center ">
+      <div className="md:hidden flex items-center justify-center ! hidden">
         <Image
           width={2000}
           height={500}
@@ -89,7 +89,7 @@ export default function Newsletter() {
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <div className="hidden md:block md:w-4/5 ml-52">
+        <div className="!hidden md:block md:w-4/5 ml-52">
           <Image
             width={1300}
             height={500}
