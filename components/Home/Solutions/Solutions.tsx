@@ -1,3 +1,5 @@
+'use client';
+
 import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 import Card from './Card';
 import {
@@ -5,8 +7,10 @@ import {
   showcaseTechSolutions,
   viewAllSolutions
 } from '@/data/Solutions';
+import { useSuiteLink } from '@/lib/useDocumentLinks';
 
 export default function Solutions() {
+  const [suiteLink] = useSuiteLink();
   return (
     <AnimateWrapper>
       <section
@@ -20,9 +24,8 @@ export default function Solutions() {
         <div className="flex justify-center">
           <div className="flex gap-5 flex-col md:flex-row">
             <a
-              href="https://docs.hyperce.io/hyperce_suite_book.pdf"
+              href={suiteLink}
               className="flex justify-center md:mt-7 md:mb-10"
-              target="_blank"
             >
               <button className="px-5 w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
                 <div className="text-white flex gap-3 hover:gap-5 transition-all duration-150 items-center">

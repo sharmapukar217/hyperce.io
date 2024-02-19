@@ -20,6 +20,7 @@ import { ThemeProvider } from 'next-themes';
 import PrelineScript from '@/vendor/PrelineScript';
 
 import { EachProduct } from '../Platforms/Platforms';
+import { useProposal } from '@/lib/useDocumentLinks';
 
 const PlatformsData = [
   {
@@ -38,6 +39,7 @@ const PlatformsData = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [proposalLink] = useProposal();
 
   useEffect(() => {
     require('preline');
@@ -75,7 +77,7 @@ export default function Navbar() {
           </nav>
           <div className="flex gap-10 items-center">
             <div className="cta gap-5 hidden md:flex">
-              <a target="_blank" href="https://docs.hyperce.io/proposal.pdf">
+              <a href={proposalLink}>
                 <button
                   aria-label="proposal-download"
                   className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
