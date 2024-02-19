@@ -37,7 +37,6 @@ export const useSuiteLink = () => {
     switch (domain) {
       case Domain.HyperceUk: {
         return setData('https://docs.hyperce.io/hyperce-uk-suite-book.pdf');
-        break;
       }
       case Domain.HyperceAu: {
         return setData(
@@ -46,6 +45,43 @@ export const useSuiteLink = () => {
       }
       default: {
         return setData('https://docs.hyperce.io/hyperce-suite-book.pdf');
+      }
+    }
+  }, []);
+
+  return [data];
+};
+
+export const useYoutubeUrl = () => {
+  const [data, setData] = useState({
+    url: 'https://www.youtube.com/watch?v=wUNHpMc2bQQ',
+    embedUrl: 'https://www.youtube.com/embed/wUNHpMc2bQQ?si=Np08Gx6mk7DwcAMF'
+  });
+
+  useEffect(() => {
+    const domain: Domain = window.location.hostname as Domain;
+
+    switch (domain) {
+      case Domain.HyperceUk: {
+        return setData({
+          url: 'https://www.youtube.com/watch?si=8tn9fmctlOIlvedh&v=DKsEXe4RfSA&feature=youtu.be',
+          embedUrl:
+            'https://www.youtube.com/embed/DKsEXe4RfSA?si=8tn9fmctlOIlvedh'
+        });
+      }
+      case Domain.HyperceAu: {
+        return setData({
+          url: 'https://www.youtube.com/watch?v=wUNHpMc2bQQ',
+          embedUrl:
+            'https://www.youtube.com/embed/wUNHpMc2bQQ?si=Np08Gx6mk7DwcAMF'
+        });
+      }
+      default: {
+        return setData({
+          url: 'https://www.youtube.com/watch?v=wUNHpMc2bQQ',
+          embedUrl:
+            'https://www.youtube.com/embed/wUNHpMc2bQQ?si=Np08Gx6mk7DwcAMF'
+        });
       }
     }
   }, []);
