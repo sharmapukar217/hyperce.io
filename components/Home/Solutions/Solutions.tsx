@@ -25,6 +25,7 @@ export default function Solutions() {
           <div className="flex gap-5 flex-col md:flex-row">
             <a
               href={suiteLink}
+              target="_blank"
               className="flex justify-center md:mt-7 md:mb-10"
             >
               <button className="px-5 w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">

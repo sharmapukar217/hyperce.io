@@ -3,6 +3,28 @@
 import { useEffect, useState } from 'react';
 import { Domain } from '@/data/ContactDetailsData/OfficeMapping';
 
+export const useLinkedInUrl = () => {
+  const [data, setData] = useState('');
+
+  useEffect(() => {
+    const domain: Domain = window.location.hostname as Domain;
+
+    switch (domain) {
+      case Domain.HyperceUk: {
+        return setData('https://www.linkedin.com/company/hyperce-uk');
+      }
+      case Domain.HyperceAu: {
+        return setData('https://www.linkedin.com/company/hyperce-australia');
+      }
+      default: {
+        return setData('https://www.linkedin.com/company/hyperce');
+      }
+    }
+  }, []);
+
+  return [data];
+};
+
 export const useProposal = () => {
   const [data, setData] = useState('');
 
@@ -12,7 +34,6 @@ export const useProposal = () => {
     switch (domain) {
       case Domain.HyperceUk: {
         return setData('https://docs.hyperce.io/hyperce-uk-proposal.pdf');
-        break;
       }
       case Domain.HyperceAu: {
         return setData(

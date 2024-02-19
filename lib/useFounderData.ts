@@ -1,11 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import {
-  OfficeDetails,
-  Domain,
-  contactDetailsMapping
-} from '@/data/ContactDetailsData/OfficeMapping';
+import { Domain } from '@/data/ContactDetailsData/OfficeMapping';
 
 export const useFounderData = () => {
   const [data, setData] = useState({

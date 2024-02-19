@@ -1,7 +1,10 @@
+'use client';
 import Logo from '@/utils/assets/Logo';
 import { navMenuItems } from '@/data/Navdata';
+import { useLinkedInUrl } from '@/lib/useDocumentLinks';
 
 export default function Footer() {
+  const [linkedinUrl] = useLinkedInUrl();
   return (
     <footer className="mx-auto container flex items-center flex-col py-10">
       <div className="top flex justify-center flex-col items-center gap-5">
@@ -65,7 +68,7 @@ export default function Footer() {
         Follow us at:
         <a
           className="ms-2 inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
-          href="https://www.linkedin.com/company/hyperce-uk"
+          href={linkedinUrl}
           target="_blank"
         >
           <svg className="w-3.5 h-3.5 ms-1" viewBox="0 0 20 20" version="1.1">
