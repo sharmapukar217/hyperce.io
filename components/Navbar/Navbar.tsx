@@ -77,7 +77,7 @@ export default function Navbar() {
           </nav>
           <div className="flex gap-10 items-center">
             <div className="cta gap-5 hidden md:flex">
-              <a href={proposalLink} target="_blank">
+              <a href={proposalLink}>
                 <button
                   aria-label="proposal-download"
                   className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
@@ -145,7 +145,7 @@ export function SolutionsMegaMenu() {
         className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
       >
         <div className="">
-          <div className="hs-dropdown [--strategy:static] sm:[--strategy:fixed] [--adaptive:none] sm:[--trigger:hover] font-bold">
+          <div className="hs-dropdown [--adaptive:none] font-bold">
             <button type="button" className="flex items-center w-full">
               Solutions
               <svg
@@ -164,7 +164,7 @@ export function SolutionsMegaMenu() {
               </svg>
             </button>
 
-            <div className="hs-dropdown-menu p-3 transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
+            <div className="group hs-dropdown-menu p-3 transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
               {PlatformsData.map((platform, index) => (
                 <div key={index}>
                   <div className="hs-dropdown relative [--strategy:static] sm:[--strategy:absolute] [--adaptive:none] sm:[--trigger:hover]">
