@@ -1,3 +1,5 @@
+import FrontendDemo from '@/components/Services/Tech/Headless/Hero/minute/FrontendDemo';
+
 export default function Hero() {
   return (
     <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
@@ -42,10 +44,10 @@ export default function Hero() {
                   />
                 </svg>
               </a>
-              {/* <FrontendDemo
-                link="https://frontier-demo.hyperce.io/"
-                name="Frontier Demo"
-              /> */}
+              <FrontendDemo
+                link="https://hypercehrm.hyperce.io/"
+                name="HRM Demo"
+              />
             </div>
           </div>
         </div>

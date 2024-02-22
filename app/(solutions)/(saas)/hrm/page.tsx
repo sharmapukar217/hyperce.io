@@ -3,6 +3,8 @@ import Navbar from '@/components/Navbar/Navbar';
 import Appify from '@/components/Services/SaaS/HRM/HRM/HRM';
 import Hero from '@/components/Services/SaaS/HRM/Hero/Hero';
 import WhyChoose from '@/components/Services/SaaS/HRM/WhyChoose/WhyChoose';
+import DemoCredentials from '@/components/Services/Tech/Headless/Hero/minute/DemoCredentials';
+
 import Contact from '@/components/Contact/Contact';
 
 import Image from 'next/image';
@@ -37,6 +39,13 @@ export default function FrontierPage() {
           </div>
         </main>
         <Appify />
+        <DemoCredentials
+          demoLink="https://hypercehrm.hyperce.io"
+          productName="HRM Panel"
+          demoEmail="admin"
+          demoPassword="ADMIN@ADMIN123"
+          qrSource="/admin.hyperce.qr.png"
+        />
         <WhyChoose />
         <Newsletter />
         <Contact />
