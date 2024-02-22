@@ -43,7 +43,7 @@ export default function FrontierPage() {
           demoLink="https://hypercehrm.hyperce.io"
           productName="HRM Panel"
           demoEmail="admin"
-          demoPassword="ADMIN@ADMIN123"
+          demoPassword="ADMIN#admin123"
           qrSource="/admin.hyperce.qr.png"
         />
         <WhyChoose />
