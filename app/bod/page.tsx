@@ -11,6 +11,11 @@ const boardOfDirectors = [
     src: 'https://media.discordapp.net/attachments/1129807618907590656/1208043723418632242/WhatsApp_Image_2024-02-16_at_19.16.28.jpeg?ex=65e1d964&is=65cf6464&hm=742ed45a9bf082210a2945a7ab7bfa2423ce047bfb92c81d7dcb9a2682b409ea&=&width=575&height=603',
     alt: 'Jawwad Aamer Khan',
     name: 'Jawwad Aamer Khan'
+  },
+  {
+    src: 'https://media.discordapp.net/attachments/1129807618907590656/1211365766171983984/WhatsApp_Image_2024-02-19_at_02.58.42.jpeg?ex=65edef48&is=65db7a48&hm=64d754b123bb37a575973d649345a07e12ea48b477151eca642731f64c035488&=&format=webp&width=452&height=603',
+    alt: 'Roshanara Mulla',
+    title: 'Roshanara Mulla'
   }
 ];
 
@@ -94,7 +99,7 @@ export default function BOD() {
             Our valuable members from board of directors.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-4 lg:gap-y-12 my-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-y-4 2xl:gap-y-12 my-10">
             {boardOfDirectors.map((bod, idx) => (
               <div
                 key={idx}
