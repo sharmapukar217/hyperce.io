@@ -91,7 +91,7 @@ export default function BOD() {
     <>
       <Navbar />
       <div className="py-10">
-        <div className="mx-auto xl:w-4/6">
+        <div className="mx-auto md:w-10/12">
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
             Board Of Directors
           </h2>
