@@ -1,97 +1,92 @@
 import Navbar from '@/components/Navbar/Navbar';
 
 const boardOfDirectors = [
+  { src: '/biplab.png', alt: 'Biplab Karki', name: 'Biplab Karki' },
   {
-    src: 'https://cdn.dribbble.com/userupload/3179736/file/original-1f59f5f4a4e1dda73973a34bb6f618f8.png?resize=1024x768',
-    alt: 'image 1'
+    src: 'https://media.discordapp.net/attachments/1129807618907590656/1206929912116682824/huwd.png?ex=65ddcc12&is=65cb5712&hm=f7e20df1890216a63f6ae55f09306f668bf1655d154b79a99387363837d67a2b&=&format=webp&quality=lossless&width=575&height=603',
+    alt: 'Huw Davies',
+    name: 'Huw Davies'
   },
   {
-    src: 'https://cdn.dribbble.com/users/145843/screenshots/16098624/media/0298d380748ae843eb8a955c913ffb81.jpg?resize=1000x750&vertical=center',
-    alt: 'image 2'
-  },
-  {
-    src: 'https://cdn.dribbble.com/users/2417352/screenshots/16250175/media/6f292cd2847c0f3fcaf42bfb4c9dafa1.png?resize=1000x750&vertical=center',
-    alt: 'image 3'
-  },
-  {
-    src: 'https://cdn.dribbble.com/users/2168231/screenshots/17416722/media/c6c9ce7114613b5d5cb94aa8eec53e68.jpg?resize=1000x750&vertical=center',
-    alt: 'image 4'
+    src: 'https://media.discordapp.net/attachments/1129807618907590656/1208043723418632242/WhatsApp_Image_2024-02-16_at_19.16.28.jpeg?ex=65e1d964&is=65cf6464&hm=742ed45a9bf082210a2945a7ab7bfa2423ce047bfb92c81d7dcb9a2682b409ea&=&width=575&height=603',
+    alt: 'Jawwad Aamer Khan',
+    name: 'Jawwad Aamer Khan'
   }
 ];
 
-const members = [
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(71).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  },
-  {
-    alt: '',
-    src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-  }
-];
+// const members = [
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(71).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   },
+//   {
+//     alt: '',
+//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
+//   }
+// ];
 
 export default function BOD() {
   return (
     <>
       <Navbar />
       <div className="py-10">
-        <div className="mx-auto md:w-3/5">
+        <div className="mx-auto lg:w-4/6">
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
             Board Of Directors
           </h2>
@@ -99,55 +94,28 @@ export default function BOD() {
             Our valuable members from board of directors.
           </p>
 
-          <div className="flex overflow-hidden space-x-8 my-20 group">
-            <div className="flex space-x-16 animate-loop-scroll group-hover:[animation-play-state:paused]">
-              {boardOfDirectors.map((bod, idx) => (
-                <div
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-4 lg:gap-y-12 my-10">
+            {boardOfDirectors.map((bod, idx) => (
+              <div
+                key={idx}
+                className="relative max-w-none rounded-xl h-96 w-96 border-2 dark:border-gray-700 cursor-pointer shadow-sm group overflow-clip mx-auto"
+              >
+                <img
                   key={idx}
-                  className="relative max-w-none rounded-xl h-96 w-96 border-2 dark:border-gray-700 cursor-pointer shadow-sm"
-                >
-                  <img
-                    key={idx}
-                    loading="lazy"
-                    alt={bod.alt}
-                    src={bod.src}
-                    className="rounded-xl w-full h-full object-cover aspect-square"
-                  />
-                  <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
-                    <h1 className="font-semibold">BOARD OF DIRECTOR NAME</h1>
-                    <span className="text-sm">TITLE OR SOMETHING</span>
-                  </div>
+                  loading="lazy"
+                  alt={bod.alt}
+                  src={bod.src}
+                  className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
+                />
+                <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
+                  <h1 className="font-semibold">{bod.name}</h1>
                 </div>
-              ))}
-            </div>
-
-            <div
-              className="flex space-x-16 animate-loop-scroll group-hover:[animation-play-state:paused]"
-              aria-hidden="true"
-            >
-              {boardOfDirectors.map((bod, idx) => (
-                <div
-                  key={idx}
-                  className="relative max-w-none rounded-xl h-96 w-96 border-2 dark:border-gray-700 cursor-pointer shadow-sm"
-                >
-                  <img
-                    key={idx}
-                    loading="lazy"
-                    alt={bod.alt}
-                    src={bod.src}
-                    className="rounded-xl w-full h-full object-cover aspect-square"
-                  />
-                  <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
-                    <h1 className="font-semibold">BOARD OF DIRECTOR NAME</h1>
-                    <span className="text-sm">TITLE OR SOMETHING</span>
-                  </div>
-                </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="mx-auto md:w-3/5">
+        {/* <div className="mx-auto md:w-3/5">
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
             Core members
           </h2>
@@ -156,7 +124,7 @@ export default function BOD() {
             actively contribute on hyperce.
           </p>
 
-          {/* {members.map((member, idx) => (
+          {members.map((member, idx) => (
               <div
                 key={idx}
                 className="border-2 dark:border-gray-700 rounded-xl shaodw-sm group relative overflow-hidden"
@@ -173,7 +141,7 @@ export default function BOD() {
                   </p>
                 </div>
               </div>
-            ))} */}
+            ))} 
 
           <div className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>:not(:first-child)]:mt-8 mt-5">
             {members.map((member, idx) => (
@@ -195,7 +163,7 @@ export default function BOD() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
           <div className="-m-1 flex flex-wrap md:-m-2">
