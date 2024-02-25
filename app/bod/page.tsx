@@ -98,7 +98,7 @@ export default function BOD() {
             {boardOfDirectors.map((bod, idx) => (
               <div
                 key={idx}
-                className="relative max-w-none rounded-xl h-96 w-96 border-2 dark:border-gray-700 cursor-pointer shadow-sm group overflow-clip mx-auto"
+                className="relative max-w-none rounded-xl h-96 w-96 border-2 dark:border-gray-700 cursor-pointer shadow-md group overflow-clip mx-auto"
               >
                 <img
                   key={idx}
