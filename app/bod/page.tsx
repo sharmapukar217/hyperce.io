@@ -99,7 +99,7 @@ export default function BOD() {
             Our valuable members from board of directors.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-4 2xl:gap-y-12 my-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
             {boardOfDirectors.map((bod, idx) => (
               <div
                 key={idx}
