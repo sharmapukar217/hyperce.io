@@ -10,5 +10,9 @@ export const navMenuItems = [
   {
     name: 'FAQs',
     href: '/#faq'
+  },
+  {
+    name: 'Teams',
+    href: '/bod'
   }
 ];

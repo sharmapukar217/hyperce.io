@@ -37,7 +37,7 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     country: 'United Kingdom'
   },
   [Domain.HyperceAu]: {
-    officeName: 'Hyperce Australia',
+    officeName: 'Hyperce',
     address:
       'Kings Business Park - Kings Club 80 Dorcas St, South Melbourne 3205, Australia',
     email: 'hi@hyperce.au',
