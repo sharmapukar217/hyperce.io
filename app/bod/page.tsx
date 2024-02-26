@@ -14,8 +14,8 @@ const boardOfDirectors = [
   },
   {
     src: 'https://media.discordapp.net/attachments/1129807618907590656/1211365766171983984/WhatsApp_Image_2024-02-19_at_02.58.42.jpeg?ex=65edef48&is=65db7a48&hm=64d754b123bb37a575973d649345a07e12ea48b477151eca642731f64c035488&=&format=webp&width=452&height=603',
-    alt: 'Roshanara Mulla',
-    name: 'Roshanara Mulla'
+    alt: 'Roshanara Mulla Khan',
+    name: 'Roshanara Mulla Khan'
   }
 ];
 
