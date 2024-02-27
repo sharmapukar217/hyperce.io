@@ -13,6 +13,6 @@ export const navMenuItems = [
   },
   {
     name: 'Our Team',
-    href: '/teams'
+    href: '/team'
   }
 ];
