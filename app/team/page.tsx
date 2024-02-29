@@ -3,17 +3,17 @@ import Navbar from '@/components/Navbar/Navbar';
 const boardOfDirectors = [
   { src: '/biplab.png', alt: 'Biplab Karki', name: 'Biplab Karki' },
   {
-    src: 'https://media.discordapp.net/attachments/1129807618907590656/1206929912116682824/huwd.png?ex=65ddcc12&is=65cb5712&hm=f7e20df1890216a63f6ae55f09306f668bf1655d154b79a99387363837d67a2b&=&format=webp&quality=lossless&width=575&height=603',
+    src: '/Huw Davies.webp',
     alt: 'Huw Davies',
     name: 'Huw Davies'
   },
   {
-    src: 'https://media.discordapp.net/attachments/1129807618907590656/1208043723418632242/WhatsApp_Image_2024-02-16_at_19.16.28.jpeg?ex=65e1d964&is=65cf6464&hm=742ed45a9bf082210a2945a7ab7bfa2423ce047bfb92c81d7dcb9a2682b409ea&=&width=575&height=603',
+    src: '/Jawwad Aamer Khan.jpeg',
     alt: 'Jawwad Aamer Khan',
     name: 'Jawwad Aamer Khan'
   },
   {
-    src: 'https://media.discordapp.net/attachments/1129807618907590656/1211365766171983984/WhatsApp_Image_2024-02-19_at_02.58.42.jpeg?ex=65edef48&is=65db7a48&hm=64d754b123bb37a575973d649345a07e12ea48b477151eca642731f64c035488&=&format=webp&width=452&height=603',
+    src: '/Roshanara Mulla Khan.webp',
     alt: 'Roshanara Mulla Khan',
     name: 'Roshanara Mulla Khan'
   }
