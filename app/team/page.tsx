@@ -19,72 +19,128 @@ const boardOfDirectors = [
   }
 ];
 
-// const members = [
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(71).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   },
-//   {
-//     alt: '',
-//     src: 'https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp'
-//   }
-// ];
+const teamMembers = [
+  {
+    alt: 'Biplab Karki',
+    name: 'Biplab Karki',
+    src: '/teams/biplab-karki.jpg',
+    position: 'CEO'
+  },
+  {
+    alt: 'Gulab Miya',
+    name: 'Gulab Miya',
+    src: '/teams/gulab-miya.jpg',
+    position: 'Chief HR Officer'
+  },
+  {
+    alt: 'Ujal Bhatta',
+    name: 'Ujal Bhatta',
+    src: '/teams/ujal-bhatta.jpg',
+    position: 'COO'
+  },
+  {
+    alt: 'Rohan Poudel',
+    name: 'Rohan Poudel',
+    src: '/teams/rohan-poudel.jpg',
+    position: 'CTO'
+  },
+  {
+    alt: 'Nikesh Singh',
+    name: 'Nikesh Singh',
+    src: '/teams/nikesh-singh.jpg',
+    position: 'CFO'
+  },
+  {
+    alt: 'Saurabh Chalise',
+    name: 'Saurabh Chalise',
+    src: '/teams/saurabh-chalise.jpg',
+    position: 'SEO Head'
+  },
+  {
+    alt: 'Bhabishya Bhatt',
+    name: 'Bhabishya Bhatt',
+    src: '/teams/bhabishya-bhatt.jpg',
+    position: 'Associate CTO'
+  },
+  {
+    alt: 'Ankit Poudel',
+    name: 'Ankit Poudel',
+    src: '/teams/ankit-poudel.jpg',
+    position: 'Full Stack Developer'
+  },
+  {
+    alt: 'Falguni Mandal',
+    name: 'Falguni Mandal',
+    src: '/teams/falguni-mandal.jpg',
+    position: 'Graphics Designer'
+  },
+  {
+    alt: 'Prakash Poudel',
+    name: 'Prakash Poudel',
+    src: '/teams/prakash-poudel.jpg',
+    position: 'Frontend Developer'
+  },
+  {
+    alt: 'Pratikshya Poudel',
+    name: 'Pratikshya Poudel',
+    src: '/teams/pratikshya-poudel.jpg',
+    position: 'Backend Developer'
+  },
+  {
+    alt: 'Pukar Sharma',
+    name: 'Pukar Sharma',
+    src: '/teams/pukar-sharma.jpg',
+    position: 'Full Stack Developer'
+  },
+  {
+    alt: 'Ritika Bogati',
+    name: 'Ritika Bogati',
+    src: '/teams/ritika-bogati.jpg',
+    position: 'Content Writer'
+  },
+  {
+    alt: 'Sangam Ghimire',
+    name: 'Sangam Ghimire',
+    src: '/teams/sangam-ghimire.jpg',
+    position: 'Junior Devops Engineer'
+  },
+  {
+    alt: 'Silson Sapkota',
+    name: 'Silson Sapkota',
+    src: '/teams/silson-sapkota.jpg',
+    position: 'Frontend Developer'
+  },
+  {
+    alt: 'Sonam Syangbo',
+    name: 'Sonam Syangbo',
+    src: '/teams/sonam-syangbo.jpg',
+    position: 'UI/UX Designer'
+  },
+  {
+    alt: 'Sovit Kumar Karn',
+    name: 'Sovit Kumar Karn',
+    src: '/teams/sovit-kumar-karn.jpg',
+    position: 'Accounting Officer'
+  },
+  {
+    alt: 'Subharaj Bhandari',
+    name: 'Subharaj Bhandari',
+    src: '/teams/subharaj-bhandari.jpg',
+    position: 'Backend Developer'
+  },
+  {
+    alt: 'Suruchi Gautam',
+    name: 'Suruchi Gautam',
+    src: '/teams/suruchi-gautam.jpg',
+    position: 'Sales & Marketing Officer'
+  },
+  {
+    alt: 'Tasnuva Ferdush',
+    name: 'Tasnuva Ferdush',
+    src: '/teams/tasnuva-ferdush.jpg',
+    position: 'Sales & Marketing Officer'
+  }
+];
 
 export default function BOD() {
   return (
@@ -114,6 +170,39 @@ export default function BOD() {
                 />
                 <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
                   <h1 className="font-semibold">{bod.name}</h1>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto px-4 pt-10 md:w-10/12">
+          <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
+            Core Membrs
+          </h2>
+          <p className="mt-4 text-center font-semibold">
+            Aside from the board members, here&apos;s our core teams who
+            actively contribute on hyperce..
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
+            {teamMembers.map((member, idx) => (
+              <div
+                key={idx}
+                className="relative max-w-none rounded-xl w-72 h-72 lg:h-96 lg:w-96 border-2 dark:border-gray-700 cursor-pointer shadow-md group overflow-clip mx-auto"
+              >
+                <img
+                  key={idx}
+                  loading="lazy"
+                  alt={member.alt}
+                  src={member.src}
+                  className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
+                />
+                <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
+                  <h1 className="font-semibold">{member.name}</h1>
+                  <p className="text-sm font-bold text-gray-500 dark:text-gray-300">
+                    {member.position}
+                  </p>
                 </div>
               </div>
             ))}
