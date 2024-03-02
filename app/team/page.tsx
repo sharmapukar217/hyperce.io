@@ -157,9 +157,6 @@ export default function BOD() {
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
             Directors
           </h2>
-          <p className="mt-4 text-center font-semibold">
-            Our valuable members from board of directors.
-          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
             {boardOfDirectors.map((bod, idx) => (
@@ -217,10 +214,6 @@ export default function BOD() {
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
             Core Members
           </h2>
-          <p className="mt-4 text-center font-semibold">
-            Aside from the board &amp; executive members, here&apos;s our core
-            teams who actively contribute on hyperce..
-          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
             {teamMembers.map((member, idx) => (
