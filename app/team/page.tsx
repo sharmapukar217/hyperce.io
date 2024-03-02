@@ -1,31 +1,33 @@
 import Navbar from '@/components/Navbar/Navbar';
 
 const boardOfDirectors = [
-  { src: '/biplab.png', alt: 'Biplab Karki', name: 'Biplab Karki' },
+  {
+    src: '/biplab.png',
+    alt: 'Biplab Karki',
+    name: 'Biplab Karki',
+    position: 'CEO'
+  },
   {
     src: '/Huw Davies.webp',
     alt: 'Huw Davies',
-    name: 'Huw Davies'
+    name: 'Huw Davies',
+    position: 'CEO, Hyperce UK'
   },
   {
     src: '/Jawwad Aamer Khan.jpeg',
     alt: 'Jawwad Aamer Khan',
-    name: 'Jawwad Aamer Khan'
+    name: 'Jawwad Aamer Khan',
+    position: 'CEO, Hyperce APAC'
   },
   {
     src: '/Roshanara Mulla Khan.webp',
     alt: 'Roshanara Mulla Khan',
-    name: 'Roshanara Mulla Khan'
+    name: 'Roshanara Mulla Khan',
+    position: 'CEO, Hyperce APAC'
   }
 ];
 
-const teamMembers = [
-  {
-    alt: 'Biplab Karki',
-    name: 'Biplab Karki',
-    src: '/teams/biplab-karki.jpg',
-    position: 'CEO'
-  },
+const executives = [
   {
     alt: 'Gulab Miya',
     name: 'Gulab Miya',
@@ -44,24 +46,28 @@ const teamMembers = [
     src: '/teams/rohan-poudel.jpg',
     position: 'CTO'
   },
-  {
-    alt: 'Nikesh Singh',
-    name: 'Nikesh Singh',
-    src: '/teams/nikesh-singh.jpg',
-    position: 'CFO'
-  },
+  // TODO: add image for nikesh sir
+  // {
+  //   alt: 'Nikesh Singh',
+  //   name: 'Nikesh Singh',
+  //   src: '/teams/nikesh-singh.jpg',
+  //   position: 'CFO'
+  // },
   {
     alt: 'Saurabh Chalise',
     name: 'Saurabh Chalise',
     src: '/teams/saurabh-chalise.jpg',
-    position: 'SEO Head'
+    position: 'Chief Project Officer / SEO Head'
   },
   {
     alt: 'Bhabishya Bhatt',
     name: 'Bhabishya Bhatt',
     src: '/teams/bhabishya-bhatt.jpg',
     position: 'Associate CTO'
-  },
+  }
+];
+
+const teamMembers = [
   {
     alt: 'Ankit Poudel',
     name: 'Ankit Poudel',
@@ -149,7 +155,7 @@ export default function BOD() {
       <div className="py-10">
         <div className="mx-auto px-4 md:w-10/12">
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
-            Board Of Directors
+            Directors
           </h2>
           <p className="mt-4 text-center font-semibold">
             Our valuable members from board of directors.
@@ -169,7 +175,9 @@ export default function BOD() {
                   className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
                 />
                 <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
-                  <h1 className="font-semibold">{bod.name}</h1>
+                  <h1 className="font-semibold">
+                    {bod.name} - {bod.position}
+                  </h1>
                 </div>
               </div>
             ))}
@@ -178,11 +186,40 @@ export default function BOD() {
 
         <div className="mx-auto px-4 pt-10 md:w-10/12">
           <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
-            Core Membrs
+            Executive Directors
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
+            {executives.map((executive, idx) => (
+              <div
+                key={idx}
+                className="relative max-w-none rounded-xl w-72 h-72 lg:h-96 lg:w-96 border-2 dark:border-gray-700 cursor-pointer shadow-md group overflow-clip mx-auto"
+              >
+                <img
+                  key={idx}
+                  loading="lazy"
+                  alt={executive.alt}
+                  src={executive.src}
+                  className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
+                />
+                <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
+                  <h1 className="font-semibold">{executive.name}</h1>
+                  <p className="text-sm font-bold text-gray-500 dark:text-gray-300">
+                    {executive.position}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto px-4 pt-10 md:w-10/12">
+          <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
+            Core Members
           </h2>
           <p className="mt-4 text-center font-semibold">
-            Aside from the board members, here&apos;s our core teams who
-            actively contribute on hyperce..
+            Aside from the board &amp; executive members, here&apos;s our core
+            teams who actively contribute on hyperce..
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
