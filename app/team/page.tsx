@@ -57,7 +57,7 @@ const executives = [
     alt: 'Saurabh Chalise',
     name: 'Saurabh Chalise',
     src: '/teams/saurabh-chalise.jpg',
-    position: 'Chief Project Officer / SEO Head'
+    position: 'Chief Project Officer'
   },
   {
     alt: 'Bhabishya Bhatt',
