@@ -23,7 +23,7 @@ const boardOfDirectors = [
     src: '/Roshanara Mulla Khan.webp',
     alt: 'Roshanara Mulla Khan',
     name: 'Roshanara Mulla Khan',
-    position: 'CEO, Hyperce APAC'
+    position: 'COO, Hyperce APAC'
   }
 ];
 
