@@ -8,11 +8,14 @@ import {
 } from '@/data/Solutions';
 import { usePathname } from 'next/navigation';
 import { navMenuItems } from '@/data/Navdata';
+import { useProposal } from '@/lib/useDocumentLinks';
+
 
 export default function Hamburger(props: any) {
   const pathname = usePathname();
 
   const menu = navMenuItems;
+  const [proposalLink] = useProposal();
   const [menuOpen, setMenuOpen] = useState(false);
 
   function openMenu() {
@@ -199,7 +202,7 @@ export default function Hamburger(props: any) {
               </ul>
               <a
                 target="_blank"
-                href="https://docs.hyperce.io/proposal.pdf"
+                href={proposalLink}
                 className="mt-10"
               >
                 <button
