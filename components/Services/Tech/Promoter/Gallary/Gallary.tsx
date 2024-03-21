@@ -35,15 +35,16 @@ export default function PromoterGallaryComponent() {
           Check out our previous works.
         </span>
       </div>
-      {/* <div ref={ref} className="keen-slider">
+      <div ref={ref} className="keen-slider">
         {PromoterGallary.map((website) => (
-          <div className="keen-slider__slide">
+          <div className="keen-slider__slide" key={website.a_href}>
             <span className="flex justify-center mb-5 text-xl font-bold">
               {website.img_name}
             </span>
             <a target="_blank" href={website.a_href}>
               <Image
                 src={website.img_src}
+                className="w-full h-full object-cover"
                 alt="WebsiteDemo"
                 width={500}
                 height={200}
@@ -73,8 +74,8 @@ export default function PromoterGallaryComponent() {
             />
           </>
         )}
-      </div> */}
-      {PromoterGallary.map((website: any, index: number) => (
+      </div>
+      {/* {PromoterGallary.map((website: any, index: number) => (
         <div key={index} className="mx-auto">
           <span className="flex justify-center mb-5 text-xl font-bold">
             {website.img_name}
@@ -88,7 +89,7 @@ export default function PromoterGallaryComponent() {
             />
           </a>
         </div>
-      ))}
+      ))} */}
     </section>
   );
 }
