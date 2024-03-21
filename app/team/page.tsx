@@ -47,12 +47,12 @@ const executives = [
     position: 'CTO'
   },
   // TODO: add image for nikesh sir
-  // {
-  //   alt: 'Nikesh Singh',
-  //   name: 'Nikesh Singh',
-  //   src: '/teams/nikesh-singh.jpg',
-  //   position: 'CFO'
-  // },
+  {
+    alt: 'Nikesh Singh',
+    name: 'Nikesh Singh',
+    src: '/teams/nikesh-singh.jpg',
+    position: 'CFO'
+  },
   {
     alt: 'Saurabh Chalise',
     name: 'Saurabh Chalise',
@@ -145,6 +145,12 @@ const teamMembers = [
     name: 'Tasnuva Ferdush',
     src: '/teams/tasnuva-ferdush.jpg',
     position: 'Sales & Marketing Officer'
+  },
+  {
+    alt: 'Bibek Ghimire',
+    name: 'Bibek Ghimire',
+    src: '/teams/bibek-ghimire.jpg',
+    position: 'Flutter Developer'
   }
 ];
 
