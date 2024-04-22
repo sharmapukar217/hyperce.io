@@ -8,7 +8,8 @@ import { useEffect } from 'react';
 export default function AnimateWrapper({ children }: any) {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      disable: true,
+      duration: 0,
       once: false
     });
   }, []);

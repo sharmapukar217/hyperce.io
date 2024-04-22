@@ -12,7 +12,7 @@ export default function Message() {
               width="100%"
               height="100%"
               loading="lazy"
-              className="h-[60vh] object-cover w-full"
+              className="h-[60vh] object-scale-down w-full"
               src={founderData.imageUrl}
               alt=""
             />
