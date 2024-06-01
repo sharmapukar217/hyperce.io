@@ -15,7 +15,7 @@ export enum Domain {
 
 export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
   [Domain.HyperceUs]: {
-    officeName: 'Hyperce, LLC',
+    officeName: 'Hyperce',
     address:
       '800 N King Street Suite 304 1198 Wilmington, DE 19801 United States',
     email: 'hi@hyperce.io',
