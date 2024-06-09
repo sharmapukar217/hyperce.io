@@ -5,7 +5,7 @@ import { Domain } from '@/data/ContactDetailsData/OfficeMapping';
 
 export const useFounderData = () => {
   const [data, setData] = useState({
-    title: 'Founder & CEO, Hyperce.',
+    title: 'Founder, Hyperce.',
     founder: 'Biplab Karki',
     imageUrl: '/biplab.png',
     quote:
