@@ -1,4 +1,5 @@
-'use client';
+import { cn } from '@/lib/utils';
+import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
 
 type PersonInfoProps = {
@@ -8,6 +9,7 @@ type PersonInfoProps = {
   hideLinks?: boolean;
   facebookLink?: string;
   linkedInLink?: string;
+  animateBorder?: boolean;
 };
 
 const boardOfDirectors: Omit<PersonInfoProps, 'hideLinks'>[] = [
@@ -146,16 +148,25 @@ const PersonInfo = ({
   position,
   hideLinks,
   facebookLink,
-  linkedInLink
+  linkedInLink,
+  animateBorder
 }: PersonInfoProps) => {
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-      <div className="w-40 h-40 md:h-52 md:w-52 rounded-full flex overflow-hidden">
+      <div className="w-40 h-40 md:h-52 md:w-52 rounded-full flex overflow-hidden relative ">
+        {animateBorder && (
+          <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#357D8A_20deg,transparent_240deg)]"></div>
+        )}
+
         <img
           alt={name}
           src={imageUrl}
           draggable="false"
-          className="h-full w-full aspect-square  rounded-full hover:scale-110 transition-transform"
+          className={cn(
+            'p-1 z-10 h-full w-full aspect-square rounded-full',
+            !animateBorder &&
+              'hover:scale-110 transition-transform duration-500'
+          )}
         />
       </div>
 
@@ -236,7 +247,7 @@ export default function Page() {
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
               {boardOfDirectors.map((bod, idx) => (
-                <PersonInfo key={idx} {...bod} />
+                <PersonInfo key={idx} {...bod} animateBorder />
               ))}
             </div>
           </div>
@@ -265,6 +276,8 @@ export default function Page() {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     </div>
   );

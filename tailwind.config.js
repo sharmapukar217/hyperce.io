@@ -70,9 +70,14 @@ module.exports = {
         'loop-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' }
+        },
+        rotate: {
+          '0%': { transform: 'rotate(0deg) scale(10)' },
+          '100%': { transform: 'rotate(-360deg) scale(10)' }
         }
       },
       animation: {
+        rotate: 'rotate 10s linear infinite',
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'loop-scroll': 'loop-scroll 50s linear infinite'
