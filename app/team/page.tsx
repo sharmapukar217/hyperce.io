@@ -225,7 +225,7 @@ export default function Page() {
 
         <div className="fixed -z-50 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]"></div>
 
-        <div className="container py-8 px-10 md:px-20 grid justify-center text-center">
+        <div className="container py-8 md:px-20 grid justify-center text-center">
           <div className="space-y-1">
             <h1 className="text-[#357D8A] text-3xl md:text-5xl lg:text-6xl font-bold">
               Meet the Hyperce Team

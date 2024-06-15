@@ -13,11 +13,11 @@ export default function Footer() {
         </div>
         <div className="nav">
           <nav className="justify-center items-center">
-            <ul className="flex gap-10">
+            <ul className="flex gap-5 md:gap-10">
               {navMenuItems.map((menuItem) => (
                 <li
                   key={navMenuItems.indexOf(menuItem)}
-                  className="hover:scale-[105%] text-md transition-all duration-200  text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
+                  className="text-sm md:text-base font-medium text-md transition-all duration-200 text-gray-500 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
                 >
                   <a href={menuItem.href}>{menuItem.name}</a>
                 </li>
@@ -26,7 +26,7 @@ export default function Footer() {
           </nav>
         </div>
       </div>
-      <div className="border-[1px] w-[60%] dark:border-zinc-600 border-zinc-300 my-5"></div>
+      <div className="border-[1px] w-full md:w-[60%] dark:border-zinc-600 border-zinc-300 my-5"></div>
       <div>
         <span className="text-sm dark:text-zinc-400 text-zinc-600">
           © Copyright {new Date().getFullYear()} Hyperce | All rights reserved.{' '}
