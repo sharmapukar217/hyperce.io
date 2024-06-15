@@ -1,361 +1,271 @@
+'use client';
 import Navbar from '@/components/Navbar/Navbar';
 
-const boardOfDirectors = [
+type PersonInfoProps = {
+  name: string;
+  imageUrl: string;
+  position: string;
+  hideLinks?: boolean;
+  facebookLink?: string;
+  linkedInLink?: string;
+};
+
+const boardOfDirectors: Omit<PersonInfoProps, 'hideLinks'>[] = [
   {
-    src: '/biplab.png',
-    alt: 'Biplab Karki',
+    imageUrl: '/biplab.png',
     name: 'Biplab Karki',
     position: 'CEO'
   },
   {
-    src: '/Huw Davies.webp',
-    alt: 'Huw Davies',
+    imageUrl: '/Huw Davies.webp',
     name: 'Huw Davies',
     position: 'CEO, Hyperce UK'
   },
   {
-    src: '/Jawwad Aamer Khan.jpeg',
-    alt: 'Jawwad Aamer Khan',
+    imageUrl: '/Jawwad Aamer Khan.jpeg',
     name: 'Jawwad Aamer Khan',
     position: 'CEO, Hyperce APAC'
   },
   {
-    src: '/Roshanara Mulla Khan.webp',
-    alt: 'Roshanara Mulla Khan',
+    imageUrl: '/Roshanara Mulla Khan.webp',
     name: 'Roshanara Mulla Khan',
     position: 'COO, Hyperce APAC'
   }
 ];
 
-const executives = [
+const executives: Omit<PersonInfoProps, 'hideLinks'>[] = [
   {
-    alt: 'Gulab Miya',
     name: 'Gulab Miya',
-    src: '/teams/gulab-miya.jpg',
+    imageUrl: '/teams/gulab-miya.jpg',
     position: 'Chief HR Officer'
   },
   {
-    alt: 'Ujal Bhatta',
     name: 'Ujal Bhatta',
-    src: '/teams/ujal-bhatta.jpg',
+    imageUrl: '/teams/ujal-bhatta.jpg',
     position: 'COO'
   },
   {
-    alt: 'Rohan Poudel',
     name: 'Rohan Poudel',
-    src: '/teams/rohan-poudel.jpg',
+    imageUrl: '/teams/rohan-poudel.jpg',
     position: 'CTO'
   },
   // TODO: add image for nikesh sir
   {
-    alt: 'Nikesh Singh',
     name: 'Nikesh Singh',
-    src: '/teams/nikesh-singh.jpg',
+    imageUrl: '/teams/nikesh-singh.jpg',
     position: 'CFO'
   },
   {
-    alt: 'Saurabh Chalise',
     name: 'Saurabh Chalise',
-    src: '/teams/saurabh-chalise.jpg',
+    imageUrl: '/teams/saurabh-chalise.jpg',
     position: 'Chief Project Officer'
   },
   {
-    alt: 'Bhabishya Bhatt',
     name: 'Bhabishya Bhatt',
-    src: '/teams/bhabishya-bhatt.jpg',
+    imageUrl: '/teams/bhabishya-bhatt.jpg',
     position: 'Associate CTO'
   }
 ];
 
-const teamMembers = [
+const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
   {
-    alt: 'Ankit Poudel',
     name: 'Ankit Poudel',
-    src: '/teams/ankit-poudel.jpg',
+    imageUrl: '/teams/ankit-poudel.jpg',
     position: 'Full Stack Developer'
   },
   {
-    alt: 'Falguni Mandal',
+    name: 'Bibek Ghimire',
+    imageUrl: '/teams/bibek-ghimire.jpg',
+    position: 'Flutter Developer'
+  },
+  {
     name: 'Falguni Mandal',
-    src: '/teams/falguni-mandal.jpg',
+    imageUrl: '/teams/falguni-mandal.jpg',
     position: 'Graphics Designer'
   },
   {
-    alt: 'Prakash Poudel',
     name: 'Prakash Poudel',
-    src: '/teams/prakash-poudel.jpg',
+    imageUrl: '/teams/prakash-poudel.jpg',
     position: 'Frontend Developer'
   },
   {
-    alt: 'Pratikshya Poudel',
     name: 'Pratikshya Poudel',
-    src: '/teams/pratikshya-poudel.jpg',
+    imageUrl: '/teams/pratikshya-poudel.jpg',
     position: 'Backend Developer'
   },
   {
-    alt: 'Pukar Sharma',
     name: 'Pukar Sharma',
-    src: '/teams/pukar-sharma.jpg',
+    imageUrl: '/teams/pukar-sharma.jpg',
     position: 'Full Stack Developer'
   },
   {
-    alt: 'Ritika Bogati',
     name: 'Ritika Bogati',
-    src: '/teams/ritika-bogati.jpg',
+    imageUrl: '/teams/ritika-bogati.jpg',
     position: 'Content Writer'
   },
   {
-    alt: 'Sangam Ghimire',
     name: 'Sangam Ghimire',
-    src: '/teams/sangam-ghimire.jpg',
+    imageUrl: '/teams/sangam-ghimire.jpg',
     position: 'Junior Devops Engineer'
   },
   {
-    alt: 'Silson Sapkota',
     name: 'Silson Sapkota',
-    src: '/teams/silson-sapkota.jpg',
+    imageUrl: '/teams/silson-sapkota.jpg',
     position: 'Frontend Developer'
   },
   {
-    alt: 'Sonam Syangbo',
     name: 'Sonam Syangbo',
-    src: '/teams/sonam-syangbo.jpg',
+    imageUrl: '/teams/sonam-syangbo.jpg',
     position: 'UI/UX Designer'
   },
   {
-    alt: 'Sovit Kumar Karn',
     name: 'Sovit Kumar Karn',
-    src: '/teams/sovit-kumar-karn.jpg',
+    imageUrl: '/teams/sovit-kumar-karn.jpg',
     position: 'Accounting Officer'
   },
   {
-    alt: 'Subharaj Bhandari',
     name: 'Subharaj Bhandari',
-    src: '/teams/subharaj-bhandari.jpg',
+    imageUrl: '/teams/subharaj-bhandari.jpg',
     position: 'Backend Developer'
   },
   {
-    alt: 'Suruchi Gautam',
     name: 'Suruchi Gautam',
-    src: '/teams/suruchi-gautam.jpg',
+    imageUrl: '/teams/suruchi-gautam.jpg',
     position: 'Sales & Marketing Officer'
   },
   {
-    alt: 'Tasnuva Ferdush',
     name: 'Tasnuva Ferdush',
-    src: '/teams/tasnuva-ferdush.jpg',
+    imageUrl: '/teams/tasnuva-ferdush.jpg',
     position: 'Sales & Marketing Officer'
-  },
-  {
-    alt: 'Bibek Ghimire',
-    name: 'Bibek Ghimire',
-    src: '/teams/bibek-ghimire.jpg',
-    position: 'Flutter Developer'
   }
 ];
 
-export default function BOD() {
+const PersonInfo = ({
+  name,
+  imageUrl,
+  position,
+  hideLinks,
+  facebookLink,
+  linkedInLink
+}: PersonInfoProps) => {
   return (
-    <>
-      <Navbar />
-      <div className="py-10">
-        <div className="mx-auto px-4 md:w-10/12">
-          <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
-            Directors
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
-            {boardOfDirectors.map((bod, idx) => (
-              <div
-                key={idx}
-                className="relative max-w-none rounded-xl w-72 h-72 lg:h-96 lg:w-96 border-2 dark:border-gray-700 cursor-pointer shadow-md group overflow-clip mx-auto"
-              >
-                <img
-                  key={idx}
-                  loading="lazy"
-                  alt={bod.alt}
-                  src={bod.src}
-                  className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
-                />
-                <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
-                  <h1 className="font-semibold">
-                    {bod.name} - {bod.position}
-                  </h1>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mx-auto px-4 pt-10 md:w-10/12">
-          <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
-            Executive Directors
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
-            {executives.map((executive, idx) => (
-              <div
-                key={idx}
-                className="relative max-w-none rounded-xl w-72 h-72 lg:h-96 lg:w-96 border-2 dark:border-gray-700 cursor-pointer shadow-md group overflow-clip mx-auto"
-              >
-                <img
-                  key={idx}
-                  loading="lazy"
-                  alt={executive.alt}
-                  src={executive.src}
-                  className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
-                />
-                <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
-                  <h1 className="font-semibold">{executive.name}</h1>
-                  <p className="text-sm font-bold text-gray-500 dark:text-gray-300">
-                    {executive.position}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mx-auto px-4 pt-10 md:w-10/12">
-          <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
-            Core Members
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-y-8 2xl:gap-y-12 my-10">
-            {teamMembers.map((member, idx) => (
-              <div
-                key={idx}
-                className="relative max-w-none rounded-xl w-72 h-72 lg:h-96 lg:w-96 border-2 dark:border-gray-700 cursor-pointer shadow-md group overflow-clip mx-auto"
-              >
-                <img
-                  key={idx}
-                  loading="lazy"
-                  alt={member.alt}
-                  src={member.src}
-                  className="rounded-xl w-full h-full object-cover aspect-square group-hover:scale-110 transition duration-200 ease-in"
-                />
-                <div className="absolute bottom-0 w-full bg-white/80 dark:bg-black/60 rounded-b-xl flex flex-col justify-center px-4 py-4 border-t-2 dark:border-gray-700">
-                  <h1 className="font-semibold">{member.name}</h1>
-                  <p className="text-sm font-bold text-gray-500 dark:text-gray-300">
-                    {member.position}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* <div className="mx-auto md:w-3/5">
-          <h2 className="text-center text-3xl font-bold md:text-4xl lg:text-5xl text-[#357D8A]">
-            Core members
-          </h2>
-          <p className="mt-4 text-center font-semibold">
-            Aside from the board members, here&apos;s our core teams who
-            actively contribute on hyperce.
-          </p>
-
-          {members.map((member, idx) => (
-              <div
-                key={idx}
-                className="border-2 dark:border-gray-700 rounded-xl shaodw-sm group relative overflow-hidden"
-              >
-                <img
-                  className="rounded-xl aspect-auto h-full w-full group-hover:scale-125 transition-all duration-150 ease-in"
-                  src="https://source.unsplash.com/bYuI23mnmDQ"
-                />
-
-                <div className="absolute bg-white rounded-xl bottom-2 inset-x-2 border-2 py-2 px-3 dark:bg-gray-800 dark:border-gray-700">
-                  <h1 className="font-semibold">DEVELOPER NAME</h1>
-                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-300">
-                    POSITION
-                  </p>
-                </div>
-              </div>
-            ))} 
-
-          <div className="columns-1 gap-5 sm:columns-2 sm:gap-8 md:columns-3 lg:columns-4 [&>:not(:first-child)]:mt-8 mt-5">
-            {members.map((member, idx) => (
-              <div
-                key={idx}
-                className="border-2 dark:border-gray-700 rounded-xl shaodw-sm group relative overflow-hidden cursor-pointer"
-              >
-                <img
-                  className="rounded-xl aspect-auto h-full w-full group-hover:scale-125 transition-all duration-150 ease-in"
-                  src="https://source.unsplash.com/bYuI23mnmDQ"
-                />
-
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity ease-in duration-200 flex flex-col absolute bg-white rounded-xl bottom-1 inset-x-1 border-2 py-2 px-3 dark:bg-gray-800 dark:border-gray-700">
-                  <h1 className="font-semibold">DEVELOPER NAME</h1>
-                  <p className="text-xs font-semibold text-gray-500 dark:text-gray-300">
-                    POSITION
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        {/* <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
-          <div className="-m-1 flex flex-wrap md:-m-2">
-            <div className="flex w-1/2 flex-wrap">
-              {members.map((member, idx) => (
-                <div key={idx} className="w-1/2 p-1 md:p-2">
-                  <img
-                    alt="gallery"
-                    className="block h-full w-full rounded-lg object-cover object-center"
-                    src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
-                  />
-                </div>
-              ))}
-
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp"
-                />
-              </div>
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp"
-                />
-              </div>
-              <div className="w-full p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
-                />
-              </div>
-            </div>
-            <div className="flex w-1/2 flex-wrap">
-              <div className="w-full p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"
-                />
-              </div>
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"
-                />
-              </div>
-              <div className="w-1/2 p-1 md:p-2">
-                <img
-                  alt="gallery"
-                  className="block h-full w-full rounded-lg object-cover object-center"
-                  src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
+    <div className="flex flex-col items-center justify-center gap-4">
+      <div className="w-40 h-40 md:h-52 md:w-52 rounded-full flex overflow-hidden">
+        <img
+          alt={name}
+          src={imageUrl}
+          draggable="false"
+          className="h-full w-full aspect-square  rounded-full hover:scale-110 transition-transform"
+        />
       </div>
-    </>
+
+      <div>
+        <h3 className="text-md md:text-xl font-bold text-[#357D8A]">{name}</h3>
+        <small className="block font-medium text-sm md:text-base">
+          {position}
+        </small>
+
+        {hideLinks ? null : (
+          <div className="inline-flex items-center gap-4 pt-4 md:pt-6">
+            {facebookLink ? (
+              <a href={facebookLink} className="group outline-none">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white group-focus-visible:text-black dark:group-focus-visible:text-white transition-colors"
+                >
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                </svg>
+              </a>
+            ) : null}
+
+            {linkedInLink ? (
+              <a href={linkedInLink} className="group outline-none">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                  className="w-6 h-6 text-gray-600 dark:text-gray-400 group-hover:text-black dark:group-hover:text-white group-focus-visible:text-black dark:group-focus-visible:text-white transition-colors"
+                >
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+              </a>
+            ) : null}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default function Page() {
+  return (
+    <div className="fixed inset-0 select-none">
+      <div
+        className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-slate-900 bg-[size:6rem_4rem]
+      bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
+      dark:bg-[linear-gradient(to_right,rgb(30,41,59)_1px,transparent_1px),linear-gradient(to_bottom,rgb(30,41,59)_1px,transparent_1px)] overflow-auto
+       "
+      >
+        <Navbar className="!bg-transparent" />
+
+        <div className="fixed -z-50 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]"></div>
+
+        <div className="container py-8 px-10 md:px-20 grid justify-center text-center">
+          <div className="space-y-1">
+            <h1 className="text-[#357D8A] text-3xl md:text-5xl lg:text-6xl font-bold">
+              Meet the Hyperce Team
+            </h1>
+            <div>
+              <h2 className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-semibold">
+                Discover the tallent and dedication shaping our innovations.
+              </h2>
+              <h3 className="md:text-md lg:text-lg text-gray-600 dark:text-gray-400 font-medium">
+                Welcome to the core of the creativity.
+              </h3>
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Core Team
+            </h1>
+
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+              {boardOfDirectors.map((bod, idx) => (
+                <PersonInfo key={idx} {...bod} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Executive Directors
+            </h1>
+
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+              {executives.map((executiveMember, idx) => (
+                <PersonInfo key={idx} {...executiveMember} />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Team Members
+            </h1>
+
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+              {teamMembers.map((member, idx) => (
+                <PersonInfo key={idx} {...member} hideLinks />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

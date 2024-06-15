@@ -176,10 +176,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-      <script
-        async
-        src="https://preline.co/assets/vendor/preline/preline.js"
-      ></script>
     </section>
   );
 }

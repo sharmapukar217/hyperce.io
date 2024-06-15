@@ -27,7 +27,7 @@ export default function RootLayout({
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
-        ></Script>
+        />
 
         <Script strategy="beforeInteractive" id="gtag-loader">
           {`
@@ -89,16 +89,14 @@ export default function RootLayout({
         <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script>  
       */}
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
+        <PrelineScript />
+
         {children}
         <div className="dark:bg-[#02080F] bg-[#ebeeef]">
           <Footer />
         </div>
         <Toaster />
         <WhatsAppBtn />
-        <Script
-          src="https://cdn.jsdelivr.net/npm/preline@2.0.0/dist/preline.min.js"
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   );

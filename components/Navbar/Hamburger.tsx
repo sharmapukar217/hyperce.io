@@ -10,7 +10,6 @@ import { usePathname } from 'next/navigation';
 import { navMenuItems } from '@/data/Navdata';
 import { useProposal } from '@/lib/useDocumentLinks';
 
-
 export default function Hamburger(props: any) {
   const pathname = usePathname();
 
@@ -24,10 +23,6 @@ export default function Hamburger(props: any) {
   function closeMenu() {
     setMenuOpen(false);
   }
-
-  useEffect(() => {
-    require('preline');
-  }, []);
 
   return (
     <div className="lg:hidden">
@@ -200,11 +195,7 @@ export default function Hamburger(props: any) {
                   </div>
                 </div>
               </ul>
-              <a
-                target="_blank"
-                href={proposalLink}
-                className="mt-10"
-              >
+              <a target="_blank" href={proposalLink} className="mt-10">
                 <button
                   aria-label="proposal-download"
                   className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"

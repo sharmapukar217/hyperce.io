@@ -4,9 +4,8 @@ import DarkModeToggle from '../ThemeSwitch/DarkModeToggle';
 import HamburgerComponent from './Hamburger';
 import Logo from '@/utils/assets/Logo';
 import { navMenuItems } from '@/data/Navdata';
-
+import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
 
 import './Navbar.css';
 
@@ -17,7 +16,6 @@ import {
 } from '@/data/Solutions';
 
 import { ThemeProvider } from 'next-themes';
-import PrelineScript from '@/vendor/PrelineScript';
 
 import { EachProduct } from '../Platforms/Platforms';
 import { useProposal } from '@/lib/useDocumentLinks';
@@ -37,17 +35,13 @@ const PlatformsData = [
   }
 ];
 
-export default function Navbar() {
+export default function Navbar(props: any) {
   const pathname = usePathname();
   const [proposalLink] = useProposal();
 
-  useEffect(() => {
-    require('preline');
-  }, []);
-
   return (
     <ThemeProvider defaultTheme="dark" attribute="class">
-      <header className={`dark:bg-slate-900 w-full`}>
+      <header className={cn('dark:bg-slate-900 w-full', props.className)}>
         <div className="flex items-center justify-between gap-5 md:gap-0 container py-8 px-10 md:px-20 z-50">
           <div className="logo">
             <Logo />
@@ -130,7 +124,6 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-      <PrelineScript />
     </ThemeProvider>
   );
 }
