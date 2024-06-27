@@ -2,7 +2,7 @@ import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
 
 export default function Page() {
-  const date = new Date(2024, 6, 26);
+  const date = new Date(2024, 5, 26); // even month starts from 0 ( LOL )
 
   return (
     <div className="fixed inset-0 select-none">
