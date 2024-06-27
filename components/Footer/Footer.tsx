@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import Logo from '@/utils/assets/Logo';
 import { navMenuItems } from '@/data/Navdata';
 import { useLinkedInUrl } from '@/lib/useDocumentLinks';
@@ -19,9 +20,13 @@ export default function Footer() {
                   key={navMenuItems.indexOf(menuItem)}
                   className="text-sm md:text-base font-medium text-md transition-all duration-200 text-gray-500 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]"
                 >
-                  <a href={menuItem.href}>{menuItem.name}</a>
+                  <Link href={menuItem.href}>{menuItem.name}</Link>
                 </li>
               ))}
+
+              <li className="text-sm md:text-base font-medium text-md transition-all duration-200 text-gray-500 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]">
+                <Link href="/privacy-policy">Privacy Policy</Link>
+              </li>
             </ul>
           </nav>
         </div>
