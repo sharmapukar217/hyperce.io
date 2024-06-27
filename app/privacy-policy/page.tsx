@@ -16,12 +16,12 @@ export default function Page() {
 
         <div className="fixed -z-50 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]"></div>
 
-        <div className="container py-8 md:px-20 grid text-justify md:justify-center">
-          <div className="md:text-center">
-            <h1 className="text-xl md:text-3xl font-medium text-center font-mono">
+        <div className="container py-8 md:px-20 grid text-justify lg:justify-center">
+          <div className="lg:text-center font-mono">
+            <h1 className="text-xl md:text-3xl font-medium">
               Hyperce.io Privacy Policy
             </h1>
-            <h2 className="text-lg text-gray-700 dark:text-gray-300 font-mono">
+            <h2 className="text-base md:text-lg text-gray-700 dark:text-gray-300">
               Effective from {date.toLocaleDateString()}
             </h2>
           </div>
