@@ -117,7 +117,7 @@ export default function ContactForm() {
             <p className="text-lg mb-8">
               Kickstart your transformation. Turn your initial sketches into
               fully-fledged solutions. Adapt and innovate to stay competitive in
-              today&apso;s market.
+              today&apos;s market.
             </p>
             <p className="text-lg mb-8">
               We combine the agility of a startup with the robust quality and
