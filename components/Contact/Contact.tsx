@@ -47,11 +47,11 @@ type EachOfficeProps = {
 };
 function EachOffice({ contactAddressDetails }: EachOfficeProps) {
   return (
-    <div className="flex flex-col gap-7">
-      <span className="country text-2xl flex justify-start font-semibold">
+    <div className="flex flex-col gap-7 ">
+      <span className="country text-base flex justify-start font-semibold">
         {contactAddressDetails.country}
       </span>
-      <div className="flex gap-1 flex-col mt-4">
+      <div className="flex gap-1 flex-col -mt-4">
         <div className="registrar flex gap-3">
           <div className="icon justify-center w-5 flex items-center">
             <svg
@@ -163,6 +163,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
             </span>
           </div>
         </a>
+        <hr className="mt-6 text-blue-950" />
       </div>
     </div>
   );
