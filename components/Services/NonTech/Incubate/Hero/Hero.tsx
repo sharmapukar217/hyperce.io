@@ -10,6 +10,7 @@ export default function Hero() {
               className="h-[100px] mb-5 w-auto dark:hidden"
               src="/incubate.png"
               alt="Hyperce Incubate Logo"
+              height={300}
               width={400}
             />
             <Image
@@ -17,6 +18,7 @@ export default function Hero() {
               src="/incubate-dark.svg"
               alt="Hyperce Incubate Logo"
               width={400}
+              height={300}
             />
             <span className="text-4xl md:text-7xl font-bold">
               Hyperce Incubate
@@ -32,7 +34,7 @@ export default function Hero() {
               support.
             </p>
             <div className="flex gap-5 mt-10">
-              <a
+              {/* <a
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 href="#learnmore"
               >
@@ -51,11 +53,11 @@ export default function Hero() {
                     strokeLinecap="round"
                   />
                 </svg>
-              </a>
+              </a> */}
 
               <a
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-purple-800 to-[#7D357D] shadow-lg shadow-transparent hover:shadow-purple-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
-                href="#apply"
+                href="#contact"
               >
                 Apply Now
                 <svg

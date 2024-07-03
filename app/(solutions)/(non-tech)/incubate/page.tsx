@@ -1,3 +1,4 @@
+import Contact from '@/components/Contact/Contact';
 import Navbar from '@/components/Navbar/Navbar';
 import FAQ from '@/components/Services/NonTech/Incubate/FAQ/FAQ';
 import Hero from '@/components/Services/NonTech/Incubate/Hero/Hero';
@@ -36,6 +37,7 @@ export default function Services() {
       <WhyChoose />
       <FAQ />
       <OurIncubatees />
+      <Contact />
     </div>
   );
 }
