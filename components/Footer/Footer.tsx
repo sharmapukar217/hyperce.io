@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Logo from '@/utils/assets/Logo';
 import { navMenuItems } from '@/data/Navdata';
 import { useLinkedInUrl } from '@/lib/useDocumentLinks';
+import { FaFacebookF } from 'react-icons/fa6';
+import { FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   const [linkedinUrl] = useLinkedInUrl();
@@ -60,6 +62,20 @@ export default function Footer() {
               </g>
             </g>
           </svg>
+        </a>
+        <a
+          className="ms-2 inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+          href={'https://www.facebook.com/hyperce'}
+          target="_blank"
+        >
+          <FaFacebookF />
+        </a>
+        <a
+          className="ms-2 inline-flex justify-center items-center w-10 h-10 text-center text-gray-500 hover:bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition dark:text-gray-500 dark:hover:text-gray-200 dark:hover:bg-gray-800"
+          href={'https://www.instagram.com/hyperce_io/'}
+          target="_blank"
+        >
+          <FaInstagram />
         </a>
       </div>
     </footer>
