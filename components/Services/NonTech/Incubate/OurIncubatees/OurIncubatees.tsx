@@ -24,20 +24,20 @@ export default function OurIncubatees() {
   ];
 
   return (
-    <section className="text-black dark:text-white py-20 bg-white dark:bg-gray-800">
+    <section className="text-black dark:text-white pt-20 pb-12 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-10 md:px-20">
         <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center">
           Our Incubatees
         </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 overflow-hidden">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 pb-12 overflow-hidden">
           {incubatees.map((incubatee, index) => (
             <a
               key={index}
               href={incubatee.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg flex flex-col items-center text-center w-full md:w-1/3 transition-transform transform hover:scale-105 shadow-lg shadow-blue-400
-              hover:shadow-xl hover:shadow-blue-500"
+              className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg flex flex-col items-center text-center w-full md:w-1/3 transition-transform transform hover:scale-105 shadow-sm shadow-blue-400
+              hover:shadow-lg hover:shadow-blue-500"
             >
               <Image
                 src={incubatee.image}
