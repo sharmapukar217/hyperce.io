@@ -6,19 +6,19 @@ export default function OurIncubatees() {
     {
       name: 'LogicLand',
       url: 'https://logicland.net',
-      image: '/incubate/logiclandScreenshot.jpg',
+      image: '/incubate/LogicLand.png',
       description: "Building Tomorrow's Innovators Today."
     },
     {
       name: 'WedGlam',
       url: 'https://wedglam.co',
-      image: '/1.png',
+      image: '/incubate/wedglam.png',
       description: 'Glamorous wedding planning services.'
     },
     {
       name: 'OnBlockIT',
       url: 'https://onblockit.com',
-      image: '/2.png',
+      image: '/incubate/onblockit.png',
       description: 'Cutting-edge blockchain IT solutions.'
     }
   ];
@@ -42,9 +42,9 @@ export default function OurIncubatees() {
               <Image
                 src={incubatee.image}
                 alt={`${incubatee.name} logo`}
-                className=" h-96 w-96 mb-3 hover:scale-110 overflow-hidden rounded-xl border border-green-500"
-                width={500}
-                height={500}
+                className=" hover:scale-110 mb-4 object-contain overflow-hidden rounded-xl "
+                width={600}
+                height={200}
               />
               <h3 className="text-xl font-semibold mb-2">{incubatee.name}</h3>
               <p className="text-sm mb-3">{incubatee.description}</p>
