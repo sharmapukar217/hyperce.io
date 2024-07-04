@@ -13,13 +13,13 @@ export default function OurIncubatees() {
       name: 'WedGlam',
       url: 'https://wedglam.co',
       image: '/incubate/wedglam.png',
-      description: 'Glamorous wedding planning services.'
+      description: 'One stop wedding dress marketplace.'
     },
     {
       name: 'OnBlockIT',
       url: 'https://onblockit.com',
       image: '/incubate/onblockit.png',
-      description: 'Cutting-edge blockchain IT solutions.'
+      description: 'Your Linkedin Growth Agency'
     }
   ];
 
