@@ -8,12 +8,12 @@ export default function Hero() {
           <div className="flex flex-col items-center text-black dark:text-white gap-2 justify-center">
             <Image
               className=" object-contain hidden dark:block"
-              src="/incubate/incubate-logo2.png"
+              src="/incubate/Incubate.png"
               alt="Hyperce Incubate Logo"
-              width={400}
-              height={300}
+              width={300}
+              height={200}
             />
-            <span className="text-4xl md:text-7xl font-bold -mt-12">
+            <span className="text-4xl md:text-7xl font-bold mt-10">
               Hyperce Incubate
             </span>
             <br />
