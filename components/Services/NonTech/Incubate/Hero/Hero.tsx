@@ -13,6 +13,13 @@ export default function Hero() {
               width={300}
               height={200}
             />
+            <Image
+              className=" object-contain dark:hidden"
+              src="/incubate/Incubate.png"
+              alt="Hyperce Incubate Logo"
+              width={300}
+              height={200}
+            />
             <span className="text-4xl md:text-7xl font-bold mt-10">
               Hyperce Incubate
             </span>
