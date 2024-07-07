@@ -108,30 +108,6 @@ export default function ContactForm() {
 
           <div id="result" className="mt-3 text-center"></div>
         </form>
-
-        {/* Cards Design */}
-        <div className="bg-gradient-to-r from-[#020817] via-gray-600 to-[#020817] mt-12 text-white py-16 shadow-lg shadow-blue-400">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <FaRocket className="text-[#3c9fb1] text-6xl mx-auto mb-4 animate-bounce " />
-            <h1 className="text-4xl font-bold mb-4">Get Started with Us</h1>
-            <p className="text-lg mb-8">
-              Kickstart your transformation. Turn your initial sketches into
-              fully-fledged solutions. Adapt and innovate to stay competitive in
-              today&apos;s market.
-            </p>
-            <p className="text-lg mb-8">
-              We combine the agility of a startup with the robust quality and
-              scalability of an enterprise. Reach out to learn more and
-              let&apos;s build something great together.
-            </p>
-            <Link href="#contact" className="">
-              <span className="inline-block bg-[#357D8A] hover:bg-[#194b53] text-white font-bold py-2 px-4 rounded transition-colors duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-300">
-                Get Started{' '}
-                <FaHandshake className="inline-block ml-2 text-4xl " />
-              </span>
-            </Link>
-          </div>
-        </div>
       </div>
     </>
   );

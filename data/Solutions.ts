@@ -218,6 +218,16 @@ export const allNonTechServices = [
     },
     description:
       'Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. '
+  },
+  {
+    title: 'Hyperce Incubate',
+    href: '/incubate',
+    icon: {
+      dark: '/incubate/Incubate.png',
+      light: '/incubate/Incubate.png'
+    },
+    description:
+      'Hyperce Incubate offers full support for small and startup businesses, including mentorship, networking, funding, and business support. '
   }
 ];
 
