@@ -7,11 +7,11 @@ export default function Events() {
       className="container mx-auto px-10 py-20 text-black dark:text-white"
       id="learnmore"
     >
-      <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
+      <div className="flex flex-col items-center text-center md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
         <p className="leading-wide text-2xl font-extrabold ">
           Hyperce Events: Your Premier Corporate Event Provider
         </p>
-        <p className="w-2/3 text-base text-justify">
+        <p className="w-2/3  text-xl sm:text-base text-center">
           At Hyperce Events, we specialize in creating extraordinary corporate
           events tailored to meet your business objectives. From meticulous
           planning to flawless execution, we ensure your events are memorable
@@ -28,8 +28,10 @@ export default function Events() {
             creativity. Our team of experienced professionals works closely with
             you to understand your vision and bring it to life.
           </p>
-          <p className="text-justify">
-            <span className="font-bold text-center">Our Mission</span>
+          <p className=" text-justify">
+            <span className="font-bold text-center inline-block mb-6">
+              Our Mission
+            </span>
             <br />
             Our mission is to provide comprehensive event management solutions
             that drive engagement and deliver measurable results. We offer a
