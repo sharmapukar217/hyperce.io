@@ -8,12 +8,12 @@ export default function Hero() {
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
             <img
               className="h-[120px] w-auto rounded-full hidden dark:block"
-              src="/services_logos/events/events_logo_light.jpeg"
+              src="/services_logos/events/HyperceEvents.jpg"
               alt="Hyperce Events Logo"
             />
             <img
               className="h-[120px] w-auto rounded-full dark:hidden"
-              src="/services_logos/events/events_logo_light.jpeg"
+              src="/services_logos/events/HyperceEvents.jpg"
               alt="Hyperce Events Logo"
             />
             <span className="text-4xl md:text-7xl font-bold mt-10">
