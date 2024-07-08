@@ -228,6 +228,16 @@ export const allNonTechServices = [
     },
     description:
       'Hyperce Incubate offers full support for small and startup businesses, including mentorship, networking, funding, and business support. '
+  },
+  {
+    title: 'Hyperce Events',
+    href: '/events',
+    icon: {
+      dark: '/incubate/Incubate.png',
+      light: '/incubate/Incubate.png'
+    },
+    description:
+      'Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event&apos;s success .'
   }
 ];
 
