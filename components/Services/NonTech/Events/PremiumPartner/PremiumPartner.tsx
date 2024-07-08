@@ -5,6 +5,7 @@ import {
   FaHeadset,
   FaExternalLinkAlt
 } from 'react-icons/fa';
+import { AiFillHome } from 'react-icons/ai';
 import Card from './Card';
 
 export default function PremiumPartner() {
@@ -12,6 +13,12 @@ export default function PremiumPartner() {
     <section className="mx-auto container text-black dark:text-white mb-20 px-10">
       <div className="bg-gray-200 dark:bg-gradient-to-r from-[#101525] to-[#212642] md:px-10 rounded-3xl pt-16">
         <div className="flex items-center flex-col gap-5">
+          <div className="flex items-center justify-center mb-5">
+            <AiFillHome
+              size={60}
+              className="text-blue-600 dark:text-blue-300"
+            />
+          </div>
           <span className="text-2xl md:text-4xl font-bold text-center px-6">
             Premium Corporate Ticketing Platform
           </span>
@@ -19,7 +26,8 @@ export default function PremiumPartner() {
             Discover the ultimate solution for corporate ticketing with
             Eventsize. Our platform ensures seamless booking, management, and
             tracking of corporate events. Elevate your corporate events with a
-            premium ticketing partner that you can trust.
+            premium global ticketing partner, which Hyperce officially is a
+            part, that you can trust.
           </p>
           <a
             href="https://eventsize.com/"
