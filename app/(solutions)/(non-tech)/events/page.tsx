@@ -6,7 +6,7 @@ import Events from '@/components/Services/NonTech/Events/Events/Events';
 import WhyChoose from '@/components/Services/NonTech/Events/WhyChoose/WhyChoose';
 import PremiumPartner from '@/components/Services/NonTech/Events/PremiumPartner/PremiumPartner';
 import Image from 'next/image';
-import QaBg from '@/public/services_logos/events/eventsBG.jpg';
+import eventsBg from '@/public/services_logos/events/eventsBG.jpg';
 
 export const metadata: Metadata = {
   title: 'Hyperce Incubate | Best Ecommerce Suite Solution',
@@ -21,7 +21,7 @@ export default function Services() {
         <div>
           <Image
             className="opacity-[80%] dark:opacity-30 bg-white"
-            src={QaBg}
+            src={eventsBg}
             alt="HeadlessBg"
             layout="fill"
             objectFit="cover"

@@ -7,18 +7,24 @@ import {
 } from 'react-icons/fa';
 import { AiFillHome } from 'react-icons/ai';
 import Card from './Card';
+import Image from 'next/image';
+import EventSize from '@/public/services_logos/events/EventSize.png';
+import Link from 'next/link';
 
 export default function PremiumPartner() {
   return (
     <section className="mx-auto container text-black dark:text-white mb-20 px-10">
       <div className="bg-gray-200 dark:bg-gradient-to-r from-[#101525] to-[#212642] md:px-10 rounded-3xl pt-16">
         <div className="flex items-center flex-col gap-5">
-          <div className="flex items-center justify-center mb-5">
-            <AiFillHome
-              size={60}
-              className="text-blue-600 dark:text-blue-300"
+          <Link href="https://eventsize.com/">
+            <Image
+              className="flex items-center justify-center mb-5"
+              alt="eventsize"
+              width={80}
+              src={EventSize}
             />
-          </div>
+          </Link>
+
           <span className="text-2xl md:text-4xl font-bold text-center px-6">
             Premium Corporate Ticketing Platform
           </span>
