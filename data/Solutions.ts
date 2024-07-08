@@ -223,7 +223,7 @@ export const allNonTechServices = [
     title: 'Hyperce Incubate',
     href: '/incubate',
     icon: {
-      dark: '/incubate/Incubate.png',
+      dark: '/incubate/incubate1.png',
       light: '/incubate/Incubate.png'
     },
     description:
@@ -233,8 +233,8 @@ export const allNonTechServices = [
     title: 'Hyperce Events',
     href: '/events',
     icon: {
-      dark: '/incubate/Incubate.png',
-      light: '/incubate/Incubate.png'
+      dark: '/services_logos/events/HyperceEvents.jpg',
+      light: '/services_logos/events/HyperceEvents.jpg'
     },
     description:
       'Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event&apos;s success .'
