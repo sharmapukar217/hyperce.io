@@ -8,7 +8,7 @@ export default function Events() {
       id="learnmore"
     >
       <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
-        <p className="leading-wide text-2xl font-extrabold text-justify">
+        <p className="leading-wide text-2xl font-extrabold ">
           Hyperce Events: Your Premier Corporate Event Provider
         </p>
         <p className="w-2/3 text-base text-justify">
@@ -28,8 +28,8 @@ export default function Events() {
             creativity. Our team of experienced professionals works closely with
             you to understand your vision and bring it to life.
           </p>
-          <p className="text-center">
-            <span className="font-bold">Our Mission</span>
+          <p className="text-justify">
+            <span className="font-bold text-center">Our Mission</span>
             <br />
             Our mission is to provide comprehensive event management solutions
             that drive engagement and deliver measurable results. We offer a
