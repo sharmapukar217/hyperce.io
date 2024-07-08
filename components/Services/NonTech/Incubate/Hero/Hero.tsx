@@ -7,11 +7,11 @@ export default function Hero() {
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-10 rounded-3xl">
           <div className="flex flex-col items-center text-black dark:text-white gap-2 justify-center">
             <Image
-              className=" object-contain hidden dark:block"
-              src="/incubate/Incubate.png"
+              className="  h-[120px]  w-auto rounded-full hidden dark:block"
+              src="/incubate/incubate2.jpg"
               alt="Hyperce Incubate Logo"
-              width={300}
-              height={200}
+              width={100}
+              height={80}
             />
             <Image
               className=" object-contain dark:hidden"
