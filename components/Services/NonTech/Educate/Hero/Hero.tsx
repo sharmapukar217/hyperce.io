@@ -7,15 +7,19 @@ export default function HeroEducate() {
       <div className="w-full">
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
-            <img
-              className="h-[120px] w-auto rounded-full hidden dark:block"
-              src="/services_logos/educate/HyperceEducate.jpg"
+            <Image
+              className="h-[120px] object-contain rounded-full hidden dark:block"
+              src="/services_logos/educate/HyperceEducate.png"
               alt="Hyperce Educate Logo"
+              width={120}
+              height={120}
             />
-            <img
-              className="h-[120px] w-auto rounded-full dark:hidden"
-              src="/services_logos/educate/HyperceEducate.jpg"
+            <Image
+              className=" object-contain rounded-full dark:hidden"
+              src="/services_logos/educate/HyperceEducate.png"
               alt="Hyperce Educate Logo"
+              width={120}
+              height={120}
             />
             <FaGraduationCap className="text-6xl md:text-8xl mt-5" />
             <span className="text-4xl md:text-7xl font-bold mt-5">

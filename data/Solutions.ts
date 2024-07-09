@@ -238,6 +238,16 @@ export const allNonTechServices = [
     },
     description:
       'Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event&apos;s success .'
+  },
+  {
+    title: 'Hyperce Educate',
+    href: '/educate',
+    icon: {
+      dark: '/services_logos/educate/HyperceEducate.png',
+      light: '/services_logos/educate/HyperceEducate.png'
+    },
+    description:
+      'Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event&apos;s success .'
   }
 ];
 

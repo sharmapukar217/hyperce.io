@@ -6,15 +6,19 @@ export default function Hero() {
       <div className="w-full">
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
-            <img
-              className="h-[120px] w-auto rounded-full hidden dark:block"
+            <Image
+              className=" w-auto rounded-full hidden dark:block"
               src="/services_logos/events/HyperceEvents.jpg"
               alt="Hyperce Events Logo"
+              width={120}
+              height={120}
             />
-            <img
-              className="h-[120px] w-auto rounded-full dark:hidden"
+            <Image
+              className=" w-auto rounded-full dark:hidden"
               src="/services_logos/events/HyperceEvents.jpg"
               alt="Hyperce Events Logo"
+              width={120}
+              height={120}
             />
             <span className="text-4xl md:text-7xl font-bold mt-10">
               Hyperce Events
