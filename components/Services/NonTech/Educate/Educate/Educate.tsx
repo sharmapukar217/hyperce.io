@@ -9,7 +9,7 @@ import { GiTeacher } from 'react-icons/gi';
 export default function Educate() {
   return (
     <section
-      className="container mx-auto px-10 py-20 text-black dark:text-white"
+      className="container mx-auto px-10 pt-6 pb-20 text-black dark:text-white"
       id="learnmore"
     >
       <div className="flex flex-col items-center text-center md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
