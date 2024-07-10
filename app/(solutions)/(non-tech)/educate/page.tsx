@@ -1,15 +1,14 @@
 import { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Contact from '@/components/Contact/Contact';
-import HeroEvents from '@/components/Services/NonTech/Events/Hero/Hero';
-import Events from '@/components/Services/NonTech/Events/Events/Events';
-import WhyChoose from '@/components/Services/NonTech/Events/WhyChoose/WhyChoose';
-import PremiumPartner from '@/components/Services/NonTech/Events/PremiumPartner/PremiumPartner';
+import HeroEducate from '@/components/Services/NonTech/Educate/Hero/Hero';
+import Educate from '@/components/Services/NonTech/Educate/Educate/Educate';
+import WhyChooseEducate from '@/components/Services/NonTech/Educate/WhyChooseEducate/WhyChooseEducate';
 import Image from 'next/image';
-import eventsBg from '@/public/services_logos/events/eventsBG.jpg';
+import EducateBG from '@/public/services_logos/educate/EducateBG.jpg';
 
 export const metadata: Metadata = {
-  title: 'Hyperce Events | Best Ecommerce Suite Solution',
+  title: 'Hyperce Educate | Best Ecommerce Suite Solution',
   description:
     "Hyperce Ecommerce Solution helps to strategize, execute, and amplify your brand's reach. Transform Your Business with Expert Marketing Solutions Today! So Hurry up and give us a call."
 };
@@ -21,7 +20,7 @@ export default function Services() {
         <div>
           <Image
             className="opacity-[80%] dark:opacity-30 bg-white"
-            src={eventsBg}
+            src={EducateBG}
             alt="HeadlessBg"
             layout="fill"
             objectFit="cover"
@@ -31,12 +30,11 @@ export default function Services() {
           <Navbar />
         </div>
         <div className="h-max w-[100vw]">
-          <HeroEvents />
+          <HeroEducate />
         </div>
       </main>
-      <Events />
-      <WhyChoose />
-      <PremiumPartner />
+      <Educate />
+      <WhyChooseEducate />
 
       <Contact />
     </div>

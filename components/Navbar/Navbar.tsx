@@ -19,6 +19,7 @@ import { ThemeProvider } from 'next-themes';
 
 import { EachProduct } from '../Platforms/Platforms';
 import { useProposal } from '@/lib/useDocumentLinks';
+import Link from 'next/link';
 
 const PlatformsData = [
   {
@@ -58,12 +59,12 @@ export default function Navbar(props: any) {
                       : 'text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]'
                   }`}
                 >
-                  <a
+                  <Link
                     className="font-semibold hover:dark:text-[#357D8A]"
                     href={menuItem.href}
                   >
                     {menuItem.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <SolutionsMegaMenu />
@@ -71,7 +72,7 @@ export default function Navbar(props: any) {
           </nav>
           <div className="flex gap-10 items-center">
             <div className="cta gap-5 hidden md:flex">
-              <a href={proposalLink} target="_blank">
+              <Link href={proposalLink}>
                 <button
                   aria-label="proposal-download"
                   className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
@@ -102,15 +103,15 @@ export default function Navbar(props: any) {
                   </div>
                   <span className="text-base font-bold">Proposal</span>
                 </button>
-              </a>
-              <a href="/#contact">
+              </Link>
+              <Link href="/#contact">
                 <button
                   aria-label="quotation"
                   className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-300 rounded-full font-extralight dark:bg-transparent bg-[#1f2937] text-[#fff] hover:scale-[105%] active:scale-[95%]"
                 >
                   <span className="text-base font-bold">Quotation</span>
                 </button>
-              </a>
+              </Link>
             </div>
 
             <div className="flex items-center gap-5">

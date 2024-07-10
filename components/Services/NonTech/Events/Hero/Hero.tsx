@@ -2,19 +2,23 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="text-black dark:text-white flex flex-col pt-0 pb-20 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
+    <section className="text-black dark:text-white flex flex-col pt-0 pb-6 mt-10 lg:flex-row items-center gap-10 px-10 md:px-20 mx-auto container text-center justify-center">
       <div className="w-full">
         <div className="relative bg-white bg-opacity-50 dark:bg-transparent py-10 md:py-20 mt-20 rounded-3xl">
           <div className="flex flex-col text-black dark:text-white items-center gap-2 justify-center">
-            <img
-              className="h-[120px] w-auto rounded-full hidden dark:block"
+            <Image
+              className=" w-auto rounded-full hidden dark:block"
               src="/services_logos/events/HyperceEvents.jpg"
               alt="Hyperce Events Logo"
+              width={120}
+              height={120}
             />
-            <img
-              className="h-[120px] w-auto rounded-full dark:hidden"
+            <Image
+              className=" w-auto rounded-full dark:hidden"
               src="/services_logos/events/HyperceEvents.jpg"
               alt="Hyperce Events Logo"
+              width={120}
+              height={120}
             />
             <span className="text-4xl md:text-7xl font-bold mt-10">
               Hyperce Events
