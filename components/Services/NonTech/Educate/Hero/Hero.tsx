@@ -22,7 +22,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, children }) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center overflow-y-auto z-50">
       <div
         className="bg-white shadow-2xl shadow-black hover:shadow-blue-400 bg-opacity-90 p-8 rounded-lg relative 
-      mt-[850px] sm:mt-96 md:mt-96 lg:mt-96 w-11/12 md:w-3/4 lg:w-1/2 z-50 text-orange-500   "
+      mt-[900px] sm:mt-96 md:mt-96 lg:mt-96 w-11/12 md:w-3/4 lg:w-1/2 z-50 text-orange-500   "
       >
         <button
           onClick={onClose}
