@@ -23,9 +23,9 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, children }) => {
       <div className="bg-white shadow-2xl shadow-black hover:shadow-blue-400 bg-opacity-90 p-8 rounded-lg relative w-11/12 md:w-3/4 lg:w-1/2 mt-80 z-50 text-orange-500">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 dark:text-gray-300 "
+          className="absolute top-4 right-4 bg-orange-500 rounded-full"
         >
-          <FaTimes size={24} className="text-green-600" />
+          <FaTimes size={24} className="text-gray-100" />
         </button>
         {children}
       </div>
@@ -95,7 +95,7 @@ export default function HeroEducate() {
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-yellow-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-yellow-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 onClick={handleModalToggle}
               >
-                Our Sample Programs
+                Our Sample Program
                 <FaBook className="w-4 h-4" />
               </button>
             </div>
@@ -103,14 +103,14 @@ export default function HeroEducate() {
         </div>
       </div>
 
-      {/*  */}
+      {/* Modal */}
       <Modal show={showModal} onClose={handleModalToggle}>
-        <h2 className="text-3xl font-bold mb-6 text-center text-green-900">
-          Our Programs
+        <h2 className="text-3xl font-bold mb-6 text-center text-green-800">
+          Our Sample Program
         </h2>
         <div className="text-left">
           <h3 className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 flex items-center gap-2">
-            <FaShoppingCart className="text-purple-600" />
+            <FaShoppingCart className="text-purple-500" />
             Module 1: Foundation of E-commerce
           </h3>
           <ul className="list-disc ml-6 mb-6 text-green-900">
@@ -129,7 +129,7 @@ export default function HeroEducate() {
             </li>
           </ul>
           <h3 className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 flex items-center gap-2">
-            <FaDigitalTachograph className="text-green-700" />
+            <FaDigitalTachograph className="text-green-600" />
             Module 2: Digital Entrepreneurship Essentials
           </h3>
           <ul className="list-disc ml-6 mb-6 text-green-900">
@@ -152,7 +152,7 @@ export default function HeroEducate() {
             <li>Practical sessions regarding email marketing</li>
           </ul>
           <h3 className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 flex items-center gap-2">
-            <FaChartLine className="text-green-700" />
+            <FaChartLine className="text-blue-500" />
             Module 3: Advanced Strategies and Analytics
           </h3>
           <ul className="list-disc ml-6 text-green-900">
