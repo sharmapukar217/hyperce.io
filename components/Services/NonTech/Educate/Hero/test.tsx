@@ -1,13 +1,6 @@
 'use client';
 import { useState, ReactNode } from 'react';
-import {
-  FaBook,
-  FaGraduationCap,
-  FaTimes,
-  FaShoppingCart,
-  FaDigitalTachograph,
-  FaChartLine
-} from 'react-icons/fa';
+import { FaBook, FaGraduationCap, FaTimes } from 'react-icons/fa';
 import Image from 'next/image';
 
 interface ModalProps {
@@ -20,10 +13,10 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, children }) => {
   if (!show) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center overflow-y-auto z-50">
-      <div className="bg-white shadow-2xl shadow-black hover:shadow-blue-400 bg-opacity-90 p-8 rounded-lg relative w-11/12 md:w-3/4 lg:w-1/2 z-50 text-orange-500  mt-96 sm:mt-96 ">
+      <div className="bg-white shadow-2xl shadow-black hover:shadow-blue-400 bg-opacity-90 p-8 rounded-lg relative w-11/12 md:w-3/4 lg:w-1/2 transform -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2 z-50 text-orange-500">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 bg-orange-500 rounded-full"
+          className="absolute top-4 right-4 bg-orange-500 rounded-full shadow-2xl shadow-black hover:shadow-black"
         >
           <FaTimes size={24} className="text-gray-100" />
         </button>
@@ -95,7 +88,7 @@ export default function HeroEducate() {
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-yellow-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-yellow-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 onClick={handleModalToggle}
               >
-                Our Sample Program
+                Our Sample Programs
                 <FaBook className="w-4 h-4" />
               </button>
             </div>
@@ -103,17 +96,13 @@ export default function HeroEducate() {
         </div>
       </div>
 
-      {/* Modal */}
       <Modal show={showModal} onClose={handleModalToggle}>
-        <h2 className="text-3xl font-bold mb-6 text-center text-green-800">
-          Our Sample Program
-        </h2>
+        <h2 className="text-2xl font-bold mb-4">Our Programs</h2>
         <div className="text-left">
-          <h3 className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 flex items-center gap-2">
-            <FaShoppingCart className="text-purple-500" />
+          <h3 className="text-xl font-semibold mb-2">
             Module 1: Foundation of E-commerce
           </h3>
-          <ul className="list-disc ml-6 mb-6 text-green-900">
+          <ul className="list-disc ml-5 mb-4">
             <li>
               Understanding the opportunities and advantages of online business
             </li>
@@ -128,11 +117,10 @@ export default function HeroEducate() {
               Practical sessions on digital platforms & e-commerce selection
             </li>
           </ul>
-          <h3 className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 flex items-center gap-2">
-            <FaDigitalTachograph className="text-green-600" />
+          <h3 className="text-xl font-semibold mb-2">
             Module 2: Digital Entrepreneurship Essentials
           </h3>
-          <ul className="list-disc ml-6 mb-6 text-green-900">
+          <ul className="list-disc ml-5 mb-4">
             <li>Introduction to Digital Marketing</li>
             <li>Basics of connecting with your target audience online</li>
             <li>Making your business discoverable through digital platforms</li>
@@ -151,11 +139,10 @@ export default function HeroEducate() {
             </li>
             <li>Practical sessions regarding email marketing</li>
           </ul>
-          <h3 className="text-2xl font-semibold mb-4 border-b border-gray-300 pb-2 flex items-center gap-2">
-            <FaChartLine className="text-blue-500" />
+          <h3 className="text-xl font-semibold mb-2">
             Module 3: Advanced Strategies and Analytics
           </h3>
-          <ul className="list-disc ml-6 text-green-900">
+          <ul className="list-disc ml-5">
             <li>
               Proper product listings, analytics, and product descriptions
             </li>
