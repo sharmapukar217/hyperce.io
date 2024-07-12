@@ -120,7 +120,7 @@ const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
   },
   {
     name: 'Pragati Shrestha',
-    imageUrl: '/teams/pawan-pandey.jpg',
+    imageUrl: '/teams/pragati-shrestha.webp',
     position: 'Project Manager'
   },
   {
