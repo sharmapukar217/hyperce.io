@@ -217,7 +217,6 @@ const PersonInfo = ({
         )}
 
         <Image
-          u
           alt={name}
           src={imageUrl}
           draggable="false"
