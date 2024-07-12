@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
+import Image from 'next/image';
 
 type PersonInfoProps = {
   name: string;
@@ -16,22 +17,28 @@ const boardOfDirectors: Omit<PersonInfoProps, 'hideLinks'>[] = [
   {
     imageUrl: '/biplab.png',
     name: 'Biplab Karki',
-    position: 'CEO'
+    position: 'CEO',
+    facebookLink: 'https://www.facebook.com/biplab.karki1',
+    linkedInLink: 'https://www.linkedin.com/in/beeplove'
   },
   {
     imageUrl: '/Huw Davies.webp',
     name: 'Huw Davies',
-    position: 'CEO, Hyperce UK'
+    position: 'CEO, Hyperce UK',
+    linkedInLink: 'https://www.linkedin.com/in/huw-davies-583990142'
   },
   {
     imageUrl: '/Jawwad Aamer Khan.jpeg',
     name: 'Jawwad Aamer Khan',
-    position: 'CEO, Hyperce APAC'
+    position: 'CEO, Hyperce APAC',
+    facebookLink: 'https://www.facebook.com/aamerk2',
+    linkedInLink: 'https://www.linkedin.com/in/jawwadaamerkhan'
   },
   {
     imageUrl: '/Roshanara Mulla Khan.webp',
     name: 'Roshanara Mulla Khan',
-    position: 'COO, Hyperce APAC'
+    position: 'COO, Hyperce APAC',
+    linkedInLink: 'https://www.linkedin.com/in/roshanara-m-145455223'
   }
 ];
 
@@ -39,37 +46,53 @@ const executives: Omit<PersonInfoProps, 'hideLinks'>[] = [
   {
     name: 'Gulab Miya',
     imageUrl: '/teams/gulab-miya.jpg',
-    position: 'Chief HR Officer'
+    position: 'Chief HR Officer',
+    facebookLink: 'https://www.facebook.com/sunil.don.58760',
+    linkedInLink: 'https://www.linkedin.com/in/gulab-miya-sunil/'
   },
   {
     name: 'Ujal Bhatta',
     imageUrl: '/teams/ujal-bhatta.jpg',
-    position: 'COO'
+    position: 'COO',
+    facebookLink: 'https://www.facebook.com/ujalbhatta1',
+    linkedInLink: 'https://www.linkedin.com/in/ujal-bhatta/'
   },
   {
     name: 'Rohan Poudel',
     imageUrl: '/teams/rohan-poudel.jpg',
-    position: 'CTO'
+    position: 'CTO',
+    facebookLink: 'https://www.facebook.com/rohan.poudel.3597',
+    linkedInLink: 'https://www.linkedin.com/in/rohan-poudel/'
   },
-  // TODO: add image for nikesh sir
   {
     name: 'Nikesh Singh',
     imageUrl: '/teams/nikesh-singh.jpg',
-    position: 'CFO'
+    position: 'CFO',
+    facebookLink: 'https://www.facebook.com/nikesh.singh.796',
+    linkedInLink: 'https://www.linkedin.com/in/nikesh-singh-3a41b0bb/'
   },
   {
     name: 'Saurabh Chalise',
     imageUrl: '/teams/saurabh-chalise.jpg',
-    position: 'Chief Project Officer'
+    position: 'Chief Project Officer',
+    facebookLink: 'https://www.facebook.com/saurabh.chalise',
+    linkedInLink: 'https://www.linkedin.com/in/saurabh-chalise-9983461ba/'
   },
   {
     name: 'Bhabishya Bhatt',
     imageUrl: '/teams/bhabishya-bhatt.jpg',
-    position: 'Associate CTO'
+    position: 'Associate CTO',
+    facebookLink: 'https://www.facebook.com/lighterharayeko.manxema',
+    linkedInLink: 'https://www.linkedin.com/in/bhabishya/'
   }
 ];
 
 const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
+  {
+    name: 'Aashish Shrestha',
+    imageUrl: '/teams/aashish-shrestha.png',
+    position: 'Graphics Designer'
+  },
   {
     name: 'Ankit Poudel',
     imageUrl: '/teams/ankit-poudel.jpg',
@@ -81,9 +104,24 @@ const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
     position: 'Flutter Developer'
   },
   {
-    name: 'Falguni Mandal',
-    imageUrl: '/teams/falguni-mandal.jpg',
-    position: 'Graphics Designer'
+    name: 'Charchit Dahal',
+    imageUrl: '/teams/charchit-dahal.jpg',
+    position: 'Full Stack Developer'
+  },
+  {
+    name: 'Kushal Subedi',
+    imageUrl: '/teams/kushal-subedi.png',
+    position: 'Frontend Developer'
+  },
+  {
+    name: 'Pawan Pandey',
+    imageUrl: '/teams/pawan-pandey.jpg',
+    position: 'Full Stack Developer'
+  },
+  {
+    name: 'Pragati Shrestha',
+    imageUrl: '/teams/pawan-pandey.jpg',
+    position: 'Project Manager'
   },
   {
     name: 'Prakash Poudel',
@@ -101,18 +139,33 @@ const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
     position: 'Full Stack Developer'
   },
   {
+    name: 'Rahul Raj Yadav',
+    imageUrl: '/teams/rahul-raj-yadav.jpg',
+    position: 'Backend Developer'
+  },
+  {
+    name: 'Ritesh Bista',
+    imageUrl: '/teams/ritesh-bista.png',
+    position: 'Frontend Developer'
+  },
+  {
     name: 'Ritika Bogati',
     imageUrl: '/teams/ritika-bogati.jpg',
     position: 'Content Writer'
   },
   {
-    name: 'Sangam Ghimire',
-    imageUrl: '/teams/sangam-ghimire.jpg',
-    position: 'Junior Devops Engineer'
+    name: 'Sajan Nagarkoti',
+    imageUrl: '/teams/sajan-nagarkoti.jpg',
+    position: 'Frontend Developer'
   },
   {
     name: 'Silson Sapkota',
     imageUrl: '/teams/silson-sapkota.jpg',
+    position: 'Frontend Developer'
+  },
+  {
+    name: 'Smriti Panta',
+    imageUrl: '/teams/smriti-panta.jpg',
     position: 'Frontend Developer'
   },
   {
@@ -121,14 +174,14 @@ const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
     position: 'UI/UX Designer'
   },
   {
-    name: 'Sovit Kumar Karn',
-    imageUrl: '/teams/sovit-kumar-karn.jpg',
-    position: 'Accounting Officer'
-  },
-  {
     name: 'Subharaj Bhandari',
     imageUrl: '/teams/subharaj-bhandari.jpg',
     position: 'Backend Developer'
+  },
+  {
+    name: 'Suman Khatri',
+    imageUrl: '/teams/suman-khatri.png',
+    position: 'Frontend Developer'
   },
   {
     name: 'Suruchi Gautam',
@@ -139,6 +192,11 @@ const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
     name: 'Tasnuva Ferdush',
     imageUrl: '/teams/tasnuva-ferdush.jpg',
     position: 'Sales & Marketing Officer'
+  },
+  {
+    name: 'Yogesh Lamichhane',
+    imageUrl: '/teams/yogesh-lamichhane.jpg',
+    position: 'DevOps Engineer'
   }
 ];
 
@@ -158,10 +216,13 @@ const PersonInfo = ({
           <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#357D8A_20deg,transparent_240deg)]"></div>
         )}
 
-        <img
+        <Image
+          u
           alt={name}
           src={imageUrl}
           draggable="false"
+          layout="fill"
+          objectFit="cover"
           className={cn(
             'p-1 z-10 h-full w-full aspect-square rounded-full',
             !animateBorder &&
