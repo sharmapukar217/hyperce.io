@@ -21,6 +21,7 @@ export function EachProduct({ product }: { product: any }) {
     <Link
       className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 transition-all duration-200 dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
       href={product.href}
+      target="_blank"
     >
       <Image
         height={40}
