@@ -8,6 +8,7 @@ import {
   viewAllSolutions
 } from '@/data/Solutions';
 import { useSuiteLink } from '@/lib/useDocumentLinks';
+import Link from 'next/link';
 
 export default function Solutions() {
   const [suiteLink] = useSuiteLink();
@@ -23,8 +24,9 @@ export default function Solutions() {
         </h1>
         <div className="flex justify-center">
           <div className="flex gap-5 flex-col md:flex-row">
-            <a
+            <Link
               href={suiteLink}
+              target="_blank"
               className="flex justify-center md:mt-7 md:mb-10"
             >
               <button className="px-5 w-full bg-gradient-to-tr to-[#1f525c] from-[#516f75] font-bold text-sm transition duration-400 py-2 rounded flex justify-center">
@@ -47,8 +49,9 @@ export default function Solutions() {
                   </svg>
                 </div>
               </button>
-            </a>
-            <a
+            </Link>
+            <Link
+              target="_blank"
               href="/solutions"
               className="flex justify-center md:mt-7 md:mb-10"
             >
@@ -72,7 +75,7 @@ export default function Solutions() {
                   </svg>
                 </div>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center w-fit">
