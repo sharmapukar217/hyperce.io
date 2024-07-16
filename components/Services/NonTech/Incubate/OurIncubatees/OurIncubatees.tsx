@@ -19,7 +19,7 @@ export default function OurIncubatees() {
       name: 'OnBlockIT',
       url: 'https://onblockit.com',
       image: '/incubate/onblockit.png',
-      description: 'Your Linkedin Growth Agency'
+      description: 'Your Corporate Marketing Agency'
     }
   ];
 
