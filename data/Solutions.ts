@@ -237,7 +237,7 @@ export const allNonTechServices = [
       light: '/services_logos/events/HyperceEvents.jpg'
     },
     description:
-      'Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event&apos;s success .'
+      "Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event's success ."
   },
   {
     title: 'Hyperce Educate',
@@ -247,7 +247,7 @@ export const allNonTechServices = [
       light: '/services_logos/educate/HyperceEducate.png'
     },
     description:
-      'Hyperce Events specializes in organizing top-tier corporate events, offering comprehensive event planning, execution, and management services to ensure your event&apos;s success .'
+      'Hyperce Educate specializes in delivering high-quality educational events, providing comprehensive planning, execution, and management services to ensure the success of your learning experiences.'
   }
 ];
 

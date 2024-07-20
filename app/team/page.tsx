@@ -239,7 +239,11 @@ const PersonInfo = ({
         {hideLinks ? null : (
           <div className="inline-flex items-center gap-4 pt-4 md:pt-6">
             {facebookLink ? (
-              <a href={facebookLink} className="group outline-none">
+              <a
+                href={facebookLink}
+                target="_blank"
+                className="group outline-none"
+              >
                 <svg
                   width="16"
                   height="16"
@@ -253,7 +257,11 @@ const PersonInfo = ({
             ) : null}
 
             {linkedInLink ? (
-              <a href={linkedInLink} className="group outline-none">
+              <a
+                href={linkedInLink}
+                target="_blank"
+                className="group outline-none"
+              >
                 <svg
                   width="16"
                   height="16"
