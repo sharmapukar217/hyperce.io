@@ -7,6 +7,7 @@ import WhyChoose from '@/components/Services/NonTech/Events/WhyChoose/WhyChoose'
 import PremiumPartner from '@/components/Services/NonTech/Events/PremiumPartner/PremiumPartner';
 import Image from 'next/image';
 import eventsBg from '@/public/services_logos/events/eventsBG.jpg';
+import HyperceSkillEvents from '@/components/Services/NonTech/Events/HyperceSkillEvents/HyperceSkillEvents';
 
 export const metadata: Metadata = {
   title: 'Hyperce Events | Best Ecommerce Suite Solution',
@@ -37,6 +38,7 @@ export default function Services() {
       <Events />
       <WhyChoose />
       <PremiumPartner />
+      <HyperceSkillEvents />
 
       <Contact />
     </div>
