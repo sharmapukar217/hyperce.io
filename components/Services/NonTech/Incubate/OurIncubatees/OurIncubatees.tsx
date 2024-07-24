@@ -20,6 +20,12 @@ export default function OurIncubatees() {
       url: 'https://onblockit.com',
       image: '/incubate/onblockit.png',
       description: 'Your Corporate Marketing Agency'
+    },
+    {
+      name: 'Samaajpatra',
+      url: 'https://www.samaajpatra.com/',
+      image: '/incubate/samaajpatra.png',
+      description: 'Your online news portal.'
     }
   ];
 
@@ -29,20 +35,19 @@ export default function OurIncubatees() {
         <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center">
           Our Incubatees
         </h2>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 pb-12 overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-10 pb-12">
           {incubatees.map((incubatee, index) => (
             <a
               key={index}
               href={incubatee.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg flex flex-col items-center text-center w-full md:w-1/3 transition-transform transform hover:scale-105 shadow-sm shadow-blue-400
-              hover:shadow-lg hover:shadow-blue-500"
+              className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg flex flex-col items-center text-center transition-transform transform hover:scale-105 shadow-sm shadow-blue-400 hover:shadow-lg hover:shadow-blue-500"
             >
               <Image
                 src={incubatee.image}
                 alt={`${incubatee.name} logo`}
-                className=" hover:scale-110 mb-4 object-contain overflow-hidden rounded-xl "
+                className="hover:scale-110 mb-4 object-contain overflow-hidden rounded-xl"
                 width={600}
                 height={200}
               />
