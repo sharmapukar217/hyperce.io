@@ -18,7 +18,7 @@ export default function HyperceSkillEvents() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-5">
         <div className="bg-gray-100 dark:bg-[#172D41] p-6 rounded-xl shadow-lg flex flex-col items-center text-center transition-transform transform hover:scale-105">
           <GiSkills className="text-[#854b8a] dark:text-[#D8AEF2]" size={45} />
           <h3 className="text-xl font-bold mt-4">Skill Events</h3>

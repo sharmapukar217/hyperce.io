@@ -35,7 +35,7 @@ export default function OurIncubatees() {
         <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center">
           Our Incubatees
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-10 pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-10 pb-12">
           {incubatees.map((incubatee, index) => (
             <a
               key={index}
