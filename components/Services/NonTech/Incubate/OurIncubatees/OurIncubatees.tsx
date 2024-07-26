@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function OurIncubatees() {
@@ -37,10 +38,8 @@ export default function OurIncubatees() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-10 pb-12">
           {incubatees.map((incubatee, index) => (
-            <a
+            <div
               key={index}
-              href={incubatee.url}
-              target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-100 dark:bg-gray-700 p-5 rounded-lg flex flex-col items-center text-center transition-transform transform hover:scale-105 shadow-sm shadow-blue-400 hover:shadow-lg hover:shadow-blue-500"
             >
@@ -53,8 +52,10 @@ export default function OurIncubatees() {
               />
               <h3 className="text-xl font-semibold mb-2">{incubatee.name}</h3>
               <p className="text-sm mb-3">{incubatee.description}</p>
-              <FaExternalLinkAlt className="text-2xl text-blue-500" />
-            </a>
+              <Link href={incubatee.url} target="_blank">
+                <FaExternalLinkAlt className="text-2xl text-blue-500" />
+              </Link>
+            </div>
           ))}
         </div>
       </div>
