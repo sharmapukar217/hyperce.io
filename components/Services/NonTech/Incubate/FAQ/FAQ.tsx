@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaQuestionCircle, FaChevronDown } from 'react-icons/fa';
 
 export default function FAQ() {
@@ -47,11 +48,18 @@ export default function FAQ() {
             <p>
               You can apply for one by submitting a filled application form
               through our company&apos;s website{' '}
-              <a href="#" className="text-blue-500 underline">
+              <a href="#contact" className="text-blue-500 underline">
                 here
               </a>
               . Our team will consider your application and contact you to
-              arrange the further process.
+              arrange the next steps. You may also reach out to us at{' '}
+              <Link
+                href="mailto:hi@hyperce-incubate.com"
+                className="text-blue-500 underline"
+              >
+                hi@hyperce-incubate.com
+              </Link>
+              .
             </p>
           </div>
         </div>
