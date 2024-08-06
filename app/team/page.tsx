@@ -15,9 +15,9 @@ type PersonInfoProps = {
 
 const boardOfDirectors: Omit<PersonInfoProps, 'hideLinks'>[] = [
   {
-    imageUrl: '/biplab.png',
-    name: 'Biplab Karki',
     position: 'CEO',
+    name: 'Biplab Karki',
+    imageUrl: '/teams/biplab-karki.jpg',
     facebookLink: 'https://www.facebook.com/biplab.karki1',
     linkedInLink: 'https://www.linkedin.com/in/beeplove'
   },
@@ -216,14 +216,14 @@ const PersonInfo = ({
           <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#357D8A_20deg,transparent_240deg)]"></div>
         )}
 
-        <Image
+        <img
           alt={name}
           src={imageUrl}
           draggable="false"
           layout="fill"
           objectFit="cover"
           className={cn(
-            'p-1 z-10 h-full w-full aspect-square rounded-full',
+            'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
             !animateBorder &&
               'hover:scale-110 transition-transform duration-500'
           )}
@@ -310,7 +310,7 @@ export default function Page() {
 
           <div className="mt-16">
             <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Core Team
+              Directors
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
