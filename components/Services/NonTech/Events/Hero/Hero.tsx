@@ -32,7 +32,7 @@ export default function Hero() {
               events, offering comprehensive event planning, execution, and
               management services to ensure your event&apos;s success.
             </p>
-            <div className="flex flex-col md:flex-row gap-5 mt-10">
+            <div className="flex flex-col md:flex-row gap-5 mt-10 items-center">
               <a
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-green-800 to-[#357D8A] shadow-lg shadow-transparent hover:shadow-green-700/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 href="#learnmore"
