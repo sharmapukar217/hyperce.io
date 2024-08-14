@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Script from 'next/script';
 import PrelineScript from '@/vendor/PrelineScript';
 import WhatsAppBtn from '@/components/WhatsAppBtn';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const raleway = DM_Sans({ subsets: ['latin'] });
 
@@ -88,6 +89,8 @@ export default function RootLayout({
         <script defer data-domain="hyperce.io" src="https://analytics.hyperce.io/js/script.js"></script> 
         <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script>  
       */}
+
+      <GoogleTagManager gtmId="GTM-TC5WS6B6" />
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
         <PrelineScript />
 
