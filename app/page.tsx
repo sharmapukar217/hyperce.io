@@ -16,6 +16,7 @@ import CardsSection from '@/components/Home/CardsSection/CardsSection';
 import FAQ from '@/components/FAQ/FAQ';
 import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 import HomeTestimonial from '@/components/Home/Gallary/Testimonials';
+import HypercePitchPdf from '@/components/Home/HypercePitchPdf';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -74,6 +75,10 @@ export default function Home() {
           </div>
           <div data-aos="fade-up">
             <RequestQuote />
+          </div>
+
+          <div data-aos="fade-up">
+            <HypercePitchPdf />
           </div>
           <div data-aos="fade-up">
             <Contact />

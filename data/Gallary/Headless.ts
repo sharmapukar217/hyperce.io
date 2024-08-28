@@ -11,8 +11,19 @@ export const HeadlessGallary = [
   },
   {
     img_name: 'Maipic',
-    a_href: 'https://maipic.hyperce.io/',
+    a_href: 'https://maipic.de',
     img_src: '/gallary/maipic_demo.png'
+  },
+
+  {
+    img_name: 'Kingsley Air USA',
+    a_href: 'https://kingsleyairusa.com/',
+    img_src: '/gallary/Kingsley Air USA Air Purification.png'
+  },
+  {
+    img_name: 'Piccadilly',
+    a_href: 'https://restronaut-ecommerce.vercel.app',
+    img_src: '/gallary/Piccadilly.png'
   },
 
   {
@@ -21,23 +32,10 @@ export const HeadlessGallary = [
     img_src: '/gallary/shopvest_demo.png'
   },
   {
-    img_name: 'Store In House',
-    a_href: 'https://storeinhouse.com.ar/home',
-    img_src: '/gallary/storeinhouse_demo.png'
-  },
-
-  {
     img_name: 'Mrs Learning Bee',
     a_href: 'https://mrslearningbee.com/',
     img_src: '/gallary/mrslearningbee_demo.png'
   },
-
-  {
-    img_name: 'Himalayan Hardwear',
-    a_href: 'https://himalayanhardwear.com.np/',
-    img_src: '/gallary/himalayanhardwear_demo.png'
-  },
-
   {
     img_name: 'SignalStuff',
     a_href: 'https://staging.signalstuff.com/',
