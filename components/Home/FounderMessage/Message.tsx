@@ -6,7 +6,7 @@ export default function Message() {
   return (
     <section className="mx-auto container flex px-0 md:px-20 justify-center py-10 md:py-20">
       <div className="w-[80%] flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/2 min-h-[60vh] bg-cover flex items-end bg-[url('')]">
+        <div className="w-full lg:w-1/2 min-h-[60vh] bg-cover flex items-end]">
           <div className="relative h-[60vh] w-full object-center">
             <img
               width="100%"

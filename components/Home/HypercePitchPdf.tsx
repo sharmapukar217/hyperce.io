@@ -1,7 +1,5 @@
 'use client';
 import { useSwipeable } from 'react-swipeable';
-// @ts-ignore
-import * as pdfjsLib from 'pdfjs-dist/webpack';
 import { useRef, useState, useEffect, useCallback } from 'react';
 
 export default function HypercePitchPdf() {
@@ -52,6 +50,9 @@ export default function HypercePitchPdf() {
 
   useEffect(() => {
     const loadPdf = async () => {
+      // @ts-ignore
+      const pdfjsLib = await import('pdfjs-dist/webpack');
+
       pdfjsLib.GlobalWorkerOptions.workerSrc =
         'https://unpkg.com/pdfjs-dist@3.0.0/build/pdf.worker.min.js';
       const pdf = await pdfjsLib.getDocument('/HypercePitch.pdf').promise;

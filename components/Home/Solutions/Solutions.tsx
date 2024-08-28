@@ -80,29 +80,27 @@ export default function Solutions() {
         </div>
         <div className="flex justify-center w-fit">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-4/5">
-            {showcaseTechSolutions.slice(0, 3).map((solution) => (
-              <>
-                <Card
-                  href={solution.href}
-                  whiteIcon={solution.whiteIcon}
-                  darkIcon={solution.darkIcon}
-                  name={solution.name}
-                  des={solution.des}
-                  altText={solution.altText}
-                />
-              </>
+            {showcaseTechSolutions.slice(0, 3).map((solution, index) => (
+              <Card
+                key={index}
+                href={solution.href}
+                whiteIcon={solution.whiteIcon}
+                darkIcon={solution.darkIcon}
+                name={solution.name}
+                des={solution.des}
+                altText={solution.altText}
+              />
             ))}
-            {showcaseNonTechSolutions.slice(0, 2).map((solution) => (
-              <>
-                <Card
-                  href={solution.href}
-                  whiteIcon={solution.whiteIcon}
-                  darkIcon={solution.darkIcon}
-                  name={solution.name}
-                  des={solution.des}
-                  altText={solution.altText}
-                />
-              </>
+            {showcaseNonTechSolutions.slice(0, 2).map((solution, index) => (
+              <Card
+                key={index}
+                href={solution.href}
+                whiteIcon={solution.whiteIcon}
+                darkIcon={solution.darkIcon}
+                name={solution.name}
+                des={solution.des}
+                altText={solution.altText}
+              />
             ))}
             <Card
               href={viewAllSolutions.href}

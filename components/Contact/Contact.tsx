@@ -135,7 +135,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
             <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
               <svg
                 width="25px"
-                height="25x"
+                height="25px"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

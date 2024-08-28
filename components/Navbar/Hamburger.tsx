@@ -116,15 +116,15 @@ export default function Hamburger(props: any) {
                               viewBox="0 0 24 24"
                               fill="none"
                               stroke="currentColor"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeWidth={2}
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                             >
                               <path d="m6 9 6 6 6-6" />
                             </svg>
                           </button>
 
-                          <div className="absolute left-[10vh] max-h-[70vh] overflow-scroll -top-[20vh] hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 start-0 min-w-[80vw] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
+                          <div className="absolute left-[10vh] max-h-[70vh] overflow-scroll -top-[20vh] hs-dropdown-menu transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 start-0 min-w-[80vw] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
                             <div className="grid grid-cols-1 gap-4 ">
                               <div className="flex flex-col mx-1 md:mx-0">
                                 <span className="mb-5">Tech Solutions</span>

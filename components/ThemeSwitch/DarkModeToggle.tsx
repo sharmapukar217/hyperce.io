@@ -1,11 +1,13 @@
-import React from 'react';
-import { useDarkMode } from '@/contexts/theme_context';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 const DarkModeToggle: React.FC = () => {
-  // const { darkMode, toggleDarkMode } = useDarkMode();
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return;
   return (
     <button
       aria-label="toggle-dark-mode"
