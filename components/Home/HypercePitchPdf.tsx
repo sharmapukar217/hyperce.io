@@ -107,7 +107,10 @@ export default function HypercePitchPdf() {
         </span>
       </div>
 
-      <div ref={containerRef} className="relative w-full min-h-px">
+      <div
+        ref={containerRef}
+        className="relative w-full md:w-1/2 mx-auto min-h-px"
+      >
         <Link
           href="/HypercePitch.pdf"
           target="_blank"
@@ -115,7 +118,7 @@ export default function HypercePitchPdf() {
         >
           <ExternalLink className="h-6 w-6" />
         </Link>
-        <div className="mt-5 size-full" {...swipeHandlers}>
+        <div className="mt-5" {...swipeHandlers}>
           <canvas ref={canvasRef}></canvas>
           <div className="flex gap-8 mt-4 items-center justify-center">
             <button
