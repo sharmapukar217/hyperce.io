@@ -5,7 +5,7 @@ import { useSwipeable } from 'react-swipeable';
 import { useRef, useState, useEffect, useCallback } from 'react';
 
 function debounce(func: () => unknown, delay = 200) {
-  let timeoutId;
+  let timeoutId: number | undefined;
 
   return function (...args) {
     // Clear the previous timeout
