@@ -4,10 +4,10 @@ import { ExternalLink } from 'lucide-react';
 import { useSwipeable } from 'react-swipeable';
 import { useRef, useState, useEffect, useCallback } from 'react';
 
-function debounce(func: () => unknown, delay = 200) {
-  let timeoutId: number | undefined;
+function debounce(func: (...args: any[]) => unknown, delay = 200) {
+  let timeoutId: NodeJS.Timeout;
 
-  return function (...args) {
+  return function (...args: any[]) {
     // Clear the previous timeout
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -15,7 +15,7 @@ function debounce(func: () => unknown, delay = 200) {
 
     // Set a new timeout
     timeoutId = setTimeout(() => {
-      func.apply(this, args);
+      func(args);
     }, delay);
   };
 }
