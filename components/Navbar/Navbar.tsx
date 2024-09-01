@@ -33,6 +33,10 @@ const PlatformsData = [
   {
     platformName: 'Hyperce SaaS',
     platformProducts: showcaseSaasSolutions
+  },
+  {
+    platformName: 'View All Solutions',
+    href: '/solutions'
   }
 ];
 
@@ -162,8 +166,8 @@ export function SolutionsMegaMenu() {
               {PlatformsData.map((platform, index) => (
                 <div key={index}>
                   <div className="hs-dropdown relative [--strategy:absolute]">
-                    <button
-                      type="button"
+                    <Link
+                      href={platform.href || '#'}
                       className="flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 text-left w-[13vw]"
                     >
                       {platform.platformName}
@@ -182,16 +186,18 @@ export function SolutionsMegaMenu() {
                       >
                         <path d="m6 9 6 6 6-6" />
                       </svg>
-                    </button>
+                    </Link>
 
-                    <div className="-mt-50 -ml-20 w-[20vw] hs-dropdown-menu transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full top-0 end-full !mx-[10px]">
-                      {platform.platformProducts?.map((product, index) => (
-                        <div key={index} className="p-2">
-                          <EachProduct product={product} />
-                          {/* <span>{product.name}</span> */}
-                        </div>
-                      ))}
-                    </div>
+                    {platform.platformProducts?.length ? (
+                      <div className="-mt-50 -ml-20 w-[20vw] hs-dropdown-menu transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 sm:mt-2 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute sm:border before:-end-5 before:top-0 before:h-full top-0 end-full !mx-[10px]">
+                        {platform.platformProducts?.map((product, index) => (
+                          <div key={index} className="p-2">
+                            <EachProduct product={product} />
+                            {/* <span>{product.name}</span> */}
+                          </div>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               ))}

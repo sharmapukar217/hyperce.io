@@ -1,11 +1,30 @@
 'use client';
+import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
 import { useSwipeable } from 'react-swipeable';
 import { useRef, useState, useEffect, useCallback } from 'react';
+
+function debounce(func: () => unknown, delay = 200) {
+  let timeoutId;
+
+  return function (...args) {
+    // Clear the previous timeout
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    // Set a new timeout
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
 
 export default function HypercePitchPdf() {
   const [pdfDoc, setPdfDoc] = useState<any>(null);
   const [pageNumber, setPageNumber] = useState(1);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const renderPage = useCallback(
     async (num = 1, pdf: any) => {
@@ -19,14 +38,20 @@ export default function HypercePitchPdf() {
 
       const canvas = canvasRef.current;
       const context = canvas.getContext('2d');
+
       const viewport = page.getViewport({ scale: 1 });
 
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
+      const containerWidth = containerRef.current?.clientWidth || 0;
+      const scale = containerWidth / viewport.width;
+      const scaledViewport = page.getViewport({ scale });
 
-      await page.render({ viewport: viewport, canvasContext: context }).promise;
+      canvas.width = containerWidth;
+      canvas.height = scaledViewport.height;
+
+      await page.render({ viewport: scaledViewport, canvasContext: context })
+        .promise;
     },
-    [canvasRef]
+    [canvasRef, containerRef]
   );
 
   const handlePrevPage = useCallback(() => {
@@ -62,12 +87,16 @@ export default function HypercePitchPdf() {
     };
 
     loadPdf();
+    window.addEventListener('resize', () => debounce(loadPdf));
+    return () => {
+      window.removeEventListener('resize', () => debounce(loadPdf));
+    };
   }, []);
 
   if (!pdfDoc) return;
 
   return (
-    <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16">
+    <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16 flex flex-col">
       <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">
         HypercePitch
       </h2>
@@ -78,28 +107,37 @@ export default function HypercePitchPdf() {
         </span>
       </div>
 
-      <div className="relative mt-10 w-fit mx-auto" {...swipeHandlers}>
-        <canvas ref={canvasRef}></canvas>
-        <div className="flex gap-8 mt-4 items-center justify-center">
-          <button
-            className="disabled:cursor-not-allowed disabled:opacity-50"
-            onClick={() => handlePrevPage()}
-            disabled={pageNumber <= 1}
-          >
-            Previous page
-          </button>
+      <div ref={containerRef} className="relative w-full min-h-px">
+        <Link
+          href="/HypercePitch.pdf"
+          target="_blank"
+          className="absolute top-7 right-2 z-50 bg-black/40 hover:bg-black/60 h-10 w-10 flex items-center justify-center rounded-[8px] shadow-sm backdrop-blur-sm"
+        >
+          <ExternalLink className="h-6 w-6" />
+        </Link>
+        <div className="mt-5 size-full" {...swipeHandlers}>
+          <canvas ref={canvasRef}></canvas>
+          <div className="flex gap-8 mt-4 items-center justify-center">
+            <button
+              className="disabled:cursor-not-allowed disabled:opacity-50"
+              onClick={() => handlePrevPage()}
+              disabled={pageNumber <= 1}
+            >
+              Previous page
+            </button>
 
-          <div>
-            {pageNumber} / {pdfDoc.numPages}
+            <div>
+              {pageNumber} / {pdfDoc.numPages}
+            </div>
+
+            <button
+              className="disabled:cursor-not-allowed disabled:opacity-50"
+              onClick={() => handleNextPage()}
+              disabled={pageNumber >= pdfDoc.numPages}
+            >
+              Next page
+            </button>
           </div>
-
-          <button
-            className="disabled:cursor-not-allowed disabled:opacity-50"
-            onClick={() => handleNextPage()}
-            disabled={pageNumber >= pdfDoc.numPages}
-          >
-            Next page
-          </button>
         </div>
       </div>
     </section>
