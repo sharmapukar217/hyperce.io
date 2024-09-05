@@ -1,99 +1,102 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
-import { useSwipeable } from 'react-swipeable';
-import { useRef, useState, useEffect, useCallback } from 'react';
+// import { useSwipeable } from 'react-swipeable';
+// import { useRef, useState, useEffect, useCallback } from 'react';
 
-function debounce(func: (...args: any[]) => unknown, delay = 200) {
-  let timeoutId: NodeJS.Timeout;
+// function debounce(func: (...args: any[]) => unknown, delay = 200) {
+//   let timeoutId: NodeJS.Timeout;
 
-  return function (...args: any[]) {
-    // Clear the previous timeout
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
+//   return function (...args: any[]) {
+//     // Clear the previous timeout
+//     if (timeoutId) {
+//       clearTimeout(timeoutId);
+//     }
 
-    // Set a new timeout
-    timeoutId = setTimeout(() => {
-      func(args);
-    }, delay);
-  };
-}
+//     // Set a new timeout
+//     timeoutId = setTimeout(() => {
+//       func(args);
+//     }, delay);
+//   };
+// }
 
 export default function HypercePitchPdf() {
-  const [pdfDoc, setPdfDoc] = useState<any>(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  // const [pdfDoc, setPdfDoc] = useState<any>(null);
+  // const [pageNumber, setPageNumber] = useState(1);
+  // const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  // const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const renderPage = useCallback(
-    async (num = 1, pdf: any) => {
-      if (!pdf) return;
+  // const renderPage = useCallback(
+  //   async (num = 1, pdf: any) => {
+  //     if (!pdf) return;
 
-      // Load page
-      const page = await pdf.getPage(num);
+  //     // Load page
+  //     const page = await pdf.getPage(num);
 
-      // Set up canvas
-      if (!canvasRef.current) return;
+  //     // Set up canvas
+  //     if (!canvasRef.current) return;
 
-      const canvas = canvasRef.current;
-      const context = canvas.getContext('2d');
+  //     const canvas = canvasRef.current;
+  //     const context = canvas.getContext('2d');
 
-      const viewport = page.getViewport({ scale: 1 });
+  //     const viewport = page.getViewport({ scale: 1 });
 
-      const containerWidth = containerRef.current?.clientWidth || 0;
-      const scale = containerWidth / viewport.width;
-      const scaledViewport = page.getViewport({ scale });
+  //     const containerWidth = containerRef.current?.clientWidth || 0;
+  //     const devicePixelRatio = window.devicePixelRatio || 1;
+  //     const scale = containerWidth / viewport.width;
 
-      canvas.width = containerWidth;
-      canvas.height = scaledViewport.height;
+  //     const scaledViewport = page.getViewport({ scale: scale });
 
-      await page.render({ viewport: scaledViewport, canvasContext: context })
-        .promise;
-    },
-    [canvasRef, containerRef]
-  );
+  //     canvas.width = containerWidth;
+  //     canvas.height = scaledViewport.height;
 
-  const handlePrevPage = useCallback(() => {
-    if (pageNumber <= 1) return;
-    setPageNumber(pageNumber - 1);
-    renderPage(pageNumber - 1, pdfDoc);
-  }, [pageNumber, renderPage]);
+  //     await page.render({ viewport: scaledViewport, canvasContext: context })
+  //       .promise;
+  //   },
+  //   [canvasRef, containerRef]
+  // );
 
-  const handleNextPage = useCallback(() => {
-    if (!pdfDoc || pageNumber >= pdfDoc.numPages) return;
-    setPageNumber(pageNumber + 1);
-    renderPage(pageNumber + 1, pdfDoc);
-  }, [pageNumber, pdfDoc, renderPage]);
+  // const handlePrevPage = useCallback(() => {
+  //   if (pageNumber <= 1) return;
+  //   setPageNumber(pageNumber - 1);
+  //   renderPage(pageNumber - 1, pdfDoc);
+  // }, [pageNumber, renderPage]);
 
-  const swipeHandlers = useSwipeable({
-    trackMouse: true,
-    preventScrollOnSwipe: true,
-    onSwipedLeft: handleNextPage,
-    onSwipedRight: handlePrevPage
-  });
+  // const handleNextPage = useCallback(() => {
+  //   if (!pdfDoc || pageNumber >= pdfDoc.numPages) return;
+  //   setPageNumber(pageNumber + 1);
+  //   renderPage(pageNumber + 1, pdfDoc);
+  // }, [pageNumber, pdfDoc, renderPage]);
 
-  useEffect(() => {
-    const loadPdf = async () => {
-      // @ts-ignore
-      const pdfjsLib = await import('pdfjs-dist/webpack');
+  // const swipeHandlers = useSwipeable({
+  //   trackMouse: true,
+  //   preventScrollOnSwipe: true,
+  //   onSwipedLeft: handleNextPage,
+  //   onSwipedRight: handlePrevPage
+  // });
 
-      pdfjsLib.GlobalWorkerOptions.workerSrc =
-        'https://unpkg.com/pdfjs-dist@3.0.0/build/pdf.worker.min.js';
-      const pdf = await pdfjsLib.getDocument('/HypercePitch.pdf').promise;
+  // useEffect(() => {
+  //   // const loadPdf = async () => {
+  //   //   // @ts-ignore
+  //   //   const pdfjsLib = await import('pdfjs-dist/webpack');
 
-      setPdfDoc(pdf);
-      renderPage(1, pdf);
-    };
+  //   //   // prettier ignore
+  //   //   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@3.0.0/build/pdf.worker.min.js';
+  //   //   const pdf = await pdfjsLib.getDocument('/HypercePitch.pdf').promise;
 
-    loadPdf();
-    window.addEventListener('resize', () => debounce(loadPdf));
-    return () => {
-      window.removeEventListener('resize', () => debounce(loadPdf));
-    };
-  }, []);
+  //   //   // setPdfDoc(pdf);
+  //   //   // renderPage(1, pdf);
+  //   // };
 
-  if (!pdfDoc) return;
+  //   // // loadPdf();
+  //   // // window.addEventListener('resize', () => debounce(loadPdf));
+  //   // return () => {
+  //   //   // window.removeEventListener('resize', () => debounce(loadPdf));
+  //   // };
+  // }, []);
+
+  // if (!pdfDoc) return;
 
   return (
     <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16 flex flex-col">
@@ -107,7 +110,27 @@ export default function HypercePitchPdf() {
         </span>
       </div>
 
-      <div
+      <div className="w-full md:w-2/3 lg:w-1/2 mx-auto h-full">
+        <div className="mt-5 relative">
+          <Link
+            href="/HypercePitch.pdf"
+            target="_blank"
+            className="absolute top-2 right-2 z-50 bg-black/40 hover:bg-black/60 h-10 w-10 flex items-center justify-center rounded-[8px] shadow-sm backdrop-blur-sm"
+          >
+            <ExternalLink className="h-6 w-6" />
+          </Link>
+
+          <Image
+            src="/HypercePitchThumbnail.jpg"
+            sizes="100vw"
+            style={{ width: '100%', height: 'auto' }}
+            width={500}
+            height={300}
+          />
+        </div>
+      </div>
+
+      {/*<div
         ref={containerRef}
         className="relative w-full md:w-2/3 lg:w-1/2 mx-auto min-h-px"
       >
@@ -142,7 +165,7 @@ export default function HypercePitchPdf() {
             </button>
           </div>
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }
