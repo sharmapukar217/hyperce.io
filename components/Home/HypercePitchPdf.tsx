@@ -121,6 +121,7 @@ export default function HypercePitchPdf() {
           </Link>
 
           <Image
+            alt=""
             src="/HypercePitchThumbnail.jpg"
             sizes="100vw"
             style={{ width: '100%', height: 'auto' }}
