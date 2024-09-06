@@ -41,6 +41,9 @@ export default function Home() {
             <Watch />
           </div>
           <div data-aos="fade-up">
+            <HypercePitchPdf />
+          </div>
+          <div data-aos="fade-up">
             <Mission />
           </div>
           <div data-aos="fade-up">
@@ -75,10 +78,6 @@ export default function Home() {
           </div>
           <div data-aos="fade-up">
             <RequestQuote />
-          </div>
-
-          <div data-aos="fade-up">
-            <HypercePitchPdf />
           </div>
           <div data-aos="fade-up">
             <Contact />

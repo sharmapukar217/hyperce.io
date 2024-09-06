@@ -99,7 +99,7 @@ export default function HypercePitchPdf() {
   // if (!pdfDoc) return;
 
   return (
-    <section className="mx-auto container px-10 lg:px-20 py-12 md:py-16 flex flex-col">
+    <section className="mx-auto container px-10 lg:px-20 py-8 md:py-12 flex flex-col">
       <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">
         HypercePitch
       </h2>
