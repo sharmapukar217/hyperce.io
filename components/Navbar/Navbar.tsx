@@ -145,7 +145,7 @@ export function SolutionsMegaMenu() {
         <div className="">
           <div className="hs-dropdown [--adaptive:none] font-bold">
             <button type="button" className="flex items-center w-full">
-              Solutions
+              <Link href="/solutions">Solutions</Link>
               <svg
                 className="flex-shrink-0 ms-2 w-4 h-4"
                 xmlns="http://www.w3.org/2000/svg"
