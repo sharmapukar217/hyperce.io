@@ -78,7 +78,7 @@ function ServiceCard({
         <p className="leading-relaxed text-base">{description}</p>
         <a
           href={href}
-          target="_blank"
+          target=""
           className="relative inline-block text-lg group"
         >
           <span className="relative z-10 block px-5 py-2 overflow-hidden font-medium b leading-tight text-white transition-colors duration-300 ease-out border-2 border-[#357D8A] rounded-full mt-3">

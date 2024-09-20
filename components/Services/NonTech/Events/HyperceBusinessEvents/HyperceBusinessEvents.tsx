@@ -27,6 +27,7 @@ export default function HyperceBusinessEvents() {
           <FaBriefcase
             className="text-[#3498db] dark:text-[#AEDFF7]"
             size={45}
+            aria-label="Business Forums Icon"
           />
           <h3 className="text-xl font-bold mt-4">Business Forums</h3>
           <p className="text-black dark:text-[#CBCBCB] text-sm mt-2">
@@ -39,6 +40,7 @@ export default function HyperceBusinessEvents() {
           <FaBusinessTime
             className="text-[#f39c12] dark:text-[#F8E6A2]"
             size={45}
+            aria-label="Executive Summits Icon"
           />
           <h3 className="text-xl font-bold mt-4">Executive Summits</h3>
           <p className="text-black dark:text-[#CBCBCB] text-sm mt-2">
@@ -51,6 +53,7 @@ export default function HyperceBusinessEvents() {
           <IoIosPeople
             className="text-[#27ae60] dark:text-[#B4F0C6]"
             size={45}
+            aria-label="Networking Events Icon"
           />
           <h3 className="text-xl font-bold mt-4">Networking Events</h3>
           <p className="text-black dark:text-[#CBCBCB] text-sm mt-2">
@@ -63,6 +66,7 @@ export default function HyperceBusinessEvents() {
           <FaHandshake
             className="text-[#e74c3c] dark:text-[#F4A7A7]"
             size={45}
+            aria-label="Partnership Meetings Icon"
           />
           <h3 className="text-xl font-bold mt-4">Partnership Meetings</h3>
           <p className="text-black dark:text-[#CBCBCB] text-sm mt-2">
@@ -75,6 +79,7 @@ export default function HyperceBusinessEvents() {
           <FaChalkboardTeacher
             className="text-[#9b59b6] dark:text-[#D8AEF2]"
             size={45}
+            aria-label="Business Workshops Icon"
           />
           <h3 className="text-xl font-bold mt-4">Business Workshops</h3>
           <p className="text-black dark:text-[#CBCBCB] text-sm mt-2">
@@ -87,6 +92,7 @@ export default function HyperceBusinessEvents() {
           <MdOutlineEventAvailable
             className="text-[#16a085] dark:text-[#A3F0DB]"
             size={45}
+            aria-label="Corporate Conferences Icon"
           />
           <h3 className="text-xl font-bold mt-4">Corporate Conferences</h3>
           <p className="text-black dark:text-[#CBCBCB] text-sm mt-2">

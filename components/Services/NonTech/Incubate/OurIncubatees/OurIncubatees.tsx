@@ -52,7 +52,7 @@ export default function OurIncubatees() {
               />
               <h3 className="text-xl font-semibold mb-2">{incubatee.name}</h3>
               <p className="text-sm mb-3">{incubatee.description}</p>
-              <Link href={incubatee.url} target="_blank">
+              <Link href={incubatee.url} target="_self">
                 <FaExternalLinkAlt className="text-2xl text-blue-500" />
               </Link>
             </div>

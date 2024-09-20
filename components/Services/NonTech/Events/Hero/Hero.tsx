@@ -56,7 +56,7 @@ export default function Hero() {
               <a
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-blue-400 shadow-lg shadow-transparent hover:shadow-blue-500/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 href="https://docs.hyperce.io/hyperce-events-community-proposal.pdf"
-                target="_blank"
+                target="_self"
               >
                 Community Proposal
                 <svg
@@ -77,7 +77,7 @@ export default function Hero() {
               <a
                 className="w-fit text-white flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-purple-600 to-purple-400 shadow-lg shadow-transparent hover:shadow-purple-500/50 border border-transparent text-sm font-medium rounded-full py-3 px-6"
                 href="https://docs.hyperce.io/hyperce-events-corporate-proposal.pdf"
-                target="_blank"
+                target="_self"
               >
                 Corporate Proposal
                 <svg

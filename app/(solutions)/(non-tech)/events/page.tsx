@@ -9,6 +9,7 @@ import Image from 'next/image';
 import eventsBg from '@/public/services_logos/events/eventsBG.jpg';
 import HyperceSkillEvents from '@/components/Services/NonTech/Events/HyperceSkillEvents/HyperceSkillEvents';
 import HyperceBusinessEvents from '@/components/Services/NonTech/Events/HyperceBusinessEvents/HyperceBusinessEvents';
+import HyperceComboEvents from '@/components/Services/NonTech/Events/Events/HyperceComboEvents.tsx/HyperceComboEvents';
 
 export const metadata: Metadata = {
   title: 'Hyperce Events | Best Ecommerce Suite Solution',
@@ -41,6 +42,7 @@ export default function Services() {
       <PremiumPartner />
       <HyperceSkillEvents />
       <HyperceBusinessEvents />
+      <HyperceComboEvents />
 
       <Contact />
     </div>
