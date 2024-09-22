@@ -2,7 +2,6 @@ import { FaCheckCircle, FaStar } from 'react-icons/fa';
 import { GiSkills } from 'react-icons/gi';
 import { MdOutlineBusinessCenter } from 'react-icons/md';
 import { FaUserFriends } from 'react-icons/fa';
-import { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import Contact from '@/components/Contact/Contact';
 
@@ -53,16 +52,35 @@ export default function Page() {
               </li>
             </ul>
             <div className="mt-6">
-              <p className="font-bold text-lg">Membership Pricing</p>
-              <p className="mt-2 text-sm">
-                Virtual Pass: $300/month or $3000/year
+              <p className="font-bold text-lg text-[#2c3e50] dark:text-[#AAB8C2]">
+                Membership Pricing
               </p>
-              <p className="mt-1 text-sm">
-                Physical Pass: $500/month or $5000/year
-              </p>
-              <p className="mt-1 text-sm">
-                Hybrid Pass: $600/month or $6000/year
-              </p>
+              <div className="mt-4 flex flex-col gap-3">
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
+                    Virtual Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 300/month or NPR 3000/year
+                  </p>
+                </div>
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
+                    Physical Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 500/month or NPR 5000/year
+                  </p>
+                </div>
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
+                    Hybrid Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 600/month or NPR 6000/year
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -75,7 +93,7 @@ export default function Page() {
             <h3 className="text-2xl font-bold mt-4">
               Hyperce Business Events Club
             </h3>
-            <p className="mt-2 text-black dark:text-[#CBCBCB] text-sm">
+            <p className="mt-2 text-black dark:text-[#CBCBCB] text-sm justify-center">
               Ideal for entrepreneurs and professionals looking to stay ahead in
               the business world with insightful summits, forums, and networking
               events.
@@ -96,15 +114,32 @@ export default function Page() {
             </ul>
             <div className="mt-6">
               <p className="font-bold text-lg">Membership Pricing</p>
-              <p className="mt-2 text-sm">
-                Virtual Pass: $750/month or $7500/year
-              </p>
-              <p className="mt-1 text-sm">
-                Physical Pass: $1000/month or $10000/year
-              </p>
-              <p className="mt-1 text-sm">
-                Hybrid Pass: $1500/month or $15000/year
-              </p>
+              <div className="mt-4 flex flex-col gap-3">
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
+                    Virtual Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 750/month or NPR 7500/year
+                  </p>
+                </div>
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
+                    Physical Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 1000/month or NPR 10000/year
+                  </p>
+                </div>
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
+                    Hybrid Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 1500/month or NPR 15000/year
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -137,15 +172,32 @@ export default function Page() {
             </ul>
             <div className="mt-6">
               <p className="font-bold text-lg">Membership Pricing</p>
-              <p className="mt-2 text-sm">
-                Virtual Pass: $900/month or $9000/year
-              </p>
-              <p className="mt-1 text-sm">
-                Physical Pass: $1300/month or $13000/year
-              </p>
-              <p className="mt-1 text-sm">
-                Hybrid Pass: $1800/month or $18000/year
-              </p>
+              <div className="mt-4 flex flex-col gap-3">
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6]">
+                    Virtual Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 900/month or NPR 9000/year
+                  </p>
+                </div>
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6]">
+                    Physical Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 1300/month or NPR 13000/year
+                  </p>
+                </div>
+                <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
+                  <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6]">
+                    Hybrid Pass
+                  </p>
+                  <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                    NPR 1800/month or NPR 18000/year
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -166,7 +218,7 @@ export default function Page() {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <button className="bg-[#3498db] text-white py-3 px-8 rounded-3xls shadow-lg hover:bg-[#2980b9] transition-colors text-lg">
+          <button className="bg-[#3498db] text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors text-lg">
             Join the Hyperce Events Club Now
           </button>
         </div>
