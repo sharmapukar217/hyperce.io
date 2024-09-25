@@ -3,8 +3,23 @@ import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 import Typewriter from './minute/Typerwriter';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Link from 'next/link';
+import { MdCelebration } from 'react-icons/md';
 
 export default function Hero() {
+  // for events-club
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsButtonClicked(true);
+    setIsPaused(true); // Pause the movement
+    setTimeout(() => {
+      setIsPaused(false); //Resume after some time.....
+    }, 5000);
+  };
+
   return (
     <section className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center pb-[10%] py-10">
       {/* <AnimateWrapper> */}
@@ -391,6 +406,42 @@ export default function Hero() {
         </svg>
       </div>
       {/* </AnimateWrapper> */}
+
+      <div
+        className={`fixed top-24 left-0 transform -translate-y-1/2 sm:p-3 p-4 rounded-r-lg bg-green-500 text-white shadow-lg cursor-pointer ${
+          isPaused ? '' : 'animate-slide'
+        }`}
+        onClick={handleButtonClick}
+      >
+        <Link href="/events-club">
+          {' '}
+          <button className="text-white font-bold py-2 px-4 flex items-center space-x-2">
+            <MdCelebration className="text-orange-600 shadow-2xl shadow-pink-400" />
+            <span>Join Events Club Now</span>
+            <MdCelebration className="text-orange-600 shadow-2xl shadow-pink-400" />
+          </button>
+        </Link>
+      </div>
+
+      {/* css for events-club  */}
+
+      <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(-90px);
+          }
+          50% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-90px);
+          }
+        }
+
+        .animate-slide {
+          animation: slide 5s infinite ease-in-out;
+        }
+      `}</style>
     </section>
   );
 }

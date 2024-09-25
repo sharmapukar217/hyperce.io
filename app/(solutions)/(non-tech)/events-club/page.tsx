@@ -17,7 +17,7 @@ export default function Page() {
           <p className="w-full lg:w-3/4 text-xl sm:text-base">
             The Hyperce Events Club offers exclusive access to a wide range of
             skill-building and business networking events, including workshops,
-            bootcamps, and webinars. Whether you’re looking to advance your
+            bootcamps, and webinars. Whether you&apos;re looking to advance your
             career or expand your professional network, we have the perfect
             membership plan for you.
           </p>
@@ -202,8 +202,9 @@ export default function Page() {
           </div>
         </div>
 
+        {/* hiding for now */}
         {/* Special Offers Section */}
-        <div className="bg-[#f1f1f1] dark:bg-[#34495e] p-10 rounded-lg shadow-md text-center">
+        {/* <div className="bg-[#f1f1f1] dark:bg-[#34495e] p-10 rounded-lg shadow-md text-center">
           <h2 className="text-2xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
             Special Offer: 10% Off All Memberships!
           </h2>
@@ -214,7 +215,7 @@ export default function Page() {
           <p className="mt-2 text-lg font-semibold">
             One lucky winner will receive a Combo Premium Pass Membership!
           </p>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
         <div className="text-center mt-12">
