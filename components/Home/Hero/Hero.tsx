@@ -3,22 +3,24 @@ import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 import Typewriter from './minute/Typerwriter';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { MdCelebration } from 'react-icons/md';
 
 export default function Hero() {
-  // for events-club
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const handleButtonClick = () => {
-    setIsButtonClicked(true);
-    setIsPaused(true); // Pause the movement
-    setTimeout(() => {
-      setIsPaused(false); //Resume after some time.....
-    }, 5000);
+  const handleClose = () => {
+    setIsVisible(false);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center pb-[10%] py-10">
@@ -407,41 +409,87 @@ export default function Hero() {
       </div>
       {/* </AnimateWrapper> */}
 
-      <div
-        className={`fixed top-24 left-0 transform -translate-y-1/2 sm:p-3 p-4 rounded-r-lg bg-green-500 text-white shadow-lg cursor-pointer ${
-          isPaused ? '' : 'animate-slide'
-        }`}
-        onClick={handleButtonClick}
-      >
-        <Link href="/events-club">
-          {' '}
-          <button className="text-white font-bold py-2 px-4 flex items-center space-x-2">
-            <MdCelebration className="text-orange-600 shadow-2xl shadow-pink-400" />
-            <span>Join Events Club Now</span>
-            <MdCelebration className="text-orange-600 shadow-2xl shadow-pink-400" />
-          </button>
-        </Link>
-      </div>
+      {isVisible && (
+        <div
+          className={`fixed top-24 left-0 transform -translate-y-1/2 sm:p-3 p-4 rounded-r-lg shadow-lg backdrop-blur backdrop-blur-5 cursor-pointer transition-opacity duration-300 ease-in-out ${
+            isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          } animate-slide`}
+        >
+          {/* Close button */}
+          <div className="absolute top-2 right-2">
+            <button
+              className="text-gray-200 hover:text-gray-400 focus:outline-none"
+              onClick={handleClose}
+            >
+              ✕
+            </button>
+          </div>
 
-      {/* css for events-club  */}
+          <div className="text-center justify-center items-center align-middle">
+            <div className="flex justify-center items-center space-x-2 text-white font-bold py-2">
+              <MdCelebration className="text-orange-600 shadow-2xl shadow-pink-400" />
+              <span>Join the Events Club Today</span>
+              <MdCelebration className="text-orange-600 shadow-2xl shadow-pink-400" />
+            </div>
 
-      <style jsx>{`
-        @keyframes slide {
-          0% {
-            transform: translateX(-90px);
-          }
-          50% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-90px);
-          }
-        }
+            <span className="block sm:text-lg font-semibold mt-3 text-center">
+              Be Part of a Thriving Community
+            </span>
 
-        .animate-slide {
-          animation: slide 5s infinite ease-in-out;
-        }
-      `}</style>
+            <p className="mx-auto mt-4 max-w-sm sm:text-lg text-gray-200 leading-relaxed text-justify">
+              Unlock your potential with enriching courses and exciting events.
+              The Events Club offers an opportunity to enhance both your
+              academic and life skills, with experiences that go beyond the
+              classroom.
+            </p>
+
+            {/* Join Now button with the specified color */}
+            <div className="mt-6 text-center">
+              <Link href="/events-club">
+                <button
+                  className="text-white  font-bold py-2 px-6 rounded-full transition-colors duration-200 hover:bg-green-700"
+                  style={{ backgroundColor: '#357D8A' }}
+                >
+                  Join Now
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>
+        {`
+          @keyframes slide {
+            0% {
+              transform: translateX(-90px);
+            }
+            50% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-90px);
+            }
+          }
+
+          .animate-slide {
+            animation: slide 6s infinite ease-in-out;
+          }
+
+          .opacity-0 {
+            opacity: 0;
+          }
+
+          .transition-opacity {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+          }
+
+          .pointer-events-none {
+            pointer-events: none;
+          }
+        `}
+      </style>
     </section>
   );
 }
