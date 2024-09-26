@@ -7,9 +7,9 @@ import { MdOutlineBusinessCenter } from 'react-icons/md';
 
 export default function HyperceEventsClubHome() {
   return (
-    <section className="bg-[#f0f4f8] dark:bg-gray-900 px-5 md:px-10 lg:px-20">
+    <section className="bg-[#f0f4f8] dark:bg-gray-900 py-14 px-5 md:px-10 lg:px-20">
       {/* Title Section */}
-      <div className="flex flex-col items-center text-center gap-5 ">
+      <div className="flex flex-col items-center text-center mb-12 gap-5 ">
         <h1 className="text-4xl font-extrabold text-[#2c3e50] dark:text-[#AAB8C2]">
           Hyperce Events Club
         </h1>
