@@ -18,6 +18,7 @@ import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 import HomeTestimonial from '@/components/Home/Gallary/Testimonials';
 import HypercePitchPdf from '@/components/Home/HypercePitchPdf';
 import { Metadata } from 'next';
+import HyperceEventsClubHome from '@/components/Home/HyperceEventsClub/HyperceEventsClubHome';
 
 export const metadata: Metadata = {
   title: 'Hyperce | Best Ecommerce Suite Solution',
@@ -36,6 +37,9 @@ export default function Home() {
         <AnimateWrapper>
           <div data-aos="fade-up">
             <Solutions />
+          </div>
+          <div data-aos="fade-up">
+            <HyperceEventsClubHome />
           </div>
           <div data-aos="fade-up">
             <Watch />

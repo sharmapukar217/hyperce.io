@@ -14,5 +14,9 @@ export const navMenuItems = [
   {
     name: 'Our Team',
     href: '/team'
+  },
+  {
+    name: 'Events',
+    href: '/events-club'
   }
 ];
