@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Home/HyperceEventsClub"
+    "components/Home/HyperceEventsClubHome"
   ],
   "exclude": ["node_modules"]
 }

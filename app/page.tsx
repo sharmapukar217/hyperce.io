@@ -18,7 +18,7 @@ import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
 import HomeTestimonial from '@/components/Home/Gallary/Testimonials';
 import HypercePitchPdf from '@/components/Home/HypercePitchPdf';
 import { Metadata } from 'next';
-import HyperceEventsClubHome from '@/components/Home/HyperceEventsClub/HyperceEventsClubHome';
+import HyperceEventsClubHome from '@/components/Home/HyperceEventsClubHome/HyperceEventsClubHome';
 
 export const metadata: Metadata = {
   title: 'Hyperce | Best Ecommerce Suite Solution',
