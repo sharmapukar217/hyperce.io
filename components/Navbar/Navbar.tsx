@@ -46,14 +46,14 @@ export default function Navbar(props: any) {
 
   return (
     <ThemeProvider defaultTheme="dark" attribute="class">
-      <header className={cn('dark:bg-slate-900 w-full', props.className)}>
+      <header className={cn('dark:bg-slate-900 w-full gap-5', props.className)}>
         <div className="flex items-center justify-between gap-5 md:gap-0 container py-8 px-10 md:px-20 z-50">
           <div className="logo">
             <Logo />
           </div>
 
           <nav className="justify-center items-center hidden lg:flex">
-            <ul className="flex gap-10">
+            <ul className="flex gap-7">
               {navMenuItems.map((menuItem) => (
                 <li
                   key={menuItem.href}
@@ -148,7 +148,7 @@ export function SolutionsMegaMenu() {
   const pathname = usePathname();
 
   return (
-    <div className="relative md:flex md:items-center md:justify-between z-50">
+    <div className="relative md:flex md:items-center md:justify-between">
       <div
         id="navbar-collapse-with-animation"
         className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"

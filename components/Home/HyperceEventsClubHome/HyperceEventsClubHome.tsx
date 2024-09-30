@@ -122,7 +122,7 @@ export default function HyperceEventsClubHome() {
           <span className="font-extrabold">Combo Premium Pass Membership</span>.
         </p>
         <div>
-          <Link href="/events-club">
+          <Link href="/events-club-membership">
             <button className="mt-6 bg-[#357d8A] hover:bg-[#357d8A] text-white py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
               Join Our Events Club
             </button>

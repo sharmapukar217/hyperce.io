@@ -113,7 +113,7 @@ export default function HyperceEventsClub() {
           One lucky winner will receive a{' '}
           <span className="font-extrabold">Combo Premium Pass Membership</span>.
         </p>
-        <Link href="/events-club">
+        <Link href="/events-club-membership">
           <button className="mt-4 bg-[#3498db] text-white py-3 px-6 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors">
             Join Our Events Club
           </button>

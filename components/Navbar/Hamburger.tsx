@@ -50,7 +50,7 @@ export default function Hamburger(props: any) {
       <div
         className={`${
           menuOpen ? 'transition-x-0 hyperce-no-scroll' : 'translate-x-[100%]'
-        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl dark:backdrop-blur-full py-[10%] transition-all flex justify-center duration-500 h-[100vh] -top-10 overflow-scroll z-20 fixed scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-0`}
+        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl dark:backdrop-blur-full py-[10%] transition-all flex justify-center duration-500 h-[900%] -top-[250px] overflow-scroll z-20 absolute scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-10`}
       >
         <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] dark:bg-opacity-10 bg-opacity-0 px-[10%]">
           <svg
@@ -96,8 +96,8 @@ export default function Hamburger(props: any) {
                     id="navbar-collapse-with-animation"
                     className="hs-collapse overflow-hidden transition-all duration-300 basis-full grow"
                   >
-                    <div className="overflow-scroll overflow-y-auto max-h-[75vh] left-0">
-                      <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:mt-0 md:divide-y-0 md:divide-solid dark:divide-gray-700">
+                    <div className="overflow-scroll overflow-y-auto  left-0">
+                      <div className="flex flex-col gap-x-0 mt-0 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:mt-0 md:divide-y-0 md:divide-solid dark:divide-gray-700">
                         <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
                           <button
                             type="button"
@@ -124,9 +124,9 @@ export default function Hamburger(props: any) {
                             </svg>
                           </button>
 
-                          <div className="absolute left-[10vh] max-h-[70vh] overflow-scroll -top-[20vh] hs-dropdown-menu transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 start-0 min-w-[80vw] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
-                            <div className="grid grid-cols-1 gap-4 ">
-                              <div className="flex flex-col mx-1 md:mx-0">
+                          <div className="absolute left-0 top-0 max-h-[70vh] overflow-scroll hs-dropdown-menu transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-[500] start-0 min-w-[80vw] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700  before:-top-5 before:start-0 before:w-full before:h-5">
+                            <div className="grid grid-cols-1 gap-4">
+                              <div className="flex flex-col mx-1 md:mx-0 ">
                                 <span className="mb-5">Tech Solutions</span>
                                 {showcaseTechSolutions.map((each, index) => (
                                   <a
@@ -195,7 +195,19 @@ export default function Hamburger(props: any) {
                   </div>
                 </div>
               </ul>
-              <a target="_blank" href={proposalLink} className="mt-10">
+
+              {/* for event events-club-membership */}
+
+              <a target="_blank" href={proposalLink} className="mt-6">
+                <button
+                  aria-label="proposal-download"
+                  className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
+                >
+                  <span className="text-base font-bold">Join Events Club</span>
+                </button>
+              </a>
+
+              <a target="_blank" href={proposalLink} className="">
                 <button
                   aria-label="proposal-download"
                   className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
