@@ -4,6 +4,7 @@ import { MdOutlineBusinessCenter } from 'react-icons/md';
 import { FaUserFriends } from 'react-icons/fa';
 import Navbar from '@/components/Navbar/Navbar';
 import Contact from '@/components/Contact/Contact';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -218,10 +219,18 @@ export default function Page() {
         </div> */}
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <button className="bg-[#3498db] text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors text-lg">
-            Join the Hyperce Events Club Now
-          </button>
+        <div className="text-center mt-12 flex flex-col lg:flex-row gap-4 justify-center">
+          <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6">
+            <button className="bg-[#3498db] text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors text-lg  shadow-transparent hover:shadow-blue-500/50">
+              Join the Hyperce Events Club Now
+            </button>
+          </Link>
+
+          <Link href="https://docs.hyperce.io/hyperce-events-club-proposal.pdf">
+            <button className="bg-gradient-to-tl from-purple-600 to-purple-400 shadow-lg shadow-transparent hover:shadow-purple-500/50 border border-transparent font-medium rounded-3xl py-3 px-8 transition-colors text-lg">
+              View Hyperce Events Club Proposal
+            </button>
+          </Link>
         </div>
       </div>
 

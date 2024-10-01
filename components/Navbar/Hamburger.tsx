@@ -1,7 +1,7 @@
 'use client';
 
 import './Hamburger.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   showcaseNonTechSolutions,
   showcaseTechSolutions
@@ -16,16 +16,24 @@ export default function Hamburger(props: any) {
   const menu = navMenuItems;
   const [proposalLink] = useProposal();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   function openMenu() {
     setMenuOpen(!menuOpen);
   }
+
   function closeMenu() {
     setMenuOpen(false);
+    setSolutionsOpen(false); // Reset solution dropdown when menu closes
+  }
+
+  function toggleSolutions() {
+    setSolutionsOpen(!solutionsOpen);
   }
 
   return (
     <div className="lg:hidden">
+      {/* Hamburger Icon */}
       <button
         aria-label="hamburger-menu"
         type="button"
@@ -47,207 +55,169 @@ export default function Hamburger(props: any) {
         </svg>
       </button>
 
+      {/* Mobile Menu */}
       <div
         className={`${
-          menuOpen ? 'transition-x-0 hyperce-no-scroll' : 'translate-x-[100%]'
-        } mobile-menu-content dark:backdrop-blur-md backdrop-blur-xl dark:backdrop-blur-full py-[10%] transition-all flex justify-center duration-500 h-[900%] -top-[250px] overflow-scroll z-20 absolute scroll- bg-transparent text-primary w-[100vw] lg:max-w-[30vw] mt-10 right-10`}
+          menuOpen ? 'translate-x-0' : 'translate-x-full'
+        } fixed inset-0 z-50 bg-white dark:bg-gray-900 transition-transform duration-500 ease-in-out flex flex-col w-full h-full`}
       >
-        <div className="close-btn flex flex-col justify-center text-black dark:text-white h-fit w-[80%] rounded-2xl py-[10%] dark:bg-opacity-10 bg-opacity-0 px-[10%]">
-          <svg
-            onClick={closeMenu}
-            className="my-8 cursor-pointer hover:scale-105 text-secondary"
-            width="40px"
-            height="40px"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10.0303 8.96965C9.73741 8.67676 9.26253 8.67676 8.96964 8.96965C8.67675 9.26255 8.67675 9.73742 8.96964 10.0303L10.9393 12L8.96966 13.9697C8.67677 14.2625 8.67677 14.7374 8.96966 15.0303C9.26255 15.3232 9.73743 15.3232 10.0303 15.0303L12 13.0607L13.9696 15.0303C14.2625 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2625 15.0303 13.9696L13.0606 12L15.0303 10.0303C15.3232 9.73744 15.3232 9.26257 15.0303 8.96968C14.7374 8.67678 14.2625 8.67678 13.9696 8.96968L12 10.9393L10.0303 8.96965Z"
-              fill="currentColor"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M12 1.25C6.06294 1.25 1.25 6.06294 1.25 12C1.25 17.9371 6.06294 22.75 12 22.75C17.9371 22.75 22.75 17.9371 22.75 12C22.75 6.06294 17.9371 1.25 12 1.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
-              fill="currentColor"
-            />
-          </svg>
+        <div className="menu flex flex-col w-full p-6">
+          {/* Close Button */}
+          <div className="flex justify-end">
+            <button
+              onClick={closeMenu}
+              className="text-gray-700 dark:text-gray-200 text-3xl"
+            >
+              &times;
+            </button>
+          </div>
 
-          <div className="menu">
-            <div className="flex flex-col gap-5 px-4 mx-auto">
-              <ul className="flex flex-col gap-8">
-                {menu.map((eachMenu) => (
-                  <li
-                    onClick={closeMenu}
-                    key={menu.indexOf(eachMenu)}
-                    className="lg:hover:scale-[105%] text-md transition-all duration-200 text-black dark:text-white hover:text-gray-500 hover:dark:text-gray-200"
-                  >
+          {/* Menu Items */}
+          <ul className="flex flex-col gap-8 mt-10">
+            {menu.map((eachMenu) => (
+              <li
+                key={eachMenu.name}
+                onClick={closeMenu}
+                className="text-lg text-black dark:text-white hover:text-gray-500 hover:dark:text-gray-200 font-semibold"
+              >
+                <a href={eachMenu.href}>{eachMenu.name}</a>
+              </li>
+            ))}
+
+            {/* Solutions Button */}
+            <li className="text-lg text-black dark:text-white font-semibold">
+              <button
+                onClick={toggleSolutions}
+                className="flex items-center gap-2 focus:outline-none hover:text-gray-500 dark:hover:text-gray-200"
+              >
+                Solutions
+                <svg
+                  className={`transition-transform transform ${
+                    solutionsOpen ? 'rotate-180' : ''
+                  }`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+
+              {/* Solutions Dropdown */}
+              {solutionsOpen && (
+                <div className="-mt-24 -translate-y-48  flex flex-col gap-4 text-base text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-800 shadow-md rounded-lg p-4 max-h-[90vh] overflow-y-auto">
+                  <h2 className="text-lg font-semibold">Tech Solutions</h2>
+                  {showcaseTechSolutions.map((each, index) => (
                     <a
-                      href={eachMenu.href}
-                      className="font-bold hover:dark:text-[#357D8A]"
+                      key={index}
+                      className="flex gap-4 items-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg p-3 transition-transform transform hover:scale-105 shadow-md dark:shadow-none"
+                      href={each.href}
                     >
-                      {eachMenu.name}
-                    </a>
-                  </li>
-                ))}
-                <div className="relative md:flex md:items-center md:justify-between z-50">
-                  <div
-                    id="navbar-collapse-with-animation"
-                    className="hs-collapse overflow-hidden transition-all duration-300 basis-full grow"
-                  >
-                    <div className="overflow-scroll overflow-y-auto  left-0">
-                      <div className="flex flex-col gap-x-0 mt-0 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:mt-0 md:divide-y-0 md:divide-solid dark:divide-gray-700">
-                        <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]">
-                          <button
-                            type="button"
-                            className={`hover:scale-[105%] text-base font-bold transition-all duration-200  flex items-center absolute left-0 ${
-                              pathname === '/solutions'
-                                ? `text-[#337684]`
-                                : 'text-black dark:text-zinc-200 hover:text-[#1e1e1e] dark:hover:text-[#e4e4e4]'
-                            }`}
-                          >
-                            Solutions
-                            <svg
-                              className="flex-shrink-0 ms-2 w-4 h-4"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth={2}
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="m6 9 6 6 6-6" />
-                            </svg>
-                          </button>
-
-                          <div className="absolute left-0 top-0 max-h-[70vh] overflow-scroll hs-dropdown-menu transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-[500] start-0 min-w-[80vw] bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700  before:-top-5 before:start-0 before:w-full before:h-5">
-                            <div className="grid grid-cols-1 gap-4">
-                              <div className="flex flex-col mx-1 md:mx-0 ">
-                                <span className="mb-5">Tech Solutions</span>
-                                {showcaseTechSolutions.map((each, index) => (
-                                  <a
-                                    key={index}
-                                    className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                    href={each.href}
-                                  >
-                                    <img
-                                      className="h-10 w-10 hidden dark:block"
-                                      src={each.darkIcon}
-                                      alt=""
-                                    />
-                                    <img
-                                      className="h-10 w-10 dark:hidden"
-                                      src={each.whiteIcon}
-                                      alt=""
-                                    />
-
-                                    <div className="grow">
-                                      <p className="font-medium text-gray-800 dark:text-gray-200">
-                                        {each.name}
-                                      </p>
-                                      <p className="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200 line-clamp-2">
-                                        {each.des}
-                                      </p>
-                                    </div>
-                                  </a>
-                                ))}
-                              </div>
-
-                              <div className="flex flex-col mx-1 md:mx-0">
-                                <span className="mb-5">Non-Tech Solutions</span>
-                                {showcaseNonTechSolutions.map((each, index) => (
-                                  <a
-                                    key={index}
-                                    className="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                                    href={each.href}
-                                  >
-                                    <img
-                                      className="h-10 w-10 hidden dark:block"
-                                      src={each.darkIcon}
-                                      alt=""
-                                    />
-                                    <img
-                                      className="h-10 w-10 dark:hidden"
-                                      src={each.whiteIcon}
-                                      alt=""
-                                    />
-
-                                    <div className="grow">
-                                      <p className="font-medium text-gray-800 dark:text-gray-200">
-                                        {each.name}
-                                      </p>
-                                      <p className="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200 line-clamp-2">
-                                        {each.des}
-                                      </p>
-                                    </div>
-                                  </a>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                      {/* Icon */}
+                      <img
+                        className="h-10 w-10 rounded-lg object-contain bg-white"
+                        src={each.whiteIcon}
+                        alt={each.name}
+                      />
+                      {/* Solution Name and Description */}
+                      <div>
+                        <p className="font-medium">{each.name}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-300">
+                          {each.des}
+                        </p>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </ul>
+                    </a>
+                  ))}
 
-              {/* for event events-club-membership */}
-
-              <a target="_blank" href={proposalLink} className="mt-6">
-                <button
-                  aria-label="proposal-download"
-                  className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
-                >
-                  <span className="text-base font-bold">Join Events Club</span>
-                </button>
-              </a>
-
-              <a target="_blank" href={proposalLink} className="">
-                <button
-                  aria-label="proposal-download"
-                  className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
-                >
-                  <div className="svg">
-                    <svg
-                      width="20px"
-                      height="20px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <h2 className="text-lg font-semibold mt-6">
+                    Non-Tech Solutions
+                  </h2>
+                  {showcaseNonTechSolutions.map((each, index) => (
+                    <a
+                      key={index}
+                      className="flex gap-4 items-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg p-3 transition-transform transform hover:scale-105 shadow-md dark:shadow-none"
+                      href={each.href}
                     >
-                      <path
-                        d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                      <path
-                        d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>
-                    </svg>
-                  </div>
-                  <span className="text-base font-bold">Proposal</span>
-                </button>
-              </a>
-              <a href="/#contact">
-                <button
-                  aria-label="quotation"
-                  className="border-2 border-black dark:border-zinc-200  px-5 py-1 transition duration-300 rounded-full font-extralight dark:bg-transparent bg-[#1f2937] text-[#fff] hover:scale-[105%] active:scale-[95%]"
+                      {/* Icon */}
+                      <img
+                        className="h-10 w-10 rounded-lg object-contain"
+                        src={each.whiteIcon}
+                        alt={each.name}
+                      />
+                      {/* Solution Name and Description */}
+                      <div>
+                        <p className="font-medium">{each.name}</p>
+                        <p className="text-sm text-gray-500 dark:text-gray-300">
+                          {each.des}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </li>
+          </ul>
+
+          {/* Event and Proposal Links */}
+          <div className="mt-10 space-y-4">
+            <a
+              target="_blank"
+              href="https://forms.gle/gzn4Qf5mYgy4zEfz6"
+              className="w-full"
+            >
+              <button
+                aria-label="join-events-club"
+                className="w-full flex justify-center gap-2 py-2 px-4 text-white bg-[#357D8A] rounded-full hover:scale-105 transition-transform font-semibold"
+              >
+                Join Events Club
+              </button>
+            </a>
+
+            <a target="_blank" href={proposalLink} className="w-full">
+              <button
+                aria-label="proposal-download"
+                className="w-full flex justify-center gap-2 py-2 my-5 px-4 text-white bg-[#357D8A] rounded-full hover:scale-105 transition-transform font-semibold"
+              >
+                <svg
+                  width="20px"
+                  height="20px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <span className="text-base font-bold">Quotation</span>
-                </button>
-              </a>
-            </div>
+                  <path
+                    d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                  <path
+                    d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>
+                </svg>
+                <span className="text-base font-bold">Proposal</span>
+              </button>
+            </a>
+
+            <a href="/#contact" className="w-full">
+              <button
+                aria-label="quotation"
+                className="w-full border-2 border-black dark:border-zinc-200 py-2 px-4 transition-transform hover:scale-105 rounded-full font-semibold text-black dark:text-white bg-transparent dark:bg-transparent"
+              >
+                Quotation
+              </button>
+            </a>
           </div>
         </div>
       </div>
