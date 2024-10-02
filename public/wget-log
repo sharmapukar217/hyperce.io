@@ -1,0 +1,6 @@
+--2024-02-15 19:50:41--  https://media.discordapp.net/attachments/1058391154745421834/1207309653936054355/image.png?ex=65df2dbc
+Resolving media.discordapp.net (media.discordapp.net)... 162.159.130.232, 162.159.129.232, 162.159.134.232, ...
+Connecting to media.discordapp.net (media.discordapp.net)|162.159.130.232|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2024-02-15 19:50:41 ERROR 403: Forbidden.
+

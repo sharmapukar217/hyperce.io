@@ -1,0 +1,25 @@
+.arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: #111111;
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+  fill: rgb(222, 215, 68);
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+  fill: rgb(222, 215, 68);
+}
+
+.arrow--disabled {
+  fill: rgb(222, 215, 68);
+}

@@ -1,0 +1,67 @@
+{
+  "name": "hyperce-main-next",
+  "version": "0.1.2",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/lab": "^5.0.0-alpha.146",
+    "@mui/material": "^5.14.11",
+    "@next/third-parties": "^14.2.5",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-toast": "^1.1.4",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "20.5.6",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "aos": "^2.3.4",
+    "autoprefixer": "10.4.15",
+    "canvas": "^2.11.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "framer-motion": "^11.8.0",
+    "keen-slider": "^6.8.6",
+    "lucide-react": "^0.277.0",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "^14.2.5",
+    "next-themes": "^0.2.1",
+    "pdfjs-dist": "^4.5.136",
+    "popmotion": "^11.0.5",
+    "postcss": "^8.4.38",
+    "preline": "^2.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.11.0",
+    "react-intersection-observer": "^9.5.2",
+    "react-slick": "^0.29.0",
+    "react-swipeable": "^7.0.1",
+    "slick-carousel": "^1.8.1",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss": "3.3.3",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/react-slick": "^0.23.10",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
+  },
+  "lint-staged": {
+    "**/*.ts(x)": [
+      "eslint --fix --ignore-path .gitignore"
+    ],
+    "*": "prettier -w --ignore-path .gitignore --ignore-unknown"
+  }
+}
