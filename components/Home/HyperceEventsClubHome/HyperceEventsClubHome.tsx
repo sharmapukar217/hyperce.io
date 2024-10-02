@@ -22,9 +22,9 @@ export default function HyperceEventsClubHome() {
       </div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {/* Skills Events Club */}
-        <div className="bg-white dark:bg-[#2c3e50] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl border-t-4 border-pink-500 shadow-pink-300">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        
+        <div className="bg-white dark:bg-[#2c3e50] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl  border-pink-500 ">
           <GiSkills className="text-[#854b8a] dark:text-[#D8AEF2]" size={45} />
           <h3 className="text-xl font-bold mt-4 text-gray-800 dark:text-gray-200">
             Hyperce Skills Events Club
@@ -36,21 +36,21 @@ export default function HyperceEventsClubHome() {
           <ul className="mt-4 text-left space-y-2">
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#854b8a] mr-2" /> Virtual Pass:
-              $300/month, $3000/year
+              NPR 300/month, NPR 3000/year
             </li>
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#854b8a] mr-2" /> Physical Pass:
-              $500/month, $5000/year
+              NPR 500/month, NPR 5000/year
             </li>
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#854b8a] mr-2" /> Hybrid Pass:
-              $600/month, $6000/year
+              NPR 600/month, NPR 6000/year
             </li>
           </ul>
         </div>
 
-        {/* Business Events Club */}
-        <div className="bg-white dark:bg-[#2c3e50] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl border-t-4 border-blue-500 shadow-blue-300">
+  
+        <div className="bg-white dark:bg-[#2c3e50] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl  border-blue-500 ">
           <MdOutlineBusinessCenter
             className="text-[#3498db] dark:text-[#AEDFF7]"
             size={45}
@@ -65,21 +65,21 @@ export default function HyperceEventsClubHome() {
           <ul className="mt-4 text-left space-y-2">
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#3498db] mr-2" /> Virtual Pass:
-              $750/month, $7500/year
+              NPR 750/month, NPR 7500/year
             </li>
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#3498db] mr-2" /> Physical Pass:
-              $1000/month, $10000/year
+              NPR 1000/month, NPR 10000/year
             </li>
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#3498db] mr-2" /> Hybrid Pass:
-              $1500/month, $15000/year
+              NPR 1500/month, NPR 15000/year
             </li>
           </ul>
         </div>
 
-        {/* Super Events Club */}
-        <div className="bg-white dark:bg-[#2c3e50] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl border-t-4 border-green-500 shadow-green-300">
+      
+        <div className="bg-white dark:bg-[#2c3e50] p-6 rounded-2xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl  ">
           <FaUserFriends
             className="text-[#27ae60] dark:text-[#B4F0C6]"
             size={45}
@@ -94,23 +94,23 @@ export default function HyperceEventsClubHome() {
           <ul className="mt-4 text-left space-y-2">
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#27ae60] mr-2" /> Virtual Pass:
-              $900/month, $9000/year
+              NPR 900/month, NPR 9000/year
             </li>
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#27ae60] mr-2" /> Physical Pass:
-              $1300/month, $13000/year
+              NPR 1300/month, NPR 13000/year
             </li>
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               <FaTicketAlt className="text-[#27ae60] mr-2" /> Hybrid Pass:
-              $1800/month, $18000/year
+              NPR 1800/month, NPR 18000/year
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Additional Information */}
       <div className="mt-12 text-center">
-        <p className="text-xl font-bold text-yellow-500 dark:text-yellow-700">
+        {/* <p className="text-xl font-bold text-yellow-500 dark:text-yellow-700">
           Limited Time Offer: Only 30 seats available for the entire club!
         </p>
         <p className="text-lg mt-2 text-gray-800 dark:text-gray-300">
@@ -120,7 +120,7 @@ export default function HyperceEventsClubHome() {
         <p className="text-lg mt-2 text-gray-800 dark:text-gray-300">
           One lucky winner will receive a{' '}
           <span className="font-extrabold">Combo Premium Pass Membership</span>
-        </p>
+        </p> */}
         <div>
           <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6" target="_blank">
             <button className="mt-6 bg-[#357d8A] hover:bg-[#357d8A] text-white py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">

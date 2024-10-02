@@ -47,12 +47,12 @@ export default function Navbar(props: any) {
   return (
     <ThemeProvider defaultTheme="dark" attribute="class">
       <header className={cn('dark:bg-slate-900 w-full gap-5', props.className)}>
-        <div className="flex items-center justify-between gap-5 md:gap-0 container py-8 px-10 md:px-20 z-50">
+        <div className="flex items-center justify-between gap-5 md:gap-2 container py-8 px-10 md:px-20 z-50">
           <div className="logo">
             <Logo />
           </div>
 
-          <nav className="justify-center items-center hidden lg:flex">
+          <nav className="justify-center items-center hidden lg1:flex gap-2">
             <ul className="flex gap-7">
               {navMenuItems.map((menuItem) => (
                 <li
@@ -80,9 +80,11 @@ export default function Navbar(props: any) {
               <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6" target="_blank">
                 <button
                   aria-label="events-club-membership"
-                  className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-1 rounded-full items-center"
+                  className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-purple-700 px-5 py-1 rounded-full items-center"
                 >
-                  <span className="text-base font-bold">Join Events Club</span>
+                  <span className="text-base font-bold">
+                    Join Our Events Club
+                  </span>
                 </button>
               </Link>
 

@@ -173,9 +173,9 @@ export default function Hamburger(props: any) {
             >
               <button
                 aria-label="join-events-club"
-                className="w-full flex justify-center gap-2 py-2 px-4 text-white bg-[#357D8A] rounded-full hover:scale-105 transition-transform font-semibold"
+                className="w-full flex justify-center gap-2 py-2 px-4 text-white bg-purple-700 rounded-full hover:scale-105 transition-transform font-semibold"
               >
-                Join Events Club
+                Join Our Events Club
               </button>
             </a>
 

@@ -81,6 +81,9 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'loop-scroll': 'loop-scroll 50s linear infinite'
+      },
+      screens: {
+        lg1: '1212px'
       }
     }
   },
