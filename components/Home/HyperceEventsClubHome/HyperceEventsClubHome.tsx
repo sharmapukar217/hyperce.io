@@ -100,9 +100,9 @@ export default function HyperceEventsClubHome() {
           club and enjoy <span className="font-extrabold text-red-500">special
           perks</span>.
         </p> */}
-        <div className="mt-6 flex flex-row">
+        <div className="mt-6 flex flex-row gap-4 items-center justify-center">
           <AiFillFire
-            className="mx-auto text-red-600 dark:text-yellow-400"
+            className=" text-red-600 dark:text-yellow-400"
             size={50}
           />
           <Link href="/events-club" target="_blank">
@@ -111,7 +111,7 @@ export default function HyperceEventsClubHome() {
             </button>
           </Link>
           <AiFillFire
-            className="mx-auto text-red-600 dark:text-yellow-400"
+            className=" text-red-600 dark:text-yellow-400"
             size={50}
           />
         </div>
