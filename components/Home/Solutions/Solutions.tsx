@@ -19,11 +19,11 @@ export default function Solutions() {
         id="solutions"
         className="w-fit container  dark:bg-[#0F1023] text-black dark:text-white bg-[#F3F4F6] mx-auto lg:px-20 py-10 md:py-16 rounded-2xl"
       >
-        <h1 className="hyperce-head-xl text-4xl text-black dark:text-white text-center">
+        <h1 className="hyperce-head-xl text-4xl text-black dark:text-white text-center my-8">
           Hyperce Suite
         </h1>
         <div className="flex justify-center">
-          <div className="flex gap-5 flex-col md:flex-row">
+          <div className="flex gap-12 flex-col md:flex-row">
             <Link
               href={suiteLink}
               target="_blank"

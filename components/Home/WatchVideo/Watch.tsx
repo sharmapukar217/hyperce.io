@@ -10,7 +10,7 @@ export default function Watch() {
       className="container mx-auto px-10 md:px-20 py-10 md:py-20 flex flex-col lg:flex-row text-left"
     >
       <div className="flex w-full flex-col justify-center items-center md:items-start">
-        <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase">
+        <div className="hyperce-head-sup tracking-wider text-[#357D8A] uppercase pb-6">
           Watch a video
         </div>
         <h2 className="hyperce-head-xl text-3xl md:text-4xl text-center leading-snug tracking-tight text-gray-800 lg:leading-tight dark:text-white">
