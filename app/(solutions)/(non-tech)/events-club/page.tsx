@@ -8,8 +8,6 @@ export default function Page() {
     <>
       <Navbar />
       <HeroSection />
-
-      {/* contact Section */}
       <Contact />
     </>
   );
