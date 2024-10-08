@@ -184,7 +184,7 @@ export default function HeroSection() {
           </ul>
 
           {/* pricing  */}
-          {/* <div className="mt-6">
+          <div className="mt-6">
             <p className="font-bold text-lg">Membership Pricing</p>
             <div className="mt-4 flex flex-col gap-3">
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
@@ -212,7 +212,7 @@ export default function HeroSection() {
                 </p>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
 
