@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* Call to Action */}
       <div className="text-center my-12 flex flex-col lg:flex-row gap-4 justify-center">
         <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6" target="_blank">
-          <button className="bg-green-600 text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2aa854] transition-colors text-lg  shadow-transparent hover:shadow-blue-500/50">
+          <button className="bg-green-600 text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2aa854] transition-colors text-lg  shadow-transparent hover:shadow-green-500/50">
             Claim Your Membership
           </button>
         </Link>
