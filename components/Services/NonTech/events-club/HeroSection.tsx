@@ -24,13 +24,16 @@ export default function HeroSection() {
 
       {/* Call to Action */}
       <div className="text-center my-12 flex flex-col lg:flex-row gap-4 justify-center">
-        <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6">
-          <button className="bg-green-600 text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors text-lg  shadow-transparent hover:shadow-blue-500/50">
+        <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6" target="_blank">
+          <button className="bg-green-600 text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2aa854] transition-colors text-lg  shadow-transparent hover:shadow-blue-500/50">
             Claim Your Membership
           </button>
         </Link>
 
-        <Link href="https://docs.hyperce.io/hyperce-events-club-proposal.pdf">
+        <Link
+          href="https://docs.hyperce.io/hyperce-events-club-proposal.pdf"
+          target="_blank"
+        >
           <button className="bg-gradient-to-tl from-purple-600 to-purple-400 shadow-lg shadow-transparent hover:shadow-purple-500/50 border border-transparent font-medium rounded-3xl py-3 px-8 transition-colors text-lg">
             View Hyperce Events Club Proposal
           </button>
@@ -166,14 +169,14 @@ export default function HeroSection() {
             tailored to ambitious professionals.
           </p>
           <ul className="mt-4 text-left space-y-2">
-            <li className="flex items-center">
+            {/* <li className="flex items-center">
               <FaCheckCircle className="text-[#27ae60] mr-2" /> 12-36 virtual
               events per year
             </li>
             <li className="flex items-center">
               <FaCheckCircle className="text-[#27ae60] mr-2" /> 12-24 physical
               events per year
-            </li>
+            </li> */}
             <li className="flex items-center">
               <FaCheckCircle className="text-[#27ae60] mr-2" /> Combination of
               skill & business events
@@ -227,21 +230,6 @@ export default function HeroSection() {
             One lucky winner will receive a Combo Premium Pass Membership!
           </p>
         </div> */}
-
-      {/* Call to Action */}
-      {/* <div className="text-center mt-12 flex flex-col lg:flex-row gap-4 justify-center">
-        <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6">
-          <button className="bg-[#3498db] text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors text-lg  shadow-transparent hover:shadow-blue-500/50">
-            Register
-          </button>
-        </Link>
-
-        <Link href="https://docs.hyperce.io/hyperce-events-club-proposal.pdf">
-          <button className="bg-gradient-to-tl from-purple-600 to-purple-400 shadow-lg shadow-transparent hover:shadow-purple-500/50 border border-transparent font-medium rounded-3xl py-3 px-8 transition-colors text-lg">
-            View Hyperce Events Club Proposal
-          </button>
-        </Link>
-      </div> */}
     </div>
   );
 }
