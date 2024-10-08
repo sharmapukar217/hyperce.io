@@ -22,6 +22,20 @@ export default function HeroSection() {
         </p>
       </div>
 
+      <div className="text-center my-12 flex flex-col lg:flex-row gap-4 justify-center">
+        <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6">
+          <button className="bg-green-600 text-white py-3 px-8 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors text-lg  shadow-transparent hover:shadow-blue-500/50">
+            Claim Your Membership
+          </button>
+        </Link>
+
+        <Link href="https://docs.hyperce.io/hyperce-events-club-proposal.pdf">
+          <button className="bg-gradient-to-tl from-purple-600 to-purple-400 shadow-lg shadow-transparent hover:shadow-purple-500/50 border border-transparent font-medium rounded-3xl py-3 px-8 transition-colors text-lg">
+            View Hyperce Events Club Proposal
+          </button>
+        </Link>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
         {/* Skills Events Plan */}
         <div className="bg-gray-100 dark:bg-[#2c3e50] p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
@@ -164,7 +178,9 @@ export default function HeroSection() {
               skill & business events
             </li>
           </ul>
-          <div className="mt-6">
+
+          {/* pricing  */}
+          {/* <div className="mt-6">
             <p className="font-bold text-lg">Membership Pricing</p>
             <div className="mt-4 flex flex-col gap-3">
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
@@ -192,7 +208,7 @@ export default function HeroSection() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
