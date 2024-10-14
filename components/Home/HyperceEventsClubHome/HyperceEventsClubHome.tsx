@@ -18,13 +18,27 @@ export default function HyperceEventsClubHome() {
         <h1 className="text-4xl font-extrabold text-[#2c3e50] dark:text-[#AAB8C2]">
           Hyperce Events Club
         </h1>
-        <p className="w-full md:w-2/3 text-lg md:text-xl text-gray-600 dark:text-gray-300">
-          Elevate your personal and professional growth by joining
-          Hyperce&apos;s exclusive events, workshops, bootcamps, and webinars.
-          Whether you&apos;re looking to upskill or expand your business
-          network, Hyperce Events Club offers unparalleled opportunities to
-          grow.
+        <div className="w-2/3 text-xl sm:text-lg p-2 border-b border-gray-800 text-gray-900">
+          <p className="font-semibold text-green-600 ">
+            The membership is right now open to only Nepalese people.
+          </p>
+          <p className="italic text-yellow-400 p-2">Will open globally soon.</p>
+        </div>
+      </div>
+
+      {/* Special Offers Section */}
+      <div className="mt-12 text-center pb-8">
+        <p className="text-xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
+          Initially: 30 seats limit for the entire club membership
         </p>
+        <p className="text-lg mt-2">
+          Festive Offer: <span className="font-extrabold">10% off</span> on all
+          membership passes!
+        </p>
+        {/* <p className="text-lg mt-2">
+          One lucky winner will receive a{' '}
+          <span className="font-extrabold">Combo Premium Pass Membership</span>.
+        </p> */}
       </div>
 
       {/* Cards Section */}
@@ -101,19 +115,11 @@ export default function HyperceEventsClubHome() {
           perks</span>.
         </p> */}
         <div className="mt-6 flex flex-row gap-4 items-center justify-center">
-          <AiFillFire
-            className=" text-red-600 dark:text-yellow-400"
-            size={50}
-          />
           <Link href="/events-club" target="_blank">
             <button className="bg-gradient-to-r from-purple-700 to-indigo-600 hover:from-purple-600 hover:to-indigo-500 text-white py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
               Join Our Events Club
             </button>
           </Link>
-          <AiFillFire
-            className=" text-red-600 dark:text-yellow-400"
-            size={50}
-          />
         </div>
       </div>
     </section>

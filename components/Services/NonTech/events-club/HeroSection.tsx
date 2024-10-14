@@ -13,13 +13,28 @@ export default function HeroSection() {
         <h1 className="text-4xl font-extrabold text-[#2c3e50] dark:text-[#AAB8C2]">
           Welcome to the Hyperce Events Club
         </h1>
-        <p className="w-full lg:w-3/4 text-xl sm:text-base">
-          The Hyperce Events Club offers exclusive access to a wide range of
-          skill-building and business networking events, including workshops,
-          bootcamps, and webinars. Whether you&apos;re looking to advance your
-          career or expand your professional network, we have the perfect
-          membership plan for you.
+        <div className="w-2/3 text-xl sm:text-lg p-2 border-b border-gray-800 text-gray-900">
+          <p className="font-semibold text-green-600 ">
+            The membership is right now open to only Nepalese people.
+          </p>
+          <p className="italic text-yellow-400 p-2">Will open globally soon.</p>
+        </div>
+      </div>
+
+      {/* hiding for now */}
+      {/* Special Offers Section */}
+      <div className="mt-12 text-center pb-2">
+        <p className="text-xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
+          Initially: 30 seats limit for the entire club membership
         </p>
+        <p className="text-lg mt-2">
+          Festive Offer: <span className="font-extrabold">10% off</span> on all
+          membership passes!
+        </p>
+        {/* <p className="text-lg mt-2">
+          One lucky winner will receive a{' '}
+          <span className="font-extrabold">Combo Premium Pass Membership</span>.
+        </p> */}
       </div>
 
       {/* Call to Action */}
@@ -215,21 +230,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* hiding for now */}
-      {/* Special Offers Section */}
-      {/* <div className="bg-[#f1f1f1] dark:bg-[#34495e] p-10 rounded-lg shadow-md text-center">
-          <h2 className="text-2xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
-            Special Offer: 10% Off All Memberships!
-          </h2>
-          <p className="mt-2 text-lg">
-            Join now to enjoy our exclusive festive offer. Limited to the first
-            30 members!
-          </p>
-          <p className="mt-2 text-lg font-semibold">
-            One lucky winner will receive a Combo Premium Pass Membership!
-          </p>
-        </div> */}
     </div>
   );
 }
