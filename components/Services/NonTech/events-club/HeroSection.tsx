@@ -21,22 +21,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* hiding for now */}
-      {/* Special Offers Section */}
-      <div className="mt-12 text-center pb-2">
-        <p className="text-xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
-          Initially: 30 seats limit for the entire club membership
-        </p>
-        <p className="text-lg mt-2">
-          Festive Offer: <span className="font-extrabold">10% off</span> on all
-          membership passes!
-        </p>
-        {/* <p className="text-lg mt-2">
-          One lucky winner will receive a{' '}
-          <span className="font-extrabold">Combo Premium Pass Membership</span>.
-        </p> */}
-      </div>
-
       {/* Call to Action */}
       <div className="text-center my-12 flex flex-col lg:flex-row gap-4 justify-center">
         <Link href="https://forms.gle/gzn4Qf5mYgy4zEfz6" target="_blank">
@@ -53,6 +37,22 @@ export default function HeroSection() {
             View Hyperce Events Club Proposal
           </button>
         </Link>
+      </div>
+
+      {/* hiding for now */}
+      {/* Special Offers Section */}
+      <div className="mt-12 text-center pb-6">
+        <p className="text-xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
+          Initially: 30 seats limit for the entire club membership
+        </p>
+        <p className="text-lg mt-2">
+          Festive Offer: <span className="font-extrabold">10% off</span> on all
+          membership passes!
+        </p>
+        {/* <p className="text-lg mt-2">
+          One lucky winner will receive a{' '}
+          <span className="font-extrabold">Combo Premium Pass Membership</span>.
+        </p> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
