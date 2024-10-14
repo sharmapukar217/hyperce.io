@@ -10,13 +10,27 @@ export default function HyperceEventsClub() {
         <h1 className="text-3xl font-extrabold text-[#2c3e50] dark:text-[#AAB8C2]">
           Hyperce Events Club
         </h1>
-        <p className="w-2/3 text-xl sm:text-base">
-          Club for Hyperce organized and powered/supported business and skills
-          events, bootcamps, workshops, trainings, and webinars. Whether
-          you&apos;re looking to upskill or build business connections, Hyperce
-          Events Club offers various opportunities to grow your career and
-          network.
+        <div className="w-2/3 text-xl sm:text-lg p-2 border-b border-gray-800 text-gray-900">
+          <p className="font-semibold text-green-600 ">
+            The membership is right now open to only Nepalese people.
+          </p>
+          <p className="italic text-yellow-400 p-2">Will open globally soon.</p>
+        </div>
+      </div>
+
+      {/*Additional Details */}
+      <div className="mt-12 text-center pb-6">
+        <p className="text-xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
+          Initially: 30 seats limit for the entire club membership
         </p>
+        <p className="text-lg mt-2">
+          Festive Offer: <span className="font-extrabold">10% off</span> on all
+          membership passes!
+        </p>
+        {/* <p className="text-lg mt-2">
+          One lucky winner will receive a{' '}
+          <span className="font-extrabold">Combo Premium Pass Membership</span>.
+        </p> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-5">
@@ -101,19 +115,7 @@ export default function HyperceEventsClub() {
         </div>
       </div>
 
-      {/*Additional Details */}
       <div className="mt-12 text-center">
-        {/* <p className="text-xl font-bold text-[#e74c3c] dark:text-[#F4A7A7]">
-          Initially: 30 seats limit for the entire club membership
-        </p> */}
-        {/* <p className="text-lg mt-2">
-          Festive Offer: <span className="font-extrabold">10% off</span> on all
-          membership passes!
-        </p>
-        <p className="text-lg mt-2">
-          One lucky winner will receive a{' '}
-          <span className="font-extrabold">Combo Premium Pass Membership</span>.
-        </p> */}
         <Link href="/events-club" target="_blank">
           <button className="mt-4 bg-[#3498db] text-white py-3 px-6 rounded-3xl shadow-lg hover:bg-[#2980b9] transition-colors">
             Join Our Events Club
