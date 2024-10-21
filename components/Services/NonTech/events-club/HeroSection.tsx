@@ -90,24 +90,36 @@ export default function HeroSection() {
                   Virtual Pass
                 </p>
                 <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                  NPR 270/month or NPR 2700/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 300/month or NPR 3000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
                 <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
                   Physical Pass
                 </p>
                 <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                  NPR 450/month or NPR 4500/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 500/month or NPR 5000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
                 <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
                   Hybrid Pass
                 </p>
                 <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                  NPR 540/month or NPR 5400/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 600/month or NPR 6000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
             </div>
           </div>
@@ -149,24 +161,36 @@ export default function HeroSection() {
                   Virtual Pass
                 </p>
                 <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                  NPR 675/month or NPR 6750/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 750/month or NPR 7500/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
                 <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
                   Physical Pass
                 </p>
                 <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                  NPR 900/month or NPR 9000/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 1000/month or NPR 10000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
                 <p className="font-semibold text-[#3498db] dark:text-[#AEDFF7]">
                   Hybrid Pass
                 </p>
                 <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                  NPR 1350/month or NPR 13500/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 1500/month or NPR 15000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
             </div>
           </div>
@@ -206,25 +230,43 @@ export default function HeroSection() {
                 <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6]">
                   Virtual Pass
                 </p>
-                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+
+                {/* price with 10% discount */}
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] ">
+                  NPR 810/month or NPR 8100/year
+                </p>
+                {/* Price without discount */}
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through ">
                   NPR 900/month or NPR 9000/year
                 </p>
+
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
                 <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6]">
                   Physical Pass
                 </p>
-                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                {/* price with 10% discount */}
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] ">
+                  NPR 1170/month or NPR 11700/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 1300/month or NPR 13000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
               <div className="pricing-card bg-white dark:bg-[#34495e] p-4 rounded-lg shadow-md">
-                <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6]">
+                <p className="font-semibold text-[#27ae60] dark:text-[#B4F0C6] ">
                   Hybrid Pass
                 </p>
-                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]">
+                {/* price with 10% discount */}
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB]  ">
+                  NPR 1620/month or NPR 16200/year
+                </p>
+                <p className="text-sm text-[#2c3e50] dark:text-[#CBCBCB] line-through">
                   NPR 1800/month or NPR 18000/year
                 </p>
+                <p className="text-green-500 text-sm">10% off </p>
               </div>
             </div>
           </div>
