@@ -27,6 +27,12 @@ export default function OurIncubatees() {
       url: 'https://www.samaajpatra.com/',
       image: '/incubate/samaajpatra.png',
       description: 'Your online news portal.'
+    },
+    {
+      name: 'Vibely',
+      url: 'https://vibely.life/',
+      image: '/incubate/vibely.png',
+      description: 'Your Personal Care Marketplace.'
     }
   ];
 

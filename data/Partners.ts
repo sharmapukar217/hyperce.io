@@ -5,5 +5,6 @@ export const HypercePartners: string[] = [
   '/PartnersLogo/npdev.png',
   '/PartnersLogo/mtLegal.jpeg',
   '/PartnersLogo/roseStudio.jpeg',
-  '/PartnersLogo/zoho.jpeg'
+  '/PartnersLogo/zoho.jpeg',
+  '/PartnersLogo/vibely.png'
 ];
