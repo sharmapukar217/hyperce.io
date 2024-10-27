@@ -3,6 +3,7 @@
 import { useToast } from '@/components/ui/use-toast';
 import { HypercePartners } from '@/data/Partners';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function RequestQuote() {
   const { toast } = useToast();
@@ -43,7 +44,6 @@ export default function RequestQuote() {
     });
 
     const data = await response.json();
-    console.log(data);
 
     if (response.status === 200) {
       toast({
@@ -107,7 +107,14 @@ export default function RequestQuote() {
 
               <div className="mt-4 flex flex-wrap items-center gap-y-5 gap-x-8">
                 {HypercePartners.map((each, index) => (
-                  <img key={index} src={each} alt="" className="w-16 h-auto" />
+                  <Link
+                    key={index}
+                    href={each.href}
+                    target="_blank"
+                    className="flex justify-center"
+                  >
+                    <img src={each.imageSrc} alt="" className="w-16 h-auto" />
+                  </Link>
                 ))}
               </div>
             </div>
