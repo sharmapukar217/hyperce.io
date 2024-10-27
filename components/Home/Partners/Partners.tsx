@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { HypercePartners } from '@/data/Partners';
 
 export default function Partners() {
@@ -16,13 +17,18 @@ export default function Partners() {
 
       <div className="mt-10 logos flex gap-8 md:gap-20 flex-wrap justify-center items-center text-black dark:text-white">
         {HypercePartners.map((each, index) => (
-          <div key={index} className="flex justify-center">
+          <Link
+            key={index}
+            href={each.href}
+            target="_blank"
+            className="flex justify-center"
+          >
             <img
               className="w-14 md:w-20 cursor-pointer transition-all duration-300 invert-[10%] hover:invert-0"
-              src={each}
+              src={each.imageSrc}
               alt=""
             />
-          </div>
+          </Link>
         ))}
       </div>
     </section>
