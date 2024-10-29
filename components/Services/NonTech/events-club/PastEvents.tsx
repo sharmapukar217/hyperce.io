@@ -2,9 +2,12 @@ import React from 'react';
 
 export default function PastEvents() {
   const events = [
-    { name: 'LinkedIn Masterclass (2-day event)', attendees: '100+ Attendees' },
     {
-      name: 'Zero-Capital Startup Bootcamp (3-day event)',
+      name: 'LinkedIn Masterclass (2-days event)',
+      attendees: '100+ Attendees'
+    },
+    {
+      name: 'Zero-Capital Startup Bootcamp (3-days event)',
       attendees: '125+ Attendees'
     },
     { name: 'Resume Building with AI', attendees: '100+ Attendees' },
