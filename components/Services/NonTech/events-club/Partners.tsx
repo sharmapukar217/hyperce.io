@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Partners() {
   const partners = [
@@ -27,7 +28,7 @@ export default function Partners() {
   ];
 
   return (
-    <div className="py-16 px-4 sm:px-8 lg:px-20 text-center transition-all">
+    <div className="py-16 px-6 lg:px-20 text-center">
       {/* Header */}
       <div className="mb-12">
         <h2 className="text-4xl font-extrabold text-[#2c3e50] dark:text-[#AAB8C2]">
@@ -39,31 +40,34 @@ export default function Partners() {
       </div>
 
       {/* Partners Grid */}
-      <div className="grid gap-8 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-stretch">
+      <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center">
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center p-4 bg-white dark:bg-[#1f2937] rounded-lg shadow-md hover:shadow-2xl transition-all transform hover:scale-105"
+            className="flex items-center justify-center p-4 bg-white dark:bg-[#1f2937] rounded-lg shadow-md hover:shadow-lg transition-shadow transform hover:scale-105"
           >
-            {/* Partner Logo */}
-            <Image
-              src={partner.logo}
-              alt={partner.name}
-              width={100}
-              height={100}
-              className="w-20 h-20 object-contain mb-4"
-            />
-
-            {/* Learn More Button */}
-            {partner.url && (
-              <a
+            {partner.url ? (
+              <Link
                 href={partner.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-block bg-gradient-to-r from-blue-500 to-teal-500 text-white font-medium text-sm py-2 px-4 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
               >
-                Learn More
-              </a>
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={100}
+                  height={100}
+                  className="w-20 h-20 object-contain"
+                />
+              </Link>
+            ) : (
+              <Image
+                src={partner.logo}
+                alt={partner.name}
+                width={100}
+                height={100}
+                className="w-20 h-20 object-contain"
+              />
             )}
           </div>
         ))}
