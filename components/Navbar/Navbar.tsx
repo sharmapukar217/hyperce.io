@@ -158,7 +158,7 @@ export function SolutionsMegaMenu() {
         <div className="">
           <div className="hs-dropdown [--adaptive:none] font-bold">
             <button type="button" className="flex items-center w-full">
-              <Link href="/solutions">Solutions</Link>
+              Solutions
               <svg
                 className="flex-shrink-0 ms-2 w-4 h-4"
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,9 @@ export function SolutionsMegaMenu() {
             <div className="group hs-dropdown-menu p-3 transition-[opacity,margin] hs-dropdown-open:opacity-100 opacity-0 hidden z-10 bg-white sm:shadow-md rounded-lg dark:bg-gray-800 sm:dark:border dark:border-gray-700 dark:divide-gray-700 before:absolute top-full sm:border before:-top-5 before:start-0 before:w-full before:h-5">
               {PlatformsData.map((platform, index) => (
                 <div key={index}>
-                  <div className="hs-dropdown relative [--strategy:absolute]">
+                  <div
+                    className={`${platform.platformProducts?.length ? 'hs-dropdown' : ''} relative [--strategy:absolute]`}
+                  >
                     <Link
                       href={platform.href || '#'}
                       className="flex justify-between items-center text-sm text-gray-800 rounded-lg py-2 px-3 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 text-left w-[13vw]"
