@@ -49,7 +49,7 @@ export const HeadlessGallary = [
   },
   {
     img_name: 'Vibely',
-    url: 'https://vibely.life/',
+    a_href: 'https://vibely.life/',
     img_src: '/gallary/vibely_demo.png',
     description: 'Your Personal Care Marketplace.'
   }
