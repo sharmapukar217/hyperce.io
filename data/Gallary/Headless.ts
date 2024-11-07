@@ -4,11 +4,12 @@ export const HeadlessGallary = [
     a_href: 'https://menzz.co/',
     img_src: '/gallary/menzz_demo.png'
   },
-  {
-    img_name: 'Goonji',
-    a_href: 'https://goonji.com/',
-    img_src: '/gallary/goonji_demo.png'
-  },
+  // {
+  // REASON: SHUT DOWN
+  //   img_name: 'Goonji',
+  //   a_href: 'https://goonji.com/',
+  //   img_src: '/gallary/goonji_demo.png'
+  // },
   {
     img_name: 'Maipic',
     a_href: 'https://maipic.de',
@@ -38,7 +39,18 @@ export const HeadlessGallary = [
   },
   {
     img_name: 'SignalStuff',
-    a_href: 'https://staging.signalstuff.com/',
+    a_href: 'https://signalstuff.com/',
     img_src: '/gallary/signalstuff_demo.png'
+  },
+  {
+    img_name: 'Purplleface',
+    a_href: 'https://www.purplleface.com/',
+    img_src: '/gallary/purplleface_demo.png'
+  },
+  {
+    name: 'Vibely',
+    url: 'https://vibely.life/',
+    image: '/incubate/vibely.png',
+    description: 'Your Personal Care Marketplace.'
   }
 ];
