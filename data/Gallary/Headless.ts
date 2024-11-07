@@ -48,9 +48,9 @@ export const HeadlessGallary = [
     img_src: '/gallary/purplleface_demo.png'
   },
   {
-    name: 'Vibely',
+    img_name: 'Vibely',
     url: 'https://vibely.life/',
-    image: '/incubate/vibely.png',
+    img_src: '/gallary/vibely_demo.png',
     description: 'Your Personal Care Marketplace.'
   }
 ];
