@@ -163,6 +163,40 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
             </span>
           </div>
         </a>
+
+        {contactAddressDetails.workplace && (
+          <div>
+            <div className="phone flex gap-3">
+              <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="w-4 h-4"
+                >
+                  <path d="m14 5-3 3 2 7 8-8-7-2Z" />
+                  <path d="m14 5-3 3-3-3 3-3 3 3Z" />
+                  <path d="M9.5 6.5 4 12l3 6" />
+                  <path d="M3 22v-2c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2H3Z" />
+                </svg>
+              </div>
+              <span className="place dark:text-[#9CA3AF] text-base">
+                Workplace:
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: contactAddressDetails.workplace
+                  }}
+                />
+              </span>
+            </div>
+          </div>
+        )}
+
         <hr className="mt-6 text-blue-950" />
       </div>
     </div>

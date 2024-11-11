@@ -4,6 +4,7 @@ export interface OfficeDetails {
   email: string;
   phoneNumber: string;
   country: string;
+  workplace?: string;
 }
 
 export enum Domain {
@@ -27,7 +28,8 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     address: 'Adarshanagar, Chandragiri - 14, Kathmandu, Nepal, 44600',
     email: 'hi@hyperce.io',
     phoneNumber: '+977-9840260599',
-    country: 'Nepal'
+    country: 'Nepal',
+    workplace: 'Kalimati, Kathmandu <br />(Near Kalimati Trade Center)'
   },
   [Domain.HyperceUk]: {
     officeName: 'Hyperce',
