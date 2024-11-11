@@ -185,14 +185,14 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
                   <path d="M3 22v-2c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2H3Z" />
                 </svg>
               </div>
-              <span className="place dark:text-[#9CA3AF] text-base">
-                Workplace:
+              <div className="place dark:text-[#9CA3AF] text-base space-y-1">
+                <span>Workplace:</span>
                 <span
                   dangerouslySetInnerHTML={{
                     __html: contactAddressDetails.workplace
                   }}
                 />
-              </span>
+              </div>
             </div>
           </div>
         )}
