@@ -1,26 +1,17 @@
-import Image from 'next/image';
+import { cache } from 'react';
 import { gql, request } from 'graphql-request';
 
 import { cn } from '@/lib/utils';
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
-import { cache } from 'react';
-
-type PersonInfoProps = {
-  name: string;
-  imageUrl: string;
-  position: string;
-  hideLinks?: boolean;
-  facebookLink?: string;
-  linkedInLink?: string;
-  animateBorder?: boolean;
-};
 
 type SocialLinks = {
   github?: string;
   facebook?: string;
   linkedin?: string;
 };
+
+export const revalidate = 60;
 
 const PersonInfo = ({
   member,
