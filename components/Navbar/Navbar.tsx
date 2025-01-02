@@ -53,7 +53,7 @@ export default function Navbar(props: any) {
           </div>
 
           <nav className="justify-center items-center hidden lg1:flex gap-2">
-            <ul className="flex gap-7">
+            <ul className="flex gap-6">
               {navMenuItems.map((menuItem) => (
                 <li
                   key={menuItem.href}
@@ -179,7 +179,9 @@ export function SolutionsMegaMenu() {
               {PlatformsData.map((platform, index) => (
                 <div key={index}>
                   <div
-                    className={`${platform.platformProducts?.length ? 'hs-dropdown' : ''} relative [--strategy:absolute]`}
+                    className={`${
+                      platform.platformProducts?.length ? 'hs-dropdown' : ''
+                    } relative [--strategy:absolute]`}
                   >
                     <Link
                       href={platform.href || '#'}

@@ -1,8 +1,8 @@
 export const navMenuItems = [
-  {
-    name: 'Home',
-    href: '/'
-  },
+  // {
+  //   name: 'Home',
+  //   href: '/'
+  // },
   {
     name: 'Referral',
     href: '/referral'
@@ -14,6 +14,10 @@ export const navMenuItems = [
   {
     name: 'Our Team',
     href: '/team'
+  },
+  {
+    name: 'Career',
+    href: '/career'
   }
   // {
   //   name: 'Events',
