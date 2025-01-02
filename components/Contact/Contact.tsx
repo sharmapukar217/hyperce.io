@@ -174,7 +174,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  strokewidth="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   className="w-4 h-4"
