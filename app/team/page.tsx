@@ -1,214 +1,34 @@
+import { cache } from 'react';
+import { gql, request } from 'graphql-request';
+
 import { cn } from '@/lib/utils';
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
-import Image from 'next/image';
 
-type PersonInfoProps = {
-  name: string;
-  imageUrl: string;
-  position: string;
-  hideLinks?: boolean;
-  facebookLink?: string;
-  linkedInLink?: string;
-  animateBorder?: boolean;
+type SocialLinks = {
+  github?: string;
+  facebook?: string;
+  linkedin?: string;
 };
 
-const boardOfDirectors: Omit<PersonInfoProps, 'hideLinks'>[] = [
-  {
-    position: 'CEO',
-    name: 'Biplab Karki',
-    imageUrl: '/teams/biplab-karki.jpg',
-    facebookLink: 'https://www.facebook.com/biplab.karki1',
-    linkedInLink: 'https://www.linkedin.com/in/beeplove'
-  },
-  {
-    imageUrl: '/Huw Davies.webp',
-    name: 'Huw Davies',
-    position: 'CEO, Hyperce UK',
-    linkedInLink: 'https://www.linkedin.com/in/huw-davies-583990142'
-  },
-  {
-    imageUrl: '/Jawwad Aamer Khan.jpeg',
-    name: 'Jawwad Aamer Khan',
-    position: 'CEO, Hyperce APAC',
-    facebookLink: 'https://www.facebook.com/aamerk2',
-    linkedInLink: 'https://www.linkedin.com/in/jawwadaamerkhan'
-  },
-  {
-    imageUrl: '/Roshanara Mulla Khan.webp',
-    name: 'Roshanara Mulla Khan',
-    position: 'COO, Hyperce APAC',
-    linkedInLink: 'https://www.linkedin.com/in/roshanara-m-145455223'
-  }
-];
-
-const executives: Omit<PersonInfoProps, 'hideLinks'>[] = [
-  {
-    name: 'Gulab Miya',
-    imageUrl: '/teams/gulab-miya.jpg',
-    position: 'Chief HR Officer',
-    facebookLink: 'https://www.facebook.com/sunil.don.58760',
-    linkedInLink: 'https://www.linkedin.com/in/gulab-miya-sunil/'
-  },
-  {
-    name: 'Ujal Bhatta',
-    imageUrl: '/teams/ujal-bhatta.jpg',
-    position: 'COO',
-    facebookLink: 'https://www.facebook.com/ujalbhatta1',
-    linkedInLink: 'https://www.linkedin.com/in/ujal-bhatta/'
-  },
-  {
-    name: 'Rohan Poudel',
-    imageUrl: '/teams/rohan-poudel.jpg',
-    position: 'CTO',
-    facebookLink: 'https://www.facebook.com/rohan.poudel.3597',
-    linkedInLink: 'https://www.linkedin.com/in/rohan-poudel/'
-  },
-  {
-    name: 'Nikesh Singh',
-    imageUrl: '/teams/nikesh-singh.jpg',
-    position: 'CFO',
-    facebookLink: 'https://www.facebook.com/nikesh.singh.796',
-    linkedInLink: 'https://www.linkedin.com/in/nikesh-singh-3a41b0bb/'
-  },
-  {
-    name: 'Saurabh Chalise',
-    imageUrl: '/teams/saurabh-chalise.jpg',
-    position: 'Chief Project Officer',
-    facebookLink: 'https://www.facebook.com/saurabh.chalise',
-    linkedInLink: 'https://www.linkedin.com/in/saurabh-chalise-9983461ba/'
-  },
-  {
-    name: 'Bhabishya Bhatt',
-    imageUrl: '/teams/bhabishya-bhatt.jpg',
-    position: 'Associate CTO',
-    facebookLink: 'https://www.facebook.com/lighterharayeko.manxema',
-    linkedInLink: 'https://www.linkedin.com/in/bhabishya/'
-  }
-];
-
-const teamMembers: Omit<PersonInfoProps, 'hideLinks'>[] = [
-  {
-    name: 'Aashish Shrestha',
-    imageUrl: '/teams/aashish-shrestha.png',
-    position: 'Graphics Designer'
-  },
-  {
-    name: 'Ankit Poudel',
-    imageUrl: '/teams/ankit-poudel.jpg',
-    position: 'Full Stack Developer'
-  },
-  {
-    name: 'Bibek Ghimire',
-    imageUrl: '/teams/bibek-ghimire.jpg',
-    position: 'Flutter Developer'
-  },
-  {
-    name: 'Charchit Dahal',
-    imageUrl: '/teams/charchit-dahal.jpg',
-    position: 'Full Stack Developer'
-  },
-  {
-    name: 'Kushal Subedi',
-    imageUrl: '/teams/kushal-subedi.png',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Pawan Pandey',
-    imageUrl: '/teams/pawan-pandey.jpg',
-    position: 'Full Stack Developer'
-  },
-  {
-    name: 'Pragati Shrestha',
-    imageUrl: '/teams/pragati-shrestha.webp',
-    position: 'Project Manager'
-  },
-  {
-    name: 'Prakash Poudel',
-    imageUrl: '/teams/prakash-poudel.jpg',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Pratikshya Poudel',
-    imageUrl: '/teams/pratikshya-poudel.jpg',
-    position: 'Backend Developer'
-  },
-  {
-    name: 'Pukar Sharma',
-    imageUrl: '/teams/pukar-sharma.jpg',
-    position: 'Full Stack Developer'
-  },
-  {
-    name: 'Rahul Raj Yadav',
-    imageUrl: '/teams/rahul-raj-yadav.jpg',
-    position: 'Backend Developer'
-  },
-  {
-    name: 'Ritesh Bista',
-    imageUrl: '/teams/ritesh-bista.png',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Ritika Bogati',
-    imageUrl: '/teams/ritika-bogati.jpg',
-    position: 'Content Writer'
-  },
-  {
-    name: 'Sajan Nagarkoti',
-    imageUrl: '/teams/sajan-nagarkoti.jpg',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Silson Sapkota',
-    imageUrl: '/teams/silson-sapkota.jpg',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Smriti Panta',
-    imageUrl: '/teams/smriti-panta.jpg',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Sonam Syangbo',
-    imageUrl: '/teams/sonam-syangbo.jpg',
-    position: 'UI/UX Designer'
-  },
-  {
-    name: 'Subharaj Bhandari',
-    imageUrl: '/teams/subharaj-bhandari.jpg',
-    position: 'Backend Developer'
-  },
-  {
-    name: 'Suman Khatri',
-    imageUrl: '/teams/suman-khatri.png',
-    position: 'Frontend Developer'
-  },
-  {
-    name: 'Suruchi Gautam',
-    imageUrl: '/teams/suruchi-gautam.jpg',
-    position: 'Sales & Marketing Officer'
-  },
-  {
-    name: 'Tasnuva Ferdush',
-    imageUrl: '/teams/tasnuva-ferdush.jpg',
-    position: 'Sales & Marketing Officer'
-  },
-  {
-    name: 'Yogesh Lamichhane',
-    imageUrl: '/teams/yogesh-lamichhane.jpg',
-    position: 'DevOps Engineer'
-  }
-];
+export const revalidate = 60;
 
 const PersonInfo = ({
-  name,
-  imageUrl,
-  position,
+  member,
   hideLinks,
-  facebookLink,
-  linkedInLink,
   animateBorder
-}: PersonInfoProps) => {
+}: {
+  member: Member;
+  hideLinks?: boolean;
+  animateBorder?: boolean;
+}) => {
+  const socialLinks = (member.links || []).reduce((acc, link) => {
+    if (link.includes('facebook.com')) acc.facebook = link;
+    if (link.includes('linkedin.com')) acc.linkedin = link;
+    if (link.includes('github.com')) acc.github = link;
+    return acc;
+  }, {} as SocialLinks);
+
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <div className="w-40 h-40 md:h-52 md:w-52 rounded-full flex overflow-hidden relative ">
@@ -217,8 +37,8 @@ const PersonInfo = ({
         )}
 
         <img
-          alt={name}
-          src={imageUrl}
+          alt={member.name}
+          src={member.asset?.source}
           draggable="false"
           className={cn(
             'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
@@ -229,16 +49,18 @@ const PersonInfo = ({
       </div>
 
       <div>
-        <h3 className="text-md md:text-xl font-bold text-[#357D8A]">{name}</h3>
+        <h3 className="text-md md:text-xl font-bold text-[#357D8A]">
+          {member.name}
+        </h3>
         <small className="block font-medium text-sm md:text-base">
-          {position}
+          {member.role}
         </small>
 
         {hideLinks ? null : (
           <div className="inline-flex items-center gap-4 pt-4 md:pt-6">
-            {facebookLink ? (
+            {socialLinks.facebook ? (
               <a
-                href={facebookLink}
+                href={socialLinks.facebook}
                 target="_blank"
                 className="group outline-none"
               >
@@ -254,9 +76,9 @@ const PersonInfo = ({
               </a>
             ) : null}
 
-            {linkedInLink ? (
+            {socialLinks.linkedin ? (
               <a
-                href={linkedInLink}
+                href={socialLinks.linkedin}
                 target="_blank"
                 className="group outline-none"
               >
@@ -278,7 +100,66 @@ const PersonInfo = ({
   );
 };
 
-export default function Page() {
+type TeamType = 'Directors' | 'Team Members' | 'Executive Directors';
+type Member = {
+  id: string;
+  name: string;
+  role: string;
+  links?: Array<string>;
+  asset: { source: string };
+};
+
+type TeamsQueryResponse = {
+  teams: {
+    items: Array<{
+      name: TeamType;
+      members: Array<Member>;
+    }>;
+  };
+};
+const getTeams = cache(async function () {
+  const response = await request<TeamsQueryResponse>(
+    process.env.NEXT_PUBLIC_BACKEND_URL!,
+    gql`
+      query Teams {
+        teams {
+          items {
+            id
+            name
+
+            members {
+              id
+              name
+              links
+              role
+              asset {
+                source
+              }
+            }
+          }
+          totalItems
+        }
+      }
+    `
+  );
+
+  const groupedTeams = response.teams.items.reduce(
+    (acc, team) => {
+      acc[team.name] = team.members;
+      return acc;
+    },
+    {} as Record<TeamType, Member[]>
+  );
+
+  return {
+    Directors: groupedTeams['Directors'] || [],
+    Members: groupedTeams['Team Members'] || [],
+    Executives: groupedTeams['Executive Directors'] || []
+  };
+});
+
+export default async function Page() {
+  const teams = await getTeams();
   return (
     <div className="fixed inset-0 select-none">
       <div
@@ -312,8 +193,8 @@ export default function Page() {
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {boardOfDirectors.map((bod, idx) => (
-                <PersonInfo key={idx} {...bod} animateBorder />
+              {teams.Directors.map((bod, idx) => (
+                <PersonInfo key={idx} member={bod} animateBorder />
               ))}
             </div>
           </div>
@@ -324,8 +205,8 @@ export default function Page() {
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {executives.map((executiveMember, idx) => (
-                <PersonInfo key={idx} {...executiveMember} />
+              {teams.Executives.map((executiveMember, idx) => (
+                <PersonInfo key={idx} member={executiveMember} />
               ))}
             </div>
           </div>
@@ -336,8 +217,8 @@ export default function Page() {
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {teamMembers.map((member, idx) => (
-                <PersonInfo key={idx} {...member} hideLinks />
+              {teams.Members.map((member, idx) => (
+                <PersonInfo key={idx} member={member} />
               ))}
             </div>
           </div>

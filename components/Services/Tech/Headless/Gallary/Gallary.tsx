@@ -43,6 +43,7 @@ export default function HomeTestimonial() {
             </span>
             <a target="_blank" href={website.a_href}>
               <Image
+                className="size-full max-h-[35rem] object-cover"
                 src={website.img_src}
                 alt="WebsiteDemo"
                 width={500}
