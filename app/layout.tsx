@@ -4,6 +4,7 @@ import { DM_Sans } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
 import Script from 'next/script';
 import PrelineScript from '@/vendor/PrelineScript';
+import { Analytics } from '@vercel/analytics/react';
 import WhatsAppBtn from '@/components/WhatsAppBtn';
 import { GoogleTagManager } from '@next/third-parties/google';
 
@@ -76,6 +77,7 @@ export default function RootLayout({
         <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script>  
       */}
 
+      <Analytics />
       <GoogleTagManager gtmId="GTM-TC5WS6B6" />
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
         <PrelineScript />
