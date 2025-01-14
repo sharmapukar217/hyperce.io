@@ -92,9 +92,6 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
             </button>
           </form>
         </CredenzaBody>
-        <CredenzaFooter>
-          <CredenzaClose></CredenzaClose>
-        </CredenzaFooter>
       </CredenzaContent>
     </Credenza>
   );
