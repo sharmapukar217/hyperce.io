@@ -12,6 +12,7 @@ export type Career = {
   title: string;
   content: string;
 
+  totalVacancies?: number
   location: 'remote' | 'onsite' | 'unknown';
   type: 'part-time' | 'full-time' | 'internship';
 };
