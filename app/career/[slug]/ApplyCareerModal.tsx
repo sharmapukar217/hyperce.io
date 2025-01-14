@@ -44,12 +44,14 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
 
   return (
     <Credenza open={open} onOpenChange={setOpen}>
-      <CredenzaTrigger
+      <CredenzaTrigger asChild>
+      <button
         onClick={() => setOpen((v) => !v)}
         className="disabled:cursor-not-allowed disabled:opacity-60 rounded-full px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
         disabled={!canApply || isApplied}
       >
         {isApplied ? 'Applied' : canApply ? 'Apply for this job' : 'Closed'}
+        </button>
       </CredenzaTrigger>
       <CredenzaContent>
         <CredenzaHeader>
