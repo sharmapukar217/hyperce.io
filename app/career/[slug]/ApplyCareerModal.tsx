@@ -24,7 +24,7 @@ function Field({ label, ...props }: FieldProps) {
   return (
     <div className="grid gap-2">
       <label
-        for={props.id}
+        htmlFor={props.id}
         className="text-sm font-semibold text-gray-700 dark:text-gray-300"
       >
         {label}
