@@ -15,7 +15,7 @@ import {
 
 type FieldProps = {
   id: string;
-  type: string;
+  type?: string;
   name?: string;
   label: string;
   placeholder?: string
