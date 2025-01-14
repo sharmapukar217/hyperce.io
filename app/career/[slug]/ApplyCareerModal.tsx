@@ -18,6 +18,7 @@ type FieldProps = {
   type: string;
   name: string;
   label: string;
+  placeholder?: string
 };
 
 function Field({ label, ...props }: FieldProps) {
