@@ -1,6 +1,5 @@
 'use client';
 import * as React from 'react';
-import { useSearchParams } from 'next/navigation';
 import {
   Credenza,
   CredenzaBody,
@@ -39,9 +38,8 @@ function Field({ label, ...props }: FieldProps) {
 }
 
 export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
-  const searchParams = useSearchParams();
   const [open, setOpen] = React.useState(false);
-  const isApplied = searchParams.get('applied') === 'true';
+  const [isApplied, setIsApplied] = React.useState(false);
 
   return (
     <Credenza open={open} onOpenChange={setOpen}>
