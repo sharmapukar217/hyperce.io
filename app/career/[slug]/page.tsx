@@ -145,7 +145,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
 
             {canApply && (
               <p className="text-sm font-semibold leading-6 text-[#357D8A]">
-                We’re hiring
+                We&apos;re hiring
               </p>
             )}
             <h1 className="mt-2 text-[length:clamp(1rem,7vw,3.5rem)] font-semibold leading-none tracking-tighter text-black dark:text-white xl:text-6xl/none">
@@ -233,8 +233,8 @@ export default async function JobDetail({ params }: JobDetailProps) {
             <span className="absolute from-slate-950/10 to-transparent dark:from-white/20 -right-px bottom-[-33px] h-8 w-px bg-gradient-to-b"></span>
 
             <div className="prose prose-slate leading-7 dark:prose-invert">
-              <h1>We&apos;re hiring {career.title}</h1>
               <div
+                className="text-lg md:text-xl"
                 dangerouslySetInnerHTML={{
                   __html: sanitize(career.description)
                 }}
