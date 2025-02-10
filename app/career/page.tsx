@@ -1,10 +1,75 @@
-import Fuse from 'fuse.js';
 import Link from 'next/link';
+import { Suspense, cache } from 'react';
+import sanitizeHtml from 'sanitize-html';
 import { ChevronsRight } from 'lucide-react';
+import { gql, request } from 'graphql-request';
 
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
-import { Career, getAllCareers } from '@/lib/careersUtils';
+import { SearchCareerForm } from './SearchCareerForm';
+
+type CarersResponse = {
+  getCareers: {
+    items: Array<{
+      id: string;
+      title: string;
+      slug: string;
+      level: string;
+      mode: string;
+      deadline: string;
+      description: string;
+      employmentType: string;
+    }>;
+  };
+};
+
+const ITEM_PER_PAGE = 5;
+
+function parseDate(dateString = '') {
+  let cleanedString = dateString.replace(/(\d+)(st|nd|rd|th)/, '$1');
+  const hasTime = /\d{1,2}:\d{2}/.test(cleanedString);
+
+  if (hasTime === false) cleanedString += ' 00:00';
+  return new Date(cleanedString);
+}
+
+const getAllCareers = async function getAllCareers(opts?: {
+  skip?: number;
+  filter?: string;
+}) {
+  // TODO: Implement search filters
+  const response = await request<CarersResponse>({
+    url: 'https://admin.hyperce.io/admin-api',
+    document: gql`
+      query GetAllCareers($skip: Int, $filter: String) {
+        getCareers(options: {
+		skip: $skip,
+		take: ${ITEM_PER_PAGE},
+		filterOperator: AND,
+		filter: {
+			title: { regex: $filter },
+			isActive: { eq: true }
+		},
+	}) {
+          items {
+            id
+            title
+            slug
+            level
+            mode
+            deadline
+            description
+            employmentType
+          }
+        }
+      }
+    `,
+    variables: opts
+  });
+  return response?.getCareers?.items;
+};
+
+type Career = Awaited<ReturnType<typeof getAllCareers>>[number];
 
 function CareerList({ career }: { career: Career }) {
   const dateformatter = new Intl.DateTimeFormat('en-us', {
@@ -15,6 +80,7 @@ function CareerList({ career }: { career: Career }) {
     minute: '2-digit',
     hour12: true
   });
+  const deadline = parseDate(career.deadline);
 
   return (
     <article className="relative group">
@@ -36,24 +102,29 @@ function CareerList({ career }: { career: Career }) {
       <div className="relative">
         <dl className="lg:absolute left-0 top-0 lg:left-auto lg:right-full lg:mr-[calc(6.5rem+1px)]">
           <dd className="flex lg:flex-col items-center whitespace-nowrap text-sm leading-6 dark:text-slate-400 font-medium">
-            <time dateTime={career.deadline.toString()}>
-              {dateformatter.format(career.deadline)}
+            <time dateTime={deadline.toString()}>
+              {dateformatter.format(new Date(deadline))}
             </time>
             <div className="text-xs ml-auto capitalize space-x-1">
-              {career.type ? <span>{career.type}</span> : null}
-              {career.location ? <span>({career.location})</span> : null}
+              {career.employmentType ? (
+                <span>{career.employmentType}</span>
+              ) : null}
+              {career.mode ? <span>({career.mode})</span> : null}
             </div>
           </dd>
         </dl>
 
         <h3 className="text-base font-semibold tracking-tight text-slate-900 dark:text-slate-200 pt-8 lg:pt-0">
           {career.title}
+          {career.level ? ` (${career.level})` : null}
         </h3>
 
         <div className="grid">
           <div
             className="mt-2 mb-4 prose prose-slate prose-a:relative prose-a:z-10 dark:prose-invert line-clamp-2 tracking-tight break-words"
-            dangerouslySetInnerHTML={{ __html: career.content }}
+            dangerouslySetInnerHTML={{
+              __html: sanitizeHtml(career.description)
+            }}
           />
         </div>
       </div>
@@ -70,19 +141,15 @@ function CareerList({ career }: { career: Career }) {
 }
 
 type PageProps = {
-  searchParams?: { query?: string };
+  searchParams?: { query?: string; page?: string };
 };
 
 export default async function Page(props: PageProps) {
-  const query = props.searchParams?.query;
-  const careers = await getAllCareers();
-
-  const engine = new Fuse(careers, {
-    useExtendedSearch: true,
-    keys: ['title', 'type', 'location']
+  const page = parseInt(props.searchParams?.page || '1');
+  const careers = await getAllCareers({
+    skip: ITEM_PER_PAGE * (page - 1),
+    filter: props.searchParams?.query
   });
-
-  const list = query ? engine.search(query) : careers.map((item) => ({ item }));
 
   return (
     <div className="fixed inset-0 select-none h-full max-w-screen overflow-hidden bg-white dark:bg-slate-900">
@@ -97,32 +164,17 @@ export default async function Page(props: PageProps) {
               All the latest job vacancies and internships, straight from the
               team.
             </p>
-            <form
-              method="get"
-              className="max-w-full md:max-w-md sm:mx-auto inline-flex w-full my-8 gap-3"
-            >
-              <input
-                name="query"
-                defaultValue={query}
-                className="appearance-none  rounded-[0.5rem] ring-1 ring-slate-900/5 dark:ring-slate-700 leading-5 sm:text-sm border border-transparent px-4 py-2 placeholder:text-slate-400 block w-full text-slate-900 dark:text-slate-400 focus:text-black dark:focus:text-white focus:outline-none focus:ring-2 focus:!ring-[#357D8A] bg-white dark:bg-slate-700/20"
-                placeholder="Search for the jobs or internships..."
-              />
-
-              <button
-                type="submit"
-                className="bg-[#357D8A] flex-auto shadow text-white rounded-[0.5rem] text-sm border-y border-transparent py-2 font-semibold px-3 hover:bg-[#357D8A]/85 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#357D8A] dark:focus:ring-offset-slate-900 dark:focus:ring-[#357D8A]"
-              >
-                Search
-              </button>
-            </form>
+            <Suspense fallback="">
+              <SearchCareerForm />
+            </Suspense>
           </header>
 
-          {list.length ? (
+          {careers.length ? (
             <div className="relative sm:pb-12 sm:ml-[calc(2rem+1px)] md:ml-[calc(3.5rem+1px)] lg:ml-[max(calc(14.5rem+1px),calc(100%-48rem))]">
               <div className="hidden absolute top-3 bottom-0 right-full mr-7 md:mr-[3.25rem] w-px bg-slate-200 dark:bg-slate-800 sm:block" />
               <div className="space-y-16">
-                {list.map((l, idx) => (
-                  <CareerList key={idx} career={l.item} />
+                {careers.map((career) => (
+                  <CareerList key={career.id} career={career} />
                 ))}
               </div>
             </div>

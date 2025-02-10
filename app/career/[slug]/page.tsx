@@ -1,26 +1,98 @@
 import Link from 'next/link';
+import { cache } from 'react';
+import sanitize from 'sanitize-html';
+import { Toaster } from 'react-hot-toast';
 import { notFound } from 'next/navigation';
-import { MapPin, ChevronLeft, Users, BriefcaseBusiness } from 'lucide-react';
+import { gql, request } from 'graphql-request';
+import {
+  MapPin,
+  ChevronLeft,
+  Users,
+  BriefcaseBusiness,
+  AlertTriangle,
+  CircleDollarSign
+} from 'lucide-react';
 
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
 import { ApplyCareerModal } from './ApplyCareerModal';
-import { getCareersBySlug, getCareersSlugs } from '@/lib/careersUtils';
+import { twJoin } from 'tailwind-merge';
+//import { getCareersBySlug, getCareersSlugs } from '@/lib/careersUtils';
 
 type JobDetailProps = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateStaticParams() {
-  return getCareersSlugs();
+//export async function generateStaticParams() {
+//  return getCareersSlugs();
+//}
+
+type Career = {
+  id: string;
+  title: string;
+  slug: string;
+
+  vacancies?: number;
+  mode: 'Onsite' | 'Remote' | 'Hybrid';
+  employmentType: 'PartTime' | 'FullTime' | 'Contract';
+  level: 'Entry' | 'Mid' | 'Senior' | 'Internship' | 'Trainee';
+
+  description: string;
+  qualifications: string;
+  companyBenefits: string;
+
+  salary: string;
+  deadline: string;
+  isActive: boolean;
+  hiringUrgency: 'ASAP' | 'Urgent' | 'Flexible';
+};
+
+type CarersResponse = {
+  getCareerBySlug: Career;
+};
+
+function parseDate(dateString = '') {
+  let cleanedString = dateString.replace(/(\d+)(st|nd|rd|th)/, '$1');
+  const hasTime = /\d{1,2}:\d{2}/.test(cleanedString);
+
+  if (hasTime === false) cleanedString += ' 00:00';
+  return new Date(cleanedString);
 }
 
+const getCareerBySlug = cache(async function getCareerBySlug(slug: string) {
+  const response = await request<CarersResponse>({
+    url: 'https://admin.hyperce.io/admin-api',
+    document: gql`
+      query GetCareerBySlug($slug: String!) {
+        getCareerBySlug(slug: $slug) {
+          id
+          title
+          slug
+          level
+          mode
+          deadline
+          vacancies
+          description
+          salary
+          hiringUrgency
+          qualifications
+          employmentType
+          companyBenefits
+        }
+      }
+    `,
+    variables: { slug }
+  });
+  return response.getCareerBySlug;
+});
+
 export default async function JobDetail({ params }: JobDetailProps) {
-  const career = await getCareersBySlug((await params).slug);
+  const career = await getCareerBySlug((await params).slug);
 
   if (!career) return notFound();
 
-  const canApply = career.deadline.getTime() >= new Date().getTime();
+  const deadline = parseDate(career.deadline);
+  const canApply = deadline.getTime() >= new Date().getTime();
 
   const dateFormatter = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -34,6 +106,11 @@ export default async function JobDetail({ params }: JobDetailProps) {
 
   return (
     <div className="fixed inset-0 bg-white dark:bg-slate-900 select-none overflow-hidden flex h-full w-full">
+      <Toaster
+        position="bottom-right"
+        containerClassName="z-[1000]"
+        toastOptions={{ className: 'z-[1000]' }}
+      />
       <div className="min-h-screen w-full overflow-auto flex flex-col bg-white dark:bg-slate-900">
         <Navbar className="sticky top-0 bg-white dark:bg-slate-900 border-b dark:border-slate-700 z-[100]" />
 
@@ -79,42 +156,70 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 <MapPin className="w-4 h-4" />
                 <dt className="sr-only">Location</dt>
                 <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
-                  {career.location || 'Unknown'}
+                  {career.mode || 'Unknown'}
                 </dd>
               </div>
 
-              {career.totalVacancies ? (
+              {career.vacancies ? (
                 <>
                   <div className="flex items-center gap-2">
                     <Users className="w-4 h-4" />
                     <dt className="sr-only">Total Vacancies</dt>
                     <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
-                      {career.totalVacancies}{' '}
-                      {career.totalVacancies > 1 ? 'vacancies' : 'vacancy.'}
+                      {career.vacancies}{' '}
+                      {career.vacancies > 1 ? 'vacancies' : 'vacancy.'}
                     </dd>
                   </div>
                 </>
               ) : null}
 
-              {career.type ? (
+              {career.employmentType ? (
                 <>
                   <div className="flex items-center gap-2">
                     <BriefcaseBusiness className="w-4 h-4" />
-                    <dt className="sr-only">Job Type</dt>
+                    <dt className="sr-only">Employment Type</dt>
                     <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
-                      {career.type}
+                      {career.employmentType}
                     </dd>
                   </div>
                 </>
               ) : null}
+
+              <>
+                <div className="flex items-center gap-2">
+                  <CircleDollarSign className="w-4 h-4" />
+                  <dt className="sr-only">Salary</dt>
+                  <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
+                    {career.salary ?? 'Negotiable'}
+                  </dd>
+                </div>
+              </>
+
+              <div
+                className={twJoin(
+                  'flex items-center gap-2 font-medium',
+                  career.hiringUrgency === 'ASAP' &&
+                    'text-red-500 dark:text-red-400',
+                  career.hiringUrgency === 'Urgent' &&
+                    'text-orange-500 dark:text-orange-400',
+                  career.hiringUrgency === 'Flexible' &&
+                    'text-slate-700 dark:text-slate-400'
+                )}
+              >
+                <AlertTriangle className="w-4 h-4" />
+                <dt className="sr-only">Hiring Type</dt>
+                <dd className="text-red-500 dark:text-red-400 font-medium capitalize">
+                  Hiring: {career.hiringUrgency}
+                </dd>
+              </div>
             </dl>
             <p className="mt-7">
               <ApplyCareerModal canApply={canApply} />
             </p>
             <p className="mt-7 text-sm/7 text-slate-500">
               {canApply ? 'Closes on' : 'Closed at'}&nbsp;
-              <time dateTime={career.deadline.toString()}>
-                {dateFormatter.format(career.deadline)}
+              <time dateTime={deadline.toString()}>
+                {dateFormatter.format(deadline)}
               </time>
             </p>
           </div>
@@ -129,7 +234,25 @@ export default async function JobDetail({ params }: JobDetailProps) {
 
             <div className="prose prose-slate leading-7 dark:prose-invert">
               <h1>We&apos;re hiring {career.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: career.content }} />
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(career.description)
+                }}
+              />
+
+              <h3>Qualifications:</h3>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(career.qualifications)
+                }}
+              />
+
+              <h3>Company Benefits:</h3>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(career.companyBenefits)
+                }}
+              />
             </div>
             <div className="mt-12">
               <ApplyCareerModal canApply={canApply} />
