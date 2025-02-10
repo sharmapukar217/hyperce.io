@@ -106,6 +106,7 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
           );
         }
 
+        setOpen(false);
         toast.success('Your cv has been recorded.', { id: 'cv-submit' });
         setIsApplied(true);
         reset();
