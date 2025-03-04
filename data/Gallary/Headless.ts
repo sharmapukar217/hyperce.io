@@ -21,11 +21,11 @@ export const HeadlessGallary = [
     a_href: 'https://kingsleyairusa.com/',
     img_src: '/gallary/Kingsley Air USA Air Purification.png'
   },
-  {
-    img_name: 'Piccadilly',
-    a_href: 'https://restronaut-ecommerce.vercel.app',
-    img_src: '/gallary/Piccadilly.png'
-  },
+  // {
+  //   img_name: 'Piccadilly',
+  //   a_href: 'https://restronaut-ecommerce.vercel.app',
+  //   img_src: '/gallary/Piccadilly.png'
+  // },
 
   {
     img_name: 'Shopvest',
