@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { cache } from 'react';
 import sanitize from 'sanitize-html';
 import { Toaster } from 'react-hot-toast';
 import { notFound } from 'next/navigation';
@@ -59,7 +58,7 @@ function parseDate(dateString = '') {
   return new Date(cleanedString);
 }
 
-const getCareerBySlug = cache(async function getCareerBySlug(slug: string) {
+const getCareerBySlug = async (slug: string) => {
   const response = await request<CarersResponse>({
     url: 'https://admin.hyperce.io/admin-api',
     document: gql`
@@ -84,7 +83,7 @@ const getCareerBySlug = cache(async function getCareerBySlug(slug: string) {
     variables: { slug }
   });
   return response.getCareerBySlug;
-});
+}
 
 export const dynamic = 'force-dynamic'
 

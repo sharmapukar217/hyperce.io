@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Suspense, cache } from 'react';
+import { Suspense } from 'react';
 import sanitizeHtml from 'sanitize-html';
 import { ChevronsRight } from 'lucide-react';
 import { gql, request } from 'graphql-request';
@@ -33,11 +33,8 @@ function parseDate(dateString = '') {
   return new Date(cleanedString);
 }
 
-const getAllCareers = async function getAllCareers(opts?: {
-  skip?: number;
-  filter?: string;
-}) {
-  // TODO: Implement search filters
+const getAllCareers = async =(opts?: { skip?: number; filter?: string; }) => {
+  // TODO: Implement advance search filters
   const response = await request<CarersResponse>({
     url: 'https://admin.hyperce.io/admin-api',
     document: gql`
