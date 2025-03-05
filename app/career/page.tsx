@@ -144,6 +144,8 @@ type PageProps = {
   searchParams?: { query?: string; page?: string };
 };
 
+export const dynamic = 'force-dynamic'
+
 export default async function Page(props: PageProps) {
   const page = parseInt(props.searchParams?.page || '1');
   const careers = await getAllCareers({

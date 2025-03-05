@@ -36,7 +36,8 @@ export default function Footer() {
       <div className="border-[1px] w-full md:w-[60%] dark:border-zinc-600 border-zinc-300 my-5"></div>
       <div>
         <span className="text-sm dark:text-zinc-400 text-zinc-600">
-          © Copyright {new Date().getFullYear()} Hyperce | All rights reserved.{' '}
+          © Copyright {new Date().getFullYear()} Hyperce | All rights
+          reserved.{' '}
         </span>
       </div>
       <div className="mt-3 space-x-2 flex items-center">

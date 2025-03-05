@@ -86,6 +86,8 @@ const getCareerBySlug = cache(async function getCareerBySlug(slug: string) {
   return response.getCareerBySlug;
 });
 
+export const dynamic = 'force-dynamic'
+
 export default async function JobDetail({ params }: JobDetailProps) {
   const career = await getCareerBySlug((await params).slug);
 
