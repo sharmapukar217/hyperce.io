@@ -42,15 +42,9 @@ const getAllCareers = async function getAllCareers(opts?: {
     url: 'https://admin.hyperce.io/admin-api',
     document: gql`
       query GetAllCareers($skip: Int, $filter: String) {
-        getCareers(options: {
-		skip: $skip,
-		take: ${ITEM_PER_PAGE},
-		filterOperator: AND,
-		filter: {
-			title: { regex: $filter },
-			isActive: { eq: true }
-		},
-	}) {
+        getCareers(options: { skip: $skip, take: ${ITEM_PER_PAGE}, filterOperator: AND,
+        filter: { title: { regex: $filter }, isActive: { eq: true } }
+        }) {
           items {
             id
             title
