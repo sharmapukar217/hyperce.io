@@ -72,6 +72,7 @@ const getCareerBySlug = async (slug: string) => {
           deadline
           vacancies
           description
+          address
           salary
           hiringUrgency
           qualifications
@@ -159,7 +160,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 <MapPin className="w-4 h-4" />
                 <dt className="sr-only">Location</dt>
                 <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
-                  {career.mode || 'Unknown'}
+                  {career.mode || 'Unknown'} {address && <span>({address})</span>}
                 </dd>
               </div>
 
@@ -188,7 +189,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 </>
               ) : null}
 
-              {career.salary ? (
+              {(career.salary && career.salary >0 ) ? (
                 <div className="flex items-center gap-2">
                   <CircleDollarSign className="w-4 h-4" />
                   <dt className="sr-only">Salary</dt>
