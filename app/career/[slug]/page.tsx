@@ -36,6 +36,7 @@ type Career = {
   employmentType: 'PartTime' | 'FullTime' | 'Contract';
   level: 'Entry' | 'Mid' | 'Senior' | 'Internship' | 'Trainee';
 
+  address?: string;
   description: string;
   qualifications: string;
   companyBenefits: string;
@@ -189,7 +190,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 </>
               ) : null}
 
-              {(career.salary && career.salary >0 ) ? (
+              {career.salary ? (
                 <div className="flex items-center gap-2">
                   <CircleDollarSign className="w-4 h-4" />
                   <dt className="sr-only">Salary</dt>
