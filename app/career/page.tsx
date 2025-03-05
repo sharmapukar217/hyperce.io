@@ -33,7 +33,7 @@ function parseDate(dateString = '') {
   return new Date(cleanedString);
 }
 
-const getAllCareers = async =(opts?: { skip?: number; filter?: string; }) => {
+const getAllCareers = async(opts?: { skip?: number; filter?: string; }) => {
   // TODO: Implement advance search filters
   const response = await request<CarersResponse>({
     url: 'https://admin.hyperce.io/admin-api',
