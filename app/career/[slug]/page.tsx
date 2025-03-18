@@ -88,7 +88,7 @@ const getCareerBySlug = async (slug: string) => {
 }
 
 // export const dynamic = 'force-dynamic'
-export const fetchCache = 'force-no-store'
+export const fetchCache = 'only-no-store'
 
 
 export default async function JobDetail({ params }: JobDetailProps) {
@@ -161,7 +161,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 <MapPin className="w-4 h-4" />
                 <dt className="sr-only">Location</dt>
                 <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
-                  {career.mode || 'Unknown'} {address && <span>({address})</span>}
+                  {career.mode || 'Unknown'} {career.address && <span>({career.address})</span>}
                 </dd>
               </div>
 
