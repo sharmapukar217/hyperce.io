@@ -35,6 +35,14 @@ const formSchema = z.object({
     })
     .trim()
     .min(1, 'Please enter a valid phone number.'),
+  appliedFor: z.enum(['intern', 'trainee', 'junior', 'mid', 'senior'], {
+    message: 'Please select a valid level.'
+  }),
+  desireSalary: z
+    .string({ message: 'Please enter your expected salary.' })
+    .trim()
+    .min(1, 'Please enter your expected salary.'),
+
   files: z
     .instanceof(FileList, { message: 'Please upload your cv.' })
     .refine((files) => files[0]?.type === 'application/pdf', {
@@ -73,7 +81,13 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps>(function Field(
   );
 });
 
-export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
+export const ApplyCareerModal = ({
+  canApply,
+  careerId
+}: {
+  careerId: string;
+  canApply: boolean;
+}) => {
   const [open, setOpen] = React.useState(false);
   const [isApplied, setIsApplied] = React.useState(false);
 
@@ -82,7 +96,9 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
     defaultValues: {
       fullName: '',
       email: '',
+      appliedFor: undefined,
       contactNumber: '',
+      desireSalary: '',
       files: undefined
     }
   });
@@ -91,12 +107,15 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
     toast.loading('Please wait while submitting...', { id: 'cv-submit' });
 
     const formData = new FormData();
+    formData.set('careerID', careerId);
     // @ts-expect-error
     Object.keys(values).map((key) => formData.set(key, values[key]));
+    if (values?.files?.[0]) formData.set('files', values.files[0]);
 
     return fetch('https://admin.hyperce.io/applications/submit', {
       method: 'POST',
       body: formData
+      // headers: { "Content-Type": "multipart/formdata" }
     })
       .then((res) => {
         if (!res.ok) {
@@ -144,7 +163,7 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
               id="fullName"
               required={true}
               label="Full Name"
-              placeholder="e.g: John Doe"
+              placeholder="Full Name"
               errorMessage={formState.errors.fullName?.message}
             />
 
@@ -154,7 +173,7 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
               type="email"
               required={true}
               label="Email Address"
-              placeholder="e.g: johndoe@gmail.com"
+              placeholder="e.g: abc@gmail.com"
               errorMessage={formState.errors.email?.message}
             />
 
@@ -163,9 +182,47 @@ export const ApplyCareerModal = ({ canApply }: { canApply: boolean }) => {
               type="tel"
               required={true}
               id="contactNumber"
-              placeholder="e.g: 9812345678"
+              placeholder="e.g: +977 9812345678"
               label="Phone Number"
               errorMessage={formState.errors.contactNumber?.message}
+            />
+
+            <div className="grid gap-2">
+              <label htmlFor="appliedFor">Applying for</label>
+              <select
+                id="appliedFor"
+                {...register('appliedFor')}
+                className={clsx(
+                  'py-3 px-4 block w-full !rounded-[0.7rem]  focus:outline-none ring-1 focus:ring-2 text-sm disabled:opacity-50 disabled:pointer-events-none bg-white dark:bg-slate-900 dark:text-neutral-400 dark:placeholder-neutral-500',
+                  formState.errors.appliedFor?.message
+                    ? 'text-red-500 dark:text-red-400 ring-red-500 dark:ring-red-400'
+                    : 'ring-gray-300 dark:ring-slate-700 focus:ring-[#357D8A] dark:focus:ring-[#357D8A]'
+                )}
+              >
+                <option value="" disabled>
+                  Select what to apply for.
+                </option>
+                <option value="intern">Intern</option>
+                <option value="trainee">Trainee</option>
+                <option value="juniot">Junior Level</option>
+                <option value="mid">Mid Level</option>
+                <option value="senior">Senior Level</option>
+              </select>
+
+              {formState.errors.appliedFor?.message && (
+                <span className="text-xs font-medium text-red-500 dark:text-red-400">
+                  {String(formState.errors.appliedFor?.message)}
+                </span>
+              )}
+            </div>
+
+            <Field
+              {...register('desireSalary')}
+              required={true}
+              id="desireSalary"
+              placeholder="e.g: Nrs 30k+"
+              label="Expected Salary"
+              errorMessage={formState.errors.desireSalary?.message}
             />
 
             <Field

@@ -85,11 +85,10 @@ const getCareerBySlug = async (slug: string) => {
     variables: { slug }
   });
   return response.getCareerBySlug;
-}
+};
 
 // export const dynamic = 'force-dynamic'
-export const fetchCache = 'only-no-store'
-
+export const fetchCache = 'only-no-store';
 
 export default async function JobDetail({ params }: JobDetailProps) {
   const career = await getCareerBySlug((await params).slug);
@@ -161,7 +160,8 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 <MapPin className="w-4 h-4" />
                 <dt className="sr-only">Location</dt>
                 <dd className="text-slate-700 dark:text-slate-400 font-medium capitalize">
-                  {career.mode || 'Unknown'} {career.address && <span>({career.address})</span>}
+                  {career.mode || 'Unknown'}{' '}
+                  {career.address && <span>({career.address})</span>}
                 </dd>
               </div>
 
@@ -198,7 +198,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
                     {career.salary ?? 'Negotiable'}
                   </dd>
                 </div>
-                ): null}
+              ) : null}
 
               <div
                 className={twJoin(
@@ -219,7 +219,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
               </div>
             </dl>
             <p className="mt-7">
-              <ApplyCareerModal canApply={canApply} />
+              <ApplyCareerModal careerId={career.id} canApply={canApply} />
             </p>
             <p className="mt-7 text-sm/7 text-slate-500">
               {canApply ? 'Closes on' : 'Closed at'}&nbsp;
@@ -260,7 +260,7 @@ export default async function JobDetail({ params }: JobDetailProps) {
               />
             </div>
             <div className="mt-12">
-              <ApplyCareerModal canApply={canApply} />
+              <ApplyCareerModal careerId={career.id} canApply={canApply} />
             </div>
           </div>
         </div>
