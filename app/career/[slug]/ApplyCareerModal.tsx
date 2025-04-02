@@ -220,8 +220,8 @@ export const ApplyCareerModal = ({
               {...register('desireSalary')}
               required={true}
               id="desireSalary"
-              placeholder="e.g: Nrs 30k+"
               label="Expected Salary"
+              placeholder="e.g: NRs. 30,000 to NRs. 50,000"
               errorMessage={formState.errors.desireSalary?.message}
             />
 
