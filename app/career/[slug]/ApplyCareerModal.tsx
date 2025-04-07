@@ -204,7 +204,7 @@ export const ApplyCareerModal = ({
                 </option>
                 <option value="intern">Intern</option>
                 <option value="trainee">Trainee</option>
-                <option value="juniot">Junior Level</option>
+                <option value="junior">Junior Level</option>
                 <option value="mid">Mid Level</option>
                 <option value="senior">Senior Level</option>
               </select>
