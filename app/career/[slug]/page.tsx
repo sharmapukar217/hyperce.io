@@ -40,6 +40,7 @@ type Career = {
   description: string;
   qualifications: string;
   companyBenefits: string;
+  responsibilities?: string;
 
   salary: string;
   deadline: string;
@@ -79,6 +80,7 @@ const getCareerBySlug = async (slug: string) => {
           qualifications
           employmentType
           companyBenefits
+          responsibilities
         }
       }
     `,
@@ -245,14 +247,23 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 }}
               />
 
-              <h3>Qualifications:</h3>
+              <h3>Qualifications/Skills Required</h3>
               <div
                 dangerouslySetInnerHTML={{
                   __html: sanitize(career.qualifications)
                 }}
               />
 
-              <h3>Company Benefits:</h3>
+              {career.responsibilities ? (
+                <h3>Responsibilities</h3>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: sanitize(career.responsibilities)
+                  }}
+                />
+              ): null}
+
+              <h3>Company Benefits</h3>
               <div
                 dangerouslySetInnerHTML={{
                   __html: sanitize(career.companyBenefits)
