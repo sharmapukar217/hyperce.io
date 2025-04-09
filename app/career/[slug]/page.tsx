@@ -255,13 +255,15 @@ export default async function JobDetail({ params }: JobDetailProps) {
               />
 
               {career.responsibilities ? (
-                <h3>Responsibilities</h3>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: sanitize(career.responsibilities)
-                  }}
-                />
-              ): null}
+                <>
+                  <h3>Responsibilities</h3>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: sanitize(career.responsibilities)
+                    }}
+                  />
+                </>
+              ) : null}
 
               <h3>Company Benefits</h3>
               <div
