@@ -33,7 +33,7 @@ function parseDate(dateString = '') {
   return new Date(cleanedString);
 }
 
-const getAllCareers = async(opts?: { skip?: number; filter?: string; }) => {
+const getAllCareers = async (opts?: { skip?: number; filter?: string }) => {
   // TODO: Implement advance search filters
   const response = await request<CarersResponse>({
     url: 'https://admin.hyperce.io/admin-api',
@@ -135,7 +135,8 @@ type PageProps = {
   searchParams?: { query?: string; page?: string };
 };
 
-export const fetchCache = 'force-dynamic'
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
 
 export default async function Page(props: PageProps) {
   const page = parseInt(props.searchParams?.page || '1');
