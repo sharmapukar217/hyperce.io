@@ -10,7 +10,7 @@ type SocialLinks = {
   linkedin?: string;
 };
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-no-store';
 
 const PersonInfo = ({
   member,
