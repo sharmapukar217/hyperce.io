@@ -1,4 +1,3 @@
-import { cache } from 'react';
 import { gql, request } from 'graphql-request';
 
 import { cn } from '@/lib/utils';
@@ -117,7 +116,7 @@ type TeamsQueryResponse = {
     }>;
   };
 };
-const getTeams = cache(async function () {
+const getTeams = async function () {
   const response = await request<TeamsQueryResponse>(
     process.env.NEXT_PUBLIC_BACKEND_URL!,
     gql`
@@ -156,7 +155,7 @@ const getTeams = cache(async function () {
     Members: groupedTeams['Team Members'] || [],
     Executives: groupedTeams['Executive Directors'] || []
   };
-});
+};
 
 export default async function Page() {
   const teams = await getTeams();
