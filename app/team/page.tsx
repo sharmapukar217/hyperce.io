@@ -11,7 +11,7 @@ type SocialLinks = {
   linkedin?: string;
 };
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 const PersonInfo = ({
   member,
