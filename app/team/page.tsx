@@ -105,6 +105,7 @@ type Member = {
   id: string;
   name: string;
   role: string;
+  position?: number;
   links?: Array<string>;
   asset: { source: string };
 };
@@ -126,12 +127,12 @@ const getTeams = async function () {
           items {
             id
             name
-
             members {
               id
               name
-              links
               role
+              links
+              position
               asset {
                 source
               }
@@ -158,8 +159,51 @@ const getTeams = async function () {
   };
 };
 
+function sortByPosition(arr: Member[]): Member[] {
+  const result: Member[] = [];
+  const usedIndexes = new Set<number>();
+  const positioned: (Member & { position: number })[] = [];
+  const unpositioned: Member[] = [];
+
+  // Separate positioned and unpositioned items
+  arr.forEach((item) => {
+    const pos = Number(item.position);
+    if (item.position != null && !isNaN(pos)) {
+      positioned.push({ ...item, position: pos });
+    } else {
+      unpositioned.push(item);
+    }
+  });
+
+  // Sort positioned items by position
+  positioned.sort((a, b) => a.position - b.position);
+
+  // Insert positioned items, using position - 1 as index
+  positioned.forEach((item) => {
+    let index = item.position - 1;
+    while (usedIndexes.has(index)) {
+      index++; // shift if index is occupied
+    }
+    result.splice(index, 0, item);
+    usedIndexes.add(index);
+  });
+
+  // Insert unpositioned items in first available free slots
+  let insertIndex = 0;
+  unpositioned.forEach((item) => {
+    while (usedIndexes.has(insertIndex)) {
+      insertIndex++;
+    }
+    result.splice(insertIndex, 0, item);
+    usedIndexes.add(insertIndex);
+  });
+
+  return result;
+}
+
 export default async function Page() {
   const teams = await getTeams();
+
   return (
     <div className="fixed inset-0 select-none">
       <div
@@ -193,7 +237,7 @@ export default async function Page() {
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {teams.Directors.map((bod, idx) => (
+              {sortByPosition(teams.Directors).map((bod, idx) => (
                 <PersonInfo key={idx} member={bod} animateBorder />
               ))}
             </div>
@@ -205,7 +249,7 @@ export default async function Page() {
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {teams.Executives.map((executiveMember, idx) => (
+              {sortByPosition(teams.Executives).map((executiveMember, idx) => (
                 <PersonInfo key={idx} member={executiveMember} />
               ))}
             </div>
@@ -217,7 +261,7 @@ export default async function Page() {
             </h1>
 
             <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {teams.Members.map((member, idx) => (
+              {sortByPosition(teams.Members).map((member, idx) => (
                 <PersonInfo key={idx} member={member} />
               ))}
             </div>

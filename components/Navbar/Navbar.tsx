@@ -75,7 +75,7 @@ export default function Navbar(props: any) {
             </ul>
           </nav>
           <div className="flex gap-10 items-center">
-            <div className="cta gap-5 hidden md:flex">
+            <div className="cta gap-5 hidden lg:flex">
               {/* Join Events Club */}
               <Link href="/events-club" target="_blank">
                 <button
