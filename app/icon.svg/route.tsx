@@ -1,4 +1,3 @@
-import { cache } from 'react';
 import { NextResponse, type NextRequest } from 'next/server';
 
 const loadIconFromIconify = async (iconName: string) => {
