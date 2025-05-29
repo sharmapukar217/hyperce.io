@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 
-const loadIconFromIconify = async (iconName: string) => {
+const loadIconFromIconify = async (iconName: string | null) => {
   try {
     if (!iconName) return null;
     const [prefix, icon] = iconName.split(':');
