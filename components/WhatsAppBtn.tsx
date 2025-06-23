@@ -27,7 +27,7 @@ export default function WhatsAppBtn() {
       style={{
         background: '#2ace67'
       }}
-      className="overflow-hidden group fixed bottom-4 right-4 rounded-xl h-12 p-3 flex justify-center items-center shadow-lg text-white"
+      className="overflow-hidden group fixed bottom-4 left-8 rounded-xl h-12 p-3 flex justify-center items-center shadow-lg text-white"
     >
       <svg
         viewBox="64 64 896 896"

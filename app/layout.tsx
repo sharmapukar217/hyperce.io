@@ -6,6 +6,7 @@ import Script from 'next/script';
 import PrelineScript from '@/vendor/PrelineScript';
 import { Analytics } from '@vercel/analytics/react';
 import WhatsAppBtn from '@/components/WhatsAppBtn';
+import BlinticAIWidget from '@/components/BlinticAIWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 const raleway = DM_Sans({ subsets: ['latin'] });
@@ -85,6 +86,7 @@ export default function RootLayout({
           className="bg-[#ebeeef] dark:bg-[#02080F] min-h-screen max-w-full"
         >
           <PrelineScript />
+          <BlinticAIWidget />
 
           {children}
           <div className="dark:bg-[#02080F] bg-[#ebeeef]">
