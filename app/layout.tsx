@@ -86,7 +86,13 @@ export default function RootLayout({
           className="bg-[#ebeeef] dark:bg-[#02080F] min-h-screen max-w-full"
         >
           <PrelineScript />
-          <BlinticAIWidget />
+
+          <BlinticAIWidget
+            position="bottom-right"
+            baseUrl="https://app.blinticai.com"
+            projectId="86266321-bcb8-4757-996b-d98404c33b33"
+            apiKey="6ea3078788ed63cc6a7393d17c5064e34f45fe0822ab600ea958dab68b2dd25c"
+          />
 
           {children}
           <div className="dark:bg-[#02080F] bg-[#ebeeef]">
