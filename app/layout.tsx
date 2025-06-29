@@ -6,8 +6,9 @@ import Script from 'next/script';
 import PrelineScript from '@/vendor/PrelineScript';
 import { Analytics } from '@vercel/analytics/react';
 import WhatsAppBtn from '@/components/WhatsAppBtn';
-import BlinticAIWidget from '@/components/BlinticAIWidget';
+// import BlinticAIWidget from '@/components/BlinticAIWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
+import Providers from './providers';
 
 const raleway = DM_Sans({ subsets: ['latin'] });
 
@@ -32,7 +33,7 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
         />
 
-        <Script strategy="beforeInteractive" id="gtag-loader">
+        <Script strategy="lazyOnload" id="gtag-loader">
           {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MLHZXN9L');
           `}
@@ -51,14 +52,6 @@ export default function RootLayout({
           });
         `}
         </Script>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=875677840678684&ev=PageView&noscript=1"
-          />
-        </noscript>
 
         <noscript>
           <iframe
@@ -72,35 +65,31 @@ export default function RootLayout({
         <meta property="og:image" content={ROOT_OG_IMAGE} />
         <link rel="icon" href="/favicon.png" />
       </head>
-      {/*
-        this shiould be inside head tag
-        <script defer data-domain="hyperce.io" src="https://analytics.hyperce.io/js/script.js"></script> 
-        <script defer data-domain="hyperce.io" src="http://104.208.74.132:8000/js/script.js"></script>  
-      */}
 
       <Analytics />
       <GoogleTagManager gtmId="GTM-TC5WS6B6" />
       <body className={`bg-[#ebeeef] dark:bg-[#02080F] ${raleway.className}`}>
-        <div
-          vaul-drawer-wrapper=""
-          className="bg-[#ebeeef] dark:bg-[#02080F] min-h-screen max-w-full"
-        >
-          <PrelineScript />
+        <Providers>
+          <div
+            vaul-drawer-wrapper=""
+            className="bg-[#ebeeef] dark:bg-[#02080F] min-h-screen max-w-full"
+          >
+            <PrelineScript />
 
-          <BlinticAIWidget
-            position="bottom-right"
-            baseUrl="https://app.blinticai.com"
-            projectId="86266321-bcb8-4757-996b-d98404c33b33"
-            apiKey="6ea3078788ed63cc6a7393d17c5064e34f45fe0822ab600ea958dab68b2dd25c"
-          />
+            {/*<BlinticAIWidget
+              baseUrl="https://app.blinticai.com"
+              projectId="86266321-bcb8-4757-996b-d98404c33b33"
+              apiKey="6ea3078788ed63cc6a7393d17c5064e34f45fe0822ab600ea958dab68b2dd25c"
+            />*/}
 
-          {children}
-          <div className="dark:bg-[#02080F] bg-[#ebeeef]">
-            <Footer />
+            {children}
+            <div className="dark:bg-[#02080F] bg-[#ebeeef]">
+              <Footer />
+            </div>
+            <Toaster />
+            <WhatsAppBtn />
           </div>
-          <Toaster />
-          <WhatsAppBtn />
-        </div>
+        </Providers>
       </body>
     </html>
   );

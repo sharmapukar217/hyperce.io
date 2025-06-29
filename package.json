@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
-    "format": "npx prettier --write .",
+    "format": "npx prettier --write --cache .",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@ark-ui/react": "^5.15.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@hookform/resolvers": "^3.10.0",

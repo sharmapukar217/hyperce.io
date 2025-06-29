@@ -59,7 +59,7 @@ export default function Watch() {
               height="315"
               src={data.embedUrl}
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
             ></iframe>
           </div>
         </div>
