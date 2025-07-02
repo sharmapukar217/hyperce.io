@@ -8,7 +8,9 @@ import { Analytics } from '@vercel/analytics/react';
 import WhatsAppBtn from '@/components/WhatsAppBtn';
 // import BlinticAIWidget from '@/components/BlinticAIWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
+
 import Providers from './providers';
+import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 
 const raleway = DM_Sans({ subsets: ['latin'] });
 
@@ -75,6 +77,7 @@ export default function RootLayout({
             className="bg-[#ebeeef] dark:bg-[#02080F] min-h-screen max-w-full"
           >
             <PrelineScript />
+            <HyperClickPromoPrompt />
 
             {/*<BlinticAIWidget
               baseUrl="https://app.blinticai.com"
