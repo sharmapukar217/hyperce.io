@@ -62,7 +62,8 @@ function parseDate(dateString = '') {
 
 const getCareerBySlug = async (slug: string) => {
   const response = await request<CarersResponse>({
-    url: 'https://admin.hyperce.io/shop-api',
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
+
     document: gql`
       query GetCareerBySlug($slug: String!) {
         getCareerBySlug(slug: $slug) {

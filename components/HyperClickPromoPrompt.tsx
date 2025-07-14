@@ -27,8 +27,8 @@ const formSchema = z.object({
 });
 
 const ADD_CONTACT = gql`
-  mutation AddContact($input: ContactAddInput!) {
-    addContact(input: $input) {
+  mutation CreateHyperclicksContact($input: CreateHyperclicksContactInput!) {
+    createHyperclicksContact(input: $input) {
       id
     }
   }
@@ -48,12 +48,12 @@ export const HyperClickPromoPrompt = () => {
       toast.loading('Please wait while loading...', { id: 'form-submit' });
 
       const response: any = await request(
-        process.env.NEXT_PUBLIC_BACKEND_URL!,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/admin-api`,
         ADD_CONTACT,
         { input }
       );
 
-      if (response?.addContact) {
+      if (response?.createHyperclicksContact) {
         reset();
         setOpen(false);
         return toast.success(

@@ -24,25 +24,28 @@ export default function ContactForm() {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    const response = await fetch('https://admin.hyperce.io/shop-api', {
-      headers: {
-        'content-type': 'application/json'
-      },
-      referrerPolicy: 'strict-origin-when-cross-origin',
-      body: JSON.stringify({
-        operationName: 'addContact',
-        variables: {
-          fullName: formData.name,
-          email: formData.email,
-          message: formData.message
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
+      {
+        headers: {
+          'content-type': 'application/json'
         },
-        query:
-          'mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
-      }),
-      method: 'POST',
-      mode: 'cors',
-      credentials: 'omit'
-    });
+        referrerPolicy: 'strict-origin-when-cross-origin',
+        body: JSON.stringify({
+          operationName: 'addContact',
+          variables: {
+            fullName: formData.name,
+            email: formData.email,
+            message: formData.message
+          },
+          query:
+            'mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
+        }),
+        method: 'POST',
+        mode: 'cors',
+        credentials: 'omit'
+      }
+    );
 
     const data = await response.json();
     console.log(data);
@@ -70,7 +73,7 @@ export default function ContactForm() {
             <input
               required
               type="text"
-              placeholder="Full Name"
+              placeholder="Full Name (Required)"
               className="w-full md:w-2/3 lg:w-full border px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
               name="name"
               value={formData.name}
@@ -80,9 +83,10 @@ export default function ContactForm() {
           <div className="mb-5">
             <label className="sr-only">Email Address</label>
             <input
-              id="email_address"
+              required
               type="email"
-              placeholder="Email Address"
+              id="email_address"
+              placeholder="Email Address (Required)"
               name="email"
               className="w-full md:w-2/3 lg:w-full border px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
               value={formData.email}
@@ -91,8 +95,9 @@ export default function ContactForm() {
           </div>
           <div className="mb-3">
             <textarea
+              required
               name="message"
-              placeholder="Your Message"
+              placeholder="Your Message (Required)"
               className="text-black w-full md:w-2/3 lg:w-full border px-4 py-3 placeholder:text-gray-800 rounded-md outline-none h-36 focus:outline-gray-400 bg-white"
               value={formData.message}
               onChange={handleChange}

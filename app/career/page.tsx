@@ -36,7 +36,7 @@ function parseDate(dateString = '') {
 const getAllCareers = async (opts?: { skip?: number; filter?: string }) => {
   // TODO: Implement advance search filters
   const response = await request<CarersResponse>({
-    url: 'https://admin.hyperce.io/shop-api',
+    url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
     document: gql`
       query GetAllCareers($skip: Int, $filter: String) {
         getCareers(options: { skip: $skip, take: ${ITEM_PER_PAGE}, filterOperator: AND,

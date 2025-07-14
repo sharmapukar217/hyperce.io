@@ -120,7 +120,7 @@ type TeamsQueryResponse = {
 };
 const getTeams = async function () {
   const response = await request<TeamsQueryResponse>(
-    process.env.NEXT_PUBLIC_BACKEND_URL!,
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
     gql`
       query Teams {
         teams {
