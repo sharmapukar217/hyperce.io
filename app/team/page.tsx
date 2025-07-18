@@ -100,7 +100,12 @@ const PersonInfo = ({
   );
 };
 
-type TeamType = 'Directors' | 'Team Members' | 'Executive Directors';
+type TeamType =
+  | 'Directors'
+  | 'Managing Directors'
+  | 'Executive Directors'
+  | 'Team Members';
+
 type Member = {
   id: string;
   name: string;
@@ -154,8 +159,9 @@ const getTeams = async function () {
 
   return {
     Directors: groupedTeams['Directors'] || [],
-    Members: groupedTeams['Team Members'] || [],
-    Executives: groupedTeams['Executive Directors'] || []
+    ManagingDirectors: groupedTeams['Managing Directors'] || [],
+    Executives: groupedTeams['Executive Directors'] || [],
+    Members: groupedTeams['Team Members'] || []
   };
 };
 
@@ -252,6 +258,20 @@ export default async function Page() {
               {sortByPosition(teams.Executives).map((executiveMember, idx) => (
                 <PersonInfo key={idx} member={executiveMember} />
               ))}
+            </div>
+          </div>
+
+          <div>
+            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+              Managing Directors
+            </h1>
+
+            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+              {sortByPosition(teams.ManagingDirectors).map(
+                (managingDirectors, idx) => (
+                  <PersonInfo key={idx} member={managingDirectors} />
+                )
+              )}
             </div>
           </div>
 
