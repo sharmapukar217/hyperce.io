@@ -2,7 +2,7 @@ export interface OfficeDetails {
   officeName: string;
   address: string;
   email: string;
-  phoneNumber: string;
+  phoneNumber?: string;
   country: string;
   workplace?: string;
 }
@@ -34,16 +34,16 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
   [Domain.HyperceUk]: {
     officeName: 'Hyperce',
     address: '184 Pantbach Rd, Rhiwbina, Cardiff, CF14 1UG',
-    email: 'hi@hyperce.uk',
-    phoneNumber: '+44-0771-044-2456',
+    email: 'hi@hyperce.io',
+    // phoneNumber: '+44-0771-044-2456',
     country: 'United Kingdom'
   },
   [Domain.HyperceAu]: {
     officeName: 'Hyperce',
     address:
       'Kings Business Park - Kings Club 80 Dorcas St, South Melbourne 3205, Australia',
-    email: 'hi@hyperce.au',
-    phoneNumber: ' +61406492096',
+    email: 'hi@hyperce.io',
+    // phoneNumber: ' +61406492096',
     country: 'Australia'
   }
 };
