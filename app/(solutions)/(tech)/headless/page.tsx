@@ -34,7 +34,7 @@ export default function Services() {
             objectFit="cover"
           />
         </div>
-        <div className="h-fit absolute top-0 w-full z-[100]">
+        <div className="h-fit absolute top-0 w-full">
           <Navbar />
         </div>
         <div className="h-max w-[100vw]">
