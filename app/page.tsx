@@ -31,10 +31,10 @@ export default function Home() {
   return (
     <>
       <div className="border-b bg-[#0F1023] text-white border-gray-800">
-        <div className="container py-2 px-10 md:px-20 flex items-center justify-center">
+        <div className="container py-2 flex items-center justify-center">
           <Link
             href="/headless"
-            className="gap-2 group inline-flex flex-wrap items-center bg-white/10 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 border border-white/10 p-1 ps-4 rounded-full text-gray-300 hover:text-white transition-all"
+            className="gap-2 group inline-flex flex-wrap items-center bg-white/10 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 border border-white/10 p-1 ps-4 rounded-full text-gray-300 hover:text-white transition-all text-xs md:text-sm"
           >
             HyperClicks is open to pre booking.
             <span className="bg-white/10 group-hover:bg-white group-focus:bg-white px-2 group-hover:[&_svg]:ms-2 group-hover:pe-0 inline-flex justify-center items-center gap-x-2 rounded-full font-semibold text-gray-400 group-hover:text-[#357D8A] group-focus:text-[#357D8A] transition-all text-xs">
