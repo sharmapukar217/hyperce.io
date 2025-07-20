@@ -13,6 +13,7 @@ import Image from 'next/image';
 import HeadlessBg from '../../../../public/services-bg.png';
 
 import { Metadata } from 'next';
+import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 import DemoCredentials from '@/components/Services/Tech/Headless/Hero/minute/DemoCredentials';
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function Services() {
             objectFit="cover"
           />
         </div>
-        <div className="h-fit absolute top-0 w-full">
+        <div className="h-fit absolute top-0 w-full z-[100]">
           <Navbar />
         </div>
         <div className="h-max w-[100vw]">
@@ -44,7 +45,7 @@ export default function Services() {
       <DemoCredentials
         demoLink="https://admin.hyperce.io"
         productName="Headless Panel"
-        demoEmail="demo@hyperce.io"
+        demoEmail="demouser@hyperce.io"
         demoPassword="Hyperce123#"
         qrSource="/admin.hyperce.qr.png"
       />
@@ -53,6 +54,7 @@ export default function Services() {
       {/* <Features /> */}
       <Newsletter />
       <Contact />
+      <HyperClickPromoPrompt />
     </div>
   );
 }

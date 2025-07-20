@@ -6,23 +6,13 @@ import Script from 'next/script';
 import PrelineScript from '@/vendor/PrelineScript';
 import { Analytics } from '@vercel/analytics/react';
 import WhatsAppBtn from '@/components/WhatsAppBtn';
-// import BlinticAIWidget from '@/components/BlinticAIWidget';
 import { GoogleTagManager } from '@next/third-parties/google';
 
 import Providers from './providers';
-import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 
 const raleway = DM_Sans({ subsets: ['latin'] });
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-  title: string;
-  og_img: string;
-  og_description: string;
-}) {
-  const ROOT_OG_IMAGE = '/og-logo.png';
+export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <html suppressHydrationWarning>
       <head>
@@ -64,7 +54,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
 
-        <meta property="og:image" content={ROOT_OG_IMAGE} />
+        <meta property="og:image" content="/og-logo.png" />
         <link rel="icon" href="/favicon.png" />
       </head>
 
@@ -77,7 +67,6 @@ export default function RootLayout({
             className="bg-[#ebeeef] dark:bg-[#02080F] min-h-screen max-w-full"
           >
             <PrelineScript />
-            <HyperClickPromoPrompt />
 
             {/*<BlinticAIWidget
               baseUrl="https://app.blinticai.com"
@@ -85,7 +74,7 @@ export default function RootLayout({
               apiKey="6ea3078788ed63cc6a7393d17c5064e34f45fe0822ab600ea958dab68b2dd25c"
             />*/}
 
-            {children}
+            {props.children}
             <div className="dark:bg-[#02080F] bg-[#ebeeef]">
               <Footer />
             </div>
