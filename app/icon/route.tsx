@@ -1,4 +1,7 @@
+import satori from 'satori';
+import { ImageResponse } from 'next/og';
 import { NextResponse, type NextRequest } from 'next/server';
+import sharp from 'sharp';
 
 const loadIconFromIconify = async (iconName: string | null) => {
   try {
@@ -16,14 +19,21 @@ const loadIconFromIconify = async (iconName: string | null) => {
   }
 };
 
+export const runtime = 'nodejs';
+
 export async function GET(request: NextRequest) {
   const iconName = request.nextUrl.searchParams.get('icon');
   const iconData = await loadIconFromIconify(iconName);
 
   if (iconData) {
-    return new Response(iconData, {
+    const pngBuffer = await sharp(Buffer.from(iconData))
+      .resize(128, 128)
+      .png()
+      .toBuffer();
+
+    return new Response(pngBuffer, {
       headers: {
-        'Content-Type': 'image/svg+xml',
+        'Content-Type': 'image/png',
         'Cache-Control': 'public, max-age=31536000, immutable'
       }
     });
