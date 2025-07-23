@@ -1,7 +1,5 @@
-import satori from 'satori';
-import { ImageResponse } from 'next/og';
-import { NextResponse, type NextRequest } from 'next/server';
 import sharp from 'sharp';
+import { NextResponse, type NextRequest } from 'next/server';
 
 const loadIconFromIconify = async (iconName: string | null) => {
   try {
