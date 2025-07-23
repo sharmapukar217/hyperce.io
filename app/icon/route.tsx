@@ -26,12 +26,12 @@ export async function GET(request: NextRequest) {
   if (iconData) {
     const pngBuffer = await sharp(Buffer.from(iconData))
       .resize(128, 128)
-      .png()
+      .webp({ alphaQuality: 0 })
       .toBuffer();
 
     return new Response(pngBuffer, {
       headers: {
-        'Content-Type': 'image/png',
+        'Content-Type': 'image/webp',
         'Cache-Control': 'public, max-age=31536000, immutable'
       }
     });
