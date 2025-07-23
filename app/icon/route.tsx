@@ -25,8 +25,11 @@ export async function GET(request: NextRequest) {
 
   if (iconData) {
     const pngBuffer = await sharp(Buffer.from(iconData))
-      .resize(128, 128)
-      .webp({ alphaQuality: 0 })
+      .resize(128, 128, {
+        fit: 'contain',
+        background: { r: 0, g: 0, b: 0, alpha: 0 }
+      })
+      .png()
       .toBuffer();
 
     return new Response(pngBuffer, {
