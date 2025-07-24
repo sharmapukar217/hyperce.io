@@ -35,13 +35,19 @@ const ADD_CONTACT = gql`
 `;
 
 export const HyperClickPromoPrompt = () => {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const { register, reset, formState, handleSubmit } = useForm<
     z.infer<typeof formSchema>
   >({
     mode: 'onChange',
     resolver: zodResolver(formSchema)
   });
+
+  React.useEffect(() => {
+    if (localStorage.getItem('SHOULD_SHOW_BY_DEFAULT') !== 'false') {
+      setOpen(true);
+    }
+  }, []);
 
   const onSubmit = handleSubmit(async function (input) {
     try {
@@ -73,7 +79,35 @@ export const HyperClickPromoPrompt = () => {
     }
   });
   return (
-    <Dialog.Dialog open={open} onOpenChange={setOpen}>
+    <Dialog.Dialog
+      open={open}
+      onOpenChange={(isOpen) => {
+        setOpen(isOpen);
+
+        if (!isOpen) {
+          localStorage.setItem('SHOULD_SHOW_BY_DEFAULT', 'false');
+        }
+      }}
+    >
+      <Dialog.DialogTrigger className="gap-2 group inline-flex flex-wrap items-center bg-white/10 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 border border-white/10 p-1 ps-4 rounded-full text-gray-300 hover:text-white transition-all text-xs md:text-sm">
+        HyperClicks is open to pre booking.
+        <span className="bg-white/10 group-hover:bg-white group-focus:bg-white px-2 group-hover:[&_svg]:ms-2 group-hover:pe-0 inline-flex justify-center items-center gap-x-2 rounded-full font-semibold text-gray-400 group-hover:text-[#357D8A] group-focus:text-[#357D8A] transition-all text-xs">
+          <svg
+            className="shrink-0 size-3 transition-all duration-200"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </span>
+      </Dialog.DialogTrigger>
       <Dialog.DialogContent className="max-h-[90%] overflow-auto bg-white dark:bg-slate-900 bg-opacity-85 dark:bg-opacity-50 backdrop-blur-xl">
         <div className="mb-4">
           <Image

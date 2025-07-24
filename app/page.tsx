@@ -20,6 +20,7 @@ import HypercePitchPdf from '@/components/Home/HypercePitchPdf';
 import { Metadata } from 'next';
 import HyperceEventsClubHome from '@/components/Home/HyperceEventsClubHome/HyperceEventsClubHome';
 import Link from 'next/link';
+import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 
 export const metadata: Metadata = {
   title: 'Hyperce | Best Ecommerce Suite Solution',
@@ -32,7 +33,9 @@ export default function Home() {
     <>
       <div className="border-b bg-[#0F1023] text-white border-gray-800">
         <div className="container py-2 flex items-center justify-center">
-          <Link
+          <HyperClickPromoPrompt />
+
+          {/* <Link
             href="/headless"
             className="gap-2 group inline-flex flex-wrap items-center bg-white/10 hover:bg-white/10 focus:outline-hidden focus:bg-white/10 border border-white/10 p-1 ps-4 rounded-full text-gray-300 hover:text-white transition-all text-xs md:text-sm"
           >
@@ -53,7 +56,7 @@ export default function Home() {
                 <path d="m9 18 6-6-6-6" />
               </svg>
             </span>
-          </Link>
+          </Link>*/}
         </div>
       </div>
 
