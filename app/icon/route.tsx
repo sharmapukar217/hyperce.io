@@ -1,14 +1,17 @@
 import sharp from 'sharp';
 import { NextResponse, type NextRequest } from 'next/server';
 
-const loadIconFromIconify = async (iconName: string | null) => {
+const loadIconFromIconify = async (iconName: string | null, color?: string) => {
   try {
     if (!iconName) return null;
     const [prefix, icon] = iconName.split(':');
 
-    const response = await fetch(
-      `https://api.iconify.design/${prefix}/${icon}.svg`
-    );
+    const url = new URL(`https://api.iconify.design/${prefix}/${icon}.svg`);
+    if (color) {
+      url.searchParams.set('color', color);
+    }
+
+    const response = await fetch(url.toString());
     if (response.ok) return await response.text();
 
     return null;
@@ -21,7 +24,9 @@ export const runtime = 'nodejs';
 
 export async function GET(request: NextRequest) {
   const iconName = request.nextUrl.searchParams.get('icon');
-  const iconData = await loadIconFromIconify(iconName);
+  const color = request.nextUrl.searchParams.get('color') ?? undefined;
+
+  const iconData = await loadIconFromIconify(iconName, color);
 
   if (iconData) {
     const pngBuffer = await sharp(Buffer.from(iconData))
