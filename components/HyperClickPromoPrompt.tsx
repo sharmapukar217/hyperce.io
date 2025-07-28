@@ -138,7 +138,7 @@ export const HyperClickPromoPrompt = () => {
             label="Email Address"
             id="email"
             type="email"
-            placeholder="i.e: hi@hyperce.io"
+            placeholder="i.e: abc@gmail.com"
             {...register('email')}
             errorMessage={formState.errors.email?.message}
             required
@@ -147,7 +147,7 @@ export const HyperClickPromoPrompt = () => {
             as="input"
             label="Phone Number"
             id="phone"
-            placeholder="i.e: 9812312312"
+            placeholder="i.e: +977 9812312312"
             {...register('phone')}
             errorMessage={formState.errors.phone?.message}
             required
