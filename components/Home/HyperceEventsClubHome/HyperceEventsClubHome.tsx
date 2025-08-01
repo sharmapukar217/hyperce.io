@@ -7,6 +7,8 @@ import { MdOutlineBusinessCenter } from 'react-icons/md';
 import { AiOutlineStar, AiFillFire } from 'react-icons/ai';
 
 export default function HyperceEventsClubHome() {
+  return null;
+
   return (
     <section className="py-16 px-5 md:px-10 lg:px-20">
       {/* Title Section */}

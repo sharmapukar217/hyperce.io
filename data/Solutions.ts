@@ -7,14 +7,14 @@ export const showcaseTechSolutions = [
     darkIcon: '/headless-dark.svg',
     altText: 'E-commerce platform'
   },
-  {
-    name: 'Hyperce Ink',
-    href: '/ink',
-    des: " Empower your content with Ink's versatile blogging service. Share ideas and engage audiences worldwide.",
-    whiteIcon: '/hyperce-ink-white.svg',
-    darkIcon: '/hyperce-ink-dark.svg',
-    altText: 'E-commerce Suite'
-  },
+  // {
+  //   name: 'Hyperce Ink',
+  //   href: '/ink',
+  //   des: " Empower your content with Ink's versatile blogging service. Share ideas and engage audiences worldwide.",
+  //   whiteIcon: '/hyperce-ink-white.svg',
+  //   darkIcon: '/hyperce-ink-dark.svg',
+  //   altText: 'E-commerce Suite'
+  // },
   {
     name: 'Hyperce Devops',
     href: '/devops',

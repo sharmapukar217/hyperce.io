@@ -4,30 +4,30 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 
 export default function OurIncubatees() {
   const incubatees = [
-    {
-      name: 'LogicLand',
-      url: 'https://logicland.net',
-      image: '/incubate/LogicLand.png',
-      description: "Building Tomorrow's Innovators Today."
-    },
+    // {
+    //   name: 'LogicLand',
+    //   url: 'https://logicland.net',
+    //   image: '/incubate/LogicLand.png',
+    //   description: "Building Tomorrow's Innovators Today."
+    // },
     {
       name: 'WedGlam',
       url: 'https://wedglam.co',
       image: '/incubate/wedglam.png',
       description: 'One stop wedding dress marketplace.'
     },
-    {
-      name: 'OnBlockIT',
-      url: 'https://onblockit.com',
-      image: '/incubate/onblockit.png',
-      description: 'Your Corporate Marketing Agency'
-    },
-    {
-      name: 'Samaajpatra',
-      url: 'https://www.samaajpatra.com/',
-      image: '/incubate/samaajpatra.png',
-      description: 'Your online news portal.'
-    },
+    // {
+    //   name: 'OnBlockIT',
+    //   url: 'https://onblockit.com',
+    //   image: '/incubate/onblockit.png',
+    //   description: 'Your Corporate Marketing Agency'
+    // },
+    // {
+    //   name: 'Samaajpatra',
+    //   url: 'https://www.samaajpatra.com/',
+    //   image: '/incubate/samaajpatra.png',
+    //   description: 'Your online news portal.'
+    // },
     {
       name: 'Vibely',
       url: 'https://vibely.life/',
