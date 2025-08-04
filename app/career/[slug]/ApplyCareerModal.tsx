@@ -117,10 +117,12 @@ export const ApplyCareerModal = ({
       body: formData
       // headers: { "Content-Type": "multipart/formdata" }
     })
-      .then((res) => {
+      .then(async (res) => {
         if (!res.ok) {
+          const json = await res.json();
           return toast.error(
-            'Oops! Something went wrong, Please try again later.',
+            json?.message ||
+              'Oops! Something went wrong, Please try again later.',
             { id: 'cv-submit' }
           );
         }
