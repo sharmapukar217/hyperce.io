@@ -60,7 +60,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <div className="lg:w-2/3 dark:text-gray-300">
+      <div className="lg:w-2/3 dark:text-gray-300 text-start">
         <h2 className="font-bold text-4xl mb-5 dark:text-white">
           Write a message
         </h2>
@@ -106,12 +106,29 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            className="bg-[#357D8A] text-white w-2/4 h-fit py-3"
+            className="bg-[#357D8A] text-white w-2/4 h-fit py-3 mr-auto"
           >
             Send Message
           </button>
 
           <div id="result" className="mt-3 text-center"></div>
+
+          <div className="grid border-s-4 border-[#357D8A] ps-2 mt-4 place-items-start text-start">
+            <h1 className="text-lg font-semibold text-[#357D8A]">
+              Official Company Details
+            </h1>
+            <div className="flex gap-2">
+              <h1 className="font-medium">Company Registration No:</h1>
+              <span className="text-gray-500 dark:text-gray-300">311031</span>
+            </div>
+
+            <div className="flex gap-2">
+              <h1 className="font-medium">VAT No:</h1>
+              <span className="text-gray-500 dark:text-gray-300">
+                610486111
+              </span>
+            </div>
+          </div>
         </form>
       </div>
     </>
