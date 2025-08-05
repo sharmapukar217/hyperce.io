@@ -113,17 +113,15 @@ export default function ContactForm() {
 
           <div id="result" className="mt-3 text-center"></div>
 
-          <div className="grid border-s-4 border-[#357D8A] ps-2 mt-4 place-items-start text-start">
-            <h1 className="text-lg font-semibold text-[#357D8A]">
-              Official Company Details
-            </h1>
+          <div className="grid border-s-4 border-[#357D8A] ps-2 mt-12 place-items-start text-start">
+            <h1 className="text-lg font-semibold">Official Company Details</h1>
             <div className="flex gap-2">
-              <h1 className="font-medium">Company Registration No:</h1>
+              <h1 className="">Company Registration No:</h1>
               <span className="text-gray-500 dark:text-gray-300">311031</span>
             </div>
 
             <div className="flex gap-2">
-              <h1 className="font-medium">VAT No:</h1>
+              <h1 className="">VAT No:</h1>
               <span className="text-gray-500 dark:text-gray-300">
                 610486111
               </span>
