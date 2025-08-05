@@ -43,6 +43,10 @@ export const HyperClickPromoPrompt = () => {
     resolver: zodResolver(formSchema)
   });
 
+  React.useEffect(() => {
+    setOpen(true);
+  }, []);
+
   const onSubmit = handleSubmit(async function (input) {
     try {
       toast.loading('Please wait while loading...', { id: 'form-submit' });
@@ -74,8 +78,8 @@ export const HyperClickPromoPrompt = () => {
   });
   return (
     <Dialog.Dialog
-      defaultOpen={open}
       open={open}
+      defaultOpen={open}
       onOpenChange={(v) => setOpen(v)}
     >
       <Dialog.DialogContent className="max-h-[90%] overflow-auto bg-white dark:bg-slate-900 bg-opacity-85 dark:bg-opacity-50 backdrop-blur-xl">
