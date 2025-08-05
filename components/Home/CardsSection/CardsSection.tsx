@@ -5,7 +5,7 @@ const servicesOffered = [
     id: 'user',
     title: 'Ecommerce Suite Solutions',
     description:
-      'Customized tools and technologies required for your ecommerce business powered by modern and headless techologies.',
+      'Customized tools and technologies required for your ecommerce business powered by modern and headless technologies.',
     image: '/images/xp.webp'
   },
   {

@@ -113,7 +113,7 @@ export default function ContactForm() {
 
           <div id="result" className="mt-3 text-center"></div>
 
-          <div className="grid border-s-4 border-[#357D8A] ps-2 mt-12 place-items-start text-start">
+          <div className="grid border-s-4 border-[#357D8A] bg-[#357D8A]/5 p-4 mt-8 place-items-start text-start">
             <h1 className="text-lg font-semibold">Official Company Details</h1>
             <div className="flex gap-2 text-gray-600 dark:text-gray-400">
               <h1>Company Registration No.:</h1>

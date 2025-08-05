@@ -166,14 +166,14 @@ export default function Hamburger(props: any) {
 
           {/* Event and Proposal Links */}
           <div className="mt-10 space-y-4">
-            <a target="_blank" href="/events-club" className="w-full">
+            {/*<a target="_blank" href="/events-club" className="w-full">
               <button
                 aria-label="join-events-club"
                 className="w-full flex justify-center gap-2 py-2 px-4 text-white bg-purple-700 rounded-full hover:scale-105 transition-transform font-semibold"
               >
                 Join Our Events Club
               </button>
-            </a>
+            </a>*/}
 
             <a target="_blank" href={proposalLink} className="w-full">
               <button

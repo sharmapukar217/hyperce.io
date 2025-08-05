@@ -13,7 +13,6 @@ import Image from 'next/image';
 import HeadlessBg from '../../../../public/services-bg.png';
 
 import { Metadata } from 'next';
-import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 import DemoCredentials from '@/components/Services/Tech/Headless/Hero/minute/DemoCredentials';
 
 export const metadata: Metadata = {
@@ -54,7 +53,6 @@ export default function Services() {
       {/* <Features /> */}
       <Newsletter />
       <Contact />
-      <HyperClickPromoPrompt />
     </div>
   );
 }

@@ -4,6 +4,8 @@ import { GiSkills } from 'react-icons/gi';
 import { MdOutlineBusinessCenter } from 'react-icons/md';
 
 export default function HyperceEventsClub() {
+  return null;
+
   return (
     <div className="mt-20">
       <div className="flex flex-col items-center text-center gap-5 mb-12">

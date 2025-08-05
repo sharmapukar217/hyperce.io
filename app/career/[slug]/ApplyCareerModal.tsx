@@ -48,6 +48,9 @@ const formSchema = z.object({
     .refine((files) => files[0]?.type === 'application/pdf', {
       message: 'Only PDF files are allowed.'
     })
+    .refine((files) => files[0]?.size <= 20 * 1024 * 1024, {
+      message: 'File size must be less than 20MB.'
+    })
 });
 
 const Field = React.forwardRef<HTMLInputElement, FieldProps>(function Field(
@@ -92,6 +95,7 @@ export const ApplyCareerModal = ({
   const [isApplied, setIsApplied] = React.useState(false);
 
   const { register, formState, handleSubmit, reset } = useForm({
+    mode: 'onInput',
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: '',
@@ -104,7 +108,10 @@ export const ApplyCareerModal = ({
   });
 
   const onSubmit = handleSubmit(function (values) {
-    toast.loading('Please wait while submitting...', { id: 'cv-submit' });
+    toast.loading('Please wait while submitting...', {
+      id: 'cv-submit',
+      duration: Infinity
+    });
 
     const formData = new FormData();
     formData.set('careerID', careerId);
@@ -151,7 +158,7 @@ export const ApplyCareerModal = ({
           {isApplied ? 'Applied' : canApply ? 'Apply for this job' : 'Closed'}
         </button>
       </CredenzaTrigger>
-      <CredenzaContent>
+      <CredenzaContent className="max-h-[90%] overflow-auto">
         <CredenzaHeader>
           <CredenzaTitle>Apply for this job</CredenzaTitle>
           <CredenzaDescription>

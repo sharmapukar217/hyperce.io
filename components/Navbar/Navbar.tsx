@@ -76,7 +76,7 @@ export default function Navbar(props: any) {
         <div className="flex gap-10 items-center">
           <div className="cta gap-5 hidden lg:flex">
             {/* Join Events Club */}
-            <Link href="/events-club" target="_blank">
+            {/*<Link href="/events-club" target="_blank">
               <button
                 aria-label="events-club-membership"
                 className="flex h-full gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-purple-700 px-5 py-1 rounded-full items-center"
@@ -85,7 +85,7 @@ export default function Navbar(props: any) {
                   Join Our Events Club
                 </span>
               </button>
-            </Link>
+            </Link>*/}
 
             <Link href={proposalLink} target="_blank">
               <button

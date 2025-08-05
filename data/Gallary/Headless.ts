@@ -27,11 +27,11 @@ export const HeadlessGallary = [
   //   img_src: '/gallary/Piccadilly.png'
   // },
 
-  {
-    img_name: 'Shopvest',
-    a_href: 'https://trylah.sg/',
-    img_src: '/gallary/shopvest_demo.png'
-  },
+  // {
+  //   img_name: 'Shopvest',
+  //   a_href: 'https://trylah.sg/',
+  //   img_src: '/gallary/shopvest_demo.png'
+  // },
   {
     img_name: 'Mrs Learning Bee',
     a_href: 'https://mrslearningbee.com/',

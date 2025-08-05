@@ -32,7 +32,7 @@ export default function HomeTestimonial() {
           Gallery
         </h2>
         <span className="hyperce-sub-head text-gray-700 dark:text-gray-400">
-          Check out our previous works.
+          Check out some of our previous works.
         </span>
       </div>
       <div ref={ref} className="keen-slider">
