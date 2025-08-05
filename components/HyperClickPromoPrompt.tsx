@@ -73,7 +73,11 @@ export const HyperClickPromoPrompt = () => {
     }
   });
   return (
-    <Dialog.Dialog open={open} onOpenChange={setOpen}>
+    <Dialog.Dialog
+      defaultOpen={open}
+      open={open}
+      onOpenChange={(v) => setOpen(v)}
+    >
       <Dialog.DialogContent className="max-h-[90%] overflow-auto bg-white dark:bg-slate-900 bg-opacity-85 dark:bg-opacity-50 backdrop-blur-xl">
         <div className="mb-4">
           <Image
