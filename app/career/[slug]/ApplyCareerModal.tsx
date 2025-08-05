@@ -95,7 +95,7 @@ export const ApplyCareerModal = ({
   const [isApplied, setIsApplied] = React.useState(false);
 
   const { register, formState, handleSubmit, reset } = useForm({
-    mode: 'onInput',
+    mode: 'onTouched',
     resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: '',
