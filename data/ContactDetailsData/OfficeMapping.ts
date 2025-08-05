@@ -25,7 +25,7 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
   },
   [Domain.HyperceIo]: {
     officeName: 'Hyperce Technologies Pvt. Ltd.',
-    address: 'Srijanachowk, Balambu 12, Chandragiri, Kathmandu, Bagmati',
+    address: 'Srijanachowk, Balambu - 12, Chandragiri, Kathmandu, Bagmati',
     email: 'hi@hyperce.io',
     phoneNumber: '+977-9840260599',
     country: 'Nepal'

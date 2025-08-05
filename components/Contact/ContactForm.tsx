@@ -116,12 +116,12 @@ export default function ContactForm() {
           <div className="grid border-s-4 border-[#357D8A] ps-2 mt-12 place-items-start text-start">
             <h1 className="text-lg font-semibold">Official Company Details</h1>
             <div className="flex gap-2 text-gray-600 dark:text-gray-400">
-              <h1>Company Registration No:</h1>
+              <h1>Company Registration No.:</h1>
               <span>311031</span>
             </div>
 
             <div className="flex gap-2 text-gray-600 dark:text-gray-400">
-              <h1 className="">VAT No:</h1>
+              <h1 className="">VAT No.:</h1>
               <span>610486111</span>
             </div>
           </div>
