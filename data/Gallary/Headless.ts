@@ -1,5 +1,20 @@
 export const HeadlessGallary = [
   {
+    img_name: 'Maipic',
+    a_href: 'https://maipic.de',
+    img_src: '/gallary/headless/maipic.png'
+  },
+  {
+    img_name: 'Mrs Learning Bee',
+    a_href: 'https://mrslearningbee.com/',
+    img_src: '/gallary/headless/Mrs-Learning-Bee.png'
+  },
+  {
+    img_name: 'Purplleface',
+    a_href: 'https://www.purplleface.com/',
+    img_src: '/gallary/purplleface_demo.png'
+  },
+  {
     img_name: 'Menzz',
     a_href: 'https://menzz.co/',
     img_src: '/gallary/menzz_demo.png'
@@ -10,11 +25,6 @@ export const HeadlessGallary = [
   //   a_href: 'https://goonji.com/',
   //   img_src: '/gallary/goonji_demo.png'
   // },
-  {
-    img_name: 'Maipic',
-    a_href: 'https://maipic.de',
-    img_src: '/gallary/maipic_demo.png'
-  },
 
   {
     img_name: 'Kingsley Air USA',
@@ -33,20 +43,11 @@ export const HeadlessGallary = [
   //   img_src: '/gallary/shopvest_demo.png'
   // },
   {
-    img_name: 'Mrs Learning Bee',
-    a_href: 'https://mrslearningbee.com/',
-    img_src: '/gallary/mrslearningbee_demo.png'
-  },
-  {
     img_name: 'SignalStuff',
     a_href: 'https://signalstuff.com/',
     img_src: '/gallary/signalstuff_demo.png'
   },
-  {
-    img_name: 'Purplleface',
-    a_href: 'https://www.purplleface.com/',
-    img_src: '/gallary/purplleface_demo.png'
-  },
+
   {
     img_name: 'Vibely',
     a_href: 'https://vibely.life/',
