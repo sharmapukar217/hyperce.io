@@ -2,9 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HyperceLogo from '@/utils/assets/Logo';
 import SharkTankLogo from '@/assets/SharkTank.png';
-
 import HyperClickLogo from '@/assets/hyper-click/logo.png';
-import HyperClickLogoDark from '@/assets/hyper-click/logo-dark.webp';
 
 export function ExclusiveOffers() {
   return (
@@ -108,32 +106,21 @@ export function ExclusiveOffers() {
           </div>
 
           {/* HyperClicks */}
-          <div className="flex flex-col w-full relative gap-4 border border-[#facc15] rounded-[10px] p-5 md:p-8 pt-16 md:pt-16 shadow-lg bg-[#ebeeef] dark:bg-slate-900">
+          <Link
+            target="_blank"
+            href="https://hyperclicks.net"
+            className="flex flex-col w-full relative gap-4 border border-[#facc15] rounded-[10px] p-5 md:p-8 pt-16 md:pt-16 shadow-lg bg-[#ebeeef] dark:bg-slate-900"
+          >
             <div className="absolute shadow-md shadow-[#facc15]/40 flex items-center justify-center -top-12 -translate-x-1/2 left-[50%] w-24 h-24 bg-[#ebeeef] dark:bg-slate-900 rounded-full border-[3px] border-[#facc15] text-5xl font-serif font-black text-[#357D8A]">
               02
             </div>
             <div className="inline-flex items-center gap-4">
-              <Link
-                target="_blank"
-                href="https://hyperclicks.net"
-                className="bg-[#facc15]/20 shrink-0 rounded-[10px] flex items-center justify-center h-12 w-12 [&_svg]:w-8 [&_svg]:h-8"
-              >
-                <Image
-                  src={HyperClickLogo}
-                  alt=""
-                  className="w-8 h-auto dark:hidden"
-                />
-                <Image
-                  alt=""
-                  src={HyperClickLogoDark}
-                  className="w-8 h-auto hidden dark:inline"
-                />
-              </Link>
-              <Link target="_blank" href="https://hyperclicks.net">
-                <h1 className="text-[#357D8A] text-base tracking-tight md:text-lg font-bold">
-                  HyperClicks Subscription Deal
-                </h1>
-              </Link>
+              <div className="bg-[#facc15]/20 shrink-0 rounded-[10px] flex items-center justify-center h-12 w-12 [&_svg]:w-8 [&_svg]:h-8">
+                <Image src={HyperClickLogo} alt="" className="w-8 h-auto" />
+              </div>
+              <h1 className="text-[#357D8A] text-base tracking-tight md:text-lg font-bold">
+                HyperClicks Subscription Deal
+              </h1>
             </div>
 
             <h2 className="font-semibold md:text-xl max-w-md">
@@ -161,7 +148,7 @@ export function ExclusiveOffers() {
                 </span>
               </li>
             </ul>
-          </div>
+          </Link>
         </div>
 
         <div className="text-center py-4">
