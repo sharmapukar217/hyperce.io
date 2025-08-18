@@ -1,5 +1,10 @@
 export const HeadlessGallary = [
   {
+    img_name: 'Hyperse',
+    a_href: 'https://demo-glass.hyperse.net',
+    img_src: '/gallary/headless/hyperse.png'
+  },
+  {
     img_name: 'Maipic',
     a_href: 'https://maipic.de',
     img_src: '/gallary/headless/maipic.png'

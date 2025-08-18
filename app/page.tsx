@@ -21,6 +21,8 @@ import { Metadata } from 'next';
 import HyperceEventsClubHome from '@/components/Home/HyperceEventsClubHome/HyperceEventsClubHome';
 import Link from 'next/link';
 import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
+import { HyperClickHero } from '@/components/HyperClickHero';
+import { HomepageHeroCarousel } from '@/components/HomepageHeroCarousel';
 
 export const metadata: Metadata = {
   title: 'Hyperce | Best Ecommerce Suite Solution',
@@ -32,10 +34,10 @@ export default function Home() {
   return (
     <>
       <HyperClickPromoPrompt />
+      <Navbar />
 
-      <main className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white h-fit bg-center">
-        <Navbar />
-        <Hero />
+      <main className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white bg-center">
+        <HomepageHeroCarousel />
       </main>
       <div className="bg-[#ebeeef] dark:bg-[#0F172A]">
         <AnimateWrapper>

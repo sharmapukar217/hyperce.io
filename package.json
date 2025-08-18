@@ -14,7 +14,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@ark-ui/react": "^5.15.1",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@hookform/resolvers": "^3.10.0",
@@ -33,6 +32,7 @@
     "autoprefixer": "10.4.15",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "embla-carousel-react": "^8.6.0",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "framer-motion": "^11.8.0",
@@ -72,6 +72,7 @@
     "zod-form-data": "^2.0.5"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/aos": "^3.0.4",
     "@types/react-slick": "^0.23.10",
     "@types/sanitize-html": "^2.13.0",

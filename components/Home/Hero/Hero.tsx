@@ -1,116 +1,16 @@
 'use client';
-import AnimateWrapper from '@/components/AnimateWrapper/AnimateWrapper';
-import Typewriter from './minute/Typerwriter';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import Typewriter from './minute/Typerwriter';
 import { MdCelebration } from 'react-icons/md';
 
 export default function Hero() {
   return (
-    <section className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center pb-[10%] py-10">
-      {/* <AnimateWrapper> */}
-      <div
-        // --aos="fade-right"
-        className="md:w-1/2 flex items-center lg:px-8  md:container mx-auto "
-      >
-        {/* for small screen without animation */}
-        <div className="md:hidden flex items-center justify-center flex-col space-y-8">
-          <a
-            className="group inline-block bg-white/[.05] hover:bg-white/[.1] border border-white/[.05] p-1 pl-4 rounded-full shadow-md"
-            href="#solutions"
-          >
-            <p className="hyperce-head-sup mr-2 dark:text-gray-400 inline-block">
-              Checkout our Solutions
-            </p>
-            <span className="group-hover:bg-white/[.1] py-2 px-3 inline-flex justify-center items-center gap-x-2 rounded-full bg-white/[.075] font-semibold text-sm">
-              <svg
-                className="w-2.5 h-2.5"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
-          </a>
-
-          <h1
-            className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left"
-            style={
-              {
-                // fontFamily: "Times New Roman",
-              }
-            }
-          >
-            Your Ecommerce <br /> Suite Partner
-          </h1>
-
-          <div className="mx-auto">
-            <p className="sm:hidden hyperce-sub-head muted text-gray-700 dark:text-gray-400">
-              Take the opportunity to elevate your business to new heights with
-              our futuristic ecommerce platforms and AI-powered ecommerce
-              solutions.
-            </p>
-            <p className="hidden sm:block hyperce-sub-head muted text-gray-700 dark:text-gray-400">
-              <Typewriter
-                text="Take the opportunity to elevate your business to new heights with our
-          futuristic ecommerce platforms and AI-powered ecommerce solutions."
-              />
-            </p>
-          </div>
-
-          <a
-            className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
-            href="#faq"
-          >
-            Learn More
-            <svg
-              className="w-2.5 h-2.5"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </a>
-          <a
-            className="hyperce-btn-text-low inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
-            href="#contact"
-          >
-            Contact Us
-            <svg
-              className="w-2.5 h-2.5"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-            >
-              <path
-                d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </a>
-        </div>
-
-        {/* for above small screen */}
-        <div className="hidden md:block flex justify-center flex-col space-y-8">
+    <section className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white flex flex-col md:flex-row container justify-center py-10 shrink-0">
+      <div className="flex container">
+        <div className="flex justify-center flex-col space-y-8 lg:px-8">
           <motion.div
             initial={{ x: -500, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -149,14 +49,7 @@ export default function Hero() {
             transition={{ duration: 1 }}
             className=""
           >
-            <h1
-              className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left"
-              style={
-                {
-                  // fontFamily: "Times New Roman",
-                }
-              }
-            >
+            <h1 className="hyperce-head-xl text-center tracking:10 text-5xl text md:text-left">
               Your Ecommerce <br /> Suite Partner
             </h1>
           </motion.div>
@@ -174,10 +67,10 @@ export default function Hero() {
             initial={{ x: -500, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="text-center flex gap-5 justify-center items-center  md:justify-start flex-col md:flex-row"
+            className="flex flex-col sm:flex-col text-center gap-5 justify-center xl:justify-start items-center lg:flex-row"
           >
             <a
-              className="hyperce-btn-text-low w-fit hover:scale-105 md:w-fit active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
+              className="md:w-full xl:w-fit hyperce-btn-text-low hover:scale-105 active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
               href="#faq"
             >
               Learn More
@@ -197,7 +90,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              className="hyperce-btn-text-low inline-flex w-/3 md:w-fit justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
+              className="md:w-full xl:w-fit hyperce-btn-text-low inline-flex justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
               href="#contact"
             >
               Contact Us
@@ -220,15 +113,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <div
-        // data-aos="fade-left"
-        className="md:w-1/2 items-center relative h-full flex my-auto justify-center md:justify-end lg:pr-20"
-      >
+      <div className="hidden md:flex items-center relative h-full my-auto justify-center md:justify-end lg:pr-20">
         <svg
           width="400"
           height="400"
           className="overflow-visible z-10 md:mt-[10%] scale-[60%] md:scale-[80%] lg:scale-[100%]"
-          // viewBox="0 0 398 398"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -393,7 +282,6 @@ export default function Hero() {
           </defs>
         </svg>
       </div>
-      {/* </AnimateWrapper> */}
     </section>
   );
 }
