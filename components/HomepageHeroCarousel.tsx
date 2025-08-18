@@ -48,9 +48,9 @@ export function HomepageHeroCarousel() {
     >
       <div ref={emblaRef} className="overflow-x-clip">
         <div className="flex">
-          <Slide>
+          {/*<Slide>
             <HyperClickHero />
-          </Slide>
+          </Slide>*/}
           <Slide>
             <Hero />
           </Slide>
@@ -76,22 +76,24 @@ export function HomepageHeroCarousel() {
             </button>
           )}
         </div>
-        <div className="mx-auto space-x-1">
-          {new Array(totalSlides).fill(null).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => api?.scrollTo(idx)}
-              className={twJoin(
-                'pointer-events-auto rounded-full transition-all backdrop-blur-xl hover:bg-black/70 dark:hover:bg-white/70',
-                [
-                  activeSlide === idx
-                    ? 'w-8 h-2 !bg-black dark:!bg-white'
-                    : 'w-2 h-2 bg-black/40 dark:bg-white/40'
-                ]
-              )}
-            />
-          ))}
-        </div>
+        {totalSlides > 1 ? (
+          <div className="mx-auto space-x-1">
+            {new Array(totalSlides).fill(null).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => api?.scrollTo(idx)}
+                className={twJoin(
+                  'pointer-events-auto rounded-full transition-all backdrop-blur-xl hover:bg-black/70 dark:hover:bg-white/70',
+                  [
+                    activeSlide === idx
+                      ? 'w-8 h-2 !bg-black dark:!bg-white'
+                      : 'w-2 h-2 bg-black/40 dark:bg-white/40'
+                  ]
+                )}
+              />
+            ))}
+          </div>
+        ) : null}
       </div>
     </div>
   );

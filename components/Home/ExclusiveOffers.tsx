@@ -5,6 +5,8 @@ import SharkTankLogo from '@/assets/SharkTank.png';
 import HyperClickLogo from '@/assets/hyper-click/logo.png';
 
 export function ExclusiveOffers() {
+  return null;
+
   return (
     <section id="exclusive-offers">
       <div className="mx-auto container px-10 lg:px-20 py-8 md:py-12 flex flex-col">

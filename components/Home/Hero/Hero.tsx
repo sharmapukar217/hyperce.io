@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="bg-[#ebeeef] dark:bg-slate-900 overflow-hidden">
       <div className="container flex flex-col md:flex-row max-w-6xl mx-auto relative">
-        <div className="flex justify-center flex-col space-y-8 lg:px-8">
+        <div className="flex justify-center flex-col space-y-8 lg:px-8 pb-12">
           <motion.div
             initial={{ x: -500, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
