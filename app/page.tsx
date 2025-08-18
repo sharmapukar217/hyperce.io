@@ -23,6 +23,7 @@ import Link from 'next/link';
 import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 import { HyperClickHero } from '@/components/HyperClickHero';
 import { HomepageHeroCarousel } from '@/components/HomepageHeroCarousel';
+import { ExclusiveOffers } from '@/components/Home/ExclusiveOffers';
 
 export const metadata: Metadata = {
   title: 'Hyperce | Best Ecommerce Suite Solution',
@@ -49,6 +50,9 @@ export default function Home() {
           </div>
           <div data-aos="fade-up">
             <Watch />
+          </div>
+          <div data-aos="fade-up">
+            <ExclusiveOffers />
           </div>
           <div data-aos="fade-up">
             <HypercePitchPdf />

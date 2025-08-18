@@ -11,8 +11,8 @@ import EffortlessIcon from '@/assets/hyper-click/effortless.svg';
 
 export function HyperClickHero() {
   return (
-    <section className="flex bg-[#ebeeef] dark:bg-slate-900 overflow-hidden">
-      <div className="flex flex-col container relative">
+    <section className="bg-[#ebeeef] dark:bg-slate-900 overflow-hidden">
+      <div className="flex flex-col container max-w-6xl mx-auto relative">
         <Image
           src={HyperClickHeroImage}
           alt=""
@@ -20,57 +20,58 @@ export function HyperClickHero() {
         />
 
         <div className="grid place-items-center text-center lg:place-items-end lg:text-right">
-          <div className="flex gap-2">
-            <h3 className="mt-7 text-xl font-black max-lg:order-3">
+          <div className="flex items-center gap-x-2">
+            <h3 className="md:mt-7 text-xl font-black max-lg:order-3">
               HyperClicks
             </h3>
             <Image
               src={HyperClickLogo}
               alt=""
-              className="w-16 h-full dark:hidden"
+              className="w-8 md:w-16 h-auto dark:hidden"
             />
             <Image
               src={HyperClickLogoDark}
               alt=""
-              className="w-16 h-full hidden dark:inline"
+              className="w-8 md:w-16 h-auto hidden dark:inline"
             />
           </div>
-          <h1 className="font-semibold text-6xl mt-4">
+          <h1 className="font-semibold text-4xl md:text-5xl mt-4">
             Your One Click <br />
             E-Commerce Store
           </h1>
 
-          <h2 className="text-xl mt-2 text-muted-foreground leading-relaxed tracking-wide">
-            <span className="font-semibold text-foreground">40% OFF</span> to
-            celebrate <span className="text-[#357D8A]">Hyperce&apos;s</span>{' '}
-            Deal on <span className="text-[#3177ff]">Shark Tank Nepal</span>
+          <h2 className="text-xl mt-4 text-gray-600 dark:text-gray-300 tracking-wide">
+            <b className="font-semibold text-black dark:text-white">25% OFF</b>{' '}
+            to celebrate <span className="text-[#357D8A]">Hyperce&apos;s</span>
+            &nbsp; Deal on{' '}
+            <span className="text-[#3177ff]">Shark Tank Nepal</span>
           </h2>
 
-          <div className="flex gap-8 my-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-12">
             <div className="flex flex-col items-center text-center justify-center">
               <FastIcon className="w-24 h-18 fill-[#357D8A]" />
-              <span className="mt-2 font-medium text-xl text-gray-500 dark:text-gray-300 ms-6">
+              <span className="mt-2 font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300 ms-6">
                 Fast
               </span>
             </div>
 
             <div className="flex flex-col items-center text-center justify-center gap-2">
               <ReliableIcon className="w-16 h-16 fill-[#357D8A]" />
-              <span className="font-medium text-xl text-gray-500 dark:text-gray-300">
+              <span className="font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300">
                 Reliable
               </span>
             </div>
 
             <div className="flex flex-col items-center text-center justify-center gap-2">
               <AffordableIcon className="w-16 h-16 fill-[#357D8A]" />
-              <span className="font-medium text-xl text-gray-500 dark:text-gray-300">
+              <span className="font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300">
                 Affordable
               </span>
             </div>
 
             <div className="flex flex-col items-center text-center justify-center gap-2">
               <EffortlessIcon className="w-16 h-16 fill-[#357D8A]" />
-              <span className="font-medium text-xl text-gray-500 dark:text-gray-300">
+              <span className="font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300">
                 Effortless
               </span>
             </div>
@@ -78,19 +79,19 @@ export function HyperClickHero() {
         </div>
 
         <div className="flex flex-col items-center lg:flex-row gap-y-8 lg:items-center justify-between mt-auto pb-12 bg-[#ebeeef] dark:bg-slate-900 w-full">
-          <div className="inline-flex lg:flex-col lg:items-start items-end gap-x-4 text-xl">
+          <div className="inline-flex lg:flex-col lg:items-start items-end gap-x-2 lg:gap-x-4 text-base md:text-xl">
             <h1 className="font-semibold">Offer Till:</h1>
-            <h2 className="text-gray-600 dark:text-gray-400 text-xl font-medium">
+            <h2 className="text-gray-600 dark:text-gray-400 font-medium">
               31st Bhadra, 2082
             </h2>
           </div>
 
           <div className="space-y-2 z-10 bg-[#ebeeef] dark:bg-slate-900">
-            <h1 className="text-xl">For further information</h1>
+            <h1 className="text-base md:text-xl">For further information</h1>
             <Link
               target="_blank"
               href="https://hyperclicks.net"
-              className="flex w-full sm:w-fit lg:w-full h-12 gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-12 py-1 rounded-full justify-center text-center font-semibold text-xl items-center shadow shadow-[#357D8A]"
+              className="flex w-full sm:w-fit lg:w-full h-12 gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-12 py-1 rounded-full justify-center text-center font-semibold text-base md:text-xl items-center shadow shadow-[#357D8A]"
             >
               Click Here
             </Link>

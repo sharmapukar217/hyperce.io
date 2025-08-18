@@ -46,12 +46,12 @@ export default function Navbar(props: any) {
 
   return (
     <header className={cn('dark:bg-slate-900 w-full gap-5', props.className)}>
-      <div className="flex items-center justify-between gap-5 md:gap-2 container py-8 px-10 md:px-20 z-50">
+      <div className="flex items-center justify-between gap-5 md:gap-2 container py-8 md:px-20 z-50">
         <div className="logo">
           <Logo />
         </div>
 
-        <nav className="justify-center items-center hidden lg1:flex gap-2">
+        <nav className="justify-center items-center hidden xl:flex gap-2">
           <ul className="flex gap-6">
             {navMenuItems.map((menuItem) => (
               <li
@@ -74,7 +74,7 @@ export default function Navbar(props: any) {
           </ul>
         </nav>
         <div className="flex gap-10 items-center">
-          <div className="cta gap-5 hidden lg:flex">
+          <div className="cta gap-5 hidden xl:flex">
             {/* Join Events Club */}
             {/*<Link href="/events-club" target="_blank">
               <button
@@ -86,6 +86,24 @@ export default function Navbar(props: any) {
                 </span>
               </button>
             </Link>*/}
+
+            <Link
+              href="/#exclusive-offers"
+              className="flex items-center justify-center h-full gap-2 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-blue-500 px-5 py-2 rounded-full"
+            >
+              <span className="text-base font-bold">Get Offer</span>
+              <div className="svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z" />
+                </svg>
+              </div>
+            </Link>
 
             <Link href={proposalLink} target="_blank">
               <button
