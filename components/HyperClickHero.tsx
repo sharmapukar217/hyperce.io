@@ -18,7 +18,7 @@ const amaranth = Amaranth({
 export function HyperClickHero() {
   return (
     <section className="bg-[#ebeeef] dark:bg-slate-900 overflow-hidden">
-      <div className="flex flex-col container max-w-6xl py-12 mx-auto relative">
+      <div className="flex flex-col container max-w-6xl mx-auto relative">
         <Image
           src={HyperClickHeroImage}
           alt=""

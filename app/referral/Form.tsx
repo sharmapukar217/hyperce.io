@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Image from 'next/image';
-import Demo from './demo.svg';
+import Demo from './demo.png';
 import { toast } from '@/components/ui/use-toast';
 
 export default function Form() {
@@ -90,12 +90,12 @@ export default function Form() {
         </h2>
 
         <form
-          className="w-full md:w-[80%] needs-validation flex-end flex flex-col gap-5"
+          className="w-full lg:w-[80%] needs-validation flex-end flex flex-col gap-5"
           onSubmit={handleSubmit}
         >
           <h3>Your Details: </h3>
           <input type="checkbox" className="hidden" name="botcheck" />
-          <div className="mb-5 flex gap-10">
+          <div className="mb-5 grid md:grid-cols-2 gap-10">
             <input
               required
               type="text"
@@ -115,7 +115,7 @@ export default function Form() {
               name="lastName"
             />
           </div>
-          <div className="mb-5 flex gap-10">
+          <div className="mb-5 grid md:grid-cols-2 gap-10">
             <input
               id="email_address"
               type="email"
@@ -137,7 +137,7 @@ export default function Form() {
             />
           </div>
           <h3>Referee Details: </h3>
-          <div className="mb-5 flex gap-10">
+          <div className="mb-5 grid md:grid-cols-2 gap-10">
             <input
               type="text"
               value={form.refereeFirstName}
@@ -155,7 +155,7 @@ export default function Form() {
               onChange={handleChange}
             />
           </div>
-          <div className="mb-5 flex gap-10">
+          <div className="mb-5 grid md:grid-cols-2 gap-10">
             <input
               id="referee_email"
               type="email"
@@ -179,7 +179,7 @@ export default function Form() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-[#357D8A] text-white w-1/4 h-fit py-3"
+              className="bg-[#357D8A] text-white w-full md:w-1/4 h-fit py-3"
             >
               Join Now
             </button>
