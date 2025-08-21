@@ -31,9 +31,9 @@ export function ExclusiveOffers() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-8 gap-y-20 pt-20">
+        <div className="grid gap-x-8 gap-y-20 pt-20">
           {/* Hyperce */}
-          <div className="flex flex-col w-full relative gap-4 border border-[#facc15] rounded-[10px] p-5 md:p-8 pt-16 md:pt-16 shadow-lg bg-[#ebeeef] dark:bg-slate-900">
+          <div className="mx-auto flex flex-col w-fit relative gap-4 border border-[#facc15] rounded-[10px] p-5 md:p-8 pt-16 md:pt-16 shadow-lg bg-[#ebeeef] dark:bg-slate-900">
             <div className="absolute shadow-md shadow-[#facc15]/40 flex items-center justify-center -top-12 -translate-x-1/2 left-[50%] w-24 h-24 bg-[#ebeeef] dark:bg-slate-900 rounded-full border-[3px] border-[#facc15] text-5xl font-serif font-black text-[#357D8A]">
               01
             </div>
@@ -110,7 +110,7 @@ export function ExclusiveOffers() {
           </div>
 
           {/* HyperClicks */}
-          <Link
+          {/*<Link
             target="_blank"
             href="https://hyperclicks.net"
             onClick={(ev) => {
@@ -169,7 +169,7 @@ export function ExclusiveOffers() {
                 </span>
               </li>
             </ul>
-          </Link>
+          </Link>*/}
         </div>
 
         <div className="text-center py-4">
