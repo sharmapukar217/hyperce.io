@@ -13,6 +13,7 @@ export default function Form() {
     refereeFirstName: '',
     refereeLastName: '',
     refereeEmail: '',
+    refereePhone: '',
     refereeCompany: '',
     comments: ''
   });
@@ -48,6 +49,7 @@ export default function Form() {
               refereeFirstName: form.refereeFirstName,
               refereeLastName: form.refereeLastName,
               refereeCompany: form.refereeCompany,
+              refereePhone: form.refereePhone,
               refereeEmail: form.refereeEmail,
               comments: form.comments
             }
@@ -166,6 +168,18 @@ export default function Form() {
               required
               className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
             />
+            <input
+              id="referee_phone"
+              type="tel"
+              value={form.refereePhone}
+              onChange={handleChange}
+              placeholder="Referee's Phone Number (Optional)"
+              name="refereePhone"
+              className="w-full px-4 py-3 text-black placeholder:text-gray-800 rounded-md outline-none focus:outline-gray-400 bg-white"
+            />
+          </div>
+
+          <div className="mb-5 grid md:grid-cols-2 gap-10">
             <input
               id="referee_company"
               type="text"

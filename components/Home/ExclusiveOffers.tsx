@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import HyperceLogo from '@/utils/assets/Logo';
@@ -5,7 +7,7 @@ import SharkTankLogo from '@/assets/SharkTank.png';
 import HyperClickLogo from '@/assets/hyper-click/logo.png';
 
 export function ExclusiveOffers() {
-  return null;
+  // return null;
 
   return (
     <section id="exclusive-offers">
@@ -111,6 +113,23 @@ export function ExclusiveOffers() {
           <Link
             target="_blank"
             href="https://hyperclicks.net"
+            onClick={(ev) => {
+              ev.preventDefault();
+              const linkId = 'hyper_clicks_offer_link';
+              const prevCount = parseInt(
+                localStorage.getItem(linkId) || '0',
+                10
+              );
+
+              const newCount = prevCount + 1;
+              localStorage.setItem(linkId, newCount.toString());
+
+              (window as any).gtag('event', 'link_click', {
+                link_id: linkId,
+                click_count: newCount
+              });
+              window.open('https://hyperclicks.net', '_blank');
+            }}
             className="flex flex-col w-full relative gap-4 border border-[#facc15] rounded-[10px] p-5 md:p-8 pt-16 md:pt-16 shadow-lg bg-[#ebeeef] dark:bg-slate-900"
           >
             <div className="absolute shadow-md shadow-[#facc15]/40 flex items-center justify-center -top-12 -translate-x-1/2 left-[50%] w-24 h-24 bg-[#ebeeef] dark:bg-slate-900 rounded-full border-[3px] border-[#facc15] text-5xl font-serif font-black text-[#357D8A]">
@@ -146,7 +165,7 @@ export function ExclusiveOffers() {
                   </svg>
                 </div>
                 <span className="text-sm md:text-base">
-                  25% OFF on all HyperClicks Subscription
+                  25% OFF on all HyperClicks Annual Subscription
                 </span>
               </li>
             </ul>
@@ -157,8 +176,8 @@ export function ExclusiveOffers() {
           <h3 className="font-medium md:text-xl">
             <span className="text-red-500 dark:text-red-600">*</span>These
             exclusive deals are valid only until&nbsp;
-            <span className="text-[#357D8A]">September 16</span>—Don&apos;t miss
-            out!
+            <span className="text-[#357D8A] font-semibold">September 16</span>
+            —Don&apos;t miss out!
           </h3>
         </div>
       </div>

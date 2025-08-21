@@ -27,7 +27,10 @@ const DrawerOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
-    className={twMerge('fixed inset-0 z-50 bg-black/80', className)}
+    className={twMerge(
+      'fixed inset-0 z-50 bg-black/70 dark:bg-black/80 backdrop-blur-md dark:backdrop-blur-sm',
+      className
+    )}
     {...props}
   />
 ));
@@ -42,12 +45,12 @@ const DrawerContent = React.forwardRef<
     <DrawerPrimitive.Content
       ref={ref}
       className={twMerge(
-        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border dark:border-slate-700 bg-white dark:bg-slate-900',
+        'fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border dark:border-slate-700 bg-white/95 dark:bg-slate-900/60 backdrop-blur-sm',
         className
       )}
       {...props}
     >
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-gray-200 dark:bg-slate-700" />
+      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-gray-300 dark:bg-slate-800" />
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>

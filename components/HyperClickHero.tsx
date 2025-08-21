@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Amaranth } from 'next/font/google';
@@ -17,8 +18,8 @@ const amaranth = Amaranth({
 
 export function HyperClickHero() {
   return (
-    <section className="bg-[#ebeeef] dark:bg-slate-900 overflow-hidden">
-      <div className="flex flex-col container max-w-6xl mx-auto relative">
+    <section className="bg-[#ebeeef] dark:bg-slate-900 overflow-hidden h-full">
+      <div className="flex flex-col container max-w-7xl h-full mx-auto relative flex-1">
         <Image
           src={HyperClickHeroImage}
           alt=""
@@ -48,68 +49,78 @@ export function HyperClickHero() {
             E-Commerce Store
           </h1>
 
-          <h2 className="text-xl mt-4 text-gray-600 dark:text-gray-300 tracking-wide">
+          <h2 className="text-center text-xl mt-4 tracking-wide">
             <b className="font-semibold text-black dark:text-white">25% OFF</b>
-            &nbsp; to celebrate{' '}
-            <span className="text-[#357D8A]">Hyperce&apos;s</span>
-            &nbsp; Deal on&nbsp;
-            <span className="text-[#3177ff]">Shark Tank Nepal</span>
+            &nbsp;on HyperClicks Annual Subscription
+            <br />
+            <span className="text-[#357D8A] font-bold">
+              Hyperce&apos;s&nbsp;
+            </span>
+            <span className="text-[#3177ff] font-bold">Shark Tank Nepal</span>
+            &nbsp;
+            <span className="font-medium">Deal</span>
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 my-12">
+          <div className="flex gap-8 my-12">
             <div className="flex flex-col items-center text-center justify-center">
               <FastIcon className="w-24 h-18 fill-[#357D8A]" />
-              <span className="mt-2 font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300 ms-6">
+              <span className="mt-2 font-medium text-sm lg:text-xl ms-6">
                 Fast
               </span>
             </div>
 
             <div className="flex flex-col items-center text-center justify-center gap-2">
               <ReliableIcon className="w-16 h-16 fill-[#357D8A]" />
-              <span className="font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300">
-                Reliable
-              </span>
+              <span className="font-medium text-sm lg:text-xl">Reliable</span>
             </div>
 
             <div className="flex flex-col items-center text-center justify-center gap-2">
               <AffordableIcon className="w-16 h-16 fill-[#357D8A]" />
-              <span className="font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300">
-                Affordable
-              </span>
+              <span className="font-medium text-sm lg:text-xl">Affordable</span>
             </div>
 
             <div className="flex flex-col items-center text-center justify-center gap-2">
               <EffortlessIcon className="w-16 h-16 fill-[#357D8A]" />
-              <span className="font-medium text-sm lg:text-xl text-gray-500 dark:text-gray-300">
-                Effortless
-              </span>
+              <span className="font-medium text-sm lg:text-xl">Effortless</span>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center lg:flex-row gap-y-8 lg:items-center justify-between mt-auto pb-12 bg-[#ebeeef] dark:bg-slate-900 w-full">
+        <div className="flex flex-col items-center lg:flex-row gap-y-8 lg:items-center justify-between lg:mt-auto pb-12 bg-[#ebeeef] dark:bg-slate-900 w-full">
           <div className="inline-flex lg:flex-col lg:items-start items-end gap-x-2 lg:gap-x-4 text-base md:text-xl">
-            <h1 className="font-semibold">Offer Till:</h1>
-            <h2 className="text-gray-600 dark:text-gray-400 font-medium">
-              31st Bhadra, 2082
-            </h2>
+            <h1 className="font-medium">Offer Till:</h1>
+            <h2 className="text-[#357D8A] font-medium">16th September, 2025</h2>
           </div>
 
           <Image
             src={SharkTankLogo}
             alt=""
-            className="w-24 h-auto rounded-full z-10 mx-auto md:me-4 me:mt-2 md:ms-auto"
+            className="w-24 h-auto rounded-full z-10 mx-auto lg:hidden xl:inline xl:me-4 xl:mt-2 xl:ms-auto"
           />
 
           <div className="space-y-2 z-10 bg-[#ebeeef] dark:bg-slate-900">
             <h1 className="text-base md:text-xl">For further information</h1>
-            <Link
-              target="_blank"
-              href="https://hyperclicks.net"
-              className="flex w-full sm:w-fit lg:w-full h-12 gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-12 py-1 rounded-full justify-center text-center font-semibold text-base md:text-xl items-center shadow shadow-[#357D8A]"
+            <button
+              onClick={() => {
+                const bannerName = 'hyper_clicks_shark_tank_deal';
+                const prevCount = parseInt(
+                  localStorage.getItem(bannerName) || '0',
+                  10
+                );
+
+                const newCount = prevCount + 1;
+                localStorage.setItem(bannerName, newCount.toString());
+
+                (window as any).gtag('event', 'banner_click', {
+                  banner_name: bannerName,
+                  click_count: newCount
+                });
+                window.open('https://hyperclicks.net', '_blank');
+              }}
+              className="flex w-full sm:w-fit lg:w-full h-12 gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-12 py-1 rounded-[12px] justify-center text-center font-semibold text-base items-center shadow shadow-[#357D8A]"
             >
               Click Here
-            </Link>
+            </button>
           </div>
         </div>
       </div>

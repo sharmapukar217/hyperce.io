@@ -20,7 +20,7 @@ import HypercePitchPdf from '@/components/Home/HypercePitchPdf';
 import { Metadata } from 'next';
 import HyperceEventsClubHome from '@/components/Home/HyperceEventsClubHome/HyperceEventsClubHome';
 import Link from 'next/link';
-import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
+// import { HyperClickPromoPrompt } from '@/components/HyperClickPromoPrompt';
 import { HyperClickHero } from '@/components/HyperClickHero';
 import { HomepageHeroCarousel } from '@/components/HomepageHeroCarousel';
 import { ExclusiveOffers } from '@/components/Home/ExclusiveOffers';
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HyperClickPromoPrompt />
+      {/*<HyperClickPromoPrompt />*/}
       <Navbar />
 
       <main className="bg-[#ebeeef] dark:bg-slate-900 text-black dark:text-white bg-center">

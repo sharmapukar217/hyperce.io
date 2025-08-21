@@ -2,9 +2,11 @@
 import * as React from 'react';
 import { twJoin } from 'tailwind-merge';
 import useEmblaCarousel from 'embla-carousel-react';
+import autoPlayPlugin from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import Hero from '@/components/Home/Hero/Hero';
+import { HyperceEvents } from '@/components/HyperceEvents';
 import { HyperClickHero } from '@/components/HyperClickHero';
 
 function Slide(props: React.PropsWithChildren) {
@@ -14,9 +16,9 @@ function Slide(props: React.PropsWithChildren) {
 }
 
 export function HomepageHeroCarousel() {
-  const [emblaRef, api] = useEmblaCarousel({
-    loop: true
-  });
+  const [emblaRef, api] = useEmblaCarousel({ loop: true }, [
+    autoPlayPlugin({ stopOnInteraction: true, stopOnMouseEnter: true })
+  ]);
 
   const [totalSlides, setTotalSlides] = React.useState(0);
   const [activeSlide, setActiveSlide] = React.useState(0);
@@ -48,12 +50,15 @@ export function HomepageHeroCarousel() {
     >
       <div ref={emblaRef} className="overflow-x-clip">
         <div className="flex">
-          {/*<Slide>
-            <HyperClickHero />
-          </Slide>*/}
           <Slide>
-            <Hero />
+            <HyperceEvents />
           </Slide>
+          <Slide>
+            <HyperClickHero />
+          </Slide>
+          {/*<Slide>
+            <Hero />
+          </Slide>*/}
         </div>
       </div>
 
@@ -77,7 +82,7 @@ export function HomepageHeroCarousel() {
           )}
         </div>
         {totalSlides > 1 ? (
-          <div className="mx-auto space-x-1">
+          <div className="mx-auto space-x-1 py-2">
             {new Array(totalSlides).fill(null).map((_, idx) => (
               <button
                 key={idx}
