@@ -61,7 +61,7 @@ export function HyperClickHero() {
             <span className="font-medium">Deal</span>
           </h2>
 
-          <div className="flex gap-8 my-12">
+          <div className="grid grid-cols-2 md:flex gap-4 md:gap-8 my-12">
             <div className="flex flex-col items-center text-center justify-center">
               <FastIcon className="w-24 h-18 fill-[#357D8A]" />
               <span className="mt-2 font-medium text-sm lg:text-xl ms-6">

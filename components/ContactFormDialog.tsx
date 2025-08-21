@@ -70,7 +70,7 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps>(function Field(
   );
 });
 
-export const ContactFormDialog = () => {
+export const ContactFormDialog = (props: React.PropsWithChildren) => {
   const [open, setOpen] = React.useState(false);
 
   const { register, formState, handleSubmit, reset } = useForm({
@@ -136,27 +136,29 @@ export const ContactFormDialog = () => {
   return (
     <Credenza open={open} onOpenChange={setOpen}>
       <CredenzaTrigger asChild>
-        <button
-          onClick={() => {
-            setOpen(true);
-            const bannerName = 'hyperce_services_contact_form';
-            const prevCount = parseInt(
-              localStorage.getItem(bannerName) || '0',
-              10
-            );
+        {props.children || (
+          <button
+            onClick={() => {
+              setOpen(true);
+              const bannerName = 'hyperce_services_contact_form';
+              const prevCount = parseInt(
+                localStorage.getItem(bannerName) || '0',
+                10
+              );
 
-            const newCount = prevCount + 1;
-            localStorage.setItem(bannerName, newCount.toString());
+              const newCount = prevCount + 1;
+              localStorage.setItem(bannerName, newCount.toString());
 
-            (window as any).gtag('event', 'banner_click', {
-              banner_name: bannerName,
-              click_count: newCount
-            });
-          }}
-          className="flex w-full sm:w-fit lg:w-full h-12 gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-16 py-1 rounded-[12px] justify-center text-center font-semibold text-base items-center"
-        >
-          Contact Us
-        </button>
+              (window as any).gtag('event', 'banner_click', {
+                banner_name: bannerName,
+                click_count: newCount
+              });
+            }}
+            className="flex w-full sm:w-fit lg:w-full h-12 gap-1 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-16 py-1 rounded-[12px] justify-center text-center font-semibold text-base items-center"
+          >
+            Contact Us
+          </button>
+        )}
       </CredenzaTrigger>
       <CredenzaContent className="pb-4">
         <CredenzaHeader>
