@@ -53,9 +53,9 @@ export function HomepageHeroCarousel() {
           <Slide>
             <HyperceEvents />
           </Slide>
-          {/*<Slide>
+          <Slide>
             <HyperClickHero />
-          </Slide>*/}
+          </Slide>
           {/*<Slide>
             <Hero />
           </Slide>*/}
