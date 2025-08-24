@@ -21,9 +21,9 @@ export default function WhatsAppBtn() {
 
   return (
     <a
-      aria-label="Chat on WhatsApp"
-      href={`https://wa.me/${whatsAppNumber?.replace(/[+-]/g, '')}`}
       target="_blank"
+      aria-label="Chat on WhatsApp"
+      href={`https://wa.me/${whatsAppNumber?.[0]?.replace(/[+-]/g, '')}`}
       style={{
         background: '#2ace67'
       }}

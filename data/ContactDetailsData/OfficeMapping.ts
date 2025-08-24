@@ -2,7 +2,7 @@ export interface OfficeDetails {
   officeName: string;
   address: string;
   email: string;
-  phoneNumber?: string;
+  phoneNumber?: string[];
   country: string;
   workplace?: string;
 }
@@ -20,14 +20,14 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     address:
       '800 N King Street Suite 304 1198 Wilmington, DE 19801 United States',
     email: 'hi@hyperce.io',
-    phoneNumber: '+1-617-819-5576',
+    phoneNumber: ['+1-617-819-5576'],
     country: 'United States'
   },
   [Domain.HyperceIo]: {
     officeName: 'Hyperce Technologies Pvt. Ltd.',
     address: 'Srijanachowk, Balambu, Chandragiri - 12, Kathmandu, Bagmati',
     email: 'hi@hyperce.io',
-    phoneNumber: '+977-9840260599',
+    phoneNumber: ['+977-9840260599', '+977-9761499680'],
     country: 'Nepal'
     // workplace: 'Kalimati, Kathmandu <br />(Near Kalimati Trade Center)'
   },
