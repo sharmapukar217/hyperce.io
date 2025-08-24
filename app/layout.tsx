@@ -25,6 +25,8 @@ export default function RootLayout(props: React.PropsWithChildren) {
           src="https://www.googletagmanager.com/gtag/js?id=G-01M293WQ6R"
         />
 
+        <Script src="https://unpkg.com/@cap.js/widget" />
+
         <Script id="google-tag-manager">
           {`
           window.dataLayer = window.dataLayer || [];

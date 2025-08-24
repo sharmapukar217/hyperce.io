@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useToast } from '@/components/ui/use-toast';
 import { FaRocket, FaHandshake } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function ContactForm() {
   const { toast } = useToast();
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -22,28 +23,43 @@ export default function ContactForm() {
     });
   };
 
+  useEffect(() => {
+    const widget = document.querySelector('#cap');
+    if (!widget) return;
+
+    const onSolve = (ev: any) => {
+      setCaptchaToken(ev.detail.token);
+    };
+
+    widget.addEventListener('solve', onSolve);
+    return () => {
+      widget.removeEventListener('solve', onSolve);
+    };
+  }, []);
+
   async function handleSubmit(e: any) {
     e.preventDefault();
+    if (!captchaToken) return;
+
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
       {
         headers: {
-          'content-type': 'application/json'
+          'content-type': 'application/json',
+          'x-captcha-token': captchaToken
         },
         referrerPolicy: 'strict-origin-when-cross-origin',
         body: JSON.stringify({
-          operationName: 'addContact',
+          operationName: 'secureAddContact',
           variables: {
             fullName: formData.name,
             email: formData.email,
             message: formData.message
           },
           query:
-            'mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
+            'mutation secureAddContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
         }),
-        method: 'POST',
-        mode: 'cors',
-        credentials: 'omit'
+        method: 'POST'
       }
     );
 
@@ -104,8 +120,16 @@ export default function ContactForm() {
             ></textarea>
           </div>
 
+          <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+            <cap-widget
+              id="cap"
+              data-cap-api-endpoint="https://admin.hyperce.io/cap/"
+            />
+          </div>
+
           <button
             type="submit"
+            disabled={!captchaToken}
             className="bg-[#357D8A] text-white w-2/4 h-fit py-3 mr-auto"
           >
             Send Message
