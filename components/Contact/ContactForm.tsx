@@ -64,8 +64,6 @@ export default function ContactForm() {
     );
 
     const data = await response.json();
-    console.log(data);
-
     if (response.status === 200) {
       toast({
         title: 'Your message has been recieved',
@@ -121,6 +119,7 @@ export default function ContactForm() {
           </div>
 
           <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+            {/* @ts-expect-error */}
             <cap-widget
               id="cap"
               data-cap-api-endpoint="https://admin.hyperce.io/cap/"
