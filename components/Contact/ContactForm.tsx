@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function ContactForm() {
   const { toast } = useToast();
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  // const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -39,25 +39,25 @@ export default function ContactForm() {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    if (!captchaToken) return;
+    // if (!captchaToken) return;
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
       {
         headers: {
-          'content-type': 'application/json',
-          'x-captcha-token': captchaToken
+          'content-type': 'application/json'
+          // 'x-captcha-token': captchaToken
         },
         referrerPolicy: 'strict-origin-when-cross-origin',
         body: JSON.stringify({
-          operationName: 'secureAddContact',
+          operationName: 'addContact',
           variables: {
             fullName: formData.name,
             email: formData.email,
             message: formData.message
           },
           query:
-            'mutation secureAddContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
+            'mutation addContact($fullName: String!, $email: String!, $phone: String, $company: String, $message: String, $country: String) {\n  addContact(input: {fullName: $fullName, email: $email, phone: $phone, company: $company, message: $message, country: $country}) {\n    id\n    fullName\n    email\n    createdAt\n    updatedAt\n  }\n}\n'
         }),
         method: 'POST'
       }
@@ -118,7 +118,7 @@ export default function ContactForm() {
             ></textarea>
           </div>
 
-          <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+          <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%] !hidden">
             {/* @ts-expect-error */}
             <cap-widget
               id="cap"
@@ -128,7 +128,7 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            disabled={!captchaToken}
+            // disabled={!captchaToken}
             className="bg-[#357D8A] text-white w-2/4 h-fit py-3 mr-auto"
           >
             Send Message
