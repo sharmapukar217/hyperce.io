@@ -33,7 +33,7 @@ export default function WhatsAppBtn() {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger
         aria-label="Chat on WhatsApp"
-        className="bg-[#2ace67] group sticky bottom-4 w-full md:w-fit inset-x-4 md:left-8 rounded-xl h-12 p-3 flex justify-start items-center shadow-lg text-white data-[state=open]:rounded-t-[0px] overflow-hidden"
+        className="bg-[#2ace67] group sticky bottom-4 w-fit inset-x-4 md:left-8 rounded-xl h-12 p-3 flex justify-start items-center shadow-lg text-white data-[state=open]:rounded-t-[0px] overflow-hidden"
       >
         <svg
           fill="currentColor"
