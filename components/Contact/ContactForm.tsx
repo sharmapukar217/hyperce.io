@@ -28,7 +28,7 @@ export default function ContactForm() {
     if (!widget) return;
 
     const onSolve = (ev: any) => {
-      setCaptchaToken(ev.detail.token);
+      // setCaptchaToken(ev.detail.token);
     };
 
     widget.addEventListener('solve', onSolve);
