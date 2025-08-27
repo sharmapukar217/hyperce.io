@@ -229,7 +229,7 @@ export default async function Page() {
             </h1>
             <div>
               <h2 className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-semibold">
-                Discover the tallent and dedication shaping our innovations.
+                Discover the talent and dedication shaping our innovations.
               </h2>
               <h3 className="md:text-md lg:text-lg text-gray-600 dark:text-gray-400 font-medium">
                 Welcome to the core of the creativity.
