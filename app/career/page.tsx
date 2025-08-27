@@ -23,7 +23,7 @@ type CarersResponse = {
   };
 };
 
-const ITEM_PER_PAGE = 5;
+const ITEM_PER_PAGE = 10;
 
 function parseDate(dateString = '') {
   let cleanedString = dateString.replace(/(\d+)(st|nd|rd|th)/, '$1');

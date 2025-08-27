@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function ContactForm() {
   const { toast } = useToast();
-  // const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -28,7 +28,8 @@ export default function ContactForm() {
     if (!widget) return;
 
     const onSolve = (ev: any) => {
-      // setCaptchaToken(ev.detail.token);
+      console.log(ev);
+      setCaptchaToken(ev.detail.token);
     };
 
     widget.addEventListener('solve', onSolve);
@@ -39,14 +40,14 @@ export default function ContactForm() {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    // if (!captchaToken) return;
+    if (!captchaToken) return;
 
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/shop-api`,
       {
         headers: {
-          'content-type': 'application/json'
-          // 'x-captcha-token': captchaToken
+          'content-type': 'application/json',
+          'x-captcha-token': captchaToken
         },
         referrerPolicy: 'strict-origin-when-cross-origin',
         body: JSON.stringify({
@@ -118,18 +119,18 @@ export default function ContactForm() {
             ></textarea>
           </div>
 
-          <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%] !hidden">
+          <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
             {/* @ts-expect-error */}
             <cap-widget
               id="cap"
-              data-cap-api-endpoint="https://admin.hyperce.io/cap/"
+              data-cap-api-endpoint="https://cap.hyperce.io/8634a7bc68/"
             />
           </div>
 
           <button
             type="submit"
-            // disabled={!captchaToken}
-            className="bg-[#357D8A] text-white w-2/4 h-fit py-3 mr-auto"
+            disabled={!captchaToken}
+            className="bg-[#357D8A] text-white w-2/4 h-fit py-3 mr-auto disabled:cursor-not-allowed disabled:opacity-80"
           >
             Send Message
           </button>

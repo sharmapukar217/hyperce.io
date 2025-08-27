@@ -93,6 +93,22 @@ export const ApplyCareerModal = ({
 }) => {
   const [open, setOpen] = React.useState(false);
   const [isApplied, setIsApplied] = React.useState(false);
+  const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    const widget = document.querySelector('#cap');
+    if (!widget) return;
+
+    const onSolve = (ev: any) => {
+      console.log(ev);
+      setCaptchaToken(ev.detail.token);
+    };
+
+    widget.addEventListener('solve', onSolve);
+    return () => {
+      widget.removeEventListener('solve', onSolve);
+    };
+  }, []);
 
   const { register, formState, handleSubmit, reset } = useForm({
     mode: 'onTouched',
@@ -108,6 +124,8 @@ export const ApplyCareerModal = ({
   });
 
   const onSubmit = handleSubmit(function (values) {
+    if (!captchaToken) return;
+
     toast.loading('Please wait while submitting...', {
       id: 'cv-submit',
       duration: Infinity
@@ -121,8 +139,11 @@ export const ApplyCareerModal = ({
 
     return fetch('https://admin.hyperce.io/applications/submit', {
       method: 'POST',
-      body: formData
-      // headers: { "Content-Type": "multipart/formdata" }
+      body: formData,
+      headers: {
+        'Content-Type': 'multipart/formdata',
+        'x-captcha-token': captchaToken
+      }
     })
       .then(async (res) => {
         if (!res.ok) {
@@ -242,6 +263,14 @@ export const ApplyCareerModal = ({
               {...register('files')}
               errorMessage={formState.errors.files?.message}
             />
+
+            <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+              {/* @ts-expect-error */}
+              <cap-widget
+                id="cap"
+                data-cap-api-endpoint="https://cap.hyperce.io/8634a7bc68/"
+              />
+            </div>
 
             <button
               type="submit"

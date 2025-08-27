@@ -72,6 +72,7 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps>(function Field(
 
 export const ContactFormDialog = (props: React.PropsWithChildren) => {
   const [open, setOpen] = React.useState(false);
+  const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
 
   const { register, formState, handleSubmit, reset } = useForm({
     mode: 'onTouched',
@@ -85,7 +86,24 @@ export const ContactFormDialog = (props: React.PropsWithChildren) => {
     }
   });
 
+  React.useEffect(() => {
+    const widget = document.querySelector('#cap');
+    if (!widget) return;
+
+    const onSolve = (ev: any) => {
+      console.log(ev);
+      setCaptchaToken(ev.detail.token);
+    };
+
+    widget.addEventListener('solve', onSolve);
+    return () => {
+      widget.removeEventListener('solve', onSolve);
+    };
+  }, []);
+
   const onSubmit = handleSubmit(async function (values) {
+    if (!captchaToken) return;
+
     toast.loading('Please wait while submitting...', {
       id: 'contact-submit',
       duration: Infinity
@@ -97,7 +115,8 @@ export const ContactFormDialog = (props: React.PropsWithChildren) => {
         {
           method: 'POST',
           headers: {
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'x-captcha-token': captchaToken
           },
           body: JSON.stringify({
             operationName: 'addContact',
@@ -224,9 +243,17 @@ export const ContactFormDialog = (props: React.PropsWithChildren) => {
               )}
             </div>
 
+            <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+              {/* @ts-expect-error */}
+              <cap-widget
+                id="cap"
+                data-cap-api-endpoint="https://cap.hyperce.io/8634a7bc68/"
+              />
+            </div>
+
             <button
               type="submit"
-              disabled={formState.isSubmitting}
+              disabled={!captchaToken || formState.isSubmitting}
               className="disabled:cursor-not-allowed disabled:opacity-60 rounded-xl px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
             >
               Submit
