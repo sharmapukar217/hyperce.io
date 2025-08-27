@@ -91,7 +91,7 @@ export default function Navbar(props: any) {
               href="/#exclusive-offers"
               className="flex items-center justify-center h-full gap-2 hover:scale-[105%] active:scale-[95%] transition-all duration-300 text-white bg-[#357D8A] px-5 py-2 rounded-full"
             >
-              <span className="text-base font-bold">Get Offer</span>
+              <span className="text-base font-bold">Shark Tank Offer</span>
               <div className="svg">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
