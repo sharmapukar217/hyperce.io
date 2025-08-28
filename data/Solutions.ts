@@ -81,7 +81,7 @@ export const showcaseNonTechSolutions = [
   {
     name: 'Hyperce Acquire',
     href: '/acquire',
-    des: 'Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. ',
+    des: 'Hyperce Acquire helps ecommerce founders sell their businesses and buyers discover profitable opportunities.',
     whiteIcon: '/services_logos/acquire/acquire_logo_light.jpeg',
     darkIcon: '/services_logos/acquire/acquire_logo_light.jpeg',
     altText: 'E-commerce Platform'
@@ -217,7 +217,7 @@ export const allNonTechServices = [
       light: '/services_logos/acquire/acquire_logo_transparent.png'
     },
     description:
-      'Hyperce Acquire leads the way in facilitating seamless e-commerce business transactions through its comprehensive suite of services. '
+      'Hyperce Acquire helps ecommerce founders sell their businesses and buyers discover profitable opportunities.'
   },
   {
     title: 'Hyperce Incubate',

@@ -110,7 +110,16 @@ export default function RequestQuote() {
                   id=""
                 />
 
-                <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+                <div
+                  className="flex pb-4 [&_*]:w-full 
+                  [--cap-widget-width:100%] 
+                  [--cap-border-radius:0px] 
+                  [--cap-checkbox-border:1px_solid_#d1d1d1] 
+                  [--cap-checkbox-border-radius:0px] 
+                  [--cap-checkbox-background:rgb(251,245,249)] 
+                  [--cap-background:#fff]  
+                  [--cap-color:#2d6977]"
+                >
                   {/* @ts-expect-error */}
                   <cap-widget
                     id="cap"

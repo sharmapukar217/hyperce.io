@@ -68,7 +68,7 @@ const Field = React.forwardRef<HTMLInputElement, FieldProps>(function Field(
       <input
         ref={ref}
         className={clsx(
-          'py-3 px-4 block w-full !rounded-[0.7rem]  focus:outline-none ring-1 focus:ring-2 text-sm disabled:opacity-50 disabled:pointer-events-none bg-white dark:bg-slate-900 dark:text-neutral-400 dark:placeholder-neutral-500',
+          'py-3 px-4 block w-full !rounded-[0]  focus:outline-none ring-1 focus:ring-2 text-sm disabled:opacity-50 disabled:pointer-events-none bg-white dark:bg-slate-900 dark:text-neutral-400 dark:placeholder-neutral-500',
           errorMessage
             ? 'text-red-500 dark:text-red-400 ring-red-500 dark:ring-red-400'
             : 'ring-gray-300 dark:ring-slate-700 focus:ring-[#357D8A] dark:focus:ring-[#357D8A]'
@@ -223,7 +223,7 @@ export const ApplyCareerModal = ({
                 id="appliedFor"
                 {...register('appliedFor')}
                 className={clsx(
-                  'py-3 px-4 block w-full !rounded-[0.7rem]  focus:outline-none ring-1 focus:ring-2 text-sm disabled:opacity-50 disabled:pointer-events-none bg-white dark:bg-slate-900 dark:text-neutral-400 dark:placeholder-neutral-500',
+                  'py-3 px-4 block w-full !rounded-[0]  focus:outline-none ring-1 focus:ring-2 text-sm disabled:opacity-50 disabled:pointer-events-none bg-white dark:bg-slate-900 dark:text-neutral-400 dark:placeholder-neutral-500',
                   formState.errors.appliedFor?.message
                     ? 'text-red-500 dark:text-red-400 ring-red-500 dark:ring-red-400'
                     : 'ring-gray-300 dark:ring-slate-700 focus:ring-[#357D8A] dark:focus:ring-[#357D8A]'
@@ -264,7 +264,20 @@ export const ApplyCareerModal = ({
               errorMessage={formState.errors.files?.message}
             />
 
-            <div className="flex pb-4 [&_*]:w-full [--cap-widget-width:100%]">
+            <div
+              className="flex pb-4 [&_*]:w-full
+              [--cap-widget-width:100%] 
+              [--cap-border-radius:0] 
+              [--cap-background:#fff] 
+              [--cap-color:#2d6977]
+              [--cap-border-color:rgb(209,213,219)]
+              [--cap-checkbox-border:1px_solid_rgb(209,213,219)]
+              dark:[--cap-background:rgb(15,23,42)] 
+              dark:[--cap-border-color:rgb(51,65,85)]
+              dark:[--cap-color:#fff]
+              dark:[--cap-checkbox-background:rgb(15,23,42)]
+              dark:[--cap-checkbox-border:1px_solid_rgb(51,65,85)]"
+            >
               {/* @ts-expect-error */}
               <cap-widget
                 id="cap"
@@ -275,7 +288,7 @@ export const ApplyCareerModal = ({
             <button
               type="submit"
               disabled={formState.isSubmitting}
-              className="disabled:cursor-not-allowed disabled:opacity-60 rounded-xl px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
+              className="disabled:cursor-not-allowed disabled:opacity-60 rounded-[0] px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
             >
               Submit
             </button>

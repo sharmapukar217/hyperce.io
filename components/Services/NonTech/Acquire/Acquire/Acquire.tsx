@@ -6,13 +6,13 @@ export default function Acquire() {
     >
       <div className="flex flex-col md:text-center gap-5 md:items-center text-black dark:text-[#CECFDF] mb-20">
         <p className="leading-wide text-2xl font-extrabold">
-          Hyperce Acquire: Elevating E-commerce Business Transactions
+          Hyperce Acquire: Where Ecommerce Businesses Find Their Next Owner
         </p>
         <p className="w-2/3 text-base">
-          Hyperce Acquire leads the way in facilitating seamless e-commerce
-          business transactions through its comprehensive suite of services. Our
-          commitment is to empower sellers and buyers with expert guidance,
-          transparency, and meticulous support throughout the entire process.
+          Hyperce Acquire helps ecommerce founders sell their businesses and
+          buyers discover profitable opportunities. We streamline the process
+          with valuations, matchmaking, and end-to-end support. A trusted
+          platform built for smooth, transparent ecommerce acquisitions.
         </p>
       </div>
 
@@ -20,35 +20,31 @@ export default function Acquire() {
         <div className="lg:w-3/5 flex flex-col gap-10 text-lg">
           <p className="text-4xl font-bold">What is Hyperce Acquire ?</p>
           <p>
-            Hyperce Acquire stands as a beacon in the realm of e-commerce
-            business transactions. Our suite of services begins with expert
-            business valuation, conducting a thorough analysis of financials,
-            customer base, brand strength, and growth potential. This meticulous
-            evaluation provides sellers with a clear understanding of their
-            e-commerce business&apos;s market value, fostering confidence and
-            transparency.
+            Hyperce Acquire is a dedicated platform designed to connect
+            ecommerce entrepreneurs with the right buyers. For founders, it
+            offers a seamless way to list and showcase their businesses,
+            complete with accurate valuations and clear performance insights.
+            For buyers, it provides access to a curated marketplace of vetted
+            ecommerce opportunities.
           </p>
           <p>
             <p className="font-bold">Our mission? </p>
             <br />
             <p>
-              Our mission at Hyperce Acquire is to redefine the e-commerce
-              transaction experience. We aim to build buyer confidence,
-              facilitate transparency, and guide both sellers and buyers through
-              a seamless negotiation process. By offering due diligence
-              assistance and access to essential documentation, financial
-              records, and operational details, we ensure that all parties are
-              well-informed and empowered.
+              Our mission is to remove the complexity often associated with
+              selling or acquiring digital businesses. From due diligence to
+              negotiations, we simplify each step and ensure transparency
+              throughout the process. With our expertise in ecommerce and
+              technology, we make sure both sides feel confident and supported
+              during the entire journey.
               <br />
               <br />
-              Experience the Transformation with Hyperce Acquire: Hyperce
-              Acquire&apos;s approach revolves around personalized matchmaking,
-              utilizing a robust database to connect sellers with qualified and
-              interested buyers. This tailored connection aligns businesses with
-              individuals or entities sharing similar goals and preferences,
-              ensuring a harmonious partnership. We not only initiate the
-              connection but also provide guidance through due diligence,
-              negotiation, and transaction phases.
+              Whether you&apos;re an entrepreneur looking to exit and secure
+              your hard-earned value, or an investor seeking to acquire and grow
+              an established online business, Hyperce Acquire provides the
+              tools, network, and guidance to make it happen. It’s not just
+              about buying and selling—it&apos;s about building the future of
+              ecommerce, one acquisition at a time.
             </p>
           </p>
         </div>
