@@ -166,14 +166,14 @@ export const ContactFormDialog = (props: React.PropsWithChildren) => {
           </button>
         )}
       </CredenzaTrigger>
-      <CredenzaContent className="pb-4">
-        <CredenzaHeader>
-          <CredenzaTitle>Contact Us</CredenzaTitle>
-          <CredenzaDescription>
-            Please fill out all the required fields to share your queries...
-          </CredenzaDescription>
-        </CredenzaHeader>
-        <CredenzaBody>
+      <CredenzaContent className="md:overflow-auto pb-4 max-h-[80vh]">
+        <CredenzaBody data-vaul-no-drag className="max-md:overflow-auto">
+          <CredenzaHeader>
+            <CredenzaTitle>Contact Us</CredenzaTitle>
+            <CredenzaDescription>
+              Please fill out all the required fields to share your queries...
+            </CredenzaDescription>
+          </CredenzaHeader>
           <form onSubmit={onSubmit} className="grid gap-6">
             <Field
               {...register('fullName')}
