@@ -33,7 +33,7 @@ export default function WhatsAppBtn() {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger
         aria-label="Chat on WhatsApp"
-        className="bg-[#2ace67] group sticky bottom-4 w-fit inset-x-4 md:left-8 rounded-xl h-12 p-3 flex justify-start items-center shadow-lg text-white data-[state=open]:rounded-t-[0px] overflow-hidden"
+        className="bg-[#2ace67] group fixed bottom-4 w-fit inset-x-4 md:left-8 rounded-xl h-12 p-3 flex justify-start items-center shadow-lg text-white data-[state=open]:rounded-t-[0px] overflow-hidden"
       >
         <svg
           fill="currentColor"
@@ -49,7 +49,7 @@ export default function WhatsAppBtn() {
         </div>
       </DropdownMenu.Trigger>
 
-      <DropdownMenu.Content className="bg-[#2ace67] rounded-t-xl w-0 h-0 opacity-0 pt-3 pb-0.5 data-[state=open]:opacity-100 data-[state=open]:w-[--radix-popper-anchor-width] data-[state=open]:h-auto transition-all">
+      <DropdownMenu.Content className="bg-[#2ace67] text-white rounded-t-xl w-0 h-0 opacity-0 pt-3 pb-0.5 data-[state=open]:opacity-100 data-[state=open]:w-[--radix-popper-anchor-width] data-[state=open]:h-auto transition-all">
         {filteredContacts.map((detail) => (
           <DropdownMenu.Group
             key={detail.country}
