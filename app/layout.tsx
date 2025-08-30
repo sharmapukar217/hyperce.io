@@ -1,4 +1,6 @@
 import './globals.css';
+import '@pitininja/cap-react-widget/dist/index.css';
+
 import Footer from '@/components/Footer/Footer';
 import { DM_Sans } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';

@@ -4,6 +4,9 @@ import * as z from 'zod';
 import { clsx } from 'clsx';
 import * as React from 'react';
 import { toast } from 'react-hot-toast';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+
 import {
   Credenza,
   CredenzaBody,
@@ -13,8 +16,7 @@ import {
   CredenzaTitle,
   CredenzaTrigger
 } from '@/components/ui/credenza';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { CapWidget } from '@/components/CapWidget';
 
 type FieldProps = React.ComponentProps<'input'> & {
   label: string;
@@ -85,20 +87,6 @@ export const ContactFormDialog = (props: React.PropsWithChildren) => {
       message: ''
     }
   });
-
-  React.useEffect(() => {
-    const widget = document.querySelector('#cap');
-    if (!widget) return;
-
-    const onSolve = (ev: any) => {
-      setCaptchaToken(ev.detail.token);
-    };
-
-    widget.addEventListener('solve', onSolve);
-    return () => {
-      widget.removeEventListener('solve', onSolve);
-    };
-  }, []);
 
   const onSubmit = handleSubmit(async function (values) {
     if (!captchaToken) return;
@@ -242,31 +230,29 @@ export const ContactFormDialog = (props: React.PropsWithChildren) => {
               )}
             </div>
 
-            <div
-              className="flex pb-4 [&_*]:w-full
-              [--cap-widget-width:100%] 
-              [--cap-border-radius:0] 
-              [--cap-background:#fff] 
-              [--cap-color:#2d6977]
-              [--cap-border-color:rgb(209,213,219)]
-              [--cap-checkbox-border:1px_solid_rgb(209,213,219)]
-              dark:[--cap-background:rgb(15,23,42)] 
-              dark:[--cap-border-color:rgb(51,65,85)]
-              dark:[--cap-color:#fff]
-              dark:[--cap-checkbox-background:rgb(15,23,42)]
-              dark:[--cap-checkbox-border:1px_solid_rgb(51,65,85)]"
-            >
-              {/* @ts-expect-error */}
-              <cap-widget
-                id="cap"
-                data-cap-api-endpoint="https://cap.hyperce.io/8634a7bc68/"
-              />
-            </div>
+            {!captchaToken && (
+              <div
+                className="flex pb-4 [&_*]:w-full
+                [--cap-widget-width:100%] 
+                [--cap-border-radius:0] 
+                [--cap-background:#fff] 
+                [--cap-color:#2d6977]
+                [--cap-border-color:rgb(209,213,219)]
+                [--cap-checkbox-border:1px_solid_rgb(209,213,219)]
+                dark:[--cap-background:rgb(15,23,42)] 
+                dark:[--cap-border-color:rgb(51,65,85)]
+                dark:[--cap-color:#fff]
+                dark:[--cap-checkbox-background:rgb(15,23,42)]
+                dark:[--cap-checkbox-border:1px_solid_rgb(51,65,85)]"
+              >
+                <CapWidget onSolve={setCaptchaToken} />
+              </div>
+            )}
 
             <button
               type="submit"
               disabled={!captchaToken || formState.isSubmitting}
-              className="disabled:cursor-not-allowed disabled:opacity-60 rounded-none px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
+              className="rounded-none px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A] disabled:pointer-events-none disabled:opacity-75"
             >
               Submit
             </button>

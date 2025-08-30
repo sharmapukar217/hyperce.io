@@ -4,6 +4,9 @@ import * as z from 'zod';
 import { clsx } from 'clsx';
 import * as React from 'react';
 import { toast } from 'react-hot-toast';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+
 import {
   Credenza,
   CredenzaBody,
@@ -13,8 +16,7 @@ import {
   CredenzaTitle,
   CredenzaTrigger
 } from '@/components/ui/credenza';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { CapWidget } from '@/components/CapWidget';
 
 type FieldProps = React.ComponentProps<'input'> & {
   label: string;
@@ -44,7 +46,7 @@ const formSchema = z.object({
     .min(1, 'Please enter your expected salary.'),
 
   files: z
-    .instanceof(FileList, { message: 'Please upload your cv.' })
+    .instanceof(globalThis.FileList, { message: 'Please upload your cv.' })
     .refine((files) => files[0]?.type === 'application/pdf', {
       message: 'Only PDF files are allowed.'
     })
@@ -94,21 +96,6 @@ export const ApplyCareerModal = ({
   const [open, setOpen] = React.useState(false);
   const [isApplied, setIsApplied] = React.useState(false);
   const [captchaToken, setCaptchaToken] = React.useState<string | null>(null);
-
-  React.useEffect(() => {
-    const widget = document.querySelector('#cap');
-    if (!widget) return;
-
-    const onSolve = (ev: any) => {
-      console.log(ev);
-      setCaptchaToken(ev.detail.token);
-    };
-
-    widget.addEventListener('solve', onSolve);
-    return () => {
-      widget.removeEventListener('solve', onSolve);
-    };
-  }, []);
 
   const { register, formState, handleSubmit, reset } = useForm({
     mode: 'onTouched',
@@ -179,14 +166,14 @@ export const ApplyCareerModal = ({
           {isApplied ? 'Applied' : canApply ? 'Apply for this job' : 'Closed'}
         </button>
       </CredenzaTrigger>
-      <CredenzaContent className="max-h-[90%] overflow-auto">
-        <CredenzaHeader>
-          <CredenzaTitle>Apply for this job</CredenzaTitle>
-          <CredenzaDescription>
-            Please fill out all the required fields to apply for the job...
-          </CredenzaDescription>
-        </CredenzaHeader>
-        <CredenzaBody>
+      <CredenzaContent className="md:overflow-auto pb-4 max-h-[80vh]">
+        <CredenzaBody data-vaul-no-drag className="max-md:overflow-auto">
+          <CredenzaHeader>
+            <CredenzaTitle>Apply for this job</CredenzaTitle>
+            <CredenzaDescription>
+              Please fill out all the required fields to apply for the job...
+            </CredenzaDescription>
+          </CredenzaHeader>
           <form onSubmit={onSubmit} className="grid gap-6">
             <Field
               {...register('fullName')}
@@ -264,31 +251,29 @@ export const ApplyCareerModal = ({
               errorMessage={formState.errors.files?.message}
             />
 
-            <div
-              className="flex pb-4 [&_*]:w-full
-              [--cap-widget-width:100%] 
-              [--cap-border-radius:0] 
-              [--cap-background:#fff] 
-              [--cap-color:#2d6977]
-              [--cap-border-color:rgb(209,213,219)]
-              [--cap-checkbox-border:1px_solid_rgb(209,213,219)]
-              dark:[--cap-background:rgb(15,23,42)] 
-              dark:[--cap-border-color:rgb(51,65,85)]
-              dark:[--cap-color:#fff]
-              dark:[--cap-checkbox-background:rgb(15,23,42)]
-              dark:[--cap-checkbox-border:1px_solid_rgb(51,65,85)]"
-            >
-              {/* @ts-expect-error */}
-              <cap-widget
-                id="cap"
-                data-cap-api-endpoint="https://cap.hyperce.io/8634a7bc68/"
-              />
-            </div>
+            {!captchaToken && (
+              <div
+                className="flex pb-4 [&_*]:w-full
+                  [--cap-widget-width:100%] 
+                  [--cap-border-radius:0] 
+                  [--cap-background:#fff] 
+                  [--cap-color:#2d6977]
+                  [--cap-border-color:rgb(209,213,219)]
+                  [--cap-checkbox-border:1px_solid_rgb(209,213,219)]
+                  dark:[--cap-background:rgb(15,23,42)] 
+                  dark:[--cap-border-color:rgb(51,65,85)]
+                  dark:[--cap-color:#fff]
+                  dark:[--cap-checkbox-background:rgb(15,23,42)]
+                  dark:[--cap-checkbox-border:1px_solid_rgb(51,65,85)]"
+              >
+                <CapWidget onSolve={setCaptchaToken} />
+              </div>
+            )}
 
             <button
               type="submit"
-              disabled={formState.isSubmitting}
-              className="disabled:cursor-not-allowed disabled:opacity-60 rounded-[0] px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
+              disabled={!captchaToken || formState.isSubmitting}
+              className="disabled:pointer-events-none disabled:opacity-75 rounded-[0] px-6 py-2.5 text-sm/7 font-semibold text-white bg-[#357D8A]"
             >
               Submit
             </button>

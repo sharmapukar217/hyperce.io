@@ -1,28 +1,14 @@
 'use client';
 
-import { useToast } from '@/components/ui/use-toast';
-import { HypercePartners } from '@/data/Partners';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useState } from 'react';
+import { HypercePartners } from '@/data/Partners';
+import { CapWidget } from '@/components/CapWidget';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function RequestQuote() {
   const { toast } = useToast();
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-
-  useEffect(() => {
-    const widget = document.querySelector('#cap');
-    if (!widget) return;
-
-    const onSolve = (ev: any) => {
-      console.log(ev);
-      setCaptchaToken(ev.detail.token);
-    };
-
-    widget.addEventListener('solve', onSolve);
-    return () => {
-      widget.removeEventListener('solve', onSolve);
-    };
-  }, []);
 
   const [formData, setFormData] = useState({
     email: '',
@@ -31,10 +17,7 @@ export default function RequestQuote() {
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   async function handleSubmit(e: any) {
@@ -110,27 +93,26 @@ export default function RequestQuote() {
                   id=""
                 />
 
-                <div
-                  className="flex pb-4 [&_*]:w-full 
-                  [--cap-widget-width:100%] 
-                  [--cap-border-radius:0px] 
-                  [--cap-checkbox-border:1px_solid_#d1d1d1] 
-                  [--cap-checkbox-border-radius:0px] 
-                  [--cap-checkbox-background:rgb(251,245,249)] 
-                  [--cap-background:#fff]  
-                  [--cap-color:#2d6977]"
-                >
-                  {/* @ts-expect-error */}
-                  <cap-widget
-                    id="cap"
-                    data-cap-api-endpoint="https://cap.hyperce.io/8634a7bc68/"
-                  />
-                </div>
+                {!captchaToken && (
+                  <div
+                    className="flex pb-4 [&_*]:w-full 
+                    [--cap-widget-width:100%] 
+                    [--cap-border-radius:0px] 
+                    [--cap-checkbox-border:1px_solid_#d1d1d1] 
+                    [--cap-checkbox-border-radius:0px] 
+                    [--cap-checkbox-background:rgb(251,245,249)] 
+                    [--cap-background:#fff]  
+                    [--cap-color:#2d6977]"
+                  >
+                    <CapWidget onSolve={setCaptchaToken} />
+                  </div>
+                )}
+
                 <button
                   type="submit"
                   disabled={!captchaToken}
                   aria-label="subscribe-newsletter"
-                  className="px-4 py-3 rounded-full w-fit bg-[#357D8A] hover:shadow-xl hover:bg-[#265058] transition-all duration-200 text-white"
+                  className="px-4 py-3 rounded-full w-fit bg-[#357D8A] hover:shadow-xl hover:bg-[#265058] transition-all duration-200 text-white disabled:pointer-events-none disabled:opacity-75"
                 >
                   Request Quotation
                 </button>
