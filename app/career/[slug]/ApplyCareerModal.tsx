@@ -128,7 +128,7 @@ export const ApplyCareerModal = ({
       method: 'POST',
       body: formData,
       headers: {
-        'Content-Type': 'multipart/form-data',
+        // 'Content-Type': 'multipart/form-data',
         'x-captcha-token': captchaToken
       }
     })
