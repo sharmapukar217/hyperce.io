@@ -128,7 +128,7 @@ export const ApplyCareerModal = ({
       method: 'POST',
       body: formData,
       headers: {
-        'Content-Type': 'multipart/formdata',
+        'Content-Type': 'multipart/form-data',
         'x-captcha-token': captchaToken
       }
     })
@@ -138,7 +138,7 @@ export const ApplyCareerModal = ({
           return toast.error(
             json?.message ||
               'Oops! Something went wrong, Please try again later.',
-            { id: 'cv-submit' }
+            { id: 'cv-submit', duration: 5_000 }
           );
         }
 
@@ -150,7 +150,7 @@ export const ApplyCareerModal = ({
       .catch(() => {
         return toast.error(
           'Oops! Something went wrong, Please try again later.',
-          { id: 'cv-submit' }
+          { id: 'cv-submit', duration: 5_000 }
         );
       });
   });
