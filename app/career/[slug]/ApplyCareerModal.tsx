@@ -143,7 +143,10 @@ export const ApplyCareerModal = ({
         }
 
         setOpen(false);
-        toast.success('Your cv has been recorded.', { id: 'cv-submit' });
+        toast.success('Your cv has been recorded.', {
+          id: 'cv-submit',
+          duration: 5_000
+        });
         setIsApplied(true);
         reset();
       })
