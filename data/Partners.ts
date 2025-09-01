@@ -10,12 +10,24 @@
 // ];
 
 export const HypercePartners: { imageSrc: string; href: string }[] = [
-  { imageSrc: '/PartnersLogo/Ian.png', href: '' },
-  { imageSrc: '/PartnersLogo/Trylah.png', href: '' },
-  { imageSrc: '/PartnersLogo/SignalStuff.png', href: '' },
-  { imageSrc: '/PartnersLogo/npdev.png', href: '' },
-  { imageSrc: '/PartnersLogo/mtLegal.jpeg', href: '' },
-  { imageSrc: '/PartnersLogo/roseStudio.jpeg', href: '' },
-  { imageSrc: '/PartnersLogo/zoho.jpeg', href: '' },
-  { imageSrc: '/PartnersLogo/vibely.png', href: 'https://vibely.life' }
+  { imageSrc: '/PartnersLogo/npdev.png', href: 'https://nepdev.com.np' },
+  { imageSrc: '/PartnersLogo/mtLegal.jpeg', href: 'https://mtlegalteam.com' },
+  {
+    imageSrc: '/PartnersLogo/roseStudio.jpeg',
+    href: 'https://rosestudio.agency'
+  },
+  { imageSrc: '/PartnersLogo/zoho.jpeg', href: 'http://zoho.com' },
+  { imageSrc: '/PartnersLogo/vibely.png', href: 'https://vibely.life' },
+  {
+    imageSrc: '/PartnersLogo/ekagajpatra.png',
+    href: 'https://ekagajpatra.com'
+  },
+  {
+    imageSrc: '/PartnersLogo/SignalStuff.png',
+    href: 'https://signalstuff.com'
+  },
+  { imageSrc: '/PartnersLogo/restronaut.png', href: 'https://restronaut.ai' }
+
+  // { imageSrc: '/PartnersLogo/Ian.png', href: '' },
+  // { imageSrc: '/PartnersLogo/Trylah.png', href: '' },
 ];

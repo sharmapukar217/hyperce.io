@@ -19,8 +19,8 @@ export default function Partners() {
         {HypercePartners.map((each, index) => (
           <Link
             key={index}
-            href={each.href}
             target="_blank"
+            href={each.href}
             className="flex justify-center"
           >
             <img
