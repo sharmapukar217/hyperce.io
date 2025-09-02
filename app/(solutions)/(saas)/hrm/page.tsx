@@ -40,10 +40,10 @@ export default function FrontierPage() {
         </main>
         <Appify />
         <DemoCredentials
-          demoLink="https://hypercehrm.hyperce.io"
+          demoLink="https://hrm.hyperce.io"
           productName="HRM Panel"
-          demoEmail="admin"
-          demoPassword="ADMIN#admin123"
+          demoEmail="biplabkarki"
+          demoPassword="3slFu9I<hM&K!i!8O_"
           qrSource="/admin.hyperce.qr.png"
         />
         <WhyChoose />
