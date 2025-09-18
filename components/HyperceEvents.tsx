@@ -4,9 +4,9 @@ import Image from 'next/image';
 import { ContactFormDialog } from './ContactFormDialog';
 
 import SharkTankLogo from '@/assets/SharkTank.png';
-import HyperceBanner from '@/assets/hyperce/Banner.webp';
+import HyperceBanner from '@/assets/hyperce/Banner.png';
 import CheckMarkIcon from '@/assets/hyperce/check-mark.svg';
-import HyperceBannerDark from '@/assets/hyperce/BannerDark.webp';
+import HyperceBannerDark from '@/assets/hyperce/BannerDark.png';
 
 export function HyperceEvents() {
   return (

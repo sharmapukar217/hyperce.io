@@ -89,7 +89,7 @@ export function HyperClickHero() {
         <div className="flex flex-col items-center lg:flex-row gap-y-8 lg:items-center justify-between lg:mt-auto pb-12 bg-[#ebeeef] dark:bg-slate-900 w-full">
           <div className="inline-flex lg:flex-col lg:items-start items-end gap-x-2 lg:gap-x-4 text-base md:text-xl">
             <h1 className="font-medium">Offer Till:</h1>
-            <h2 className="text-[#357D8A] font-medium">16th September, 2025</h2>
+            <h2 className="text-[#357D8A] font-medium">4th October, 2025</h2>
           </div>
 
           <Image

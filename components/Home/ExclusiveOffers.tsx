@@ -179,7 +179,7 @@ export function ExclusiveOffers() {
           <h3 className="font-medium md:text-xl">
             <span className="text-red-500 dark:text-red-600">*</span>These
             exclusive deals are valid only until&nbsp;
-            <span className="text-[#357D8A] font-semibold">September 16</span>
+            <span className="text-[#357D8A] font-semibold">October 4</span>
             —Don&apos;t miss out!
           </h3>
         </div>
