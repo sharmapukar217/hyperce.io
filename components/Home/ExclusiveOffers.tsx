@@ -8,7 +8,7 @@ import HyperClickLogo from '@/assets/hyper-click/logo.png';
 import { ContactFormDialog } from '@/components/ContactFormDialog';
 
 export function ExclusiveOffers() {
-  // return null;
+  return null;
 
   return (
     <section id="exclusive-offers">

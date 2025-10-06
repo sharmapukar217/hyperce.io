@@ -1,10 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Typewriter from './minute/Typerwriter';
 import { MdCelebration } from 'react-icons/md';
+
+import SharkTankLogo from '@/assets/SharkTank.png';
 
 export default function Hero() {
   return (
@@ -107,6 +110,19 @@ export default function Hero() {
               </svg>
             </a>
           </motion.div>
+
+          <div className="inline-flex flex-col gap-4 w-fit items-start">
+            <Image
+              src={SharkTankLogo}
+              alt=""
+              className="w-16 h-auto rounded-full"
+            />
+
+            <p className="hyperce-sub-head text-gray-700 dark:text-gray-400">
+              As recognized on&nbsp;
+              <b className="text-[#3177ff]">Shark Tank Nepal</b>
+            </p>
+          </div>
         </div>
 
         <div className="flex items-center relative h-full my-auto justify-center md:justify-end lg:pr-20">

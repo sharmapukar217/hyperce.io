@@ -50,15 +50,15 @@ export function HomepageHeroCarousel() {
     >
       <div ref={emblaRef} className="overflow-x-clip">
         <div className="flex">
-          <Slide>
+          {/* <Slide>
             <HyperceEvents />
           </Slide>
           <Slide>
             <HyperClickHero />
-          </Slide>
-          {/*<Slide>
+          </Slide> */}
+          <Slide>
             <Hero />
-          </Slide>*/}
+          </Slide>
         </div>
       </div>
 
