@@ -26,7 +26,8 @@ export const HypercePartners: { imageSrc: string; href: string }[] = [
     imageSrc: '/PartnersLogo/SignalStuff.png',
     href: 'https://signalstuff.com'
   },
-  { imageSrc: '/PartnersLogo/restronaut.png', href: 'https://restronaut.ai' }
+  { imageSrc: '/PartnersLogo/restronaut.png', href: 'https://restronaut.ai' },
+  { imageSrc: '/PartnersLogo/sajedar.png', href: 'https://sajedar.com' }
 
   // { imageSrc: '/PartnersLogo/Ian.png', href: '' },
   // { imageSrc: '/PartnersLogo/Trylah.png', href: '' },
