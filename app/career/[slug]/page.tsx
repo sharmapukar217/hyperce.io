@@ -1,21 +1,21 @@
-import Link from 'next/link';
-import sanitize from 'sanitize-html';
-import { Toaster } from 'react-hot-toast';
-import { notFound } from 'next/navigation';
 import { gql, request } from 'graphql-request';
 import {
-  MapPin,
-  ChevronLeft,
-  Users,
-  BriefcaseBusiness,
-  AlertTriangle,
-  CircleDollarSign
+    AlertTriangle,
+    BriefcaseBusiness,
+    ChevronLeft,
+    CircleDollarSign,
+    MapPin,
+    Users
 } from 'lucide-react';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { Toaster } from 'react-hot-toast';
+import sanitize from 'sanitize-html';
 
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
-import { ApplyCareerModal } from './ApplyCareerModal';
 import { twJoin } from 'tailwind-merge';
+import { ApplyCareerModal } from './ApplyCareerModal';
 //import { getCareersBySlug, getCareersSlugs } from '@/lib/careersUtils';
 
 type JobDetailProps = {
@@ -248,13 +248,6 @@ export default async function JobDetail({ params }: JobDetailProps) {
                 }}
               />
 
-              <h3>Qualifications/Skills Required</h3>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: sanitize(career.qualifications)
-                }}
-              />
-
               {career.responsibilities ? (
                 <>
                   <h3>Responsibilities</h3>
@@ -265,6 +258,14 @@ export default async function JobDetail({ params }: JobDetailProps) {
                   />
                 </>
               ) : null}
+              
+              <h3>Qualifications/Skills Required</h3>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: sanitize(career.qualifications)
+                }}
+              />
+
 
               <h3>Company Benefits</h3>
               <div
