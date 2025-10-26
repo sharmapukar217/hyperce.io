@@ -29,7 +29,7 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     email: 'hi@hyperce.io',
     phoneNumber: ['+977-9840260599', '+977-9761499680'],
     country: 'Nepal',
-    workplace: 'Bansbari, Kathmandu <br />(Near to British Gurkha College)'
+    workplace: 'IME Complex, Panipokhari'
   },
   [Domain.HyperceUk]: {
     officeName: 'Hyperce',
