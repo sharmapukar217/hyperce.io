@@ -44,6 +44,7 @@ const PersonInfo = ({
               loop
               muted
               autoPlay
+              playsInline
               draggable="false"
               className={cn(
                 'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
