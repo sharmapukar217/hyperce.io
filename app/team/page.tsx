@@ -41,15 +41,18 @@ const PersonInfo = ({
         {isVideo ? (
           <>
             <video
+              loop
+              muted
               autoPlay
               draggable="false"
-              src={member.asset?.source}
               className={cn(
                 'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
                 !animateBorder &&
                   'hover:scale-110 transition-transform duration-500'
               )}
-            />
+            >
+              <source src={member.asset?.source} />
+            </video>
           </>
         ) : (
           <img
