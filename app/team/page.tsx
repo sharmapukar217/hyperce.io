@@ -30,6 +30,7 @@ const PersonInfo = ({
   }, {} as SocialLinks);
 
   const isVideo = member.asset?.source.endsWith('mp4');
+  if (member.position?.toString() === '-1') return null;
 
   return (
     <div className="flex flex-col items-center justify-center gap-4">
