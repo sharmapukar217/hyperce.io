@@ -1,8 +1,8 @@
 import { gql, request } from 'graphql-request';
 
-import { cn } from '@/lib/utils';
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
+import { cn } from '@/lib/utils';
 
 type SocialLinks = {
   github?: string;
@@ -29,6 +29,8 @@ const PersonInfo = ({
     return acc;
   }, {} as SocialLinks);
 
+  const isVideo = member.asset?.source.endsWith('mp4');
+
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <div className="w-40 h-40 md:h-52 md:w-52 rounded-full flex overflow-hidden relative ">
@@ -36,16 +38,31 @@ const PersonInfo = ({
           <div className="animate-rotate absolute inset-0 h-full w-full rounded-full bg-[conic-gradient(#357D8A_20deg,transparent_240deg)]"></div>
         )}
 
-        <img
-          alt={member.name}
-          src={member.asset?.source}
-          draggable="false"
-          className={cn(
-            'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
-            !animateBorder &&
-              'hover:scale-110 transition-transform duration-500'
-          )}
-        />
+        {isVideo ? (
+          <>
+            <video
+              autoPlay
+              draggable="false"
+              src={member.asset?.source}
+              className={cn(
+                'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
+                !animateBorder &&
+                  'hover:scale-110 transition-transform duration-500'
+              )}
+            />
+          </>
+        ) : (
+          <img
+            alt={member.name}
+            src={member.asset?.source}
+            draggable="false"
+            className={cn(
+              'p-1 z-10 h-full w-full aspect-square rounded-full object-cover',
+              !animateBorder &&
+                'hover:scale-110 transition-transform duration-500'
+            )}
+          />
+        )}
       </div>
 
       <div>
