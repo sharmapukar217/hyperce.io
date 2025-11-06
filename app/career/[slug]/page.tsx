@@ -1,11 +1,11 @@
 import { gql, request } from 'graphql-request';
 import {
-    AlertTriangle,
-    BriefcaseBusiness,
-    ChevronLeft,
-    CircleDollarSign,
-    MapPin,
-    Users
+  AlertTriangle,
+  BriefcaseBusiness,
+  ChevronLeft,
+  CircleDollarSign,
+  MapPin,
+  Users
 } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -258,14 +258,13 @@ export default async function JobDetail({ params }: JobDetailProps) {
                   />
                 </>
               ) : null}
-              
+
               <h3>Qualifications/Skills Required</h3>
               <div
                 dangerouslySetInnerHTML={{
                   __html: sanitize(career.qualifications)
                 }}
               />
-
 
               <h3>Company Benefits</h3>
               <div

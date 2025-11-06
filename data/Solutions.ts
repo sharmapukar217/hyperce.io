@@ -196,6 +196,17 @@ export const allTechServices = [
       light: '/services_logos/appify/appify_light.png'
     },
     href: '/appify'
+  },
+
+  {
+    title: 'HyperClicks',
+    description:
+      "Empower your digital presence with Hyperce Appify's cutting-edgemobile app solutions.",
+    icon: {
+      dark: '/services_logos/appify/appify_light_jpeg.jpeg',
+      light: '/services_logos/appify/appify_light.png'
+    },
+    href: '/appify'
   }
 ];
 export const allNonTechServices = [
