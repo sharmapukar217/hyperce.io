@@ -1,11 +1,11 @@
 'use client';
 
-import DarkModeToggle from '../ThemeSwitch/DarkModeToggle';
-import HamburgerComponent from './Hamburger';
-import Logo from '@/utils/assets/Logo';
 import { navMenuItems } from '@/data/Navdata';
 import { cn } from '@/lib/utils';
+import Logo from '@/utils/assets/Logo';
 import { usePathname } from 'next/navigation';
+import DarkModeToggle from '../ThemeSwitch/DarkModeToggle';
+import HamburgerComponent from './Hamburger';
 
 import './Navbar.css';
 
@@ -17,9 +17,10 @@ import {
 
 import { ThemeProvider } from 'next-themes';
 
-import { EachProduct } from '../Platforms/Platforms';
 import { useProposal } from '@/lib/useDocumentLinks';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { EachProduct } from '../Platforms/Platforms';
 
 const PlatformsData = [
   {
@@ -43,9 +44,29 @@ const PlatformsData = [
 export default function Navbar(props: any) {
   const pathname = usePathname();
   const [proposalLink] = useProposal();
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(window.scrollY >= 100);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <header className={cn('dark:bg-slate-900 w-full gap-5', props.className)}>
+    <header
+      data-state={isScrolling ? 'scrolling' : undefined}
+      className={cn(
+        'w-full gap-5 sticky top-0 z-[50] bg-[#ebeeef] dark:bg-slate-900 background-opacity-80 backdrop-blur-md transition-[box-shadow,colors]',
+        isScrolling && 'border-b  dark:border-gray-800 shadow-lg',
+        props.className
+      )}
+    >
       <div className="flex items-center justify-between gap-5 md:gap-2 container py-8 md:px-20 z-50">
         <div className="logo">
           <Logo />

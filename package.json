@@ -45,6 +45,7 @@
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.471.1",
     "mini-svg-data-uri": "^1.4.4",
+    "motion": "^12.23.24",
     "next": "^14.2.5",
     "next-themes": "^0.2.1",
     "pdfjs-dist": "^4.5.136",

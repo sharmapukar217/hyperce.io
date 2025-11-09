@@ -1,8 +1,8 @@
+import { gql, request } from 'graphql-request';
+import { ChevronsRight } from 'lucide-react';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import sanitizeHtml from 'sanitize-html';
-import { ChevronsRight } from 'lucide-react';
-import { gql, request } from 'graphql-request';
 
 import Footer from '@/components/Footer/Footer';
 import Navbar from '@/components/Navbar/Navbar';
@@ -146,9 +146,10 @@ export default async function Page(props: PageProps) {
   });
 
   return (
-    <div className="fixed inset-0 select-none h-full max-w-screen overflow-hidden bg-white dark:bg-slate-900">
+    <div className="bg-white dark:bg-slate-900">
+      <Navbar className="bg-transparent data-[state=scrolling]:bg-[#ebeeef] data-[state=scrolling]:dark:bg-slate-900" />
+
       <div className="h-full w-full overflow-auto flex flex-col">
-        <Navbar className="sticky top-0 bg-white dark:bg-slate-900 border-b dark:border-slate-700 z-[100]" />
         <main className="max-w-[52rem] mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
           <header className="py-16 sm:text-center">
             <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight text-slate-900 font-extrabold dark:text-slate-200">
@@ -178,7 +179,6 @@ export default async function Page(props: PageProps) {
             </h3>
           )}
         </main>
-        <Footer />
       </div>
     </div>
   );

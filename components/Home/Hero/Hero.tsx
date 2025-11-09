@@ -334,8 +334,8 @@ function SharkTankPlayButton() {
               <Dialog.Title className="text-lg font-medium">
                 Watch Shark Tank Nepal Pitch
               </Dialog.Title>
-              <Dialog.Description className="text-gray-800 text-base dark:dark:text-gray-300">
-                Hyperce - Your E-commerce Suite Partner
+              <Dialog.Description className="text-gray-800 text-base dark:dark:text-gray-300 italic">
+                Hyperce: Your E-commerce Suite Partner
               </Dialog.Description>
             </div>
 

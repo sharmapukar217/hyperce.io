@@ -233,85 +233,165 @@ export default async function Page() {
   const teams = await getTeams();
 
   return (
-    <div className="fixed inset-0 select-none">
+    <div className="isolate">
+      <Navbar className="bg-white dark:bg-slate-900 shadow-none" />
+
       <div
-        className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-slate-900 bg-[size:6rem_4rem]
+        className="fixed inset-0 -z-10 h-full w-full bg-white dark:bg-slate-900 bg-[size:6rem_4rem]
       bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
       dark:bg-[linear-gradient(to_right,rgb(30,41,59)_1px,transparent_1px),linear-gradient(to_bottom,rgb(30,41,59)_1px,transparent_1px)] overflow-auto
        "
-      >
-        <Navbar className="!bg-transparent" />
+      />
+      <div className="fixed -z-10 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]" />
 
-        <div className="fixed -z-50 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]"></div>
-
-        <div className="container py-8 md:px-20 grid justify-center text-center">
-          <div className="space-y-1">
-            <h1 className="text-[#357D8A] text-3xl md:text-5xl lg:text-6xl font-bold">
-              Meet the Hyperce Team
-            </h1>
-            <div>
-              <h2 className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-semibold">
-                Discover the talent and dedication shaping our innovations.
-              </h2>
-              <h3 className="md:text-md lg:text-lg text-gray-600 dark:text-gray-400 font-medium">
-                Welcome to the core of the creativity.
-              </h3>
-            </div>
-          </div>
-
-          <div className="mt-16">
-            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Directors
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {sortByPosition(teams.Directors).map((bod, idx) => (
-                <PersonInfo key={idx} member={bod} animateBorder />
-              ))}
-            </div>
-          </div>
-
+      <div className="container z-[100] py-8 md:px-20 grid justify-center text-center">
+        <div className="space-y-1">
+          <h1 className="text-[#357D8A] text-3xl md:text-5xl lg:text-6xl font-bold">
+            Meet the Hyperce Team
+          </h1>
           <div>
-            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Executive Directors
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {sortByPosition(teams.Executives).map((executiveMember, idx) => (
-                <PersonInfo key={idx} member={executiveMember} />
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Managing Directors
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {sortByPosition(teams.ManagingDirectors).map(
-                (managingDirectors, idx) => (
-                  <PersonInfo key={idx} member={managingDirectors} />
-                )
-              )}
-            </div>
-          </div>
-
-          <div>
-            <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
-              Team Members
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
-              {sortByPosition(teams.Members).map((member, idx) => (
-                <PersonInfo key={idx} member={member} />
-              ))}
-            </div>
+            <h2 className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-semibold">
+              Discover the talent and dedication shaping our innovations.
+            </h2>
+            <h3 className="md:text-md lg:text-lg text-gray-600 dark:text-gray-400 font-medium">
+              Welcome to the core of the creativity.
+            </h3>
           </div>
         </div>
 
-        <Footer />
+        <div className="mt-16">
+          <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Directors
+          </h1>
+
+          <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+            {sortByPosition(teams.Directors).map((bod, idx) => (
+              <PersonInfo key={idx} member={bod} animateBorder />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Executive Directors
+          </h1>
+
+          <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+            {sortByPosition(teams.Executives).map((executiveMember, idx) => (
+              <PersonInfo key={idx} member={executiveMember} />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Managing Directors
+          </h1>
+
+          <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+            {sortByPosition(teams.ManagingDirectors).map(
+              (managingDirectors, idx) => (
+                <PersonInfo key={idx} member={managingDirectors} />
+              )
+            )}
+          </div>
+        </div>
+
+        <div>
+          <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+            Team Members
+          </h1>
+
+          <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+            {sortByPosition(teams.Members).map((member, idx) => (
+              <PersonInfo key={idx} member={member} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
+
+  // return (
+  //   <div>
+  //     <div
+  //       className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-slate-900 bg-[size:6rem_4rem]
+  //     bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)]
+  //     dark:bg-[linear-gradient(to_right,rgb(30,41,59)_1px,transparent_1px),linear-gradient(to_bottom,rgb(30,41,59)_1px,transparent_1px)] overflow-auto
+  //      "
+  //     >
+  //       <Navbar />
+
+  //       <div className="fixed -z-50 pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)]"></div>
+
+  //       <div className="container py-8 md:px-20 grid justify-center text-center">
+  //         <div className="space-y-1">
+  //           <h1 className="text-[#357D8A] text-3xl md:text-5xl lg:text-6xl font-bold">
+  //             Meet the Hyperce Team
+  //           </h1>
+  //           <div>
+  //             <h2 className="text-sm md:text-lg lg:text-xl text-gray-600 dark:text-gray-400 font-semibold">
+  //               Discover the talent and dedication shaping our innovations.
+  //             </h2>
+  //             <h3 className="md:text-md lg:text-lg text-gray-600 dark:text-gray-400 font-medium">
+  //               Welcome to the core of the creativity.
+  //             </h3>
+  //           </div>
+  //         </div>
+
+  //         <div className="mt-16">
+  //           <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+  //             Directors
+  //           </h1>
+
+  //           <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+  //             {sortByPosition(teams.Directors).map((bod, idx) => (
+  //               <PersonInfo key={idx} member={bod} animateBorder />
+  //             ))}
+  //           </div>
+  //         </div>
+
+  //         <div>
+  //           <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+  //             Executive Directors
+  //           </h1>
+
+  //           <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+  //             {sortByPosition(teams.Executives).map((executiveMember, idx) => (
+  //               <PersonInfo key={idx} member={executiveMember} />
+  //             ))}
+  //           </div>
+  //         </div>
+
+  //         <div>
+  //           <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+  //             Managing Directors
+  //           </h1>
+
+  //           <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+  //             {sortByPosition(teams.ManagingDirectors).map(
+  //               (managingDirectors, idx) => (
+  //                 <PersonInfo key={idx} member={managingDirectors} />
+  //               )
+  //             )}
+  //           </div>
+  //         </div>
+
+  //         <div>
+  //           <h1 className="text-[#357D8A] text-2xl md:text-3xl lg:text-4xl font-semibold">
+  //             Team Members
+  //           </h1>
+
+  //           <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 py-16">
+  //             {sortByPosition(teams.Members).map((member, idx) => (
+  //               <PersonInfo key={idx} member={member} />
+  //             ))}
+  //           </div>
+  //         </div>
+  //       </div>
+
+  //       <Footer />
+  //     </div>
+  //   </div>
+  // );
 }

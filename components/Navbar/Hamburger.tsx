@@ -1,14 +1,16 @@
 'use client';
 
-import './Hamburger.css';
-import React, { useState } from 'react';
+import { navMenuItems } from '@/data/Navdata';
 import {
   showcaseNonTechSolutions,
   showcaseTechSolutions
 } from '@/data/Solutions';
-import { usePathname } from 'next/navigation';
-import { navMenuItems } from '@/data/Navdata';
 import { useProposal } from '@/lib/useDocumentLinks';
+import Logo from '@/utils/assets/Logo';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React, { useState } from 'react';
+import './Hamburger.css';
 
 export default function Hamburger(props: any) {
   const pathname = usePathname();
@@ -58,15 +60,21 @@ export default function Hamburger(props: any) {
       {/* Mobile Menu */}
       <div
         className={`${
-          menuOpen ? 'translate-x-0' : 'translate-x-full'
-        } fixed inset-0 z-50 bg-white dark:bg-gray-900 transition-transform duration-500 ease-in-out flex flex-col w-full h-full`}
+          menuOpen
+            ? 'translate-x-0 top-0'
+            : 'w-0 h-0 p-0 overflow-clip transition-all duration-500'
+        } fixed inset-0 z-50 bg-white dark:bg-gray-900 ease-in-out isolate flex flex-col`}
       >
-        <div className="menu flex flex-col w-full p-6">
+        <div className="menu flex flex-col w-full p-6 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
           {/* Close Button */}
-          <div className="flex justify-end">
+          <div className="flex justify-between items-center">
+            <Link href="/">
+              <Logo />
+            </Link>
+
             <button
               onClick={closeMenu}
-              className="text-gray-700 dark:text-gray-200 text-3xl"
+              className="text-gray-700 dark:text-gray-200 text-6xl px-3 py-2"
             >
               &times;
             </button>
