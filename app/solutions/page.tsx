@@ -14,29 +14,33 @@ export default function ServiesPages() {
           <span className="my-5 w-full text-center text-3xl font-extrabold dark:text-gray-300">
             Tech Solutions
           </span>
-          {allTechServices.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              href={service.href}
-            />
-          ))}
+          <div className="flex flex-wrap gap-8 justify-center">
+            {allTechServices.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                href={service.href}
+              />
+            ))}
+          </div>
         </div>
         <div className="flex flex-wrap w-full md:space-y-8 max-w-[70vw] my-8 mx-auto justify-center mt-5">
           <span className="my-5 w-full text-center text-3xl font-extrabold dark:text-gray-300">
             Non-Tech Solutions
           </span>
-          {allNonTechServices.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              href={service.href}
-            />
-          ))}
+          <div className="flex flex-wrap gap-8 justify-center">
+            {allNonTechServices.map((service, index) => (
+              <ServiceCard
+                key={index}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                href={service.href}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -58,8 +62,8 @@ function ServiceCard({
   href: string;
 }) {
   return (
-    <div className="p-4 md:w-1/2 lg:w-1/3 flex flex-col text-center items-center justify-center mt-8">
-      <div className="flex-start aspect-square inline-flex items-center justify-center rounded-full mb-5 flex-shrink-0 p-3">
+    <div className="hover:scale-105 transition-all duration-500 rounded-[30px] border-[2.5px] bg-white/30 dark:bg-gray-800 border-gray-300/50 hover:shadow-sm transition-all dark:border-gray-800 p-4 w-full max-w-sm flex flex-col text-center items-center justify-center">
+      <div className="flex-start aspect-square inline-flex items-center justify-center rounded-full flex-shrink-0 p-3">
         {icon ? (
           <div>
             <div className="hidden dark:block">

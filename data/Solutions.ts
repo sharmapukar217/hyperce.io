@@ -1,3 +1,5 @@
+import HyperClickLogo from '@/assets/hyper-click/logo.png';
+
 export const showcaseTechSolutions = [
   {
     name: 'Hyperce Headless',
@@ -49,6 +51,14 @@ export const showcaseSaasSolutions = [
     whiteIcon: '/services_logos/saas/zippyboxlogo.svg',
     darkIcon: '/services_logos/saas/zippyboxlogo.svg',
     altText: 'E-commerce Platform'
+  },
+  {
+    name: 'HyperClicks (SaaS)',
+    des: 'Build Your E-commerce Store with just One Click',
+    whiteIcon: HyperClickLogo.src,
+    darkIcon: HyperClickLogo.src,
+    altText: 'HyperClicks (SaaS)',
+    href: 'https://hyperclicks.net'
   },
   {
     name: 'View All Hyperce SaaS',
@@ -200,13 +210,12 @@ export const allTechServices = [
 
   {
     title: 'HyperClicks',
-    description:
-      "Empower your digital presence with Hyperce Appify's cutting-edgemobile app solutions.",
+    description: 'Build Your E-commerce Store with just One Click',
     icon: {
-      dark: '/services_logos/appify/appify_light_jpeg.jpeg',
-      light: '/services_logos/appify/appify_light.png'
+      dark: HyperClickLogo.src,
+      light: HyperClickLogo.src
     },
-    href: '/appify'
+    href: 'https://hyperclicks.net'
   }
 ];
 export const allNonTechServices = [
@@ -267,8 +276,8 @@ export const allSaasSolutions = [
     title: 'Hyperce HRM',
     href: '/hrm',
     icon: {
-      dark: '/services_logos/bl/bl_logo.jpeg',
-      light: '/services_logos/bl/bl_logo.jpeg'
+      light: '/services_logos/saas/hrmLogo.png',
+      dark: '/services_logos/saas/hrmLogo.png'
     },
     description:
       'Hyperce HRM is a SaaS based HRM solution that helps to strategize and execute your business goals'
@@ -282,5 +291,14 @@ export const allSaasSolutions = [
       light: '/services_logos/saas/zippyboxlogo.svg',
       dark: '/services_logos/saas/zippyboxlogo.svg'
     }
+  },
+  {
+    title: 'HyperClicks',
+    description: 'Build Your E-commerce Store with just One Click',
+    icon: {
+      dark: HyperClickLogo.src,
+      light: HyperClickLogo.src
+    },
+    href: 'https://hyperclicks.net'
   }
 ];

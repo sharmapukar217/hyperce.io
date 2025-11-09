@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import ContactForm from './ContactForm';
 import {
   Domain,
-  type OfficeDetails,
-  contactDetailsMapping
+  contactDetailsMapping,
+  type OfficeDetails
 } from '@/data/ContactDetailsData/OfficeMapping';
+import { useEffect, useState } from 'react';
+import ContactForm from './ContactForm';
 
 export default function Contact() {
   const [infoMap, setInfoMap] = useState(contactDetailsMapping);
@@ -70,7 +70,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
               />
             </svg>
           </div>
-          <span className="place dark:text-[#9CA3AF] text-left text-base">
+          <span className="flex place-items-center dark:text-[#9CA3AF] text-left text-base">
             {contactAddressDetails.officeName}
           </span>
         </div>
@@ -99,7 +99,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
               />
             </svg>
           </div>
-          <span className="place dark:text-[#9CA3AF] text-left text-base">
+          <span className="flex place-items-center dark:text-[#9CA3AF] text-left text-base">
             {contactAddressDetails.address}
           </span>
         </div>
@@ -125,7 +125,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
                 />
               </svg>
             </div>
-            <span className="place dark:text-[#9CA3AF] text-babase">
+            <span className="flex place-items-center dark:text-[#9CA3AF] text-babase">
               {contactAddressDetails.email}
             </span>
           </div>
@@ -161,7 +161,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
                       fill="currentColor"
                     />
                   </svg>
-                  <span className="place dark:text-[#9CA3AF] text-base">
+                  <span className="flex place-items-center dark:text-[#9CA3AF] text-base">
                     {num}
                   </span>
                 </a>
@@ -172,7 +172,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
         {contactAddressDetails.workplace && (
           <div>
             <div className="phone flex gap-3">
-              <div className="icon justify-center w-5 flex items-center mt-1 scale-[115%]">
+              <div className="icon justify-center w-5 flex items-center mt-1">
                 <svg
                   width="24"
                   height="24"
@@ -190,7 +190,7 @@ function EachOffice({ contactAddressDetails }: EachOfficeProps) {
                   <path d="M3 22v-2c0-1.1.9-2 2-2h4a2 2 0 0 1 2 2v2H3Z" />
                 </svg>
               </div>
-              <div className="place dark:text-[#9CA3AF] text-base space-x-1">
+              <div className="mt-1 flex place-items-center dark:text-[#9CA3AF] text-base space-x-1">
                 <span>Workplace:</span>
                 <span
                   dangerouslySetInnerHTML={{
