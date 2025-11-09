@@ -3,11 +3,18 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import { MdCelebration } from 'react-icons/md';
 import Typewriter from './minute/Typerwriter';
 
 import SharkTankLogo from '@/assets/SharkTank.png';
+import { XIcon } from 'lucide-react';
+import { Dialog } from 'radix-ui';
+import { LuPlay } from 'react-icons/lu';
+
+const VideoPlayer = lazy(async () => {
+  return import('react-player');
+});
 
 export default function Hero() {
   return (
@@ -52,7 +59,7 @@ export default function Hero() {
             transition={{ duration: 1 }}
           >
             <h1 className="hyperce-head-xl text-center text-5xl text md:text-left">
-              Your Ecommerce <br /> Suite Partner
+              Your E-commerce <br /> Suite Partner
             </h1>
           </motion.div>
 
@@ -67,9 +74,11 @@ export default function Hero() {
             initial={{ x: -500, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="flex flex-col sm:flex-col text-center gap-5 justify-center xl:justify-start items-center lg:flex-row"
+            className="flex flex-wrap justify-center md:justify-start text-center gap-5 items-center lg:flex-row"
           >
-            <a
+            <SharkTankPlayButton />
+
+            {/*<a
               className="md:w-full xl:w-fit hyperce-btn-text-low hover:scale-105 active:scale-95 transition duration-300 text-white inline-flex justify-center items-center gap-x-3 text-center bg-[#357D8A] shadow-lg ease-in-out shadow-transparent hover:shadow-[#357D8A] hover:shadow border border-transparent rounded-full py-3 px-6"
               href="#faq"
             >
@@ -88,9 +97,9 @@ export default function Hero() {
                   strokeLinecap="round"
                 />
               </svg>
-            </a>
+            </a>*/}
             <a
-              className="md:w-full xl:w-fit hyperce-btn-text-low inline-flex justify-center items-center gap-x-3 text-center shadow-lg shadow-transparent hover:shadow-gray-700/50 border-2 rounded-full py-3 px-6 "
+              className="hyperce-btn-text-low inline-flex justify-center items-center gap-x-3 text-center bg-[#357080] border-[#357080] hover:border-[#357080]/85 text-white shadow-lg hover:shadow-xl transition-all border-2 rounded-full py-2.5 px-6 "
               href="#contact"
             >
               Contact Us
@@ -296,5 +305,56 @@ export default function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function SharkTankPlayButton() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Dialog.Root open={open} onOpenChange={setOpen}>
+      <Dialog.Trigger className="flex items-center justify-center gap-2  border-[2px] border-[#ffde00] bg-[#ffde00] text-black shrink-0 py-2.5 px-6 font-semibold rounded-full shadow-lg hover:shadow-xl transition-all">
+        <LuPlay />
+        Watch Shark Tank Video
+      </Dialog.Trigger>
+
+      <Dialog.Portal>
+        <Dialog.Overlay className="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50" />
+        <Dialog.Content className="p-2">
+          <div className="bg-gray-200 dark:bg-gray-900 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-[10px] border border-gray-400 dark:border-gray-700 p-6 shadow-lg duration-200 sm:max-w-5xl">
+            <Dialog.Close
+              data-slot="dialog-close"
+              className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+            >
+              <XIcon />
+              <span className="sr-only">Close</span>
+            </Dialog.Close>
+
+            <div>
+              <Dialog.Title className="text-lg font-medium">
+                Watch Shark Tank Nepal Pitch
+              </Dialog.Title>
+              <Dialog.Description className="text-gray-800 text-base dark:dark:text-gray-300">
+                Hyperce - Your E-commerce Suite Partner
+              </Dialog.Description>
+            </div>
+
+            <div className="flex">
+              {open ? (
+                <Suspense fallback="">
+                  <VideoPlayer
+                    controls
+                    autoPlay
+                    width="100%"
+                    height="480px"
+                    src="https://youtu.be/342etU9sv14"
+                  />
+                </Suspense>
+              ) : null}
+            </div>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   );
 }
