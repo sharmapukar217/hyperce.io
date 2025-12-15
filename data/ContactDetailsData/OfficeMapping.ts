@@ -9,7 +9,7 @@ export interface OfficeDetails {
 
 export enum Domain {
   HyperceIo = 'www.hyperce.io',
-  HyperceUk = 'www.hyperce.uk',
+  // HyperceUk = 'www.hyperce.uk',
   HyperceUs = 'www.hyperce.us',
   HyperceAu = 'www.hyperce.au'
 }
@@ -31,13 +31,13 @@ export const contactDetailsMapping: { [key in Domain]: OfficeDetails } = {
     country: 'Nepal',
     workplace: 'IME Complex, Panipokhari, Kathmandu'
   },
-  [Domain.HyperceUk]: {
-    officeName: 'Hyperce',
-    address: '184 Pantbach Rd, Rhiwbina, Cardiff, CF14 1UG',
-    email: 'hi@hyperce.io',
-    // phoneNumber: '+44-0771-044-2456',
-    country: 'United Kingdom'
-  },
+  // [Domain.HyperceUk]: {
+  //   officeName: 'Hyperce',
+  //   address: '184 Pantbach Rd, Rhiwbina, Cardiff, CF14 1UG',
+  //   email: 'hi@hyperce.io',
+  //   // phoneNumber: '+44-0771-044-2456',
+  //   country: 'United Kingdom'
+  // },
   [Domain.HyperceAu]: {
     officeName: 'Hyperce',
     address:

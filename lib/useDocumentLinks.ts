@@ -10,9 +10,9 @@ export const useLinkedInUrl = () => {
     const domain: Domain = window.location.hostname as Domain;
 
     switch (domain) {
-      case Domain.HyperceUk: {
-        return setData('https://www.linkedin.com/company/hyperce-uk');
-      }
+      // case Domain.HyperceUk: {
+      //   return setData('https://www.linkedin.com/company/hyperce-uk');
+      // }
       case Domain.HyperceAu: {
         return setData('https://www.linkedin.com/company/hyperce-australia');
       }
@@ -32,9 +32,9 @@ export const useProposal = () => {
     const domain: Domain = window.location.hostname as Domain;
 
     switch (domain) {
-      case Domain.HyperceUk: {
-        return setData('https://docs.hyperce.io/hyperce-uk-proposal.pdf');
-      }
+      // case Domain.HyperceUk: {
+      //   return setData('https://docs.hyperce.io/hyperce-uk-proposal.pdf');
+      // }
       case Domain.HyperceAu: {
         return setData(
           'https://docs.hyperce.io/hyperce-australia-proposal.pdf'
@@ -56,9 +56,9 @@ export const useSuiteLink = () => {
     const domain: Domain = window.location.hostname as Domain;
 
     switch (domain) {
-      case Domain.HyperceUk: {
-        return setData('https://docs.hyperce.io/hyperce-uk-suite-book.pdf');
-      }
+      // case Domain.HyperceUk: {
+      //   return setData('https://docs.hyperce.io/hyperce-uk-suite-book.pdf');
+      // }
       case Domain.HyperceAu: {
         return setData(
           'https://docs.hyperce.io/hyperce-australia-suite-book.pdf'
@@ -83,13 +83,13 @@ export const useYoutubeUrl = () => {
     const domain: Domain = window.location.hostname as Domain;
 
     switch (domain) {
-      case Domain.HyperceUk: {
-        return setData({
-          url: 'https://www.youtube.com/watch?si=8tn9fmctlOIlvedh&v=DKsEXe4RfSA&feature=youtu.be',
-          embedUrl:
-            'https://www.youtube.com/embed/DKsEXe4RfSA?si=8tn9fmctlOIlvedh'
-        });
-      }
+      // case Domain.HyperceUk: {
+      //   return setData({
+      //     url: 'https://www.youtube.com/watch?si=8tn9fmctlOIlvedh&v=DKsEXe4RfSA&feature=youtu.be',
+      //     embedUrl:
+      //       'https://www.youtube.com/embed/DKsEXe4RfSA?si=8tn9fmctlOIlvedh'
+      //   });
+      // }
       case Domain.HyperceAu: {
         return setData({
           url: 'https://www.youtube.com/watch?v=wUNHpMc2bQQ',

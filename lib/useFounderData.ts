@@ -16,16 +16,16 @@ export const useFounderData = () => {
     const domain: Domain = window.location.hostname as Domain;
 
     switch (domain) {
-      case Domain.HyperceUk: {
-        setData({
-          founder: 'Huw Davies',
-          title: 'CEO, Hyperce UK',
-          imageUrl: '/Huw Davies.webp',
-          quote:
-            "As the founder and CEO of Hyperce UK, I am driven by a vision of a dynamic eCommerce landscape where businesses thrive, innovate, and succeed. We are here to empower your journey with cutting-edge eCommerce platforms and AI-powered solutions. Together, we'll shape the future of online commerce. Welcome to the Hyperce family!"
-        });
-        break;
-      }
+      // case Domain.HyperceUk: {
+      //   setData({
+      //     founder: 'Huw Davies',
+      //     title: 'CEO, Hyperce UK',
+      //     imageUrl: '/Huw Davies.webp',
+      //     quote:
+      //       "As the founder and CEO of Hyperce UK, I am driven by a vision of a dynamic eCommerce landscape where businesses thrive, innovate, and succeed. We are here to empower your journey with cutting-edge eCommerce platforms and AI-powered solutions. Together, we'll shape the future of online commerce. Welcome to the Hyperce family!"
+      //   });
+      //   break;
+      // }
       case Domain.HyperceAu: {
         setData({
           founder: 'Jawwad Aamer Khan',
